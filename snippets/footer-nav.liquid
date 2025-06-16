@@ -1,0 +1,23 @@
+{% comment %}
+  Footer nav
+
+  Accepts:
+  - footer_menu: {Object} Footer menu (required)
+
+  Usage:
+  {% render 'footer-nav', footer_menu: footer_menu %}
+{% endcomment %}
+
+<div class='xo-footer-nav'>
+  <div class='xo-footer-nav__title'>{{ footer_menu.title }}</div>
+  <ul class='xo-footer-nav__list'>
+    {%- for link in footer_menu.links -%}
+      <li class='xo-footer-nav__item'>
+        <a href='{{ link.url }}' class='xo-footer-nav__link'>
+          {{ link.title }}
+          <span class='xo-footer-nav__line-hover'></span>
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

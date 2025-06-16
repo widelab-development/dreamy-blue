@@ -1,0 +1,155 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "<p>Announce something here</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-2",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top_desktop": 13,
+        "padding_bottom_desktop": 13,
+        "padding_top_mobile": 13,
+        "padding_bottom_mobile": 13
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "header_style": "style-2",
+        "sticky_header_type": "up",
+        "menu": "main-menu",
+        "menu_type": "default",
+        "event_type": "hover",
+        "logo_width_desktop": 100,
+        "logo_width_mobile": 90,
+        "logo_position": "center",
+        "show_currency_selector": "hidden",
+        "show_language_selector": "hidden",
+        "color_scheme": "background-1"
+      }
+    },
+    "main-predictive-search": {
+      "type": "main-predictive-search",
+      "settings": {
+      }
+    },
+    "mega_menu_1_FLbm4n": {
+      "type": "mega-menu-1",
+      "blocks": {
+        "text_U4PHJ8": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "sub_heading": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store."
+          }
+        },
+        "collection_item_HERG7y": {
+          "type": "collection-item",
+          "settings": {
+            "collection": "",
+            "color_scheme_box": "scheme_1"
+          }
+        },
+        "collection_item_MBbQVq": {
+          "type": "collection-item",
+          "settings": {
+            "collection": "",
+            "color_scheme_box": "scheme_1"
+          }
+        },
+        "collection_item_cJmzTB": {
+          "type": "collection-item",
+          "settings": {
+            "collection": "",
+            "color_scheme_box": "scheme_1"
+          }
+        },
+        "collection_item_AECXqJ": {
+          "type": "collection-item",
+          "settings": {
+            "collection": "",
+            "color_scheme_box": "scheme_1"
+          }
+        },
+        "collection_item_X7BXGj": {
+          "type": "collection-item",
+          "settings": {
+            "collection": "",
+            "color_scheme_box": "scheme_1"
+          }
+        },
+        "collection_item_qJkkMh": {
+          "type": "collection-item",
+          "settings": {
+            "collection": "",
+            "color_scheme_box": "scheme_1"
+          }
+        },
+        "introducing_card_tErNTH": {
+          "type": "introducing-card",
+          "settings": {
+            "heading": "Heading",
+            "sub_heading": "Showcase a benefit of your product",
+            "aspect_ratio": "3/2",
+            "color_scheme_box": "scheme_1",
+            "button_text": "Button",
+            "button_link": "shopify://collections/all",
+            "button_style": "primary",
+            "button_size": "sm"
+          }
+        }
+      },
+      "block_order": [
+        "text_U4PHJ8",
+        "collection_item_HERG7y",
+        "collection_item_MBbQVq",
+        "collection_item_cJmzTB",
+        "collection_item_AECXqJ",
+        "collection_item_X7BXGj",
+        "collection_item_qJkkMh",
+        "introducing_card_tErNTH"
+      ],
+      "settings": {
+        "layout": "category",
+        "index_nav": "0",
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "main-predictive-search",
+    "mega_menu_1_FLbm4n"
+  ]
+}

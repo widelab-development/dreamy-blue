@@ -1,0 +1,7 @@
+.xo-field-select-custom__popover {
+  min-width: 25rem;
+  background-color: color-mix(in srgb, rgba(var(--color-background)) calc(1 * 100%), transparent);
+  border: 0.1rem solid rgba(var(--color-border), 0.15);
+  box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.0784313725);
+  border-radius: 0.8rem;
+}

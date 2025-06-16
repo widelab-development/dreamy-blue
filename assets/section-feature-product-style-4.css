@@ -1,0 +1,11 @@
+.feature-product-style-4 {
+  background-color: color-mix(in srgb, rgba(var(--color-layer)) calc(1 * 100%), transparent);
+}
+
+.feature-product-style-4__container {
+  height: 100%;
+}
+
+.feature-product-style-4__content {
+  height: 100%;
+}

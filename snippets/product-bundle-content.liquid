@@ -1,0 +1,38 @@
+<template xo-bundle-item xo-bundle-price='{{ product.variants[0].price }}' xo-binding='variantPrice[xo-bundle-price]'>
+  <div class='xo-product-bundle-content'>
+    <div class='xo-product-bundle-content__group-info'>
+      <div class='xo-product-bundle-content__image' xo-binding='bundleImg'>
+        {% render 'product-image', product: product, aspect_ratio: '1', lazyload: lazyload %}
+      </div>
+      <div class='xo-product-bundle-content__info'>
+        <div class='xo-product-bundle-content__wrapper'>
+          <div class='xo-product-bundle-content__title'>{{ product.title }}</div>
+          {% if product.options_with_values[0].name != 'Title' %}
+            <div xo-binding='bundleVariantLabel'>
+              <div class='xo-product-bundle-content__variant-label'>{{ product.variants[0].title }}</div>
+            </div>
+          {% endif %}
+          <xo-bundle-properties></xo-bundle-properties>
+        </div>
+        <div class='xo-product-bundle-content__quantity'>
+          {% render 'quantity', size: 'md' %}
+        </div>
+      </div>
+    </div>
+    <div class='xo-product-bundle-content__action-group'>
+      <div xo-binding='bundlePrice' class='xo-product-bundle-content__price'>
+        {{ product.price | money_with_currency }}
+      </div>
+      <xo-tooltip
+        xo-mobile-disabled
+        xo-title='{{ 'general.tooltip.remove' | t }}'
+        xo-placement='top-center'
+        class='tooltip{% if settings.enable_border_radius %} tooltip--radius{% endif %}'
+      >
+        <xo-bundle-remove class='xo-product-bundle-content__remove xo-stack' style='--ai: end; --jc: flex-end'>
+          {% render 'icon', name: 'trash', size: '20' %}
+        </xo-bundle-remove>
+      </xo-tooltip>
+    </div>
+  </div>
+</template>

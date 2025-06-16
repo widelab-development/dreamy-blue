@@ -1,0 +1,4 @@
+.line {
+  height: 0.1rem;
+  background-color: color-mix(in srgb, rgba(var(--color-border)) calc(1 * 100%), transparent);
+}
