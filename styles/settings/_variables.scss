@@ -1,0 +1,38 @@
+// Breakpoints
+$grid-breakpoints: (
+	xs: 375px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+	xxxl: 1600px,
+	max: 1800px
+);
+
+// Transitions
+$default-transition: 0.3s linear;
+
+// Colors
+$color-black: #000000;
+$color-neutral-cream: #FFFEFC;
+
+$color-blue-40: #ABD1F6;
+$color-blue-80: #8FBFEF;
+$color-blue-100: #6CB1EA;
+$color-blue-120: #58ACF2;
+
+$color-purple-80: #C49BC9;
+$color-purple-100: #B67BBA;
+
+$color-orange-80: #E2A383;
+$color-orange-100: #D88A68;
+
+// General settings
+$font-twk-lausanne: 'twk_lausanne'; 
+$font-beausite-fit-web: 'beausite_fit_web';
+$font-weight-base: 350;
+$font-size-base: 1.8rem;
+$line-height-base: 160%;
+$text-color-base: $color-black;
+$body-background-color: $color-neutral-cream;

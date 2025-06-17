@@ -1,0 +1,43 @@
+@use "../settings/init" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+	margin: 0;
+	font-family: $font-twk-lausanne;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	line-height: $line-height-base;
+	color: $text-color-base;
+	background: $body-background-color;
+	-webkit-font-smoothing: antialiased;
+	-ms-scroll-limit-x-max: 100%;
+	-ms-scroll-limit-x-min: 0;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+figure {
+	margin: 0;
+}
+
+// Make all images responsive
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}

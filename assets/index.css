@@ -1,0 +1,347 @@
+@font-face {
+  font-family: "twk_lausanne";
+  src: url("twklausanne-350.woff2") format("woff2"), url("twklausanne-350.woff") format("woff");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "twk_lausanne";
+  src: url("twklausanne-600.woff2") format("woff2"), url("twklausanne-600.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "beausite_fit_web";
+  src: url("BeausiteFitWeb-Light.woff2") format("woff2"), url("BeausiteFitWeb-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/* stylelint-disable */
+/* stylelint-enable */
+/*MIXINS*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+body {
+  margin: 0;
+  font-family: "twk_lausanne";
+  font-size: 1.8rem;
+  font-weight: 350;
+  line-height: 160%;
+  color: #000000;
+  background: #FFFEFC;
+  -webkit-font-smoothing: antialiased;
+  -ms-scroll-limit-x-max: 100%;
+  -ms-scroll-limit-x-min: 0;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+button,
+a,
+input,
+select,
+textarea,
+p,
+ul {
+  font-family: "twk_lausanne";
+}
+
+.content-for-layout p {
+  margin-top: 2rem;
+}
+@media (min-width: 992px) {
+  .content-for-layout p {
+    margin-top: 3rem;
+  }
+}
+
+.content-for-layout h1,
+.content-for-layout h2,
+.content-for-layout h3,
+.content-for-layout h4,
+.content-for-layout h5,
+.content-for-layout h6,
+.content-for-layout .h1,
+.content-for-layout .h2,
+.content-for-layout .h3,
+.content-for-layout .h4,
+.content-for-layout .h5,
+.content-for-layout .h6 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+}
+.content-for-layout h1,
+.content-for-layout .h1 {
+  font-size: 3.2rem;
+}
+@media (min-width: 992px) {
+  .content-for-layout h1,
+  .content-for-layout .h1 {
+    font-size: 7.2rem;
+  }
+}
+.content-for-layout h2,
+.content-for-layout .h2 {
+  font-size: 2.8rem;
+}
+@media (min-width: 992px) {
+  .content-for-layout h2,
+  .content-for-layout .h2 {
+    font-size: 6rem;
+  }
+}
+.content-for-layout h3,
+.content-for-layout .h3 {
+  font-size: 2.4rem;
+}
+@media (min-width: 992px) {
+  .content-for-layout h3,
+  .content-for-layout .h3 {
+    font-size: 4.8rem;
+  }
+}
+.content-for-layout h4,
+.content-for-layout .h4 {
+  font-size: 2rem;
+}
+@media (min-width: 992px) {
+  .content-for-layout h4,
+  .content-for-layout .h4 {
+    font-size: 3.6rem;
+  }
+}
+.content-for-layout h5,
+.content-for-layout .h5 {
+  font-size: 1.8rem;
+}
+@media (min-width: 992px) {
+  .content-for-layout h5,
+  .content-for-layout .h5 {
+    font-size: 3.2rem;
+  }
+}
+.content-for-layout h6,
+.content-for-layout .h6 {
+  font-size: 1.6rem;
+}
+@media (min-width: 992px) {
+  .content-for-layout h6,
+  .content-for-layout .h6 {
+    font-size: 2.4rem;
+  }
+}
+.content-for-layout a:not([class]) {
+  display: inline-block;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  transition: text-decoration-color 0.3s linear;
+  text-decoration-thickness: 0.02rem;
+}
+.content-for-layout a:not([class]):hover, .content-for-layout a:not([class]):focus-visible {
+  text-decoration-color: transparent;
+}
+.content-for-layout a:not([class]) img {
+  border: 0;
+}
+
+.beausite-120 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+  font-size: 4.8rem;
+}
+@media (min-width: 992px) {
+  .beausite-120 {
+    font-size: 12rem;
+  }
+}
+
+.beausite-100 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+  font-size: 4rem;
+}
+@media (min-width: 992px) {
+  .beausite-100 {
+    font-size: 10rem;
+  }
+}
+
+.beausite-90 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+  font-size: 3.6rem;
+}
+@media (min-width: 992px) {
+  .beausite-90 {
+    font-size: 9rem;
+  }
+}
+
+.beausite-72 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+  font-size: 3.2rem;
+}
+@media (min-width: 992px) {
+  .beausite-72 {
+    font-size: 7.2rem;
+  }
+}
+
+.beausite-60 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+  font-size: 2.8rem;
+}
+@media (min-width: 992px) {
+  .beausite-60 {
+    font-size: 6rem;
+  }
+}
+
+.beausite-48 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+  font-size: 2.4rem;
+}
+@media (min-width: 992px) {
+  .beausite-48 {
+    font-size: 4.8rem;
+  }
+}
+
+.beausite-36 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+  font-size: 2rem;
+}
+@media (min-width: 992px) {
+  .beausite-36 {
+    font-size: 3.6rem;
+  }
+}
+
+.beausite-32 {
+  font-family: "beausite_fit_web";
+  font-weight: 300;
+  line-height: 110%;
+  font-size: 1.8rem;
+}
+@media (min-width: 992px) {
+  .beausite-32 {
+    font-size: 3.2rem;
+  }
+}
+
+.twk-24 {
+  font-family: "twk_lausanne";
+  font-weight: 300;
+  line-height: 100%;
+  font-size: 1.6rem;
+}
+@media (min-width: 992px) {
+  .twk-24 {
+    font-size: 2.4rem;
+  }
+}
+
+.twk-20 {
+  font-family: "twk_lausanne";
+  font-weight: 300;
+  line-height: 100%;
+  font-size: 1.4rem;
+}
+@media (min-width: 992px) {
+  .twk-20 {
+    font-size: 2rem;
+  }
+}
+
+.twk-16 {
+  font-family: "twk_lausanne";
+  font-weight: 300;
+  line-height: 100%;
+  font-size: 1.2rem;
+}
+@media (min-width: 992px) {
+  .twk-16 {
+    font-size: 1.6rem;
+  }
+}
+
+.twk-14 {
+  font-family: "twk_lausanne";
+  font-weight: 300;
+  line-height: 100%;
+  font-size: 1.4rem;
+}
+
+.twk-12 {
+  font-family: "twk_lausanne";
+  font-weight: 300;
+  line-height: 100%;
+  font-size: 1.2rem;
+}
+
+.btn {
+  font-family: "twk_lausanne";
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 100%;
+  border-radius: 6rem;
+  color: #000000;
+  padding: 1.2rem 2.4rem;
+  transition: background-color 0.3s linear;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  .btn {
+    font-size: 1.8rem;
+    line-height: 160%;
+    border-radius: 12rem;
+    padding: 1.2rem 7.2rem;
+  }
+}
+.btn--primary {
+  background-color: #8FBFEF;
+}
+.btn--primary:hover, .btn--primary:focus-visible {
+  background-color: #58ACF2;
+}
+/*# sourceMappingURL=index.css.map */

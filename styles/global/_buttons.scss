@@ -1,0 +1,31 @@
+@use "../settings/init" as *;
+
+.btn {
+	font-family: $font-twk-lausanne;
+	font-size: rem(14);
+	font-weight: 300;
+	line-height: 100%;
+	border-radius: rem(60);
+	color: $color-black;
+	padding: rem(12) rem(24);
+	transition: background-color $default-transition;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+
+	@include media-breakpoint-up(lg) {
+		font-size: rem(18);
+		line-height: 160%;
+		border-radius: rem(120);
+		padding: rem(12) rem(72);
+	}
+
+	&--primary {
+		background-color: $color-blue-80;
+
+		&:hover,
+		&:focus-visible {
+			background-color: $color-blue-120;
+		}
+	}
+}
