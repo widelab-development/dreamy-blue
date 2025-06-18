@@ -7,7 +7,7 @@ select,
 textarea,
 p,
 ul {
-	font-family: $font-twk-lausanne;
+	font-family: var(--font-twk-lausanne);
 }
 
 // Paragraph
@@ -35,7 +35,7 @@ ul {
 	.h4,
 	.h5,
 	.h6 {
-		font-family: $font-beausite-fit-web;
+		font-family: var(--font-beausite-fit-web);
 		font-weight: 300;
 		line-height: 110%;
 
@@ -98,10 +98,10 @@ ul {
 	// Links
 	a:not([class]) {
 		display: inline-block;
-		color: $color-black;
+		color: var(--color-black);
 		text-decoration: underline;
 		text-underline-offset: 0.25rem;
-		transition: text-decoration-color $default-transition;
+		transition: text-decoration-color var(--default-transition);
 		text-decoration-thickness: rem(0.2);
 
 		&:hover,
@@ -117,7 +117,7 @@ ul {
 
 // Beausite Typography Utility Classes
 .beausite-120 {
-	font-family: $font-beausite-fit-web;
+	font-family: var(--font-beausite-fit-web);
 	font-weight: 300;
 	line-height: 110%;
 	font-size: rem(48);
@@ -128,7 +128,7 @@ ul {
 }
 
 .beausite-100 {
-	font-family: $font-beausite-fit-web;
+	font-family: var(--font-beausite-fit-web);
 	font-weight: 300;
 	line-height: 110%;
 	font-size: rem(40);
@@ -139,7 +139,7 @@ ul {
 }
 
 .beausite-90 {
-	font-family: $font-beausite-fit-web;
+	font-family: var(--font-beausite-fit-web);
 	font-weight: 300;
 	line-height: 110%;
 	font-size: rem(36);
@@ -150,7 +150,7 @@ ul {
 }
 
 .beausite-72 {
-	font-family: $font-beausite-fit-web;
+	font-family: var(--font-beausite-fit-web);
 	font-weight: 300;
 	line-height: 110%;
 	font-size: rem(32);
@@ -161,7 +161,7 @@ ul {
 }
 
 .beausite-60 {
-	font-family: $font-beausite-fit-web;
+	font-family: var(--font-beausite-fit-web);
 	font-weight: 300;
 	line-height: 110%;
 	font-size: rem(28);
@@ -172,7 +172,7 @@ ul {
 }
 
 .beausite-48 {
-	font-family: $font-beausite-fit-web;
+	font-family: var(--font-beausite-fit-web);
 	font-weight: 300;
 	line-height: 110%;
 	font-size: rem(24);
@@ -183,7 +183,7 @@ ul {
 }
 
 .beausite-36 {
-	font-family: $font-beausite-fit-web;
+	font-family: var(--font-beausite-fit-web);
 	font-weight: 300;
 	line-height: 110%;
 	font-size: rem(20);
@@ -194,7 +194,7 @@ ul {
 }
 
 .beausite-32 {
-	font-family: $font-beausite-fit-web;
+	font-family: var(--font-beausite-fit-web);
 	font-weight: 300;
 	line-height: 110%;
 	font-size: rem(18);
@@ -206,7 +206,7 @@ ul {
 
 // TWK Lausanne Typography Utility Classes
 .twk-24 {
-	font-family: $font-twk-lausanne;
+	font-family: var(--font-twk-lausanne);
 	font-weight: 300;
 	line-height: 100%;
 	font-size: rem(16);
@@ -217,7 +217,7 @@ ul {
 }
 
 .twk-20 {
-	font-family: $font-twk-lausanne;
+	font-family: var(--font-twk-lausanne);
 	font-weight: 300;
 	line-height: 100%;
 	font-size: rem(14);
@@ -228,7 +228,7 @@ ul {
 }
 
 .twk-16 {
-	font-family: $font-twk-lausanne;
+	font-family: var(--font-twk-lausanne);
 	font-weight: 300;
 	line-height: 100%;
 	font-size: rem(12);
@@ -239,7 +239,7 @@ ul {
 }
 
 .twk-14 {
-	font-family: $font-twk-lausanne;
+	font-family: var(--font-twk-lausanne);
 	font-weight: 300;
 	line-height: 100%;
 	font-size: rem(14);
@@ -247,7 +247,7 @@ ul {
 }
 
 .twk-12 {
-	font-family: $font-twk-lausanne;
+	font-family: var(--font-twk-lausanne);
 	font-weight: 300;
 	line-height: 100%;
 	font-size: rem(12);

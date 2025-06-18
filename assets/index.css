@@ -19,6 +19,23 @@
   font-style: normal;
   font-display: swap;
 }
+:root {
+  --xo-container-gap: 2rem;
+  --default-transition: 0.3s linear;
+  --color-black: #000000;
+  --color-neutral-cream: #FFFEFC;
+  --color-blue-40: #ABD1F6;
+  --color-blue-80: #8FBFEF;
+  --color-blue-100: #6CB1EA;
+  --color-blue-120: #58ACF2;
+  --color-purple-80: #C49BC9;
+  --color-purple-100: #B67BBA;
+  --color-orange-80: #E2A383;
+  --color-orange-100: #D88A68;
+  --font-twk-lausanne: "twk_lausanne";
+  --font-beausite-fit-web: "beausite_fit_web";
+}
+
 /* stylelint-disable */
 /* stylelint-enable */
 /*MIXINS*/
@@ -39,12 +56,12 @@ html {
 }
 body {
   margin: 0;
-  font-family: "twk_lausanne";
+  font-family: var(--font-twk-lausanne);
   font-size: 1.8rem;
   font-weight: 350;
   line-height: 160%;
-  color: #000000;
-  background: #FFFEFC;
+  color: var(--color-black);
+  background: var(--color-neutral-cream);
   -webkit-font-smoothing: antialiased;
   -ms-scroll-limit-x-max: 100%;
   -ms-scroll-limit-x-min: 0;
@@ -61,10 +78,6 @@ img {
   vertical-align: middle;
 }
 
-:root {
-  --xo-container-gap: 2rem;
-}
-
 button,
 a,
 input,
@@ -72,7 +85,7 @@ select,
 textarea,
 p,
 ul {
-  font-family: "twk_lausanne";
+  font-family: var(--font-twk-lausanne);
 }
 
 .content-for-layout p {
@@ -96,7 +109,7 @@ ul {
 .content-for-layout .h4,
 .content-for-layout .h5,
 .content-for-layout .h6 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
 }
@@ -162,10 +175,10 @@ ul {
 }
 .content-for-layout a:not([class]) {
   display: inline-block;
-  color: #000000;
+  color: var(--color-black);
   text-decoration: underline;
   text-underline-offset: 0.25rem;
-  transition: text-decoration-color 0.3s linear;
+  transition: text-decoration-color var(--default-transition);
   text-decoration-thickness: 0.02rem;
 }
 .content-for-layout a:not([class]):hover, .content-for-layout a:not([class]):focus-visible {
@@ -176,7 +189,7 @@ ul {
 }
 
 .beausite-120 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
   font-size: 4.8rem;
@@ -188,7 +201,7 @@ ul {
 }
 
 .beausite-100 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
   font-size: 4rem;
@@ -200,7 +213,7 @@ ul {
 }
 
 .beausite-90 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
   font-size: 3.6rem;
@@ -212,7 +225,7 @@ ul {
 }
 
 .beausite-72 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
   font-size: 3.2rem;
@@ -224,7 +237,7 @@ ul {
 }
 
 .beausite-60 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
   font-size: 2.8rem;
@@ -236,7 +249,7 @@ ul {
 }
 
 .beausite-48 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
   font-size: 2.4rem;
@@ -248,7 +261,7 @@ ul {
 }
 
 .beausite-36 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
   font-size: 2rem;
@@ -260,7 +273,7 @@ ul {
 }
 
 .beausite-32 {
-  font-family: "beausite_fit_web";
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   line-height: 110%;
   font-size: 1.8rem;
@@ -272,7 +285,7 @@ ul {
 }
 
 .twk-24 {
-  font-family: "twk_lausanne";
+  font-family: var(--font-twk-lausanne);
   font-weight: 300;
   line-height: 100%;
   font-size: 1.6rem;
@@ -284,7 +297,7 @@ ul {
 }
 
 .twk-20 {
-  font-family: "twk_lausanne";
+  font-family: var(--font-twk-lausanne);
   font-weight: 300;
   line-height: 100%;
   font-size: 1.4rem;
@@ -296,7 +309,7 @@ ul {
 }
 
 .twk-16 {
-  font-family: "twk_lausanne";
+  font-family: var(--font-twk-lausanne);
   font-weight: 300;
   line-height: 100%;
   font-size: 1.2rem;
@@ -308,28 +321,28 @@ ul {
 }
 
 .twk-14 {
-  font-family: "twk_lausanne";
+  font-family: var(--font-twk-lausanne);
   font-weight: 300;
   line-height: 100%;
   font-size: 1.4rem;
 }
 
 .twk-12 {
-  font-family: "twk_lausanne";
+  font-family: var(--font-twk-lausanne);
   font-weight: 300;
   line-height: 100%;
   font-size: 1.2rem;
 }
 
 .btn {
-  font-family: "twk_lausanne";
+  font-family: var(--font-twk-lausanne);
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 100%;
   border-radius: 6rem;
-  color: #000000;
+  color: var(--color-black);
   padding: 1.2rem 2.4rem;
-  transition: background-color 0.3s linear;
+  transition: background-color var(--default-transition);
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -343,9 +356,9 @@ ul {
   }
 }
 .btn--primary {
-  background-color: #8FBFEF;
+  background-color: var(--color-blue-80);
 }
 .btn--primary:hover, .btn--primary:focus-visible {
-  background-color: #58ACF2;
+  background-color: var(--color-blue-120);
 }
 /*# sourceMappingURL=index.css.map */

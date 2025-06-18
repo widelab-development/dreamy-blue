@@ -19,12 +19,12 @@ html {
 
 body {
 	margin: 0;
-	font-family: $font-twk-lausanne;
-	font-size: $font-size-base;
-	font-weight: $font-weight-base;
-	line-height: $line-height-base;
-	color: $text-color-base;
-	background: $body-background-color;
+	font-family: var(--font-twk-lausanne);
+	font-size: 1.8rem;
+	font-weight: 350;
+	line-height: 160%;
+	color: var(--color-black);
+	background: var(--color-neutral-cream);
 	-webkit-font-smoothing: antialiased;
 	-ms-scroll-limit-x-max: 100%;
 	-ms-scroll-limit-x-min: 0;
@@ -42,6 +42,3 @@ img {
 	vertical-align: middle;
 }
 
-:root {
-	--xo-container-gap: 2rem;
-}
