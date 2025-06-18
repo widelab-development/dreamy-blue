@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "testimonial_style_4_qdijA4": {
@@ -15,35 +6,35 @@
         "testimonial_box_q3E7EV": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_GCP3FT": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_ifXanW": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_pMdApz": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_NQdFJH": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         }
@@ -74,7 +65,7 @@
         "testimonial_slide_zrF3Yy": {
           "type": "testimonial-slide",
           "settings": {
-            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name",
             "verified_user": "show",
             "product": ""
@@ -83,7 +74,7 @@
         "testimonial_slide_6GGk9g": {
           "type": "testimonial-slide",
           "settings": {
-            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name",
             "verified_user": "show",
             "product": ""
@@ -92,7 +83,7 @@
         "testimonial_slide_MyHfCk": {
           "type": "testimonial-slide",
           "settings": {
-            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name",
             "verified_user": "show",
             "product": ""
@@ -101,7 +92,7 @@
         "testimonial_slide_URhUmC": {
           "type": "testimonial-slide",
           "settings": {
-            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name",
             "verified_user": "show",
             "product": ""
@@ -110,7 +101,7 @@
         "testimonial_slide_DXiJ3y": {
           "type": "testimonial-slide",
           "settings": {
-            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "message": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name",
             "verified_user": "show",
             "product": ""
@@ -146,27 +137,27 @@
         "testimonial_box_LTahAA": {
           "type": "testimonial-box",
           "settings": {
-            "content_1": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content_1": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name_1": "Customer name",
-            "content_2": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content_2": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name_2": "Customer name"
           }
         },
         "testimonial_box_kLWwbD": {
           "type": "testimonial-box",
           "settings": {
-            "content_1": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content_1": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name_1": "Customer name",
-            "content_2": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content_2": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name_2": "Customer name"
           }
         },
         "testimonial_box_PGThCP": {
           "type": "testimonial-box",
           "settings": {
-            "content_1": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content_1": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name_1": "Customer name",
-            "content_2": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content_2": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name_2": "Customer name"
           }
         }
@@ -195,28 +186,28 @@
         "testimonial_box_xcBcBX": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_ifz6mA": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Showcase a benefit of your product</p>",
+            "content": "<p>Showcase a benefit of your product<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_nqkbAz": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_GRdL84": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Showcase a benefit of your product</p>",
+            "content": "<p>Showcase a benefit of your product<\/p>",
             "customer_name": "Customer name"
           }
         }
@@ -229,7 +220,7 @@
       ],
       "settings": {
         "font_size_heading": "h4",
-        "heading": "<p>Testimonials spotlight</p>",
+        "heading": "<p>Testimonials spotlight<\/p>",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",
@@ -245,7 +236,7 @@
         "testimonial_box_LzT9PX": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "avatar_size": "small",
             "customer_name": "Customer name"
           }
@@ -253,7 +244,7 @@
         "testimonial_box_qYg6eW": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "avatar_size": "medium",
             "customer_name": "Customer name"
           }
@@ -261,7 +252,7 @@
         "testimonial_box_hkyayN": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "avatar_size": "medium",
             "customer_name": "Customer name"
           }
@@ -269,7 +260,7 @@
         "testimonial_box_DG9JjU": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "avatar_size": "large",
             "customer_name": "Customer name"
           }
@@ -277,7 +268,7 @@
         "testimonial_box_ewFatk": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "avatar_size": "small",
             "customer_name": "Customer name"
           }
@@ -285,7 +276,7 @@
         "testimonial_box_TpYMFF": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "avatar_size": "large",
             "customer_name": "Customer name"
           }
@@ -293,7 +284,7 @@
         "testimonial_box_qWRWDQ": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "avatar_size": "small",
             "customer_name": "Customer name"
           }

@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -44,7 +35,7 @@
         "countdown_timer_YMNHW8": {
           "type": "countdown_timer",
           "settings": {
-            "icon_image": "shopify://shop_images/union1.svg",
+            "icon_image": "shopify:\/\/shop_images\/union1.svg",
             "heading": "Extra sale!",
             "sub_heading": "Special offer ends in",
             "background_color": "rgba(15, 97, 255, 0.05)",
@@ -71,28 +62,28 @@
           "type": "collapse",
           "settings": {
             "collapse_text": "Main features",
-            "collapse_content": "<p>Our phone cases are designed to offer the perfect blend of style and protection, ensuring your device stays safe and looks great:<br/>- <strong>Shock-Absorption</strong>: Advanced technology to protect against drops and impacts.<br/>- <strong>Slim Design</strong>: Sleek profile that adds minimal bulk to your phone.<br/>- <strong>Raised Edges</strong>: Extra protection for the screen and camera.<br/>- <strong>Precision Cutouts</strong>: Easy access to all ports and buttons.<br/>- <strong>Anti-Slip Grip</strong>: Textured surface for a secure hold.<br/>- <strong>Wireless Charging</strong>: No need to remove the case for charging.</p>"
+            "collapse_content": "<p>Our phone cases are designed to offer the perfect blend of style and protection, ensuring your device stays safe and looks great:<br\/>- <strong>Shock-Absorption<\/strong>: Advanced technology to protect against drops and impacts.<br\/>- <strong>Slim Design<\/strong>: Sleek profile that adds minimal bulk to your phone.<br\/>- <strong>Raised Edges<\/strong>: Extra protection for the screen and camera.<br\/>- <strong>Precision Cutouts<\/strong>: Easy access to all ports and buttons.<br\/>- <strong>Anti-Slip Grip<\/strong>: Textured surface for a secure hold.<br\/>- <strong>Wireless Charging<\/strong>: No need to remove the case for charging.<\/p>"
           }
         },
         "collapse_cRztXf": {
           "type": "collapse",
           "settings": {
             "collapse_text": "Materials",
-            "collapse_content": "<p>- Polycarbonate: Rigid and strong, providing excellent impact resistance.<br/>- TPU (Thermoplastic Polyurethane): Flexible and shock-absorbing.<br/>- Silicone: Soft and grippy, preventing slips and falls.<br/>- Leather: Premium and stylish, offering a sophisticated look.<br/>- Fabric: Unique textures and styles for a personalized touch.</p>"
+            "collapse_content": "<p>- Polycarbonate: Rigid and strong, providing excellent impact resistance.<br\/>- TPU (Thermoplastic Polyurethane): Flexible and shock-absorbing.<br\/>- Silicone: Soft and grippy, preventing slips and falls.<br\/>- Leather: Premium and stylish, offering a sophisticated look.<br\/>- Fabric: Unique textures and styles for a personalized touch.<\/p>"
           }
         },
         "collapse_Q7Fhxe": {
           "type": "collapse",
           "settings": {
             "collapse_text": "Shipping & returns",
-            "collapse_content": "<p>- Free standard shipping on all orders<br/>- Express shipping options available at an additional cost<br/>- Orders processed and shipped within 2-3 business days<br/>- 30-day return policy for a full refund or exchange<br/>- Return shipping covered for defective or damaged items</p>"
+            "collapse_content": "<p>- Free standard shipping on all orders<br\/>- Express shipping options available at an additional cost<br\/>- Orders processed and shipped within 2-3 business days<br\/>- 30-day return policy for a full refund or exchange<br\/>- Return shipping covered for defective or damaged items<\/p>"
           }
         },
         "collapse_mdKxAA": {
           "type": "collapse",
           "settings": {
             "collapse_text": "Care guide",
-            "collapse_content": "<p>- Regular Cleaning: Wipe the case with a damp cloth and mild soap.<br/>- Avoid Harsh Chemicals: Use gentle cleaners to prevent damage.<br/>- Check Fit Regularly: Ensure the case remains snug and secure.<br/>- Remove Debris: Periodically remove the case to clean any dirt or dust from your phone.<br/>- Inspect for Wear: Replace the case if it shows signs of significant wear and tear.</p>"
+            "collapse_content": "<p>- Regular Cleaning: Wipe the case with a damp cloth and mild soap.<br\/>- Avoid Harsh Chemicals: Use gentle cleaners to prevent damage.<br\/>- Check Fit Regularly: Ensure the case remains snug and secure.<br\/>- Remove Debris: Periodically remove the case to clean any dirt or dust from your phone.<br\/>- Inspect for Wear: Replace the case if it shows signs of significant wear and tear.<\/p>"
           }
         },
         "line_cb93RG": {
@@ -102,7 +93,7 @@
         "complementary_xaj3Ky": {
           "type": "complementary",
           "settings": {
-            "heading": "<p>PAIR WITH PRODUCTS</p>",
+            "heading": "<p>PAIR WITH PRODUCTS<\/p>",
             "autoplay": "on",
             "autoplay_time": 3000,
             "show_paginate": "hide",
@@ -151,33 +142,33 @@
         "column_QAD7TD": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/Feature3.png",
-            "aspect_ratio_first": "512/577",
-            "image_second": "shopify://shop_images/mul4.png",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Essentials by CASETiFY™<br/>The Beauty of Simplicity</p>",
+            "image_first": "shopify:\/\/shop_images\/Feature3.png",
+            "aspect_ratio_first": "512\/577",
+            "image_second": "shopify:\/\/shop_images\/mul4.png",
+            "aspect_ratio_second": "512\/577",
+            "title": "<p>Essentials by CASETiFY™<br\/>The Beauty of Simplicity<\/p>",
             "enable_overlay": "off"
           }
         },
         "column_nwH8ag": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/Feature2.png",
-            "aspect_ratio_first": "512/577",
-            "image_second": "shopify://shop_images/mul-hover1.png",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Defy Gravity With The <br/>New Bounce Case</p>",
+            "image_first": "shopify:\/\/shop_images\/Feature2.png",
+            "aspect_ratio_first": "512\/577",
+            "image_second": "shopify:\/\/shop_images\/mul-hover1.png",
+            "aspect_ratio_second": "512\/577",
+            "title": "<p>Defy Gravity With The <br\/>New Bounce Case<\/p>",
             "enable_overlay": "off"
           }
         },
         "column_XPMn3z": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/Feature1.png",
-            "aspect_ratio_first": "512/577",
-            "image_second": "shopify://shop_images/mul6.png",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Spice up your mirror <br/>selfies with a little Y2K </p>",
+            "image_first": "shopify:\/\/shop_images\/Feature1.png",
+            "aspect_ratio_first": "512\/577",
+            "image_second": "shopify:\/\/shop_images\/mul6.png",
+            "aspect_ratio_second": "512\/577",
+            "title": "<p>Spice up your mirror <br\/>selfies with a little Y2K <\/p>",
             "enable_overlay": "off"
           }
         }
@@ -225,15 +216,15 @@
           "type": "detail-infomation-2",
           "settings": {
             "caption": "",
-            "title_list": "<ul><li>Height</li><li>Width</li><li>Depth</li><li>Weight</li></ul>",
-            "content_list": "<ul><li>9.5 in (241 mm)</li><li>6.5 in (160 mm)</li><li>0.5 in (241 mm)</li><li>0.008 kg</li></ul>",
+            "title_list": "<ul><li>Height<\/li><li>Width<\/li><li>Depth<\/li><li>Weight<\/li><\/ul>",
+            "content_list": "<ul><li>9.5 in (241 mm)<\/li><li>6.5 in (160 mm)<\/li><li>0.5 in (241 mm)<\/li><li>0.008 kg<\/li><\/ul>",
             "color_schema_box": "background-1"
           }
         },
         "image_Kw3CmA": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/images103.png"
+            "image": "shopify:\/\/shop_images\/images103.png"
           }
         }
       },
@@ -245,15 +236,15 @@
       "settings": {
         "layout": "image",
         "font_size_heading": "h6",
-        "heading": "<p>Introducing the Plasma XTE Case, <br/>blend of cutting-edge design and <br/>unwavering protection</p>",
+        "heading": "<p>Introducing the Plasma XTE Case, <br\/>blend of cutting-edge design and <br\/>unwavering protection<\/p>",
         "autoplay_time": 3000,
         "autoplay": "off",
         "color_schema_box": "",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",
-        "background_image_desktop": "shopify://shop_images/image_124.png",
-        "background_image_mobile": "shopify://shop_images/banner_mb2.png",
+        "background_image_desktop": "shopify:\/\/shop_images\/image_124.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/banner_mb2.png",
         "use_parallax": true,
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 0,
@@ -267,36 +258,36 @@
         "collapse_WBwfTK": {
           "type": "collapse",
           "settings": {
-            "title": "<p>What materials are used in your phone cases?</p>",
-            "content": "<p>Our phone cases are crafted from premium materials such as durable polycarbonate, shock-absorbing TPU (thermoplastic polyurethane), and high-grade silicone.</p>"
+            "title": "<p>What materials are used in your phone cases?<\/p>",
+            "content": "<p>Our phone cases are crafted from premium materials such as durable polycarbonate, shock-absorbing TPU (thermoplastic polyurethane), and high-grade silicone.<\/p>"
           }
         },
         "collapse_7WhrmF": {
           "type": "collapse",
           "settings": {
-            "title": "<p>Are your phone cases compatible with wireless charging?</p>",
-            "content": "<p>Yes, all our phone cases are designed to be compatible with wireless charging. You can charge your phone wirelessly without removing the case.</p>"
+            "title": "<p>Are your phone cases compatible with wireless charging?<\/p>",
+            "content": "<p>Yes, all our phone cases are designed to be compatible with wireless charging. You can charge your phone wirelessly without removing the case.<\/p>"
           }
         },
         "collapse_iYpCBk": {
           "type": "collapse",
           "settings": {
-            "title": "<p>Do your phone cases have raised edges for camera protection?</p>",
-            "content": "<p>Yes. Our phone cases feature raised edges around the screen and camera areas to provide additional protection against scratches and direct impacts.</p>"
+            "title": "<p>Do your phone cases have raised edges for camera protection?<\/p>",
+            "content": "<p>Yes. Our phone cases feature raised edges around the screen and camera areas to provide additional protection against scratches and direct impacts.<\/p>"
           }
         },
         "collapse_bBdNRW": {
           "type": "collapse",
           "settings": {
-            "title": "<p>How do I clean and maintain my phone case?</p>",
-            "content": "<p>For regular cleaning, use a damp cloth or mild soap solution to wipe the surface. Avoid using harsh chemicals or abrasive materials that could damage the case.</p>"
+            "title": "<p>How do I clean and maintain my phone case?<\/p>",
+            "content": "<p>For regular cleaning, use a damp cloth or mild soap solution to wipe the surface. Avoid using harsh chemicals or abrasive materials that could damage the case.<\/p>"
           }
         },
         "collapse_aQKm8X": {
           "type": "collapse",
           "settings": {
-            "title": "<p>What is your return policy if I am not satisfied with my phone case?</p>",
-            "content": "<p>We offer a 30-day return policy. If you are not completely satisfied, you can return it within 30 days of receipt for a full refund, provided the case is in its original condition.</p>"
+            "title": "<p>What is your return policy if I am not satisfied with my phone case?<\/p>",
+            "content": "<p>We offer a 30-day return policy. If you are not completely satisfied, you can return it within 30 days of receipt for a full refund, provided the case is in its original condition.<\/p>"
           }
         }
       },
@@ -309,7 +300,7 @@
       ],
       "settings": {
         "font_size_heading": "h4",
-        "heading": "<p>Frequently Asked <br/>Questions</p>",
+        "heading": "<p>Frequently Asked <br\/>Questions<\/p>",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",
@@ -325,7 +316,7 @@
         "font_size_heading": "h5",
         "heading": "May you also like",
         "button_text": "Shop all",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify:\/\/collections\/all",
         "button_style": "secondary",
         "button_size": "xs",
         "product_per_view": 4,

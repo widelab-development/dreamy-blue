@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner_style_1_UPY3pa": {
@@ -14,12 +5,12 @@
       "settings": {
         "heading": "Protection with style",
         "button_text": "Shop all",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify:\/\/collections\/all",
         "button_style": "primary",
         "button_size": "md",
         "layout": "style-2",
-        "background_image_desktop": "shopify://shop_images/banner1.png",
-        "background_image_mobile": "shopify://shop_images/banner-mb.png",
+        "background_image_desktop": "shopify:\/\/shop_images\/banner1.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/banner-mb.png",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",
@@ -86,12 +77,12 @@
                 "image_button_Cq6B7J": {
                   "type": "image-button",
                   "settings": {
-                    "image_desktop": "shopify://shop_images/collection-grid-3.jpg",
+                    "image_desktop": "shopify:\/\/shop_images\/collection-grid-3.jpg",
                     "aspect_ratio_desktop": "auto",
-                    "image_mobile": "shopify://shop_images/image_115.jpg",
+                    "image_mobile": "shopify:\/\/shop_images\/image_115.jpg",
                     "aspect_ratio_mobile": "auto",
                     "button_text": "Shop all",
-                    "button_link": "shopify://collections/all",
+                    "button_link": "shopify:\/\/collections\/all",
                     "button_style": "primary",
                     "button_size": "sm"
                   }
@@ -128,33 +119,33 @@
         "column_w6rQDk": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/mul1.png",
+            "image_first": "shopify:\/\/shop_images\/mul1.png",
             "aspect_ratio_first": "auto",
-            "image_second": "shopify://shop_images/mul4.png",
+            "image_second": "shopify:\/\/shop_images\/mul4.png",
             "aspect_ratio_second": "auto",
-            "title": "<p>Essentials by CASETiFY™<br/>The Beauty of Simplicity</p>",
+            "title": "<p>Essentials by CASETiFY™<br\/>The Beauty of Simplicity<\/p>",
             "enable_overlay": "off"
           }
         },
         "column_PcyrBm": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/mul2.png",
+            "image_first": "shopify:\/\/shop_images\/mul2.png",
             "aspect_ratio_first": "auto",
-            "image_second": "shopify://shop_images/mul5.png",
+            "image_second": "shopify:\/\/shop_images\/mul5.png",
             "aspect_ratio_second": "auto",
-            "title": "<p>Defy Gravity With The<br/>New Bounce Case</p>",
+            "title": "<p>Defy Gravity With The<br\/>New Bounce Case<\/p>",
             "enable_overlay": "off"
           }
         },
         "column_i94KRf": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/mul3.png",
+            "image_first": "shopify:\/\/shop_images\/mul3.png",
             "aspect_ratio_first": "auto",
-            "image_second": "shopify://shop_images/mul6.png",
+            "image_second": "shopify:\/\/shop_images\/mul6.png",
             "aspect_ratio_second": "auto",
-            "title": "<p>Spice up your mirror<br/>selfies with a little Y2K </p>",
+            "title": "<p>Spice up your mirror<br\/>selfies with a little Y2K <\/p>",
             "enable_overlay": "off"
           }
         }
@@ -196,9 +187,9 @@
         "text_heading_width_desktop": 43,
         "text_heading_width_mobile": 100,
         "sub_heading": "Subheading",
-        "image_dt": "shopify://shop_images/banner-featured.png",
-        "aspect_ratio_dt": "16/9",
-        "image_mb": "shopify://shop_images/banner-1-mb.jpg",
+        "image_dt": "shopify:\/\/shop_images\/banner-featured.png",
+        "aspect_ratio_dt": "16\/9",
+        "image_mb": "shopify:\/\/shop_images\/banner-1-mb.jpg",
         "aspect_ratio_mb": "auto",
         "product_card_show_image": true,
         "product_card_show_secondary_image": true,
@@ -224,8 +215,8 @@
         "text_heading_width_desktop": 60,
         "text_heading_width_mobile": 60,
         "collection": "bounce-extreme-case",
-        "image_collection_desktop": "shopify://shop_images/collection-desktop.png",
-        "image_collection_mobile": "shopify://shop_images/collection4.png",
+        "image_collection_desktop": "shopify:\/\/shop_images\/collection-desktop.png",
+        "image_collection_mobile": "shopify:\/\/shop_images\/collection4.png",
         "aspect_ratio_collection_mobile": "auto",
         "color_schema_collection": "background-2",
         "column_mobile": "2",
@@ -247,8 +238,8 @@
         "testimonial_box_iRC7nM": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>This phone case is both stylish and sturdy. It has protected my phone from multiple drops and still looks brand new!</p>",
-            "avatar": "shopify://shop_images/avatar_1.png",
+            "content": "<p>This phone case is both stylish and sturdy. It has protected my phone from multiple drops and still looks brand new!<\/p>",
+            "avatar": "shopify:\/\/shop_images\/avatar_1.png",
             "avatar_size": "small",
             "customer_name": "Sarah K."
           }
@@ -256,8 +247,8 @@
         "testimonial_box_fRM7MR": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>The case fits my phone perfectly and all the buttons are easily accessible. Plus, the color is exactly as shown.</p>",
-            "avatar": "shopify://shop_images/avatar_2.png",
+            "content": "<p>The case fits my phone perfectly and all the buttons are easily accessible. Plus, the color is exactly as shown.<\/p>",
+            "avatar": "shopify:\/\/shop_images\/avatar_2.png",
             "avatar_size": "medium",
             "customer_name": "John M."
           }
@@ -265,8 +256,8 @@
         "testimonial_box_zURWNT": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>I love this case! It offers great protection without being too bulky. Highly recommend!</p>",
-            "avatar": "shopify://shop_images/avatar_3.png",
+            "content": "<p>I love this case! It offers great protection without being too bulky. Highly recommend!<\/p>",
+            "avatar": "shopify:\/\/shop_images\/avatar_3.png",
             "avatar_size": "medium",
             "customer_name": "Emma L"
           }
@@ -274,8 +265,8 @@
         "testimonial_box_yzfNpe": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>The design is elegant and sophisticated. It adds a touch of class to my phone while keeping it safe.</p>",
-            "avatar": "shopify://shop_images/avatar_4.png",
+            "content": "<p>The design is elegant and sophisticated. It adds a touch of class to my phone while keeping it safe.<\/p>",
+            "avatar": "shopify:\/\/shop_images\/avatar_4.png",
             "avatar_size": "large",
             "customer_name": "Olivia T"
           }
@@ -283,8 +274,8 @@
         "testimonial_box_E6gaki": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>You can really feel the quality in this phone case. It’s durable and the materials are top-notch.</p>",
-            "avatar": "shopify://shop_images/avatar_5.png",
+            "content": "<p>You can really feel the quality in this phone case. It’s durable and the materials are top-notch.<\/p>",
+            "avatar": "shopify:\/\/shop_images\/avatar_5.png",
             "avatar_size": "small",
             "customer_name": "Michael B"
           }
@@ -292,8 +283,8 @@
         "testimonial_box_AzaNQM": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>This case is super lightweight yet very protective. I hardly notice it's there, but it gives me peace of mind.</p>",
-            "avatar": "shopify://shop_images/avatar_6.png",
+            "content": "<p>This case is super lightweight yet very protective. I hardly notice it's there, but it gives me peace of mind.<\/p>",
+            "avatar": "shopify:\/\/shop_images\/avatar_6.png",
             "avatar_size": "large",
             "customer_name": "Emily W"
           }
@@ -301,8 +292,8 @@
         "testimonial_box_dCVKMr": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>The texture of this case provides a great grip. No more slipping out of my hands. Plus, it looks fantastic!</p>",
-            "avatar": "shopify://shop_images/avatar_7.png",
+            "content": "<p>The texture of this case provides a great grip. No more slipping out of my hands. Plus, it looks fantastic!<\/p>",
+            "avatar": "shopify:\/\/shop_images\/avatar_7.png",
             "avatar_size": "small",
             "customer_name": "David R"
           }
@@ -346,11 +337,11 @@
             "collection": "best-sellers",
             "font_size_heading": "h6",
             "heading": "Super Protect",
-            "image_dt": "shopify://shop_images/collection5.png",
+            "image_dt": "shopify:\/\/shop_images\/collection5.png",
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",
@@ -363,11 +354,11 @@
             "collection": "new-arrivals",
             "font_size_heading": "h6",
             "heading": "Collaboration",
-            "image_dt": "shopify://shop_images/collection6.png",
+            "image_dt": "shopify:\/\/shop_images\/collection6.png",
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",
@@ -383,7 +374,7 @@
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",

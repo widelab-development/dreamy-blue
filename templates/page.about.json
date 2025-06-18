@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "introduction_text_Bydw3Y": {
@@ -42,7 +33,7 @@
         "team_member_mHUdqz": {
           "type": "team-member",
           "settings": {
-            "aspect_ratio": "512/607",
+            "aspect_ratio": "512\/607",
             "name": "Full name",
             "position": "Position"
           }
@@ -50,7 +41,7 @@
         "team_member_pMJBeF": {
           "type": "team-member",
           "settings": {
-            "aspect_ratio": "512/607",
+            "aspect_ratio": "512\/607",
             "name": "Full name",
             "position": "Position"
           }
@@ -58,7 +49,7 @@
         "team_member_yLn8wN": {
           "type": "team-member",
           "settings": {
-            "aspect_ratio": "512/607",
+            "aspect_ratio": "512\/607",
             "name": "Full name",
             "position": "Position"
           }
@@ -66,7 +57,7 @@
         "team_member_4MM36Y": {
           "type": "team-member",
           "settings": {
-            "aspect_ratio": "512/607",
+            "aspect_ratio": "512\/607",
             "name": "Full name",
             "position": "Position"
           }
@@ -74,7 +65,7 @@
         "team_member_KcXFbz": {
           "type": "team-member",
           "settings": {
-            "aspect_ratio": "512/607",
+            "aspect_ratio": "512\/607",
             "name": "Full name",
             "position": "Position"
           }
@@ -82,7 +73,7 @@
         "team_member_E6QVdD": {
           "type": "team-member",
           "settings": {
-            "aspect_ratio": "512/607",
+            "aspect_ratio": "512\/607",
             "name": "Full name",
             "position": "Position"
           }
@@ -128,7 +119,7 @@
       ],
       "settings": {
         "font_size_heading": "h6",
-        "heading": "<p>Use this text to share information about your brand <br/>with your customers. Describe a product, share <br/>announcements, or welcome customers to your store.</p>",
+        "heading": "<p>Use this text to share information about your brand <br\/>with your customers. Describe a product, share <br\/>announcements, or welcome customers to your store.<\/p>",
         "color_scheme": "background-2",
         "background_color": "",
         "background_gradient": "",
@@ -145,28 +136,28 @@
         "testimonial_box_WaJk34": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_fwqmfK": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_GJXcCt": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         },
         "testimonial_box_YXjNVb": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
             "customer_name": "Customer name"
           }
         }
@@ -196,29 +187,29 @@
         "collapse_Vqf4TW": {
           "type": "collapse",
           "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
+            "title": "<p>Heading<\/p>",
+            "content": "<p>Showcase a benefit of your product<\/p>"
           }
         },
         "collapse_rFzMpL": {
           "type": "collapse",
           "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
+            "title": "<p>Heading<\/p>",
+            "content": "<p>Showcase a benefit of your product<\/p>"
           }
         },
         "collapse_K7DAAr": {
           "type": "collapse",
           "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
+            "title": "<p>Heading<\/p>",
+            "content": "<p>Showcase a benefit of your product<\/p>"
           }
         },
         "collapse_yzFNAa": {
           "type": "collapse",
           "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
+            "title": "<p>Heading<\/p>",
+            "content": "<p>Showcase a benefit of your product<\/p>"
           }
         }
       },
@@ -230,7 +221,7 @@
       ],
       "settings": {
         "font_size_heading": "h4",
-        "heading": "<p>Collapse content</p>",
+        "heading": "<p>Collapse content<\/p>",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",

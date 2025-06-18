@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner_style_1_UPY3pa": {
@@ -14,12 +5,12 @@
       "settings": {
         "heading": "Protection with style",
         "button_text": "Shop all",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify:\/\/collections\/all",
         "button_style": "primary",
         "button_size": "md",
         "layout": "style-1",
-        "background_image_desktop": "shopify://shop_images/image_273_da584335-2016-4adf-9d1c-fc84e3f8f80b.jpg",
-        "background_image_mobile": "shopify://shop_images/image_273.jpg",
+        "background_image_desktop": "shopify:\/\/shop_images\/image_273_da584335-2016-4adf-9d1c-fc84e3f8f80b.jpg",
+        "background_image_mobile": "shopify:\/\/shop_images\/image_273.jpg",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",
@@ -38,11 +29,11 @@
             "collection": "best-sellers",
             "font_size_heading": "h6",
             "heading": "Super Protect",
-            "image_dt": "shopify://shop_images/collection5.png",
+            "image_dt": "shopify:\/\/shop_images\/collection5.png",
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",
@@ -55,11 +46,11 @@
             "collection": "new-arrivals",
             "font_size_heading": "h6",
             "heading": "Collaboration",
-            "image_dt": "shopify://shop_images/collection6.png",
+            "image_dt": "shopify:\/\/shop_images\/collection6.png",
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",
@@ -75,7 +66,7 @@
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",
@@ -159,12 +150,12 @@
                 "image_button_Cq6B7J": {
                   "type": "image-button",
                   "settings": {
-                    "image_desktop": "shopify://shop_images/image_115.jpg",
+                    "image_desktop": "shopify:\/\/shop_images\/image_115.jpg",
                     "aspect_ratio_desktop": "auto",
-                    "image_mobile": "shopify://shop_images/image_115.jpg",
+                    "image_mobile": "shopify:\/\/shop_images\/image_115.jpg",
                     "aspect_ratio_mobile": "auto",
                     "button_text": "Shop all",
-                    "button_link": "shopify://collections/all",
+                    "button_link": "shopify:\/\/collections\/all",
                     "button_style": "primary",
                     "button_size": "sm"
                   }
@@ -286,10 +277,10 @@
         "text_effect": "split",
         "text_heading_width_desktop": 70,
         "text_heading_width_mobile": 80,
-        "image_dt": "shopify://shop_images/s1.png",
-        "aspect_ratio_dt": "1920/1031",
-        "image_mb": "shopify://shop_images/Mask_group.png",
-        "aspect_ratio_mb": "375/672",
+        "image_dt": "shopify:\/\/shop_images\/s1.png",
+        "aspect_ratio_dt": "1920\/1031",
+        "image_mb": "shopify:\/\/shop_images\/Mask_group.png",
+        "aspect_ratio_mb": "375\/672",
         "product_card_show_image": true,
         "product_card_show_secondary_image": true,
         "product_card_show_price": true,
@@ -311,22 +302,22 @@
         "feature_qMMjkU": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/icon1.png",
-            "heading": "<p>Anti Water<br/>up to IP68</p>"
+            "image": "shopify:\/\/shop_images\/icon1.png",
+            "heading": "<p>Anti Water<br\/>up to IP68<\/p>"
           }
         },
         "feature_BVRGJJ": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/icon2.png",
-            "heading": "<p>Drop Protechtion<br/>4.8 meters</p>"
+            "image": "shopify:\/\/shop_images\/icon2.png",
+            "heading": "<p>Drop Protechtion<br\/>4.8 meters<\/p>"
           }
         },
         "feature_HLmH9y": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/icon3.png",
-            "heading": "<p>Anti Water<br/>up to IP68</p>"
+            "image": "shopify:\/\/shop_images\/icon3.png",
+            "heading": "<p>Anti Water<br\/>up to IP68<\/p>"
           }
         }
       },
@@ -344,10 +335,10 @@
         "text_heading_width_desktop": 100,
         "text_heading_width_mobile": 100,
         "sub_heading": "SPECIAL FEATURES",
-        "left_image": "shopify://shop_images/image78.png",
-        "aspect_ratio_left": "782/351",
-        "right_image": "shopify://shop_images/Img.png",
-        "aspect_ratio_right": "782/827",
+        "left_image": "shopify:\/\/shop_images\/image78.png",
+        "aspect_ratio_left": "782\/351",
+        "right_image": "shopify:\/\/shop_images\/Img.png",
+        "aspect_ratio_right": "782\/827",
         "show_image_right": "show",
         "color_scheme": "",
         "background_color": "",
@@ -364,12 +355,12 @@
         "testimonial_box_k7H94X": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>“Finding the right phone case for my Samsung was a challenge until I discovered Uniqcase. Their solutions have made a significant difference.”</p>",
+            "content": "<p>“Finding the right phone case for my Samsung was a challenge until I discovered Uniqcase. Their solutions have made a significant difference.”<\/p>",
             "customer_name": "Johny Angelo",
-            "image": "shopify://shop_images/image_129.png",
+            "image": "shopify:\/\/shop_images\/image_129.png",
             "aspect_ratio": "1",
             "button_text": "Shop all",
-            "button_link": "shopify://collections",
+            "button_link": "shopify:\/\/collections",
             "button_style": "primary",
             "button_size": "sm",
             "product_card_aspect_ratio": "1",
@@ -380,12 +371,12 @@
         "testimonial_box_TADEVH": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>I was skeptical about buying online, but Uniq exceeded my expectations. The delivery was so prompt, and the case I bought arrived in perfect condition.</p>",
+            "content": "<p>I was skeptical about buying online, but Uniq exceeded my expectations. The delivery was so prompt, and the case I bought arrived in perfect condition.<\/p>",
             "customer_name": "Michael Goodman",
-            "image": "shopify://shop_images/Img.png",
+            "image": "shopify:\/\/shop_images\/Img.png",
             "aspect_ratio": "1",
             "button_text": "Shop all",
-            "button_link": "shopify://collections",
+            "button_link": "shopify:\/\/collections",
             "button_style": "primary",
             "button_size": "sm",
             "product_card_aspect_ratio": "1",
@@ -396,12 +387,12 @@
         "testimonial_box_gt9Wgw": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>“Finding a phone case that combined style and protection was hard until I found CaseGuard. Their sleek, robust designs have greatly improved my phone's look and durability.”</p>",
+            "content": "<p>“Finding a phone case that combined style and protection was hard until I found CaseGuard. Their sleek, robust designs have greatly improved my phone's look and durability.”<\/p>",
             "customer_name": "John Hunam",
-            "image": "shopify://shop_images/collection1.png",
+            "image": "shopify:\/\/shop_images\/collection1.png",
             "aspect_ratio": "1",
             "button_text": "Shop all",
-            "button_link": "shopify://collections",
+            "button_link": "shopify:\/\/collections",
             "button_style": "primary",
             "button_size": "sm",
             "product_card_aspect_ratio": "1",
@@ -412,12 +403,12 @@
         "testimonial_box_q78PjD": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>I was skeptical about buying online, but Uniq exceeded my expectations. The delivery was so prompt, and the case I bought arrived in perfect condition.</p>",
+            "content": "<p>I was skeptical about buying online, but Uniq exceeded my expectations. The delivery was so prompt, and the case I bought arrived in perfect condition.<\/p>",
             "customer_name": "Sarah Paige",
-            "image": "shopify://shop_images/image_111.png",
+            "image": "shopify:\/\/shop_images\/image_111.png",
             "aspect_ratio": "1",
             "button_text": "Shop all",
-            "button_link": "shopify://collections",
+            "button_link": "shopify:\/\/collections",
             "button_style": "primary",
             "button_size": "sm",
             "product_card_aspect_ratio": "1",
@@ -451,29 +442,29 @@
         "image_1_qdQnQz": {
           "type": "image-1",
           "settings": {
-            "image_dt": "shopify://shop_images/ig1.png",
-            "image_mb": "shopify://shop_images/ig5.png"
+            "image_dt": "shopify:\/\/shop_images\/ig1.png",
+            "image_mb": "shopify:\/\/shop_images\/ig5.png"
           }
         },
         "image_2_TdDdkh": {
           "type": "image-2",
           "settings": {
-            "image_dt": "shopify://shop_images/ig2.png",
-            "image_mb": "shopify://shop_images/ig6.png"
+            "image_dt": "shopify:\/\/shop_images\/ig2.png",
+            "image_mb": "shopify:\/\/shop_images\/ig6.png"
           }
         },
         "image_3_zjBamn": {
           "type": "image-3",
           "settings": {
-            "image_dt": "shopify://shop_images/ig3.png",
-            "image_mb": "shopify://shop_images/ig7.png"
+            "image_dt": "shopify:\/\/shop_images\/ig3.png",
+            "image_mb": "shopify:\/\/shop_images\/ig7.png"
           }
         },
         "image_4_FHB7MP": {
           "type": "image-4",
           "settings": {
-            "image_dt": "shopify://shop_images/ig4.png",
-            "image_mb": "shopify://shop_images/ig8.png"
+            "image_dt": "shopify:\/\/shop_images\/ig4.png",
+            "image_mb": "shopify:\/\/shop_images\/ig8.png"
           }
         }
       },
@@ -484,9 +475,9 @@
         "image_4_FHB7MP"
       ],
       "settings": {
-        "heading": "<p>#Our<br/>Instagram</p>",
+        "heading": "<p>#Our<br\/>Instagram<\/p>",
         "button_text": "@unicase.ig",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify:\/\/collections\/all",
         "button_style": "primary",
         "button_size": "sm",
         "color_scheme": "",

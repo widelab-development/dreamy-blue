@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -90,7 +81,7 @@
       ],
       "settings": {
         "font_size_heading": "h6",
-        "heading": "<p>Product specification</p>",
+        "heading": "<p>Product specification<\/p>",
         "color_scheme": "background-2",
         "background_color": "",
         "background_gradient": "",
@@ -109,7 +100,7 @@
           "settings": {
             "aspect_ratio_first": "auto",
             "aspect_ratio_second": "auto",
-            "title": "<p>Heading</p>",
+            "title": "<p>Heading<\/p>",
             "enable_overlay": "off"
           }
         },
@@ -118,7 +109,7 @@
           "settings": {
             "aspect_ratio_first": "auto",
             "aspect_ratio_second": "auto",
-            "title": "<p>Heading</p>",
+            "title": "<p>Heading<\/p>",
             "enable_overlay": "off"
           }
         },
@@ -127,7 +118,7 @@
           "settings": {
             "aspect_ratio_first": "auto",
             "aspect_ratio_second": "auto",
-            "title": "<p>Heading</p>",
+            "title": "<p>Heading<\/p>",
             "enable_overlay": "off"
           }
         }
@@ -162,33 +153,33 @@
         "detail_information_CyWNGT": {
           "type": "detail-information",
           "settings": {
-            "heading": "<p>Product specification</p>",
-            "title_list": "<ul><li>Title</li><li>Title</li><li>Title</li><li>Title</li></ul>",
-            "content_list": "<ul><li>Content</li><li>Content</li><li>Content</li><li>Content</li></ul>"
+            "heading": "<p>Product specification<\/p>",
+            "title_list": "<ul><li>Title<\/li><li>Title<\/li><li>Title<\/li><li>Title<\/li><\/ul>",
+            "content_list": "<ul><li>Content<\/li><li>Content<\/li><li>Content<\/li><li>Content<\/li><\/ul>"
           }
         },
         "detail_information_pj4dg8": {
           "type": "detail-information",
           "settings": {
-            "heading": "<p>Product specification</p>",
-            "title_list": "<ul><li>Title</li><li>Title</li><li>Title</li><li>Title</li></ul>",
-            "content_list": "<ul><li>Content</li><li>Content</li><li>Content</li><li>Content</li></ul>"
+            "heading": "<p>Product specification<\/p>",
+            "title_list": "<ul><li>Title<\/li><li>Title<\/li><li>Title<\/li><li>Title<\/li><\/ul>",
+            "content_list": "<ul><li>Content<\/li><li>Content<\/li><li>Content<\/li><li>Content<\/li><\/ul>"
           }
         },
         "detail_information_KLKetT": {
           "type": "detail-information",
           "settings": {
-            "heading": "<p>Product specification</p>",
-            "title_list": "<ul><li>Title</li><li>Title</li><li>Title</li><li>Title</li></ul>",
-            "content_list": "<ul><li>Content</li><li>Content</li><li>Content</li><li>Content</li></ul>"
+            "heading": "<p>Product specification<\/p>",
+            "title_list": "<ul><li>Title<\/li><li>Title<\/li><li>Title<\/li><li>Title<\/li><\/ul>",
+            "content_list": "<ul><li>Content<\/li><li>Content<\/li><li>Content<\/li><li>Content<\/li><\/ul>"
           }
         },
         "detail_information_7gRJbq": {
           "type": "detail-information",
           "settings": {
-            "heading": "<p>Product specification</p>",
-            "title_list": "<ul><li>Title</li><li>Title</li><li>Title</li><li>Title</li></ul>",
-            "content_list": "<ul><li>Content</li><li>Content</li><li>Content</li><li>Content</li></ul>"
+            "heading": "<p>Product specification<\/p>",
+            "title_list": "<ul><li>Title<\/li><li>Title<\/li><li>Title<\/li><li>Title<\/li><\/ul>",
+            "content_list": "<ul><li>Content<\/li><li>Content<\/li><li>Content<\/li><li>Content<\/li><\/ul>"
           }
         }
       },
@@ -245,7 +236,7 @@
         "font_size_heading": "h5",
         "heading": "May you also like",
         "button_text": "Shop all",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify:\/\/collections\/all",
         "button_style": "secondary",
         "button_size": "xs",
         "product_per_view": 4,

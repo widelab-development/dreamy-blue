@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main_page_heading_style_2_wh9daa": {
@@ -81,7 +72,7 @@
         "text_effect": "split",
         "text_heading_width_desktop": 100,
         "text_heading_width_mobile": 100,
-        "sub_heading": "<p>Use this text to share information about your brand with your customers</p>",
+        "sub_heading": "<p>Use this text to share information about your brand with your customers<\/p>",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",
@@ -137,8 +128,8 @@
                   "type": "service",
                   "settings": {
                     "image_size": "md",
-                    "heading": "<p>Heading</p>",
-                    "content": "<p>Use this text to share information about your brand with your customers</p>",
+                    "heading": "<p>Heading<\/p>",
+                    "content": "<p>Use this text to share information about your brand with your customers<\/p>",
                     "alignment": "center",
                     "color_schema_box": ""
                   }
@@ -161,8 +152,8 @@
                   "type": "service",
                   "settings": {
                     "image_size": "md",
-                    "heading": "<p>Heading</p>",
-                    "content": "<p>Use this text to share information about your brand with your customers</p>",
+                    "heading": "<p>Heading<\/p>",
+                    "content": "<p>Use this text to share information about your brand with your customers<\/p>",
                     "alignment": "center",
                     "color_schema_box": ""
                   }
@@ -185,8 +176,8 @@
                   "type": "service",
                   "settings": {
                     "image_size": "md",
-                    "heading": "<p>Heading</p>",
-                    "content": "<p>Use this text to share information about your brand with your customers</p>",
+                    "heading": "<p>Heading<\/p>",
+                    "content": "<p>Use this text to share information about your brand with your customers<\/p>",
                     "alignment": "center",
                     "color_schema_box": ""
                   }

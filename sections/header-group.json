@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -17,7 +8,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "<p>Announce something here</p>",
+            "text": "<p>Announce something here<\/p>",
             "link": ""
           }
         }
@@ -27,6 +18,16 @@
       ],
       "disabled": true,
       "settings": {
+        "announcement_style": "carousel",
+        "hide_button_close": "off",
+        "carousel_width": 400,
+        "carousel_height": 24,
+        "carousel_style": "horizontal",
+        "carousel_autoplay": true,
+        "carousel_speed": 4000,
+        "marquee_speed": 6,
+        "marquee_rtl": false,
+        "marquee_stop": false,
         "color_scheme": "background-2",
         "background_color": "",
         "background_gradient": "",
@@ -42,9 +43,12 @@
         "header_style": "style-2",
         "sticky_header_type": "up",
         "menu": "main-menu",
+        "secondary_menu": "main-menu",
         "menu_type": "default",
         "event_type": "hover",
-        "logo_width_desktop": 100,
+        "logo_transparent": "shopify:\/\/shop_images\/Group_3.svg",
+        "logo_sticky": "shopify:\/\/shop_images\/Group_3.svg",
+        "logo_width_desktop": 250,
         "logo_width_mobile": 90,
         "logo_position": "center",
         "show_currency_selector": "hidden",
@@ -54,8 +58,7 @@
     },
     "main-predictive-search": {
       "type": "main-predictive-search",
-      "settings": {
-      }
+      "settings": {}
     },
     "mega_menu_1_FLbm4n": {
       "type": "mega-menu-1",
@@ -114,10 +117,10 @@
           "settings": {
             "heading": "Heading",
             "sub_heading": "Showcase a benefit of your product",
-            "aspect_ratio": "3/2",
+            "aspect_ratio": "3\/2",
             "color_scheme_box": "scheme_1",
             "button_text": "Button",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm"
           }

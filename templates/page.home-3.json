@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner_style_2_iDzLYr": {
@@ -17,11 +8,11 @@
         "heading": "Super Slim",
         "description": "We want to share creative inspiration, promote self-expression, imagination and outside-the-box thinking.",
         "button_text": "Explore now",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify:\/\/collections\/all",
         "button_style": "primary",
         "button_size": "sm",
-        "background_image_desktop": "shopify://shop_images/banner2.png",
-        "background_image_mobile": "shopify://shop_images/banner_mb2.png",
+        "background_image_desktop": "shopify:\/\/shop_images\/banner2.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/banner_mb2.png",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",
@@ -89,12 +80,12 @@
                 "image_button_Cq6B7J": {
                   "type": "image-button",
                   "settings": {
-                    "image_desktop": "shopify://shop_images/collection-grid-3.jpg",
+                    "image_desktop": "shopify:\/\/shop_images\/collection-grid-3.jpg",
                     "aspect_ratio_desktop": "auto",
-                    "image_mobile": "shopify://shop_images/image_115.jpg",
+                    "image_mobile": "shopify:\/\/shop_images\/image_115.jpg",
                     "aspect_ratio_mobile": "auto",
                     "button_text": "Shop all",
-                    "button_link": "shopify://collections/all",
+                    "button_link": "shopify:\/\/collections\/all",
                     "button_style": "primary",
                     "button_size": "sm"
                   }
@@ -134,32 +125,32 @@
             "caption": "SPECIAL FEATURE",
             "sub_heading": "Super",
             "heading": "Slim",
-            "image_dt": "shopify://shop_images/Mask_group_980db476-aad9-4470-8999-53b1106bdb1f.png",
-            "image_mb": "shopify://shop_images/Mask_group_980db476-aad9-4470-8999-53b1106bdb1f.png"
+            "image_dt": "shopify:\/\/shop_images\/Mask_group_980db476-aad9-4470-8999-53b1106bdb1f.png",
+            "image_mb": "shopify:\/\/shop_images\/Mask_group_980db476-aad9-4470-8999-53b1106bdb1f.png"
           }
         },
         "featured_product_PxxJje": {
           "type": "featured-product",
           "settings": {
-            "heading": "<p>We want to share creative <br/>inspiration, expression</p>",
-            "image_1": "shopify://shop_images/icon1.png",
-            "title_1": "<p>Anti Water up to IP68</p>",
-            "image_2": "shopify://shop_images/icon2.png",
-            "title_2": "<p>Drop Protection 4.8 meters</p>",
-            "image_3": "shopify://shop_images/icon3.png",
-            "title_3": "<p>Recyclable material</p>"
+            "heading": "<p>We want to share creative <br\/>inspiration, expression<\/p>",
+            "image_1": "shopify:\/\/shop_images\/icon1.png",
+            "title_1": "<p>Anti Water up to IP68<\/p>",
+            "image_2": "shopify:\/\/shop_images\/icon2.png",
+            "title_2": "<p>Drop Protection 4.8 meters<\/p>",
+            "image_3": "shopify:\/\/shop_images\/icon3.png",
+            "title_3": "<p>Recyclable material<\/p>"
           }
         },
         "collection_KkVEFd": {
           "type": "collection",
           "settings": {
             "collection": "",
-            "image_collection_desktop": "shopify://shop_images/col-img-1.jpg",
+            "image_collection_desktop": "shopify:\/\/shop_images\/col-img-1.jpg",
             "aspect_ratio_collection_desktop": "auto",
-            "image_collection_mobile": "shopify://shop_images/col-img-1.jpg",
+            "image_collection_mobile": "shopify:\/\/shop_images\/col-img-1.jpg",
             "aspect_ratio_collection_mobile": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/bounce-extreme-case",
+            "button_link": "shopify:\/\/collections\/bounce-extreme-case",
             "button_style": "primary",
             "button_size": "sm"
           }
@@ -186,33 +177,33 @@
         "column_w6rQDk": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/mul1.png",
+            "image_first": "shopify:\/\/shop_images\/mul1.png",
             "aspect_ratio_first": "auto",
-            "image_second": "shopify://shop_images/mul4.png",
+            "image_second": "shopify:\/\/shop_images\/mul4.png",
             "aspect_ratio_second": "auto",
-            "title": "<p>Essentials by CASETiFY™<br/>The Beauty of Simplicity</p>",
+            "title": "<p>Essentials by CASETiFY™<br\/>The Beauty of Simplicity<\/p>",
             "enable_overlay": "off"
           }
         },
         "column_PcyrBm": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/mul2.png",
+            "image_first": "shopify:\/\/shop_images\/mul2.png",
             "aspect_ratio_first": "auto",
-            "image_second": "shopify://shop_images/mul5.png",
+            "image_second": "shopify:\/\/shop_images\/mul5.png",
             "aspect_ratio_second": "auto",
-            "title": "<p>Defy Gravity With The<br/>New Bounce Case</p>",
+            "title": "<p>Defy Gravity With The<br\/>New Bounce Case<\/p>",
             "enable_overlay": "off"
           }
         },
         "column_i94KRf": {
           "type": "column",
           "settings": {
-            "image_first": "shopify://shop_images/mul3.png",
+            "image_first": "shopify:\/\/shop_images\/mul3.png",
             "aspect_ratio_first": "auto",
-            "image_second": "shopify://shop_images/mul6.png",
+            "image_second": "shopify:\/\/shop_images\/mul6.png",
             "aspect_ratio_second": "auto",
-            "title": "<p>Spice up your mirror<br/>selfies with a little Y2K </p>",
+            "title": "<p>Spice up your mirror<br\/>selfies with a little Y2K <\/p>",
             "enable_overlay": "off"
           }
         }
@@ -254,9 +245,9 @@
         "text_heading_width_desktop": 43,
         "text_heading_width_mobile": 100,
         "sub_heading": "Subheading",
-        "image_dt": "shopify://shop_images/banner-featured.png",
-        "aspect_ratio_dt": "16/9",
-        "image_mb": "shopify://shop_images/banner-1-mb.jpg",
+        "image_dt": "shopify:\/\/shop_images\/banner-featured.png",
+        "aspect_ratio_dt": "16\/9",
+        "image_mb": "shopify:\/\/shop_images\/banner-1-mb.jpg",
         "aspect_ratio_mb": "auto",
         "product_card_show_image": true,
         "product_card_show_secondary_image": true,
@@ -280,11 +271,11 @@
             "collection": "best-sellers",
             "font_size_heading": "h6",
             "heading": "Super Protect",
-            "image_dt": "shopify://shop_images/collection5.png",
+            "image_dt": "shopify:\/\/shop_images\/collection5.png",
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",
@@ -297,11 +288,11 @@
             "collection": "new-arrivals",
             "font_size_heading": "h6",
             "heading": "Collaboration",
-            "image_dt": "shopify://shop_images/collection6.png",
+            "image_dt": "shopify:\/\/shop_images\/collection6.png",
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",
@@ -314,11 +305,11 @@
             "collection": "slim-case",
             "font_size_heading": "h5",
             "heading": "Slim case",
-            "image_dt": "shopify://shop_images/collection-grid-6.jpg",
+            "image_dt": "shopify:\/\/shop_images\/collection-grid-6.jpg",
             "aspect_ratio_dt": "auto",
             "aspect_ratio_mb": "auto",
             "button_text": "Shop all",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "button_style": "primary",
             "button_size": "sm",
             "color_scheme_collection": "background-2",
@@ -353,7 +344,7 @@
           "settings": {
             "font_size_heading": "h5",
             "heading": "Anti Water\nup to IP68",
-            "link": "shopify://collections/all"
+            "link": "shopify:\/\/collections\/all"
           }
         },
         "feature_Ja4Ybw": {
@@ -361,7 +352,7 @@
           "settings": {
             "font_size_heading": "h5",
             "heading": "Drop Protection\n4.8 meters",
-            "link": "shopify://collections/all"
+            "link": "shopify:\/\/collections\/all"
           }
         },
         "feature_76HKnD": {
@@ -369,7 +360,7 @@
           "settings": {
             "font_size_heading": "h5",
             "heading": "Reinforced\nCorners",
-            "link": "shopify://collections/all"
+            "link": "shopify:\/\/collections\/all"
           }
         }
       },
@@ -379,11 +370,11 @@
         "feature_76HKnD"
       ],
       "settings": {
-        "sub_heading": "<p>  WE WANT TO SHARE CREATIVE INSPIRATION,EXPRESSION</p>",
-        "image_dt": "shopify://shop_images/img-text3.png",
+        "sub_heading": "<p>  WE WANT TO SHARE CREATIVE INSPIRATION,EXPRESSION<\/p>",
+        "image_dt": "shopify:\/\/shop_images\/img-text3.png",
         "aspect_ratio_dt": "auto",
-        "image_mb": "shopify://shop_images/img-text3_mb.png",
-        "aspect_ratio_mb": "3/2",
+        "image_mb": "shopify:\/\/shop_images\/img-text3_mb.png",
+        "aspect_ratio_mb": "3\/2",
         "color_scheme": "",
         "background_color": "",
         "background_gradient": "",
@@ -399,29 +390,29 @@
         "image_1_tm3CAJ": {
           "type": "image-1",
           "settings": {
-            "image_dt": "shopify://shop_images/ig1.png",
-            "image_mb": "shopify://shop_images/ig5.png"
+            "image_dt": "shopify:\/\/shop_images\/ig1.png",
+            "image_mb": "shopify:\/\/shop_images\/ig5.png"
           }
         },
         "image_2_3c4dXX": {
           "type": "image-2",
           "settings": {
-            "image_dt": "shopify://shop_images/ig2.png",
-            "image_mb": "shopify://shop_images/ig6.png"
+            "image_dt": "shopify:\/\/shop_images\/ig2.png",
+            "image_mb": "shopify:\/\/shop_images\/ig6.png"
           }
         },
         "image_3_MmM66b": {
           "type": "image-3",
           "settings": {
-            "image_dt": "shopify://shop_images/ig3.png",
-            "image_mb": "shopify://shop_images/ig7.png"
+            "image_dt": "shopify:\/\/shop_images\/ig3.png",
+            "image_mb": "shopify:\/\/shop_images\/ig7.png"
           }
         },
         "image_4_8YDaaP": {
           "type": "image-4",
           "settings": {
-            "image_dt": "shopify://shop_images/ig4.png",
-            "image_mb": "shopify://shop_images/ig8.png"
+            "image_dt": "shopify:\/\/shop_images\/ig4.png",
+            "image_mb": "shopify:\/\/shop_images\/ig8.png"
           }
         }
       },
@@ -432,9 +423,9 @@
         "image_4_8YDaaP"
       ],
       "settings": {
-        "heading": "<p>#Our<br/>Instagram</p>",
+        "heading": "<p>#Our<br\/>Instagram<\/p>",
         "button_text": "@unicase.ig",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify:\/\/collections\/all",
         "button_style": "primary",
         "button_size": "sm",
         "color_scheme": "",

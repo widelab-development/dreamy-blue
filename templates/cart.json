@@ -1,19 +1,10 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main-page-heading": {
       "type": "main-page-heading",
       "settings": {
         "font_size_heading": "h2",
-        "heading": "<p>Your cart</p>",
+        "heading": "<p>Your cart<\/p>",
         "sub_heading": "",
         "align": "left",
         "color_scheme": "",
@@ -82,11 +73,11 @@
         "text_heading_width_desktop": 100,
         "text_heading_width_mobile": 100,
         "collection": "impact-ring-stand-case",
-        "aspect_ratio_collection_desktop": "1592/701",
-        "aspect_ratio_collection_mobile": "330/228",
+        "aspect_ratio_collection_desktop": "1592\/701",
+        "aspect_ratio_collection_mobile": "330\/228",
         "color_schema_collection": "",
         "button_text": "Shop all",
-        "button_link": "shopify://collections/all",
+        "button_link": "shopify:\/\/collections\/all",
         "button_style": "secondary",
         "button_size": "xs",
         "color_scheme": "",
