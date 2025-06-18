@@ -61,6 +61,10 @@ img {
   vertical-align: middle;
 }
 
+:root {
+  --xo-container-gap: 2rem;
+}
+
 button,
 a,
 input,
