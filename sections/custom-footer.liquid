@@ -1,4 +1,108 @@
+{% assign menu_products_title = section.settings.menu_products_title %}
+{% assign menu_products = section.settings.menu_products %}
+{% assign menu_assistance_title = section.settings.menu_assistance_title %}
+{% assign menu_assistance = section.settings.menu_assistance %}
+{% assign menu_company_title = section.settings.menu_company_title %}
+{% assign menu_company = section.settings.menu_company %}
+{% assign menu_company_text = section.settings.menu_company_text %}
+{% assign menu_company_image = section.settings.menu_company_image %}
+{% assign get_in_touch_label = section.settings.get_in_touch_label %}
+{% assign get_in_touch_text = section.settings.get_in_touch_text %}
+{% assign logo_label = section.settings.logo_label %}
+{% assign logo = section.settings.logo %}
+{% assign copyright_text = section.settings.copyright_text %}
+{% assign menu_privacy = section.settings.menu_privacy %}
 <footer class="custom-footer">
+	<div class="custom-section">
+		<div class="custom-section__container">
+			<div class="custom-footer__grid">
+				{% if menu_products != blank %}
+					<div class="custom-footer__grid-item custom-footer__grid-item--products">
+						{% if menu_products_title != blank %}
+							<div class="custom-footer__grid-item-title">{{ menu_products_title }}</div>
+						{% endif %}
+						<ul class="custom-footer__grid-item-list">
+							{% for link in menu_products.links %}
+								<li class="custom-footer__grid-item-list-item">
+									<a href="{{ link.url }}" class="custom-footer__grid-item-list-item-link">{{ link.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endif %}
+				{% if menu_assistance != blank %}
+					<div class="custom-footer__grid-item custom-footer__grid-item--assistance">
+						{% if menu_assistance_title != blank %}
+							<div class="custom-footer__grid-item-title">{{ menu_assistance_title }}</div>
+						{% endif %}
+						<ul class="custom-footer__grid-item-list">
+							{% for link in menu_assistance.links %}
+								<li class="custom-footer__grid-item-list-item">
+									<a href="{{ link.url }}" class="custom-footer__grid-item-list-item-link">{{ link.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endif %}
+				{% if menu_company != blank %}
+					<div class="custom-footer__grid-item custom-footer__grid-item--company">
+						{% if menu_company_title != blank %}
+							<div class="custom-footer__grid-item-title">{{ menu_company_title }}</div>
+						{% endif %}
+						<ul class="custom-footer__grid-item-list">
+							{% for link in menu_company.links %}
+								<li class="custom-footer__grid-item-list-item">
+									<a href="{{ link.url }}" class="custom-footer__grid-item-list-item-link">{{ link.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+						{% if menu_company_text != blank and menu_company_image != blank %}
+							<div class="custom-footer__grid-item-text">
+								{{ menu_company_text }}
+								{{ menu_company_image | image_url: width: 74 | image_tag }}
+							</div>
+						{% endif %}
+					</div>
+				{% endif %}
+				{% if get_in_touch_text != blank %}
+					<div class="custom-footer__grid-item custom-footer__grid-item--get-in-touch">
+						{% if get_in_touch_label != blank %}
+							<div class="custom-footer__grid-item-title">{{ get_in_touch_label }}</div>
+						{% endif %}
+						<div class="custom-footer__grid-item-text">
+							{{ get_in_touch_text }}
+						</div>
+					</div>
+				{% endif %}
+			</div>
+			{% if logo != blank %}
+				<div class="custom-footer__logo">
+					{% if logo_label != blank %}
+						<p class="custom-footer__logo-label">{{ logo_label }}</p>
+					{% endif %}
+					{{ logo | image_url: width: 1670 | image_tag }}
+				</div>
+			{% endif %}
+			{% if copyright_text != blank or menu_privacy != blank %}
+				<div class="custom-footer__bottom">
+					{% if copyright_text != blank %}
+					<p class="custom-footer__copyright">
+						{{ copyright_text }}
+					</p>
+					{% endif %}
+					{% if menu_privacy != blank %}
+						<ul class="custom-footer__privacy">
+							{% for link in menu_privacy.links %}
+								<li class="custom-footer__privacy-item">
+									<a href="{{ link.url }}" class="custom-footer__privacy-link">{{ link.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
 </footer>
 {% schema %}
 	{
