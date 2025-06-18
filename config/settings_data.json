@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "",
@@ -10,7 +19,7 @@
     "heading_5_scale": 100,
     "type_body_font": "inter_n5",
     "body_scale": 100,
-    "page_width": 1640,
+    "page_width": 1660,
     "spacing_sections": 0,
     "enable_border_radius": true,
     "spacing_grid_horizontal": 28,
@@ -84,7 +93,7 @@
     "social_vimeo_link": "",
     "social_linked_link": "",
     "predictive_search_enabled": true,
-    "pill": "<ul><li>Iphone<\/li><li>Samsung<\/li><li>Xiaomi<\/li><li>Airpod<\/li><\/ul>",
+    "pill": "<ul><li>Iphone</li><li>Samsung</li><li>Xiaomi</li><li>Airpod</li></ul>",
     "enable_text_suggess": true,
     "quick_link": true,
     "logo_width": 90,
@@ -460,7 +469,7 @@
       "social_vimeo_link": "",
       "social_linked_link": "",
       "predictive_search_enabled": true,
-      "pill": "<ul><li>Iphone<\/li><li>Samsung<\/li><li>Xiaomi<\/li><li>Airpod<\/li><\/ul>",
+      "pill": "<ul><li>Iphone</li><li>Samsung</li><li>Xiaomi</li><li>Airpod</li></ul>",
       "enable_text_suggess": true,
       "currency_code_enabled": true,
       "cart_type": "drawer",
@@ -703,7 +712,7 @@
       "social_vimeo_link": "",
       "social_linked_link": "",
       "predictive_search_enabled": true,
-      "pill": "<ul><li>High-end<\/li><li>Portable<\/li><li>Soulful<\/li><li>Speaker<\/li><\/ul>",
+      "pill": "<ul><li>High-end</li><li>Portable</li><li>Soulful</li><li>Speaker</li></ul>",
       "enable_text_suggess": true,
       "currency_code_enabled": true,
       "cart_type": "drawer",
@@ -944,7 +953,7 @@
       "social_vimeo_link": "",
       "social_linked_link": "",
       "predictive_search_enabled": true,
-      "pill": "<ul><li>Commuter<\/li><li>Urban<\/li><li>Extreme<\/li><li>Off-road<\/li><\/ul>",
+      "pill": "<ul><li>Commuter</li><li>Urban</li><li>Extreme</li><li>Off-road</li></ul>",
       "enable_text_suggess": true,
       "currency_code_enabled": true,
       "cart_type": "drawer",
