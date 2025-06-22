@@ -3,11 +3,11 @@
 /*MIXINS*/
 .custom-footer {
   background-color: var(--color-blue-80);
-  padding: 6rem 2rem 3.5rem;
+  padding: 6rem 2rem 3rem;
 }
 @media (min-width: 992px) {
   .custom-footer {
-    padding: 12rem 2rem 12rem;
+    padding: 12rem 2rem 5.2rem;
   }
 }
 .custom-footer a {
