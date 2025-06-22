@@ -1,6 +1,9 @@
 node_modules
 .DS_Store
 
+yarn.lock
+package-lock.json
+
 /.cache
 /build
 /app/build
@@ -12,11 +15,6 @@ node_modules
 database.sqlite
 
 .env
-.env.*
-
-
-
-
 
 /extensions/*/dist
 

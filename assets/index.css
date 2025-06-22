@@ -1,3 +1,20 @@
+:root {
+  --xo-container-gap: 2rem;
+  --default-transition: 0.3s linear;
+  --color-black: #000000;
+  --color-neutral-cream: #FFFEFC;
+  --color-blue-40: #ABD1F6;
+  --color-blue-80: #8FBFEF;
+  --color-blue-100: #6CB1EA;
+  --color-blue-120: #58ACF2;
+  --color-purple-80: #C49BC9;
+  --color-purple-100: #B67BBA;
+  --color-orange-80: #E2A383;
+  --color-orange-100: #D88A68;
+  --font-twk-lausanne: "twk_lausanne";
+  --font-beausite-fit-web: "beausite_fit_web";
+}
+
 @font-face {
   font-family: "twk_lausanne";
   src: url("twklausanne-350.woff2") format("woff2"), url("twklausanne-350.woff") format("woff");
@@ -19,23 +36,6 @@
   font-style: normal;
   font-display: swap;
 }
-:root {
-  --xo-container-gap: 2rem;
-  --default-transition: 0.3s linear;
-  --color-black: #000000;
-  --color-neutral-cream: #FFFEFC;
-  --color-blue-40: #ABD1F6;
-  --color-blue-80: #8FBFEF;
-  --color-blue-100: #6CB1EA;
-  --color-blue-120: #58ACF2;
-  --color-purple-80: #C49BC9;
-  --color-purple-100: #B67BBA;
-  --color-orange-80: #E2A383;
-  --color-orange-100: #D88A68;
-  --font-twk-lausanne: "twk_lausanne";
-  --font-beausite-fit-web: "beausite_fit_web";
-}
-
 /* stylelint-disable */
 /* stylelint-enable */
 /*MIXINS*/
@@ -57,7 +57,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-twk-lausanne);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 350;
   line-height: 160%;
   color: var(--color-black);
@@ -66,6 +66,11 @@ body {
   -ms-scroll-limit-x-max: 100%;
   -ms-scroll-limit-x-min: 0;
   -moz-osx-font-smoothing: grayscale;
+}
+@media (min-width: 992px) {
+  body {
+    font-size: 1.8rem;
+  }
 }
 
 figure {
@@ -89,11 +94,14 @@ ul {
 }
 
 .content-for-layout p {
-  margin-top: 2rem;
+  margin: 0;
+}
+.content-for-layout p:not(:last-child) {
+  margin-bottom: 2.1rem;
 }
 @media (min-width: 992px) {
-  .content-for-layout p {
-    margin-top: 3rem;
+  .content-for-layout p:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
 
@@ -341,7 +349,7 @@ ul {
   line-height: 100%;
   border-radius: 6rem;
   color: var(--color-black);
-  padding: 1.2rem 2.4rem;
+  padding: 2rem 2.4rem;
   transition: background-color var(--default-transition);
   border: none;
   cursor: pointer;

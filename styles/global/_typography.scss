@@ -12,10 +12,14 @@ ul {
 
 // Paragraph
 .content-for-layout p {
-	margin-top: rem(20);
+	margin: 0;
 
-	@include media-breakpoint-up(lg) {
-		margin-top: rem(30);
+	&:not(:last-child) {
+		margin-bottom: rem(21);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+		}
 	}
 }
 
