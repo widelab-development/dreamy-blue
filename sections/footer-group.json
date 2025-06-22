@@ -33,6 +33,7 @@
     },
     "footer": {
       "type": "footer",
+      "disabled": true,
       "settings": {
         "footer_fixed": "fixed",
         "grid_col_desktop": 3,
