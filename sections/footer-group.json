@@ -23,7 +23,7 @@
         "menu_company": "footer-company",
         "menu_company_text": "CertiPUR-US and OekoTex® certified",
         "menu_company_image": "shopify://shop_images/footer-icons.webp",
-        "get_in_touch_label": "Get",
+        "get_in_touch_label": "Get in Touch",
         "get_in_touch_text": "<p>info@dreamyblue.com</p><p>1.800.456.7890</p>",
         "logo_label": "Reform Your Sleep™",
         "logo": "shopify://shop_images/dreamy-logo.svg",
@@ -33,24 +33,6 @@
     },
     "footer": {
       "type": "footer",
-      "blocks": {
-        "link_list_BfkVqH": {
-          "type": "link_list",
-          "settings": {
-            "footer_menu": "footer"
-          }
-        },
-        "link_list_QPyUNd": {
-          "type": "link_list",
-          "settings": {
-            "footer_menu": "footer"
-          }
-        }
-      },
-      "block_order": [
-        "link_list_BfkVqH",
-        "link_list_QPyUNd"
-      ],
       "settings": {
         "footer_fixed": "fixed",
         "grid_col_desktop": 3,
