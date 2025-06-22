@@ -33,24 +33,6 @@
     },
     "footer": {
       "type": "footer",
-      "blocks": {
-        "link_list_BfkVqH": {
-          "type": "link_list",
-          "settings": {
-            "footer_menu": "footer"
-          }
-        },
-        "link_list_QPyUNd": {
-          "type": "link_list",
-          "settings": {
-            "footer_menu": "footer"
-          }
-        }
-      },
-      "block_order": [
-        "link_list_BfkVqH",
-        "link_list_QPyUNd"
-      ],
       "settings": {
         "footer_fixed": "fixed",
         "grid_col_desktop": 3,
