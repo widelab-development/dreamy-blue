@@ -1,3 +1,5 @@
+{{ 'section-custom-footer.css' | asset_url | stylesheet_tag }}
+
 {% assign menu_products_title = section.settings.menu_products_title %}
 {% assign menu_products = section.settings.menu_products %}
 {% assign menu_assistance_title = section.settings.menu_assistance_title %}
@@ -14,7 +16,7 @@
 {% assign menu_privacy = section.settings.menu_privacy %}
 <footer class="custom-footer">
 	<div class="custom-section">
-		<div class="custom-section__container">
+		<xo-container class="custom-section__container">
 			<div class="custom-footer__grid">
 				{% if menu_products != blank %}
 					<div class="custom-footer__grid-item custom-footer__grid-item--products">
@@ -57,9 +59,9 @@
 							{% endfor %}
 						</ul>
 						{% if menu_company_text != blank and menu_company_image != blank %}
-							<div class="custom-footer__grid-item-text">
-								{{ menu_company_text }}
+							<div class="custom-footer__grid-item-info">
 								{{ menu_company_image | image_url: width: 74 | image_tag }}
+								{{ menu_company_text }}
 							</div>
 						{% endif %}
 					</div>
@@ -75,6 +77,12 @@
 					</div>
 				{% endif %}
 			</div>
+			{% if menu_company_text != blank and menu_company_image != blank %}
+				<div class="custom-footer__text">
+					{{ menu_company_image | image_url: width: 74 | image_tag }}
+					{{ menu_company_text }}
+				</div>
+			{% endif %}
 			{% if logo != blank %}
 				<div class="custom-footer__logo">
 					{% if logo_label != blank %}
@@ -101,7 +109,7 @@
 					{% endif %}
 				</div>
 			{% endif %}
-		</div>
+		</xo-container>
 	</div>
 </footer>
 {% schema %}

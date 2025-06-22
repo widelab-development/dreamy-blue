@@ -20,7 +20,7 @@ html {
 body {
 	margin: 0;
 	font-family: var(--font-twk-lausanne);
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	font-weight: 350;
 	line-height: 160%;
 	color: var(--color-black);
@@ -29,6 +29,10 @@ body {
 	-ms-scroll-limit-x-max: 100%;
 	-ms-scroll-limit-x-min: 0;
 	-moz-osx-font-smoothing: grayscale;
+
+	@include media-breakpoint-up (lg) {
+		font-size: 1.8rem;
+	}
 }
 
 figure {
