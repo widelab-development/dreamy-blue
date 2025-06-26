@@ -14,7 +14,14 @@
       assign background_image_mobile = section.settings.background_image_mobile | image_url: width: 1000
     %}
 
-    <div class="custom-hero-banner" style="background-image: url('{{ background_image_desktop }}');">
+    <div
+      class="custom-hero-banner"
+      style="
+        --bg-desktop: url('{{ background_image_desktop }}');
+        --bg-mobile: url('{{ background_image_mobile }}');
+        background-image: var(--bg-desktop);
+      "
+    >
       <div class="custom-hero-banner__content-box">
         {% if heading != blank %}
           <h2 class="custom-hero-banner__heading">{{ heading }}</h2>
@@ -30,9 +37,9 @@
             <a href="{% if button1_link != blank %}{{ button1_link }}{% else %}/collections/all{% endif %}" class="custom-hero-banner__button custom-hero-banner__button--primary">{{ button1_text }}</a>
           {% endif %}
           {% if button2_text != blank %}
-          <a href="{% if button2_link != blank %}{{ button2_link }}{% else %}/collections/all{% endif %}" class="custom-hero-banner__button custom-hero-banner__button--secondary">
-            {{ button2_text }}<span class="custom-hero-banner__button-arrow">&rsaquo;</span>
-          </a>
+            <a href="{% if button2_link != blank %}{{ button2_link }}{% else %}/collections/all{% endif %}" class="custom-hero-banner__button custom-hero-banner__button--secondary">
+              {{ button2_text }}<span class="custom-hero-banner__button-arrow">&rsaquo;</span>
+            </a>
           {% endif %}
         </div>
       </div>
@@ -115,4 +122,3 @@
   ]
 }
 {% endschema %}
-
