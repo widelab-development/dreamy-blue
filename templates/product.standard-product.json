@@ -323,6 +323,75 @@
         "padding_top_mobile": 50,
         "padding_bottom_mobile": 50
       }
+    },
+    "custom_section_ei4B4k": {
+      "type": "custom-section",
+      "blocks": {
+        "grid_hiBHex": {
+          "type": "grid",
+          "settings": {
+            "desktop_col": 2,
+            "fixed_row": false,
+            "auto_row": 20,
+            "tablet_col": 2,
+            "mobile_col": 1
+          },
+          "blocks": {
+            "column_6zQdNH": {
+              "type": "column",
+              "settings": {
+                "desktop_col_span": 1,
+                "desktop_row_span": 1,
+                "mobile_col_span": 1,
+                "mobile_row_span": 1
+              },
+              "blocks": {
+                "heading_T7ARdM": {
+                  "type": "heading",
+                  "name": "t:blocks.heading.presets.name",
+                  "settings": {
+                    "title_tag": "h2",
+                    "title": "Moves like goose down. Molds like memory foam.",
+                    "description": "<p>Block description</p>",
+                    "alignment": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_T7ARdM"
+              ]
+            },
+            "column_iL8Gka": {
+              "type": "column",
+              "settings": {
+                "desktop_col_span": 1,
+                "desktop_row_span": 1,
+                "mobile_col_span": 1,
+                "mobile_row_span": 1
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "column_6zQdNH",
+            "column_iL8Gka"
+          ]
+        }
+      },
+      "block_order": [
+        "grid_hiBHex"
+      ],
+      "name": "t:sections.custom_section.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top_desktop": 50,
+        "padding_bottom_desktop": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
     }
   },
   "order": [
@@ -331,6 +400,7 @@
     "product_specification_style_14_ziUrqY",
     "collapse_content_3mHbKF",
     "main_product_recommendations_TnWBYD",
-    "multi_column_style_2_pwwEtd"
+    "multi_column_style_2_pwwEtd",
+    "custom_section_ei4B4k"
   ]
 }
