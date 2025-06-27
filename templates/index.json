@@ -1,22 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner_style_1_UPY3pa": {
-      "type": "image-banner-style-1",
+    "custom_hero_dhNPbF": {
+      "type": "custom-hero",
+      "name": "Custom Hero Banner",
       "settings": {
-        "heading": "",
-        "button_text": "Shop all",
-        "button_link": "shopify:\/\/collections\/all",
-        "button_style": "primary",
-        "button_size": "md",
-        "layout": "style-2",
-        "background_image_desktop": "shopify:\/\/shop_images\/Hero_Image_copy-gigapixel2-standard_v2-2x-gigapixel2-standard_v2-2x_1.png",
-        "color_scheme": "",
-        "background_color": "",
-        "background_gradient": "",
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "heading": "The backbone of your deepest, healthiest sleep.",
+        "subheading": "Developed for natural alignment.",
+        "description": "Crafted for supernatural comfort.",
+        "button1_text": "Shop Pillows",
+        "button1_link": "/collections/all",
+        "button2_text": "Find Your Fit",
+        "button2_link": "/collections/all",
+        "background_image_desktop": "shopify://shop_images/Hero_Image_copy-gigapixel2-standard_v2-2x-gigapixel2-standard_v2-2x_1.png",
+        "background_image_mobile": "shopify://shop_images/Frame_14.png"
       }
     },
     "custom_section_VCwjbX": {
@@ -54,7 +59,7 @@
                     "text_heading_width_desktop": 100,
                     "text_heading_width_mobile": 100,
                     "button_text": "Shop all",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "aspect_ratio_desktop": "auto",
@@ -89,7 +94,7 @@
                     "text_heading_width_desktop": 100,
                     "text_heading_width_mobile": 100,
                     "button_text": "Shop all",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "aspect_ratio_desktop": "auto",
@@ -124,7 +129,7 @@
                     "text_heading_width_desktop": 100,
                     "text_heading_width_mobile": 100,
                     "button_text": "Shop all",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "aspect_ratio_desktop": "auto",
@@ -197,9 +202,9 @@
                     "aspect_ratio_dt": "auto",
                     "aspect_ratio_mb": "auto",
                     "enable_video_looping": false,
-                    "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                    "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                     "button_text": "Shop all",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "color_scheme_collection": "background-2",
@@ -238,9 +243,9 @@
                     "aspect_ratio_dt": "auto",
                     "aspect_ratio_mb": "auto",
                     "enable_video_looping": false,
-                    "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                    "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                     "button_text": "Shop all",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "color_scheme_collection": "background-2",
@@ -279,9 +284,9 @@
                     "aspect_ratio_dt": "auto",
                     "aspect_ratio_mb": "auto",
                     "enable_video_looping": false,
-                    "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                    "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                     "button_text": "Shop all",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "color_scheme_collection": "background-2",
@@ -400,9 +405,9 @@
                     "text_heading_width_desktop": 100,
                     "text_heading_width_mobile": 100,
                     "color_config_enable": false,
-                    "title_1": "<p>Heading<\/p>",
-                    "title_2": "<p>Heading<\/p>",
-                    "title_3": "<p>Heading<\/p>"
+                    "title_1": "<p>Heading</p>",
+                    "title_2": "<p>Heading</p>",
+                    "title_3": "<p>Heading</p>"
                   },
                   "blocks": {}
                 }
@@ -424,9 +429,9 @@
                   "type": "image-button",
                   "settings": {
                     "aspect_ratio_desktop": "auto",
-                    "aspect_ratio_mobile": "16\/9",
+                    "aspect_ratio_mobile": "16/9",
                     "button_text": "Shop now",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm"
                   },
@@ -468,7 +473,7 @@
           "settings": {
             "aspect_ratio_first": "auto",
             "aspect_ratio_second": "auto",
-            "title": "<p>Heading<\/p>",
+            "title": "<p>Heading</p>",
             "enable_overlay": "off"
           }
         },
@@ -477,7 +482,7 @@
           "settings": {
             "aspect_ratio_first": "auto",
             "aspect_ratio_second": "auto",
-            "title": "<p>Heading<\/p>",
+            "title": "<p>Heading</p>",
             "enable_overlay": "off"
           }
         },
@@ -486,7 +491,7 @@
           "settings": {
             "aspect_ratio_first": "auto",
             "aspect_ratio_second": "auto",
-            "title": "<p>Heading<\/p>",
+            "title": "<p>Heading</p>",
             "enable_overlay": "off"
           }
         }
@@ -520,12 +525,12 @@
       "settings": {
         "layout": "full-width",
         "background_type": "video",
-        "aspect_ratio_desktop": "21\/9",
-        "aspect_ratio_mobile": "3\/2",
+        "aspect_ratio_desktop": "21/9",
+        "aspect_ratio_mobile": "3/2",
         "enable_video_looping": true,
         "video_url": "",
         "button_text": "Shop now",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_style": "primary",
         "button_size": "sm",
         "color_scheme": "",
@@ -604,11 +609,11 @@
         "text_heading_width_mobile": 100,
         "sub_heading": "Subheading",
         "button_text": "",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_style": "primary",
         "button_size": "sm",
-        "aspect_ratio_dt": "16\/9",
-        "aspect_ratio_mb": "16\/9",
+        "aspect_ratio_dt": "16/9",
+        "aspect_ratio_mb": "16/9",
         "product_card_show_image": true,
         "product_card_show_secondary_image": true,
         "product_card_show_price": true,
@@ -654,7 +659,7 @@
         "testimonial_box_iRC7nM": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
             "avatar_size": "small",
             "customer_name": "Customer name"
           }
@@ -662,7 +667,7 @@
         "testimonial_box_fRM7MR": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
             "avatar_size": "medium",
             "customer_name": "Customer name"
           }
@@ -670,7 +675,7 @@
         "testimonial_box_zURWNT": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
             "avatar_size": "medium",
             "customer_name": "Customer name"
           }
@@ -678,7 +683,7 @@
         "testimonial_box_yzfNpe": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
             "avatar_size": "large",
             "customer_name": "Customer name"
           }
@@ -686,7 +691,7 @@
         "testimonial_box_E6gaki": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
             "avatar_size": "small",
             "customer_name": "Customer name"
           }
@@ -694,7 +699,7 @@
         "testimonial_box_AzaNQM": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
             "avatar_size": "large",
             "customer_name": "Customer name"
           }
@@ -702,7 +707,7 @@
         "testimonial_box_dCVKMr": {
           "type": "testimonial-box",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
             "avatar_size": "small",
             "customer_name": "Customer name"
           }
@@ -774,11 +779,11 @@
                     "alignment": "left",
                     "space_between": false,
                     "aspect_ratio_dt": "auto",
-                    "aspect_ratio_mb": "16\/9",
+                    "aspect_ratio_mb": "16/9",
                     "enable_video_looping": false,
-                    "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                    "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                     "button_text": "View now",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "color_scheme_collection": "background-2",
@@ -815,11 +820,11 @@
                     "alignment": "left",
                     "space_between": false,
                     "aspect_ratio_dt": "auto",
-                    "aspect_ratio_mb": "16\/9",
+                    "aspect_ratio_mb": "16/9",
                     "enable_video_looping": false,
-                    "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                    "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                     "button_text": "View now",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "color_scheme_collection": "background-2",
@@ -856,11 +861,11 @@
                     "alignment": "left",
                     "space_between": false,
                     "aspect_ratio_dt": "auto",
-                    "aspect_ratio_mb": "16\/9",
+                    "aspect_ratio_mb": "16/9",
                     "enable_video_looping": false,
-                    "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+                    "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                     "button_text": "View now",
-                    "button_link": "shopify:\/\/collections\/all",
+                    "button_link": "shopify://collections/all",
                     "button_style": "primary",
                     "button_size": "sm",
                     "color_scheme_collection": "background-2",
@@ -921,9 +926,9 @@
                   "settings": {
                     "image_size": "md",
                     "color_config_enable": false,
-                    "heading": "<p>Heading<\/p>",
+                    "heading": "<p>Heading</p>",
                     "heading_link": "",
-                    "content": "<p>Use this text to share information about your brand with your customers<\/p>",
+                    "content": "<p>Use this text to share information about your brand with your customers</p>",
                     "alignment": "center",
                     "color_schema_box": ""
                   },
@@ -948,9 +953,9 @@
                   "settings": {
                     "image_size": "md",
                     "color_config_enable": false,
-                    "heading": "<p>Heading<\/p>",
+                    "heading": "<p>Heading</p>",
                     "heading_link": "",
-                    "content": "<p>Use this text to share information about your brand with your customers<\/p>",
+                    "content": "<p>Use this text to share information about your brand with your customers</p>",
                     "alignment": "center",
                     "color_schema_box": ""
                   },
@@ -975,9 +980,9 @@
                   "settings": {
                     "image_size": "md",
                     "color_config_enable": false,
-                    "heading": "<p>Heading<\/p>",
+                    "heading": "<p>Heading</p>",
                     "heading_link": "",
-                    "content": "<p>Use this text to share information about your brand with your customers<\/p>",
+                    "content": "<p>Use this text to share information about your brand with your customers</p>",
                     "alignment": "center",
                     "color_schema_box": ""
                   },
@@ -1011,7 +1016,7 @@
     }
   },
   "order": [
-    "image_banner_style_1_UPY3pa",
+    "custom_hero_dhNPbF",
     "custom_section_VCwjbX",
     "custom_section_XyqyUU",
     "custom_section_h6CPNe",
