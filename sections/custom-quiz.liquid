@@ -1,0 +1,109 @@
+{{ 'section-custom-quiz.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+  assign embed_code = section.settings.embed_code
+  assign image = section.settings.image
+  assign background_color = section.settings.background_color
+  assign text_color = section.settings.text_color
+-%}
+
+<section 
+  {% render 'section-attr' %} 
+  class="custom-quiz"
+  style="--bg-color: {{ background_color }}; --text-color: {{ text_color }};"
+>
+  <div class="custom-quiz__grid">
+    <div class="custom-quiz__content-wrapper">
+      <div class="custom-quiz__content">
+        <div class="custom-quiz__header">
+          {%- if heading != blank -%}
+            <h2 class="custom-quiz__heading">{{ heading }}</h2>
+          {%- endif -%}
+          {%- if description != blank -%}
+            <div class="custom-quiz__description">{{ description }}</div>
+          {%- endif -%}
+        </div>
+
+        {%- if embed_code != blank -%}
+          <div class="custom-quiz__embed-wrapper">
+            {{ embed_code }}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="custom-quiz__image-wrapper">
+      {%- if image != blank -%}
+        <img
+          src="{{ image | image_url: width: 1200 }}"
+          alt="{{ image.alt | default: heading | escape }}"
+          width="{{ image.width }}"
+          height="{{ image.height }}"
+          loading="lazy"
+        >
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Quiz",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Answer. Order. Awesome."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>This quick quiz helps you find the right pillow(s) for exactly how and why you sleep.</p>"
+    },
+    {
+      "type": "liquid",
+      "id": "embed_code",
+      "label": "Quiz Embed Code",
+      "info": "Paste your quiz embed code here (e.g., from HubSpot, JotForm, Google Forms)."
+    },
+    {
+      "type": "header",
+      "content": "Appearance Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color (Left Column)",
+      "default": "#1D1C50"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Quiz"
+    }
+  ]
+}
+{% endschema %}
