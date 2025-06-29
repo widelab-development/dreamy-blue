@@ -1,0 +1,186 @@
+{{ 'section-custom-form.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign image = section.settings.image
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+  assign button_text = section.settings.button_text
+  assign name_placeholder = section.settings.name_placeholder
+  assign email_placeholder = section.settings.email_placeholder
+  assign section_bg_color = section.settings.section_background_color
+  assign inner_bg_color = section.settings.inner_background_color
+  assign button_bg_color = section.settings.button_background_color
+  assign button_text_color = section.settings.button_text_color
+-%}
+
+<section 
+  id="shopify-section-{{ section.id }}"
+  class="custom-form"
+  style="--section-bg-color: {{ section_bg_color }};"
+>
+  <xo-container>
+    <div class="custom-form__inner" style="--inner-bg-color: {{ inner_bg_color }};">
+      <div class="custom-form__grid">
+        <div class="custom-form__image-wrapper">
+          {%- if image != blank -%}
+            <img
+              src="{{ image | image_url: width: 1200 }}"
+              alt="{{ image.alt | default: heading | escape }}"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+              loading="lazy"
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        
+        <div class="custom-form__content-wrapper">
+          <div class="custom-form__content">
+            <div class="custom-form__header">
+              {%- if heading != blank -%}
+                <h2 class="custom-form__heading">{{ heading }}</h2>
+              {%- endif -%}
+              {%- if description != blank -%}
+                <div class="custom-form__description">{{ description }}</div>
+              {%- endif -%}
+            </div>
+    
+            {%- form 'contact', id: 'ContactForm' -%}
+              {%- if form.posted_successfully? -%}
+                <div class="custom-form__success-message">
+                  <p>{{ 'templates.contact.form.post_success' | t }}</p>
+                </div>
+              {%- endif -%}
+    
+              {{ form.errors | default_errors }}
+    
+              <div class="custom-form__field">
+                <input 
+                  type="text" 
+                  id="ContactForm-name-{{ section.id }}" 
+                  name="contact[{{ 'templates.contact.form.name' | t }}]" 
+                  value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                  placeholder="{{ name_placeholder }}"
+                  class="custom-form__input"
+                >
+              </div>
+              
+              <div class="custom-form__field">
+                <input
+                  type="email"
+                  id="ContactForm-email-{{ section.id }}"
+                  name="contact[email]"
+                  spellcheck="false"
+                  autocapitalize="off"
+                  value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                  aria-required="true"
+                  {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="ContactForm-email-error-{{ section.id }}"
+                  {% endif %}
+                  placeholder="{{ email_placeholder }}"
+                  class="custom-form__input"
+                >
+              </div>
+              
+              <button 
+                type="submit" 
+                class="custom-form__button" 
+                style="--btn-bg-color: {{ button_bg_color }}; --btn-text-color: {{ button_text_color }};"
+              >
+                {{ button_text }}
+              </button>
+            {%- endform -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </xo-container>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Form",
+  "tag": "section",
+  "class": "custom-form-section-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Get The Position"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Our periodic newsletter on sleep health. It's worth getting up for.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Form Settings"
+    },
+    {
+      "type": "text",
+      "id": "name_placeholder",
+      "label": "Name Field Placeholder",
+      "default": "Name"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email Field Placeholder",
+      "default": "Email Address"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Get the Good Stuff!"
+    },
+    {
+      "type": "header",
+      "content": "Appearance Settings"
+    },
+    {
+      "type": "color",
+      "id": "section_background_color",
+      "label": "Section Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "inner_background_color",
+      "label": "Inner Box Background Color",
+      "default": "#F8F7F5"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Background Color",
+      "default": "#C7B4D4"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Form"
+    }
+  ]
+}
+{% endschema %}
