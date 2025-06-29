@@ -2,121 +2,125 @@
     {{ 'section-custom-hero.css' | asset_url | stylesheet_tag }}
 
     {% liquid
-      assign heading = section.settings.heading
-      assign subheading = section.settings.subheading
-      assign description = section.settings.description
-      assign button1_text = section.settings.button1_text
-      assign button1_link = section.settings.button1_link
-      assign button2_text = section.settings.button2_text
-      assign button2_link = section.settings.button2_link
-      assign background_image_desktop = section.settings.background_image_desktop | image_url: width: 2000
-      assign background_image_mobile = section.settings.background_image_mobile | image_url: width: 1000
+    assign heading = section.settings.heading
+    assign subheading = section.settings.subheading
+    assign description = section.settings.description
+    assign button1_text = section.settings.button1_text
+    assign button1_link = section.settings.button1_link
+    assign button2_text = section.settings.button2_text
+    assign button2_link = section.settings.button2_link
+    assign background_image_desktop = section.settings.background_image_desktop | image_url: width: 2000
+    assign background_image_mobile = section.settings.background_image_mobile | image_url: width: 1000
     %}
 
-    <div
-      class="custom-hero-banner"
-      style="
+    <div class="custom-hero-banner" style="
         --bg-desktop: url('{{ background_image_desktop }}');
         --bg-mobile: url('{{ background_image_mobile }}');
         background-image: var(--bg-desktop);
-      "
-    >
-      <div class="custom-hero-banner__content-box">
-        {% if heading != blank %}
-          <h2 class="custom-hero-banner__heading">{{ heading }}</h2>
-        {% endif %}
-        {% if subheading != blank %}
-          <div class="custom-hero-banner__subheading">{{ subheading }}</div>
-        {% endif %}
-        {% if description != blank %}
-          <div class="custom-hero-banner__desc">{{ description }}</div>
-        {% endif %}
-        <div class="custom-hero-banner__buttons">
-          {% if button1_text != blank %}
-            <a href="{% if button1_link != blank %}{{ button1_link }}{% else %}/collections/all{% endif %}" class="custom-hero-banner__button custom-hero-banner__button--primary">{{ button1_text }}</a>
-          {% endif %}
-          {% if button2_text != blank %}
-            <a href="{% if button2_link != blank %}{{ button2_link }}{% else %}/collections/all{% endif %}" class="custom-hero-banner__button custom-hero-banner__button--secondary">
-              {{ button2_text }}<span class="custom-hero-banner__button-arrow">&rsaquo;</span>
-            </a>
-          {% endif %}
+      ">
+        <div class="custom-section">
+            <xo-container class="custom-section__container">
+                <div class="custom-hero-banner__content-box">
+                    {% if heading != blank %}
+                    <h2 class="custom-hero-banner__heading">{{ heading }}</h2>
+                    {% endif %}
+                    {% if subheading != blank %}
+                    <div class="custom-hero-banner__subheading">{{ subheading }}</div>
+                    {% endif %}
+                    {% if description != blank %}
+                    <div class="custom-hero-banner__desc">{{ description }}</div>
+                    {% endif %}
+                    <div class="custom-hero-banner__buttons">
+                        {% if button1_text != blank %}
+                        <a href="{% if button1_link != blank %}{{ button1_link }}{% else %}/collections/all{% endif %}"
+                            class="custom-hero-banner__button custom-hero-banner__button--primary">{{ button1_text
+                            }}</a>
+                        {% endif %}
+                        {% if button2_text != blank %}
+                        <a href="{% if button2_link != blank %}{{ button2_link }}{% else %}/collections/all{% endif %}"
+                            class="custom-hero-banner__button custom-hero-banner__button--secondary">
+                            {{ button2_text }}<span class="custom-hero-banner__button-arrow">&rsaquo;</span>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </xo-container>
         </div>
-      </div>
     </div>
 </section>
 
 {% schema %}
 {
-  "name": "Custom Hero Banner",
-  "tag": "section",
-  "class": "section",
-  "settings": [
-    {
-      "type": "textarea",
-      "id": "heading",
-      "label": "Heading",
-      "default": "The backbone of your deepest, healthiest sleep."
-    },
-    {
-      "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Developed for natural alignment."
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description",
-      "default": "Crafted for supernatural comfort."
-    },
-    {
-      "type": "text",
-      "id": "button1_text",
-      "label": "Primary button text",
-      "default": "Shop Pillows"
-    },
-    {
-      "type": "url",
-      "id": "button1_link",
-      "label": "Primary button link",
-      "default": "/collections/all"
-    },
-    {
-      "type": "text",
-      "id": "button2_text",
-      "label": "Secondary button text",
-      "default": "Find Your Fit"
-    },
-    {
-      "type": "url",
-      "id": "button2_link",
-      "label": "Secondary button link",
-      "default": "/collections/all"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image_desktop",
-      "label": "Background image (desktop)"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image_mobile",
-      "label": "Background image (mobile)"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Custom Hero Banner",
-      "settings": {
-        "heading": "The backbone of your deepest, healthiest sleep.",
-        "subheading": "Developed for natural alignment.",
-        "description": "Crafted for supernatural comfort.",
-        "button1_text": "Shop Pillows",
-        "button1_link": "/collections/all",
-        "button2_text": "Find Your Fit",
-        "button2_link": "/collections/all"
-      }
-    }
-  ]
+"name": "Custom Hero Banner",
+"tag": "section",
+"class": "section",
+"settings": [
+{
+"type": "textarea",
+"id": "heading",
+"label": "Heading",
+"default": "The backbone of your deepest, healthiest sleep."
+},
+{
+"type": "text",
+"id": "subheading",
+"label": "Subheading",
+"default": "Developed for natural alignment."
+},
+{
+"type": "textarea",
+"id": "description",
+"label": "Description",
+"default": "Crafted for supernatural comfort."
+},
+{
+"type": "text",
+"id": "button1_text",
+"label": "Primary button text",
+"default": "Shop Pillows"
+},
+{
+"type": "url",
+"id": "button1_link",
+"label": "Primary button link",
+"default": "/collections/all"
+},
+{
+"type": "text",
+"id": "button2_text",
+"label": "Secondary button text",
+"default": "Find Your Fit"
+},
+{
+"type": "url",
+"id": "button2_link",
+"label": "Secondary button link",
+"default": "/collections/all"
+},
+{
+"type": "image_picker",
+"id": "background_image_desktop",
+"label": "Background image (desktop)"
+},
+{
+"type": "image_picker",
+"id": "background_image_mobile",
+"label": "Background image (mobile)"
+}
+],
+"presets": [
+{
+"name": "Custom Hero Banner",
+"settings": {
+"heading": "The backbone of your deepest, healthiest sleep.",
+"subheading": "Developed for natural alignment.",
+"description": "Crafted for supernatural comfort.",
+"button1_text": "Shop Pillows",
+"button1_link": "/collections/all",
+"button2_text": "Find Your Fit",
+"button2_link": "/collections/all"
+}
+}
+]
 }
 {% endschema %}
