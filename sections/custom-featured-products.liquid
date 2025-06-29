@@ -1,0 +1,168 @@
+<section {% render 'section-attr' %}>
+    {{ 'section-custom-featured.css' | asset_url | stylesheet_tag }}
+
+    {%- liquid
+      assign heading = section.settings.heading
+      assign subheading = section.settings.subheading
+    -%}
+
+    <div class="custom-featured-products">
+        <div class="custom-section">
+            <xo-container class="custom-featured-products__container">
+                <div class="custom-featured-products__header">
+                    {%- if heading != blank -%}
+                        <h2 class="custom-featured-products__heading">{{ heading | escape }}</h2>
+                    {%- endif -%}
+                    {%- if subheading != blank -%}
+                        <div class="custom-featured-products__subheading">{{ subheading }}</div>
+                    {%- endif -%}
+                </div>
+
+                {%- if section.blocks.size > 0 -%}
+                    <div class="custom-featured-products__grid">
+                        {%- for block in section.blocks -%}
+                            <div class="custom-featured-products__card"
+                                 style="--card-bg-color: {{ block.settings.background_color }}; --card-text-color: {{ block.settings.text_color }};"
+                                 {{ block.shopify_attributes }}>
+                                
+                                {%- liquid
+                                    assign product = block.settings.product
+                                    assign overtitle = block.settings.overtitle
+                                    assign description = block.settings.description
+                                    assign image = block.settings.custom_image | default: product.featured_image
+                                -%}
+
+                                <div class="custom-featured-products__card-content">
+                                    {%- if overtitle != blank -%}
+                                        <span class="custom-featured-products__card-overtitle">{{ overtitle | escape }}</span>
+                                    {%- endif -%}
+                                    {%- if description != blank -%}
+                                        <p class="custom-featured-products__card-description">{{ description | escape }}</p>
+                                    {%- endif -%}
+                                    <a href="{{ product.url | default: '#' }}" class="custom-featured-products__card-button">
+                                        Discover <span class="custom-featured-products__card-arrow">&rsaquo;</span>
+                                    </a>
+                                </div>
+
+                                <div class="custom-featured-products__card-image-wrapper">
+                                    {%- if image != blank -%}
+                                        <img src="{{ image | image_url: width: 500 }}"
+                                             alt="{{ image.alt | default: product.title | escape }}"
+                                             loading="lazy"
+                                             width="{{ image.width }}"
+                                             height="{{ image.height }}">
+                                    {%- else -%}
+                                        {{ 'product-1' | placeholder_svg_tag: 'custom-featured-products__placeholder-svg' }}
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                {%- endif -%}
+            </xo-container>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Featured Products",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "3 pillows. 1 perfect posture."
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>It's automatic: when your neck, shoulders, and hips fall into neutral alignment, you naturally rest your best.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image",
+          "info": "If left blank, the product's featured image will be used."
+        },
+        {
+          "type": "text",
+          "id": "overtitle",
+          "label": "Overtitle",
+          "info": "This text appears above the description (e.g., 'The Signature')."
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#E0F2FF"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#1E2A3B"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Featured Products",
+      "settings": {
+        "heading": "3 pillows. 1 perfect posture.",
+        "subheading": "<p>It's automatic: when your neck, shoulders, and hips fall into neutral alignment, you naturally rest your best.</p>"
+      },
+      "blocks": [
+        {
+          "type": "product_card",
+          "settings": {
+            "overtitle": "The Signature",
+            "description": "The adjustable-fill pillow that changes your sleep, for life.",
+            "background_color": "#8FBFEF",
+            "text_color": "#6CB1EA"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "overtitle": "The Sapphire",
+            "description": "The high-design pillow with supportive gusset and cooling fill.",
+            "background_color": "#C49BC9",
+            "text_color": "#B67BBA"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "overtitle": "Blue Moon",
+            "description": "The crescent pillow for shoulder reach and combo sleep.",
+            "background_color": "#E2A383",
+            "text_color": "#D88A68"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
