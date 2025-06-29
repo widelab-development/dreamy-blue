@@ -197,12 +197,25 @@
         "bottom_video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4",
         "bottom_video_label": "<b>Watch:</b> How to Adjust"
       }
+    },
+    "custom_quiz_xiDFUK": {
+      "type": "custom-quiz",
+      "name": "Custom Quiz",
+      "settings": {
+        "heading": "Answer. Order. Awesome.",
+        "description": "<p>This quick quiz helps you find the right pillow(s) for exactly how and why you sleep.</p>",
+        "embed_code": "",
+        "image": "shopify://shop_images/Frame_22.png",
+        "background_color": "#1d1c50",
+        "text_color": "#ffffff"
+      }
     }
   },
   "order": [
     "custom_hero_dhNPbF",
     "custom_featured_products_baHCh7",
     "custom_advantages_aNnhmg",
-    "custom_quality_C7WMnb"
+    "custom_quality_C7WMnb",
+    "custom_quiz_xiDFUK"
   ]
 }
