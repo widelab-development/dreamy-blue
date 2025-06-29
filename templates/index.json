@@ -209,6 +209,22 @@
         "background_color": "#1d1c50",
         "text_color": "#ffffff"
       }
+    },
+    "custom_mission_FYAkLk": {
+      "type": "custom-mission",
+      "name": "Custom Mission",
+      "settings": {
+        "background_color": "#b67bba",
+        "text_color": "#FFFFFF",
+        "background_svg": "shopify://shop_images/Group_11.svg",
+        "overtitle": "Our Mission",
+        "heading": "Change your pillow.",
+        "description": "<p>At every age and life stage, our alignment-focused and adjustable products put control in your hands—while putting your body in the perfect position for rejuvenation.</p>",
+        "button_text": "Our Dream",
+        "button_link": "",
+        "button_bg_color": "#1a1f36",
+        "button_text_color": "#FFFFFF"
+      }
     }
   },
   "order": [
@@ -216,6 +232,7 @@
     "custom_featured_products_baHCh7",
     "custom_advantages_aNnhmg",
     "custom_quality_C7WMnb",
-    "custom_quiz_xiDFUK"
+    "custom_quiz_xiDFUK",
+    "custom_mission_FYAkLk"
   ]
 }
