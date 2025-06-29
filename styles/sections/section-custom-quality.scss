@@ -56,16 +56,15 @@
         gap: rem(20);
         overflow-x: auto;
         padding-bottom: rem(20);
-        scrollbar-width: thin;
-        scrollbar-color: var(--color-border, #ccc) transparent;
+        scrollbar-width: none;
 
         &::-webkit-scrollbar {
-            height: 8px;
+            height: 0;
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: var(--color-border, #ccc);
-            border-radius: 4px;
+            background-color: transparent;
+            border-radius: 0;
         }
     }
 
