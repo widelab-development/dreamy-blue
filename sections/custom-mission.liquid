@@ -1,0 +1,138 @@
+{{ 'section-custom-mission.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign background_color = section.settings.background_color
+  assign text_color = section.settings.text_color
+  assign background_svg = section.settings.background_svg
+  assign overtitle = section.settings.overtitle
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link
+  assign button_bg_color = section.settings.button_bg_color
+  assign button_text_color = section.settings.button_text_color
+-%}
+
+<section 
+  {% render 'section-attr' %} 
+  class="custom-mission"
+  style="--bg-color: {{ background_color }}; --text-color: {{ text_color }}; --btn-bg-color: {{ button_bg_color }}; --btn-text-color: {{ button_text_color }};"
+>
+  {%- if background_svg != blank -%}
+    <div class="custom-mission__background-svg">
+      <img
+        src="{{ background_svg | image_url }}"
+        alt=""
+        role="presentation"
+        width="{{ background_svg.width }}"
+        height="{{ background_svg.height }}"
+        loading="lazy"
+      >
+    </div>
+  {%- endif -%}
+
+  <div class="custom-mission__content-wrapper">
+    <xo-container>
+      <div class="custom-mission__content">
+        {%- if overtitle != blank -%}
+          <span class="custom-mission__overtitle">{{ overtitle }}</span>
+        {%- endif -%}
+
+        {%- if heading != blank -%}
+          <h2 class="custom-mission__heading">{{ heading }}</h2>
+        {%- endif -%}
+
+        {%- if description != blank -%}
+          <div class="custom-mission__description">{{ description }}</div>
+        {%- endif -%}
+
+        {%- if button_text != blank -%}
+          <a href="{{ button_link | default: '#' }}" class="custom-mission__button">
+            {{ button_text }}
+          </a>
+        {%- endif -%}
+      </div>
+    </xo-container>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Mission",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Appearance Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#C7B4D4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_svg",
+      "label": "Background SVG/Image"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "overtitle",
+      "label": "Overtitle",
+      "default": "Our Mission"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Change your pillow."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>At every age and life stage, our alignment-focused and adjustable products put control in your hands—while putting your body in the perfect position for rejuvenation.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Our Dream"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#1a1f36"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Mission"
+    }
+  ]
+}
+{% endschema %}
