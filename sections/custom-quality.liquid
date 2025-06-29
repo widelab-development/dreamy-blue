@@ -1,0 +1,310 @@
+{{ 'section-custom-quality.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading_top = section.settings.heading_top
+  assign description_top = section.settings.description_top
+  assign heading_bottom = section.settings.heading_bottom
+  assign description_bottom = section.settings.description_bottom
+  assign button_1_text = section.settings.button_1_text
+  assign button_1_link = section.settings.button_1_link
+  assign button_2_text = section.settings.button_2_text
+  assign button_2_link = section.settings.button_2_link
+  assign bottom_video = section.settings.bottom_video
+  assign bottom_video_poster = section.settings.bottom_video_poster
+  assign bottom_video_label = section.settings.bottom_video_label
+  assign play_icon = section.settings.play_icon
+-%}
+
+<section {% render 'section-attr' %} class="custom-quality">
+  <div class="custom-section">
+    <xo-container class="custom-quality__container">
+      <div class="custom-quality__top">
+        <div class="custom-quality__top-header">
+          {%- if heading_top != blank -%}
+            <h2 class="custom-quality__heading-top">{{ heading_top }}</h2>
+          {%- endif -%}
+          {%- if description_top != blank -%}
+            <div class="custom-quality__description-top">{{ description_top }}</div>
+          {%- endif -%}
+        </div>
+
+        {%- if section.blocks.size > 0 -%}
+          <div class="custom-quality__media-scroller">
+            {%- for block in section.blocks -%}
+              <div class="custom-quality__media-item" {{ block.shopify_attributes }}>
+                {%- if block.settings.poster_image != blank -%}
+                  <div class="custom-quality__media-poster-wrapper">
+                    <img
+                      src="{{ block.settings.poster_image | image_url: width: 400 }}"
+                      alt="{{ block.settings.poster_image.alt | default: 'Video poster' | escape }}"
+                      width="400"
+                      height="{{ 400 | divided_by: block.settings.poster_image.aspect_ratio | round }}"
+                      loading="lazy"
+                    >
+                    {%- if block.settings.video != blank -%}
+                      <button class="custom-quality__play-button js-video-trigger" 
+                              aria-label="Play video"
+                              data-video-id="{{ block.settings.video.id }}"
+                              data-video-type="{{ block.settings.video.type }}"
+                              data-video-src="{{ block.settings.video.sources[0].url }}">
+                        {%- if play_icon != blank -%}
+                          <img src="{{ play_icon | image_url: width: 100 }}" alt="Play video icon" class="custom-quality__play-icon-custom">
+                        {%- else -%}
+                          <span class="custom-quality__play-icon-default">{% render 'icon-play' %}</span>
+                        {%- endif -%}
+                      </button>
+                    {%- endif -%}
+                  </div>
+                {%- else -%}
+                  {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="custom-quality__bottom">
+        <div class="custom-quality__bottom-content">
+          {%- if heading_bottom != blank -%}
+            <h2 class="custom-quality__heading-bottom">{{ heading_bottom }}</h2>
+          {%- endif -%}
+          {%- if description_bottom != blank -%}
+            <div class="custom-quality__description-bottom">{{ description_bottom }}</div>
+          {%- endif -%}
+          <div class="custom-quality__buttons">
+            {%- if button_1_text != blank -%}
+              <a href="{{ button_1_link | default: '#' }}" class="custom-quality__button custom-quality__button--primary">{{ button_1_text }}</a>
+            {%- endif -%}
+            {%- if button_2_text != blank -%}
+              <a href="{{ button_2_link | default: '#' }}" class="custom-quality__button custom-quality__button--secondary">
+                {{ button_2_text }} <span class="custom-quality__button-arrow">&rsaquo;</span>
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <div class="custom-quality__bottom-media">
+          {%- if bottom_video_poster != blank -%}
+            <div class="custom-quality__media-poster-wrapper">
+              <img
+                src="{{ bottom_video_poster | image_url: width: 1200 }}"
+                alt="{{ bottom_video_poster.alt | default: 'Video poster' | escape }}"
+                width="1200"
+                height="{{ 1200 | divided_by: bottom_video_poster.aspect_ratio | round }}"
+                loading="lazy"
+              >
+              {%- if bottom_video != blank -%}
+                <button class="custom-quality__play-button custom-quality__play-button--large js-video-trigger"
+                        aria-label="Play video: {{ bottom_video_label }}"
+                        data-video-id="{{ bottom_video.id }}"
+                        data-video-type="{{ bottom_video.type }}"
+                        data-video-src="{{ bottom_video.sources[0].url }}">
+                  {%- if play_icon != blank -%}
+                    <img src="{{ play_icon | image_url: width: 150 }}" alt="Play video icon" class="custom-quality__play-icon-custom">
+                  {%- else -%}
+                    <span class="custom-quality__play-icon-default">{% render 'icon-play' %}</span>
+                  {%- endif -%}
+                  {%- if bottom_video_label != blank -%}
+                    <span class="custom-quality__play-label">{{ bottom_video_label }}</span>
+                  {%- endif -%}
+                </button>
+              {%- endif -%}
+            </div>
+          {%- else -%}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      </div>
+    </xo-container>
+  </div>
+
+  <div class="custom-quality-modal" id="CustomQualityModal-{{ section.id }}" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="custom-quality-modal__overlay js-modal-close"></div>
+    <div class="custom-quality-modal__content">
+      <button class="custom-quality-modal__close js-modal-close" aria-label="Close video">
+        &times;
+      </button>
+      <div class="custom-quality-modal__video-wrapper" id="ModalVideoWrapper-{{ section.id }}"></div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
+    if (!sectionEl) return;
+
+    const modal = sectionEl.querySelector('#CustomQualityModal-{{ section.id }}');
+    const videoWrapper = sectionEl.querySelector('#ModalVideoWrapper-{{ section.id }}');
+    const videoTriggers = sectionEl.querySelectorAll('.js-video-trigger');
+    const closeButtons = modal.querySelectorAll('.js-modal-close');
+
+    function openModal(button) {
+      const videoId = button.dataset.videoId;
+      const videoType = button.dataset.videoType;
+      const videoSrc = button.dataset.videoSrc;
+      let videoEmbed = '';
+
+      if (videoType === 'youtube') {
+        videoEmbed = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      } else if (videoType === 'vimeo') {
+        videoEmbed = `<iframe src="https://player.vimeo.com/video/${videoId}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      } else if (videoSrc) {
+        videoEmbed = `<video src="${videoSrc}" autoplay controls playsinline></video>`;
+      }
+      
+      videoWrapper.innerHTML = videoEmbed;
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.setAttribute('aria-hidden', 'true');
+      videoWrapper.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    videoTriggers.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal(this);
+      });
+    });
+
+    closeButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeModal();
+      });
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+        closeModal();
+      }
+    });
+  });
+</script>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Quality",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Top Section (Scrolling Gallery)"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_top",
+      "label": "Heading",
+      "default": "1.314 billion hours of reformed sleep. Every year."
+    },
+    {
+      "type": "richtext",
+      "id": "description_top",
+      "label": "Description",
+      "default": "<p>Are you ready for 8 hours per night of deep, quality sleep? 450,000+ of our customers can't wait to get back in bed with us.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Bottom Section (Text & Video)"
+    },
+    {
+      "type": "textarea",
+      "id": "heading_bottom",
+      "label": "Heading",
+      "default": "A joint effort. Minus the effort."
+    },
+    {
+      "type": "richtext",
+      "id": "description_bottom",
+      "label": "Description",
+      "default": "<p>Exceptional, healthy sleep is a collaboration between our product design team and your own at-home testing.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Primary Button Text",
+      "default": "How to Adjust"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Secondary Button Text",
+      "default": "Get Extrazzz"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Video Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "play_icon",
+      "label": "Custom Play Icon (SVG recommended)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_video_poster",
+      "label": "Main Video Poster Image"
+    },
+    {
+      "type": "video",
+      "id": "bottom_video",
+      "label": "Main Video"
+    },
+    {
+      "type": "text",
+      "id": "bottom_video_label",
+      "label": "Main Video Label",
+      "default": "Watch: How to Adjust"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media_item",
+      "name": "Media Item",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "poster_image",
+          "label": "Poster Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Quality",
+      "blocks": [
+        { "type": "media_item" },
+        { "type": "media_item" },
+        { "type": "media_item" },
+        { "type": "media_item" },
+        { "type": "media_item" },
+        { "type": "media_item" },
+        { "type": "media_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
