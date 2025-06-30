@@ -217,7 +217,9 @@
       "settings": {
         "background_color": "#b67bba",
         "text_color": "#ffffff",
-        "background_svg": "shopify://shop_images/Group_11.svg",
+        "animation_desktop_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Desktop_Strokes.json?v=1751281361",
+        "animation_mobile_top_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Mobile_Strokes_Top.json?v=1751281361",
+        "animation_mobile_bottom_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Mobile_Strokes_Bottom.json?v=1751281361",
         "overtitle": "Our Mission",
         "heading": "Change your pillow.",
         "description": "<p>At every age and life stage, our alignment-focused and adjustable products put control in your hands—while putting your body in the perfect position for rejuvenation.</p>",
