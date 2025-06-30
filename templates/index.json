@@ -114,7 +114,8 @@
         "text_color": "#ffffff",
         "overtitle_top": "At Our Core:",
         "heading": "The Stuff of Dreams",
-        "description": "<p>We fill each pillow with a revolutionary blend that outperforms every other fill type. It's soft without bottoming out.</p>",
+        "description": "<p>We fill each pillow with a revolutionary blend that outperforms every other fill type. It’s soft without bottoming out. It maneuvers freely yet never loses form. It’s… night and day.</p>",
+        "fluff_image": "shopify://shop_images/Frame_19.png",
         "bottom_background_color": "#b67bba",
         "bottom_text_color": "#1a1f36",
         "overtitle_bottom": "What We're Made Of"
@@ -215,7 +216,7 @@
       "name": "Custom Mission",
       "settings": {
         "background_color": "#b67bba",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "background_svg": "shopify://shop_images/Group_11.svg",
         "overtitle": "Our Mission",
         "heading": "Change your pillow.",
@@ -223,7 +224,7 @@
         "button_text": "Our Dream",
         "button_link": "",
         "button_bg_color": "#1a1f36",
-        "button_text_color": "#FFFFFF"
+        "button_text_color": "#ffffff"
       }
     },
     "custom_form_cy7gCk": {
@@ -236,10 +237,10 @@
         "name_placeholder": "Name",
         "email_placeholder": "Email Address",
         "button_text": "Get the Good Stuff!",
-        "section_background_color": "#FFFFFF",
-        "inner_background_color": "#F8F7F5",
+        "section_background_color": "#ffffff",
+        "inner_background_color": "#f8f7f5",
         "button_background_color": "#b67bba",
-        "button_text_color": "#FFFFFF"
+        "button_text_color": "#ffffff"
       }
     }
   },
