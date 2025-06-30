@@ -72,6 +72,47 @@
         "subheading": "<p>It's automatic: when your neck, shoulders, and hips fall into neutral alignment, you naturally rest your best.</p>"
       }
     },
+    "custom_reviews_JEntRe": {
+      "type": "custom-reviews",
+      "blocks": {
+        "review_slide_qjXy4k": {
+          "type": "review_slide",
+          "settings": {
+            "quote": "“Best pillow for all sleeping positions”",
+            "logo": "shopify://shop_images/Frame_84.png",
+            "logo_width": 150
+          }
+        },
+        "review_slide_iGrNDq": {
+          "type": "review_slide",
+          "settings": {
+            "quote": "“Best pillow for side sleepers on Amazon”",
+            "logo": "shopify://shop_images/image_53.png",
+            "logo_width": 150
+          }
+        },
+        "review_slide_DaGhVD": {
+          "type": "review_slide",
+          "settings": {
+            "quote": "“The shredded memory foam gives the fluffy feel of down and the firmness of pure memory foam”",
+            "logo": "shopify://shop_images/image_50.png",
+            "logo_width": 150
+          }
+        }
+      },
+      "block_order": [
+        "review_slide_qjXy4k",
+        "review_slide_iGrNDq",
+        "review_slide_DaGhVD"
+      ],
+      "name": "Custom Reviews",
+      "settings": {
+        "overtitle": "Our Pillows Are Award-Winning!",
+        "background_color": "#FFFFFF",
+        "text_color": "#000000",
+        "autoplay_speed": 3
+      }
+    },
     "custom_advantages_aNnhmg": {
       "type": "custom-advantages",
       "blocks": {
@@ -196,7 +237,7 @@
         "play_icon": "shopify://shop_images/Frame_68.svg",
         "bottom_video_poster": "shopify://shop_images/image_45.png",
         "bottom_video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4",
-        "bottom_video_label": "<b>Watch:</b> How to Adjust"
+        "bottom_video_label": "Watch: How to Adjust"
       }
     },
     "custom_quiz_xiDFUK": {
@@ -249,6 +290,7 @@
   "order": [
     "custom_hero_dhNPbF",
     "custom_featured_products_baHCh7",
+    "custom_reviews_JEntRe",
     "custom_advantages_aNnhmg",
     "custom_quality_C7WMnb",
     "custom_quiz_xiDFUK",
