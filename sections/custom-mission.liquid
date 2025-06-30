@@ -1,9 +1,10 @@
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 {{ 'section-custom-mission.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign background_color = section.settings.background_color
   assign text_color = section.settings.text_color
-  assign background_svg = section.settings.background_svg
   assign overtitle = section.settings.overtitle
   assign heading = section.settings.heading
   assign description = section.settings.description
@@ -11,23 +12,37 @@
   assign button_link = section.settings.button_link
   assign button_bg_color = section.settings.button_bg_color
   assign button_text_color = section.settings.button_text_color
+  assign animation_desktop_url = section.settings.animation_desktop_url
+  assign animation_mobile_top_url = section.settings.animation_mobile_top_url
+  assign animation_mobile_bottom_url = section.settings.animation_mobile_bottom_url
 -%}
 
 <section 
-  {% render 'section-attr' %} 
+  id="shopify-section-{{ section.id }}"
   class="custom-mission"
   style="--bg-color: {{ background_color }}; --text-color: {{ text_color }}; --btn-bg-color: {{ button_bg_color }}; --btn-text-color: {{ button_text_color }};"
 >
-  {%- if background_svg != blank -%}
-    <div class="custom-mission__background-svg">
-      <img
-        src="{{ background_svg | image_url }}"
-        alt=""
-        role="presentation"
-        width="{{ background_svg.width }}"
-        height="{{ background_svg.height }}"
-        loading="lazy"
-      >
+  {%- if animation_desktop_url != blank -%}
+    <div class="custom-mission__animation custom-mission__animation--desktop">
+      <lottie-player
+        src="{{ animation_desktop_url }}"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+  {%- endif -%}
+
+  {%- if animation_mobile_top_url != blank -%}
+    <div class="custom-mission__animation custom-mission__animation--mobile-top">
+      <lottie-player
+        src="{{ animation_mobile_top_url }}"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
     </div>
   {%- endif -%}
 
@@ -54,6 +69,18 @@
       </div>
     </xo-container>
   </div>
+
+  {%- if animation_mobile_bottom_url != blank -%}
+    <div class="custom-mission__animation custom-mission__animation--mobile-bottom">
+      <lottie-player
+        src="{{ animation_mobile_bottom_url }}"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+  {%- endif -%}
 </section>
 
 {% schema %}
@@ -70,7 +97,7 @@
       "type": "color",
       "id": "background_color",
       "label": "Background Color",
-      "default": "#C7B4D4"
+      "default": "#B67BBA"
     },
     {
       "type": "color",
@@ -79,9 +106,26 @@
       "default": "#FFFFFF"
     },
     {
-      "type": "image_picker",
-      "id": "background_svg",
-      "label": "Background SVG/Image"
+      "type": "header",
+      "content": "Lottie Animations"
+    },
+    {
+      "type": "text",
+      "id": "animation_desktop_url",
+      "label": "Desktop Animation URL",
+      "info": "Upload your .json file to Shopify Files and paste the URL here."
+    },
+    {
+      "type": "text",
+      "id": "animation_mobile_top_url",
+      "label": "Mobile Top Animation URL",
+      "info": "Upload your .json file to Shopify Files and paste the URL here."
+    },
+    {
+      "type": "text",
+      "id": "animation_mobile_bottom_url",
+      "label": "Mobile Bottom Animation URL",
+      "info": "Upload your .json file to Shopify Files and paste the URL here."
     },
     {
       "type": "header",

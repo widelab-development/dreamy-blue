@@ -6,24 +6,44 @@
   color: var(--text-color);
   overflow: hidden;
 
-  &__background-svg {
+  &__animation {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
-    padding: rem(40) 0;
     pointer-events: none;
 
-    img {
+    lottie-player {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+    }
 
+    &--desktop {
+      display: block;
       @media (max-width: 992px) {
-        object-fit: cover;
+        display: none;
       }
+    }
+
+    &--mobile-top,
+    &--mobile-bottom {
+      display: none;
+      height: auto;
+      @media (max-width: 992px) {
+        display: block;
+      }
+    }
+
+    &--mobile-top {
+      top: 0;
+      bottom: auto;
+    }
+
+    &--mobile-bottom {
+      top: auto;
+      bottom: 0;
     }
   }
 
@@ -49,20 +69,21 @@
 
   &__overtitle {
     display: block;
-    font-size: rem(16);
+    font-size: rem(18);
+    color: var(--color-black);
     margin-bottom: rem(24);
     opacity: 0.9;
   }
 
   &__heading {
-    font-size: rem(100);
-    color: var(--color-white);
+    font-size: rem(80) !important;
+    color: var(--text-color);
     font-weight: 300;
     line-height: 1.1;
     margin-bottom: rem(32);
 
     @media (max-width: 992px) {
-      font-size: rem(56);
+      font-size: rem(56) !important;
     }
   }
 
@@ -70,6 +91,7 @@
     font-size: rem(18);
     line-height: 1.6;
     max-width: rem(768);
+    color: var(--color-black);
     margin: 0 auto rem(40);
 
     p {
@@ -79,12 +101,17 @@
 
   &__button {
     display: inline-block;
-    background-color: var(--color-midnight-blue);
-    color: var(--color-white);
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
     padding: rem(12) rem(100);
     border-radius: rem(120);
     text-decoration: none;
     font-size: rem(18);
     font-weight: 300;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
   }
 }
