@@ -15,7 +15,7 @@
   assign play_icon = section.settings.play_icon
 -%}
 
-<section {% render 'section-attr' %} class="custom-quality">
+<section id="shopify-section-{{ section.id }}" class="custom-quality">
   <div class="custom-section">
     <xo-container class="custom-quality__container">
       <div class="custom-quality__top">
@@ -42,11 +42,21 @@
                       loading="lazy"
                     >
                     {%- if block.settings.video != blank -%}
-                      <button class="custom-quality__play-button js-video-trigger" 
-                              aria-label="Play video"
-                              data-video-id="{{ block.settings.video.id }}"
-                              data-video-type="{{ block.settings.video.type }}"
-                              data-video-src="{{ block.settings.video.sources[0].url }}">
+                      {%- liquid
+                        assign block_mp4_url = ''
+                        for source in block.settings.video.sources
+                          if source.format == 'mp4'
+                            assign block_mp4_url = source.url
+                            break
+                          endif
+                        endfor
+                      -%}
+                      <button 
+                        class="custom-quality__play-button js-video-trigger" 
+                        aria-label="Play video"
+                        data-video-url="{{ block_mp4_url }}"
+                        data-video-provider="{{ block.settings.video.type }}"
+                        data-video-id="{{ block.settings.video.id }}">
                         {%- if play_icon != blank -%}
                           <img src="{{ play_icon | image_url: width: 100 }}" alt="Play video icon" class="custom-quality__play-icon-custom">
                         {%- else -%}
@@ -95,11 +105,21 @@
                 loading="lazy"
               >
               {%- if bottom_video != blank -%}
-                <button class="custom-quality__play-button custom-quality__play-button--large js-video-trigger"
-                        aria-label="Play video: {{ bottom_video_label }}"
-                        data-video-id="{{ bottom_video.id }}"
-                        data-video-type="{{ bottom_video.type }}"
-                        data-video-src="{{ bottom_video.sources[0].url }}">
+                {%- liquid
+                  assign main_mp4_url = ''
+                  for source in bottom_video.sources
+                    if source.format == 'mp4'
+                      assign main_mp4_url = source.url
+                      break
+                    endif
+                  endfor
+                -%}
+                <button
+                   class="custom-quality__play-button custom-quality__play-button--large js-video-trigger"
+                   aria-label="Play video: {{ bottom_video_label }}"
+                   data-video-url="{{ main_mp4_url }}"
+                   data-video-provider="{{ bottom_video.type }}"
+                   data-video-id="{{ bottom_video.id }}">
                   {%- if play_icon != blank -%}
                     <img src="{{ play_icon | image_url: width: 150 }}" alt="Play video icon" class="custom-quality__play-icon-custom">
                   {%- else -%}
@@ -119,41 +139,37 @@
     </xo-container>
   </div>
 
-  <div class="custom-quality-modal" id="CustomQualityModal-{{ section.id }}" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="custom-quality-modal__overlay js-modal-close"></div>
+  <div class="custom-quality-modal" id="VideoModal-{{ section.id }}" aria-hidden="true" role="dialog">
+    <div class="custom-quality-modal__overlay js-modal-close-{{ section.id }}"></div>
     <div class="custom-quality-modal__content">
-      <button class="custom-quality-modal__close js-modal-close" aria-label="Close video">
-        &times;
-      </button>
-      <div class="custom-quality-modal__video-wrapper" id="ModalVideoWrapper-{{ section.id }}"></div>
+      <button class="custom-quality-modal__close js-modal-close-{{ section.id }}" aria-label="Close">&times;</button>
+      <div id="VideoPlayerWrapper-{{ section.id }}" class="custom-quality-modal__video-wrapper"></div>
     </div>
   </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
-    if (!sectionEl) return;
-
-    const modal = sectionEl.querySelector('#CustomQualityModal-{{ section.id }}');
-    const videoWrapper = sectionEl.querySelector('#ModalVideoWrapper-{{ section.id }}');
-    const videoTriggers = sectionEl.querySelectorAll('.js-video-trigger');
-    const closeButtons = modal.querySelectorAll('.js-modal-close');
+    const section = document.getElementById('shopify-section-{{ section.id }}');
+    const modal = section.querySelector('#VideoModal-{{ section.id }}');
+    const videoWrapper = section.querySelector('#VideoPlayerWrapper-{{ section.id }}');
+    const openTriggers = section.querySelectorAll('.js-video-trigger');
+    const closeTriggers = section.querySelectorAll('.js-modal-close-{{ section.id }}');
 
     function openModal(button) {
+      const provider = button.dataset.videoProvider;
+      const videoUrl = button.dataset.videoUrl;
       const videoId = button.dataset.videoId;
-      const videoType = button.dataset.videoType;
-      const videoSrc = button.dataset.videoSrc;
-      let videoEmbed = '';
+      let playerHtml = '';
 
-      if (videoType === 'youtube') {
-        videoEmbed = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-      } else if (videoType === 'vimeo') {
-        videoEmbed = `<iframe src="https://player.vimeo.com/video/${videoId}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-      } else if (videoSrc) {
-        videoEmbed = `<video src="${videoSrc}" autoplay controls playsinline></video>`;
+      if (provider === 'youtube') {
+        playerHtml = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      } else if (provider === 'vimeo') {
+        playerHtml = `<iframe src="https://player.vimeo.com/video/${videoId}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      } else {
+        playerHtml = `<video src="${videoUrl}" controls autoplay playsinline></video>`;
       }
-      
-      videoWrapper.innerHTML = videoEmbed;
+
+      videoWrapper.innerHTML = playerHtml;
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     }
@@ -164,22 +180,16 @@
       document.body.style.overflow = '';
     }
 
-    videoTriggers.forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-        openModal(this);
-      });
+    openTriggers.forEach(button => {
+      button.addEventListener('click', () => openModal(button));
     });
 
-    closeButtons.forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-        closeModal();
-      });
+    closeTriggers.forEach(button => {
+      button.addEventListener('click', closeModal);
     });
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
         closeModal();
       }
     });
