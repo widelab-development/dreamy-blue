@@ -72,6 +72,57 @@
         "subheading": "<p>It's automatic: when your neck, shoulders, and hips fall into neutral alignment, you naturally rest your best.</p>"
       }
     },
+    "testimonial_style_5_NKAYzj": {
+      "type": "testimonial-style-5",
+      "blocks": {
+        "testimonial_box_MTajCT": {
+          "type": "testimonial-box",
+          "settings": {
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "customer_name": "Customer name"
+          }
+        },
+        "testimonial_box_Bit3RH": {
+          "type": "testimonial-box",
+          "settings": {
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "customer_name": "Customer name"
+          }
+        },
+        "testimonial_box_9R3DMm": {
+          "type": "testimonial-box",
+          "settings": {
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "customer_name": "Customer name"
+          }
+        },
+        "testimonial_box_RM9Rzc": {
+          "type": "testimonial-box",
+          "settings": {
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
+            "customer_name": "Customer name"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_box_MTajCT",
+        "testimonial_box_Bit3RH",
+        "testimonial_box_9R3DMm",
+        "testimonial_box_RM9Rzc"
+      ],
+      "name": "t:sections.testimonial_style_5.presets.name",
+      "settings": {
+        "font_size_heading": "h4",
+        "heading": "<h2>Pillow Talk</h2><h6>5-star reviews from the tens of thousands of people who’ve had a good night’s sleep.</h6>",
+        "color_scheme": "",
+        "background_color": "#f2eee8",
+        "background_gradient": "",
+        "padding_top_desktop": 50,
+        "padding_bottom_desktop": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
     "custom_reviews_JEntRe": {
       "type": "custom-reviews",
       "blocks": {
@@ -290,6 +341,7 @@
   "order": [
     "custom_hero_dhNPbF",
     "custom_featured_products_baHCh7",
+    "testimonial_style_5_NKAYzj",
     "custom_reviews_JEntRe",
     "custom_advantages_aNnhmg",
     "custom_quality_C7WMnb",
