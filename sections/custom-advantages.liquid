@@ -1,4 +1,4 @@
-<section {% render 'section-attr' %}>
+<section id="shopify-section-{{ section.id }}" class="custom-advantages-section-wrapper">
     {{ 'section-custom-advantages.css' | asset_url | stylesheet_tag }}
 
     {%- liquid
@@ -11,12 +11,26 @@
       assign text_color = section.settings.text_color
       assign bottom_box_bg_color = section.settings.bottom_background_color
       assign bottom_box_text_color = section.settings.bottom_text_color
+      assign fluff_image = section.settings.fluff_image
     -%}
 
     <div class="custom-advantages" 
          style="--bg-color: {{ bg_color }}; --text-color: {{ text_color }}; --bottom-bg-color: {{ bottom_box_bg_color }}; --bottom-text-color: {{ bottom_box_text_color }};">
 
-        <div class="custom-section">
+        {%- if fluff_image != blank -%}
+          <div class="custom-advantages__fluff-overlay">
+            <img 
+              src="{{ fluff_image | image_url: width: 2000 }}" 
+              alt="" 
+              role="presentation"
+              width="{{ fluff_image.width }}"
+              height="{{ fluff_image.height }}"
+              loading="eager"
+            >
+          </div>
+        {%- endif -%}
+
+        <div class="custom-advantages__content-container">
             <xo-container class="custom-advantages__container">
                 <div class="custom-advantages__header">
                     {%- if overtitle_top != blank -%}
@@ -32,7 +46,7 @@
 
                 <div class="custom-advantages__bottom-wrapper">
                     {%- if overtitle_bottom != blank -%}
-                        <span class="custom-advantages__overtitle custom-advantages__overtitle--bottom">{{ overtitle_bottom | escape }}</span>
+                        <span class="custom-advantages__overtitle">{{ overtitle_bottom | escape }}</span>
                     {%- endif -%}
 
                     {%- if section.blocks.size > 0 -%}
@@ -63,6 +77,37 @@
             </xo-container>
         </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const section = document.getElementById('shopify-section-{{ section.id }}');
+        const fluffOverlay = section ? section.querySelector('.custom-advantages__fluff-overlay') : null;
+
+        if (!fluffOverlay) return;
+
+        const animate = () => {
+          const sectionRect = section.getBoundingClientRect();
+          
+          if (sectionRect.bottom < 0 || sectionRect.top > window.innerHeight) {
+            return;
+          }
+
+          const scroll_pos = window.scrollY;
+          const section_top_offset = section.offsetTop;
+          
+          let progress = 0;
+          if (scroll_pos > section_top_offset) {
+            progress = (scroll_pos - section_top_offset) * 1.2;
+          }
+          
+          fluffOverlay.style.transform = `translateY(-${progress}px)`;
+        };
+
+        window.addEventListener('scroll', animate, { passive: true });
+        window.addEventListener('resize', animate, { passive: true });
+        animate();
+      });
+    </script>
 </section>
 
 {% schema %}
@@ -104,7 +149,12 @@
       "type": "richtext",
       "id": "description",
       "label": "Description",
-      "default": "<p>We fill each pillow with a revolutionary blend that outperforms every other fill type. It's soft without bottoming out.</p>"
+      "default": "<p>We fill each pillow with a revolutionary blend that outperforms every other fill type. It’s soft without bottoming out. It maneuvers freely yet never loses form. It’s… night and day.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "fluff_image",
+      "label": "Fluff Image (PNG with transparency)"
     },
     {
       "type": "header",
@@ -114,7 +164,7 @@
       "type": "color",
       "id": "bottom_background_color",
       "label": "Box Background Color",
-      "default": "#c6b3d9"
+      "default": "#B67BBA"
     },
     {
       "type": "color",
@@ -149,13 +199,13 @@
           "type": "color",
           "id": "card_background_color",
           "label": "Card Background Color",
-          "default": "#f5f5f5"
+          "default": "#F9F7F4"
         },
         {
           "type": "color",
           "id": "card_text_color",
           "label": "Card Text Color",
-          "default": "#333333"
+          "default": "#000000"
         }
       ]
     }
@@ -164,24 +214,9 @@
     {
       "name": "Custom Advantages",
       "blocks": [
-        {
-          "type": "advantage_item",
-          "settings": {
-            "text": "<p>New shredded memory foam cubes</p>"
-          }
-        },
-        {
-          "type": "advantage_item",
-          "settings": {
-            "text": "<p>Fluffy matrix of down-esque poly tufts</p>"
-          }
-        },
-        {
-          "type": "advantage_item",
-          "settings": {
-            "text": "<p>Cooling gel beading (The Cool Stuff)</p>"
-          }
-        }
+        { "type": "advantage_item" },
+        { "type": "advantage_item" },
+        { "type": "advantage_item" }
       ]
     }
   ]
