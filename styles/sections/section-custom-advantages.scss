@@ -61,7 +61,7 @@
     margin: 0 auto rem(24);
     
     @media (max-width: 992px) {
-      font-size: rem(42);
+      font-size: rem(42) !important;
     }
   }
 
