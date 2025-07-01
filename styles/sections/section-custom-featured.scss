@@ -98,13 +98,18 @@
     }
 
     &__card-button {
-        color: var(--color-white);
+        color: var(--color-neutral-cream);
         text-decoration: none;
-        font-weight: 500;
+        font-weight: 300;
         display: inline-flex;
         align-items: center;
-        gap: rem(16);
+        gap: rem(24);
         transition: var(--default-transition);
+        opacity: 1;
+
+        &:hover {
+           opacity: 0.8;
+        }
     }
 
     &__card-arrow {

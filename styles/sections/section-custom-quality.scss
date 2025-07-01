@@ -122,8 +122,8 @@
 
     &__button {
         text-decoration: none;
-        font-size: rem(16);
-        font-weight: 500;
+        font-size: rem(18);
+        font-weight: 300;
         transition: var(--default-transition);
 
         &--primary {
@@ -133,7 +133,7 @@
             border-radius: rem(120);
 
             &:hover {
-                opacity: 0.8;
+                background-color: var(--color-blue-120);
             }
         }
 

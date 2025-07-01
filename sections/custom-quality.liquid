@@ -88,7 +88,10 @@
             {%- endif -%}
             {%- if button_2_text != blank -%}
               <a href="{{ button_2_link | default: '#' }}" class="custom-quality__button custom-quality__button--secondary">
-                {{ button_2_text }} <span class="custom-quality__button-arrow">&rsaquo;</span>
+                {{ button_2_text }} <span class="custom-quality__button-arrow"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.536053 14.9619L8.46387 7.96191L0.536053 0.961914" stroke="black" stroke-opacity="0.4"/>
+                </svg>
+                </span>
               </a>
             {%- endif -%}
           </div>

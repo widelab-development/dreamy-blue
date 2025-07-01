@@ -40,7 +40,10 @@
                                         <p class="custom-featured-products__card-description">{{ description | escape }}</p>
                                     {%- endif -%}
                                     <a href="{{ product.url | default: '#' }}" class="custom-featured-products__card-button">
-                                        Discover <span class="custom-featured-products__card-arrow">&rsaquo;</span>
+                                        Discover <span class="custom-featured-products__card-arrow"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.536175 15L8.46399 8L0.536175 1" stroke="#FFFEFC"/>
+                                        </svg>
+                                        </span>
                                     </a>
                                 </div>
 

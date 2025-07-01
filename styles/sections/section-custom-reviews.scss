@@ -56,7 +56,7 @@
     flex-wrap: wrap;
 
     @media (max-width: 768px) {
-      gap: rem(30);
+      gap: rem(16);
     }
   }
 
@@ -73,6 +73,10 @@
       max-height: rem(60);
       width: auto;
       object-fit: contain;
+
+      @media (max-width: 768px) {
+        max-height: rem(50);
+      }
     }
   }
 
@@ -157,5 +161,10 @@
   &__nav-icon {
     width: 12px;
     height: 19px;
+  }
+
+  .flickity-slider {
+    display: flex;
+    align-items: center;
   }
 }

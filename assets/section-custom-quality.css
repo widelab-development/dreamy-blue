@@ -116,8 +116,8 @@
 }
 .custom-quality__button {
   text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 300;
   transition: var(--default-transition);
 }
 .custom-quality__button--primary {
@@ -127,7 +127,7 @@
   border-radius: 12rem;
 }
 .custom-quality__button--primary:hover {
-  opacity: 0.8;
+  background-color: var(--color-blue-120);
 }
 .custom-quality__button--secondary {
   color: rgba(0, 0, 0, 0.4);

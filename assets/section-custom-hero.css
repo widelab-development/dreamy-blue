@@ -95,19 +95,19 @@
   color: var(--color-midnight-blue);
 }
 .custom-hero-banner__button--primary:hover {
-  background: var(--color-blue-80);
-  color: var(--color-white);
+  background: var(--color-blue-120);
 }
 .custom-hero-banner__button--secondary {
   background: transparent;
   color: var(--color-neutral-cream);
+  opacity: 0.8;
   border: none;
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
 .custom-hero-banner__button--secondary:hover {
-  color: var(--color-blue-40);
+  opacity: 1;
 }
 @media (max-width: 992px) {
   .custom-hero-banner__button--secondary {
