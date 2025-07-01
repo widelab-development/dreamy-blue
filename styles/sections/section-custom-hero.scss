@@ -95,21 +95,21 @@
         color: var(--color-midnight-blue);
   
         &:hover {
-          background: var(--color-blue-80);
-          color: var(--color-white);
+          background: var(--color-blue-120);
         }
       }
   
       &--secondary {
         background: transparent;
         color: var(--color-neutral-cream);
+        opacity: 0.8;
         border: none;
         display: flex;
         align-items: center;
         gap: rem(8);
   
         &:hover {
-          color: var(--color-blue-40);
+          opacity: 1;
         }
 
         @media (max-width: 992px) {
