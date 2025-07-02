@@ -9,6 +9,153 @@
  */
 {
   "sections": {
+    "custom_dream_hero_LqLFmE": {
+      "type": "custom-dream-hero",
+      "name": "Custom Dream Hero",
+      "settings": {
+        "background_color": "#1d1c50",
+        "title_color": "#8FBFEF",
+        "desc_color": "#FFFFFF",
+        "image": "shopify://shop_images/B0000064_1.png",
+        "title": "Change your pillow. Change your night. Change your life.",
+        "description": "<p>We know those are bold statements. (That’s why we used such big letters.) It is our firmest belief that by crafting the world’s most helpful pillows, and giving you command over how they serve you, we help align humankind into a better rested, less achy, more productive version of itself. Now that’s the dream.</p>",
+        "button1_text": "Shop Pillows",
+        "button1_link": "",
+        "button1_bg": "#8FBFEF",
+        "button1_color": "#1d1c50",
+        "button2_text": "Find Your Fit",
+        "button2_link": "",
+        "button2_color": "#fffefc"
+      }
+    },
+    "custom_dream_center_mHdVdY": {
+      "type": "custom-dream-center",
+      "name": "Custom Dream Center",
+      "settings": {
+        "background_color": "#1d1c50",
+        "image_bg_color": "#8fc6f7",
+        "image": "shopify://shop_images/Frame_81.png",
+        "title": "Comfort is subjective.",
+        "title_color": "#ffffff",
+        "description": "<p>From the starfish to the fetal, no body uses the exact same position as the next human. What’s plush to you, another might call stuffy. <strong>Adjustability = happiness.</strong></p>",
+        "desc_color": "#ffffff"
+      }
+    },
+    "custom_dream_gallery_aEVePM": {
+      "type": "custom-dream-gallery",
+      "blocks": {
+        "top_image_g3CLmw": {
+          "type": "top_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15617.png"
+          }
+        },
+        "top_image_eYbk7m": {
+          "type": "top_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15620.png"
+          }
+        },
+        "top_image_kdXBLd": {
+          "type": "top_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15621.png"
+          }
+        },
+        "top_image_yxHAkQ": {
+          "type": "top_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619.png"
+          }
+        },
+        "top_image_J4mHga": {
+          "type": "top_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15622.png"
+          }
+        },
+        "top_image_zFMyA6": {
+          "type": "top_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15618.png"
+          }
+        },
+        "side_left_img_CjNpEx": {
+          "type": "side_left_img",
+          "settings": {
+            "image": "shopify://shop_images/image_77.png"
+          }
+        },
+        "side_right_img_ParnTW": {
+          "type": "side_right_img",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15622_2.png"
+          }
+        },
+        "bottom_image_YkkWij": {
+          "type": "bottom_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15617_1.png"
+          }
+        },
+        "bottom_image_BzxKfB": {
+          "type": "bottom_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15621_1.png"
+          }
+        },
+        "bottom_image_W7WRzJ": {
+          "type": "bottom_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15620_1.png"
+          }
+        },
+        "bottom_image_eA3PEY": {
+          "type": "bottom_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619_1.png"
+          }
+        },
+        "bottom_image_KHEinj": {
+          "type": "bottom_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15622_1.png"
+          }
+        },
+        "bottom_image_FwTnzJ": {
+          "type": "bottom_image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15618_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "top_image_g3CLmw",
+        "top_image_eYbk7m",
+        "top_image_kdXBLd",
+        "top_image_yxHAkQ",
+        "top_image_J4mHga",
+        "top_image_zFMyA6",
+        "side_left_img_CjNpEx",
+        "side_right_img_ParnTW",
+        "bottom_image_YkkWij",
+        "bottom_image_BzxKfB",
+        "bottom_image_W7WRzJ",
+        "bottom_image_eA3PEY",
+        "bottom_image_KHEinj",
+        "bottom_image_FwTnzJ"
+      ],
+      "name": "Custom Dream Gallery",
+      "settings": {
+        "background_color": "#1d1c50",
+        "subtitle": "That's why we sell only one thing:",
+        "subtitle_color": "#fff",
+        "title": "America’s most adjustable, least returned pillow.",
+        "title_color": "#e5b4eb",
+        "description": "<p>DreamyBlue ranks as the pillow brand with the single lowest rate of returns across all online marketplaces.</p>",
+        "desc_color": "#fff"
+      }
+    },
     "custom_form_BhBNYk": {
       "type": "custom-form",
       "name": "Custom Form",
@@ -19,7 +166,7 @@
         "name_placeholder": "Name",
         "email_placeholder": "Email Address",
         "button_text": "Get the Good Stuff!",
-        "section_background_color": "#ffffff",
+        "section_background_color": "#1d1c50",
         "inner_background_color": "#f8f7f5",
         "button_background_color": "#c7b4d4",
         "button_text_color": "#ffffff"
@@ -27,6 +174,9 @@
     }
   },
   "order": [
+    "custom_dream_hero_LqLFmE",
+    "custom_dream_center_mHdVdY",
+    "custom_dream_gallery_aEVePM",
     "custom_form_BhBNYk"
   ]
 }
