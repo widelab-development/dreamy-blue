@@ -1,0 +1,159 @@
+{{ 'section-custom-dream-hero.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign title_color = section.settings.title_color
+  assign desc_color = section.settings.desc_color
+  assign button1_text = section.settings.button1_text
+  assign button1_link = section.settings.button1_link
+  assign button1_bg = section.settings.button1_bg
+  assign button1_color = section.settings.button1_color
+  assign button2_text = section.settings.button2_text
+  assign button2_link = section.settings.button2_link
+  assign button2_color = section.settings.button2_color
+  assign image = section.settings.image
+  assign title = section.settings.title
+  assign description = section.settings.description
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-dream-hero"
+  style="--bg-color: {{ bg_color }}; --title-color: {{ title_color }}; --desc-color: {{ desc_color }};"
+>
+  <div class="custom-dream-hero__wrapper">
+    <div class="custom-dream-hero__top">
+      <div class="custom-dream-hero__container">
+        {%- if title != blank -%}
+          <h1 class="custom-dream-hero__title">{{ title }}</h1>
+        {%- endif -%}
+        {%- if description != blank -%}
+          <div class="custom-dream-hero__desc">{{ description }}</div>
+        {%- endif -%}
+        <div class="custom-dream-hero__buttons">
+          {%- if button1_text != blank -%}
+            <a href="{{ button1_link | default: '#' }}"
+               class="custom-dream-hero__button custom-dream-hero__button--primary"
+               style="background-color: {{ button1_bg }}; color: {{ button1_color }};">
+              {{ button1_text }}
+            </a>
+          {%- endif -%}
+          {%- if button2_text != blank -%}
+            <a href="{{ button2_link | default: '#' }}"
+               class="custom-dream-hero__button custom-dream-hero__button--secondary"
+               style="color: {{ button2_color }};">
+              {{ button2_text }} <span class="custom-dream-hero__arrow"><svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.537029 14.4711L8.46484 7.47107L0.53703 0.471069" stroke="#FFFEFC"/>
+              </svg>
+              </span>
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    <div class="custom-dream-hero__bottom">
+      {%- if image != blank -%}
+        <img
+          src="{{ image | image_url: width: 1600 }}"
+          alt="{{ image.alt | default: title | escape }}"
+          class="custom-dream-hero__image"
+          width="1600"
+          height="auto"
+          loading="lazy"
+        >
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Dream Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#1d1c50"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#8FBFEF"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "Description Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Bottom Image"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "Change your pillow. Change your night. Change your life."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>We know those are bold statements. (That’s why we used such big letters.) It is our firmest belief that by crafting the world’s most helpful pillows, and giving you command over how they serve you, we help align humankind into a better rested, less achy, more productive version of itself. Now that’s the dream.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button1_text",
+      "label": "Primary Button Text",
+      "default": "Shop Pillows"
+    },
+    {
+      "type": "url",
+      "id": "button1_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button1_bg",
+      "label": "Primary Button Background",
+      "default": "#8FBFEF"
+    },
+    {
+      "type": "color",
+      "id": "button1_color",
+      "label": "Primary Button Text Color",
+      "default": "#1d1c50"
+    },
+    {
+      "type": "text",
+      "id": "button2_text",
+      "label": "Secondary Button Text",
+      "default": "Find Your Fit"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button2_color",
+      "label": "Secondary Button Text Color",
+      "default": "#8FBFEF"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Dream Hero"
+    }
+  ]
+}
+{% endschema %}
