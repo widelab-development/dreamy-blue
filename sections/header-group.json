@@ -57,7 +57,7 @@
         "event_type": "hover",
         "logo_transparent": "shopify://shop_images/Group_3_1.svg",
         "logo_sticky": "shopify://shop_images/Group_3.svg",
-        "logo_width_desktop": 250,
+        "logo_width_desktop": 180,
         "logo_width_mobile": 90,
         "logo_position": "center",
         "show_currency_selector": "hidden",
