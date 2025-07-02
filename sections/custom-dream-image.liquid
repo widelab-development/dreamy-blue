@@ -1,0 +1,158 @@
+{{ 'section-custom-dream-image.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign background_color = section.settings.background_color
+  assign title_color = section.settings.title_color
+  assign desc_color = section.settings.desc_color
+  assign button1_text = section.settings.button1_text
+  assign button1_link = section.settings.button1_link
+  assign button1_bg = section.settings.button1_bg
+  assign button1_color = section.settings.button1_color
+  assign button2_text = section.settings.button2_text
+  assign button2_link = section.settings.button2_link
+  assign button2_color = section.settings.button2_color
+  assign image = section.settings.image
+  assign title = section.settings.title
+  assign description = section.settings.description
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-dream-image"
+  style="--bg-color: {{ background_color }}; --title-color: {{ title_color }}; --desc-color: {{ desc_color }};"
+>
+  <div class="custom-dream-image__grid">
+    <div class="custom-dream-image__image-wrapper">
+      {%- if image != blank -%}
+        <img
+          src="{{ image | image_url: width: 1200 }}"
+          alt="{{ image.alt | default: title | escape }}"
+          width="{{ image.width }}"
+          height="{{ image.height }}"
+          loading="lazy"
+        >
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+
+    <div class="custom-dream-image__content-wrapper">
+      <div class="custom-dream-image__content">
+        {%- if title != blank -%}
+          <h2 class="custom-dream-image__title">{{ title }}</h2>
+        {%- endif -%}
+        {%- if description != blank -%}
+          <div class="custom-dream-image__desc">{{ description }}</div>
+        {%- endif -%}
+        <div class="custom-dream-image__buttons">
+          {%- if button1_text != blank -%}
+            <a href="{{ button1_link | default: '#' }}"
+               class="custom-dream-image__button custom-dream-image__button--primary"
+               style="background-color: {{ button1_bg }}; color: {{ button1_color }};">
+              {{ button1_text }}
+            </a>
+          {%- endif -%}
+          {%- if button2_text != blank -%}
+            <a href="{{ button2_link | default: '#' }}"
+               class="custom-dream-image__button custom-dream-image__button--secondary"
+               style="color: {{ button2_color }};">
+              {{ button2_text }} <span class="custom-dream-image__arrow"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.03703 14.7217L8.96484 7.72168L1.03703 0.721679" stroke="#FFFEFC"/>
+              </svg></span>
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Dream Image",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color (Right Column)",
+      "default": "#1d1c50"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#8FBFEF"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "Description Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "The backbone of your deepest, healthiest sleep."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Developed for natural alignment.<br>Crafted for supernatural comfort.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button1_text",
+      "label": "Primary Button Text",
+      "default": "Shop Pillows"
+    },
+    {
+      "type": "url",
+      "id": "button1_link",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button1_bg",
+      "label": "Primary Button Background",
+      "default": "#8FBFEF"
+    },
+    {
+      "type": "color",
+      "id": "button1_color",
+      "label": "Primary Button Text Color",
+      "default": "#1d1c50"
+    },
+    {
+      "type": "text",
+      "id": "button2_text",
+      "label": "Secondary Button Text",
+      "default": "Find Your Fit"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button2_color",
+      "label": "Secondary Button Text Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Dream Image"
+    }
+  ]
+}
+{% endschema %}

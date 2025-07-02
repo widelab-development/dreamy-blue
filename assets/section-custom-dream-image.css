@@ -1,0 +1,116 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/*MIXINS*/
+.custom-dream-image {
+  background-color: var(--bg-color);
+  padding-top: 8rem;
+}
+.custom-dream-image__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-image__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.custom-dream-image__image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .custom-dream-image__image-wrapper {
+    min-height: 400px;
+  }
+}
+.custom-dream-image__image-wrapper img, .custom-dream-image__image-wrapper .placeholder-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.custom-dream-image__content-wrapper {
+  background-color: var(--bg-color);
+  color: var(--desc-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-image__content-wrapper {
+    padding: 6rem 2.4rem;
+    order: -1;
+  }
+}
+.custom-dream-image__content {
+  max-width: 61rem;
+  width: 100%;
+}
+.custom-dream-image__title {
+  color: var(--title-color);
+  font-size: 4.8rem !important;
+  font-family: var(--font-beausite-fit-web);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 3.2rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-image__title {
+    font-size: 3.6rem !important;
+  }
+}
+.custom-dream-image__desc {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+.custom-dream-image__desc p {
+  margin: 0;
+}
+.custom-dream-image__buttons {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.custom-dream-image__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 12rem;
+  padding: 1.2rem 6rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--default-transition);
+}
+@media (max-width: 992px) {
+  .custom-dream-image__button {
+    width: 100%;
+  }
+}
+.custom-dream-image__button--primary {
+  background-color: var(--button1-bg);
+  color: var(--button1-color);
+}
+.custom-dream-image__button--primary:hover {
+  background-color: var(--color-blue-120) !important;
+}
+.custom-dream-image__button--secondary {
+  background: none;
+  color: var(--button2-color);
+  gap: 0.8rem;
+  opacity: 1;
+}
+.custom-dream-image__button--secondary:hover {
+  opacity: 0.8 !important;
+}
+.custom-dream-image__arrow {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+/*# sourceMappingURL=section-custom-dream-image.css.map */
