@@ -1,0 +1,124 @@
+@use "../settings/init" as *;
+
+.custom-dream-hero {
+  background-color: var(--bg-color);
+  color: var(--desc-color);
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  &__top {
+    padding: rem(100) 0 rem(72) 0;
+    background-color: var(--bg-color);
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__container {
+    max-width: rem(1200);
+    margin: 0 auto;
+    padding: 0 rem(24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    color: var(--title-color);
+    font-size: rem(64);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: rem(32);
+
+    @media (max-width: 992px) {
+      font-size: rem(38);
+    }
+  }
+
+  &__desc {
+    color: var(--desc-color);
+    font-size: rem(18);
+    line-height: 1.6;
+    margin-bottom: rem(40);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: rem(24);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: rem(24);
+  }
+
+  &__button {
+    display: inline-block;
+    border: none;
+    border-radius: rem(120);
+    padding: rem(12) rem(64);
+    font-size: rem(18);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--default-transition);
+
+    &--primary {
+      background-color: var(--color-blue-80);
+      color: var(--button1-color, #1d1c50);
+
+      &:hover {
+        background-color: var(--color-blue-120) !important;
+      }
+    }
+
+    &--secondary {
+      background: none;
+      color: var(--color-neutral-cream);
+      font-weight: 400;
+      padding-right: rem(16);
+      display: flex;
+      align-items: center;
+      gap: rem(12);
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__arrow {
+    font-size: rem(24);
+    line-height: 1;
+    margin-left: rem(4);
+    display: inline-block;
+  }
+
+  &__bottom {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: rem(-20);
+    display: flex;
+    justify-content: center;
+    background: none;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    max-height: rem(1000);
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+}

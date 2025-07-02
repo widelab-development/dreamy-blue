@@ -1,0 +1,112 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/*MIXINS*/
+.custom-dream-hero {
+  background-color: var(--bg-color);
+  color: var(--desc-color);
+}
+.custom-dream-hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+.custom-dream-hero__top {
+  padding: 10rem 0 7.2rem 0;
+  background-color: var(--bg-color);
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+.custom-dream-hero__container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.custom-dream-hero__title {
+  color: var(--title-color);
+  font-size: 6.4rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 3.2rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-hero__title {
+    font-size: 3.8rem;
+  }
+}
+.custom-dream-hero__desc {
+  color: var(--desc-color);
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+.custom-dream-hero__desc p {
+  margin: 0;
+}
+.custom-dream-hero__buttons {
+  display: flex;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+.custom-dream-hero__button {
+  display: inline-block;
+  border: none;
+  border-radius: 12rem;
+  padding: 1.2rem 6.4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--default-transition);
+}
+.custom-dream-hero__button--primary {
+  background-color: var(--color-blue-80);
+  color: var(--button1-color, #1d1c50);
+}
+.custom-dream-hero__button--primary:hover {
+  background-color: var(--color-blue-120) !important;
+}
+.custom-dream-hero__button--secondary {
+  background: none;
+  color: var(--color-neutral-cream);
+  font-weight: 400;
+  padding-right: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  opacity: 1;
+}
+.custom-dream-hero__button--secondary:hover {
+  opacity: 0.8;
+}
+.custom-dream-hero__arrow {
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-left: 0.4rem;
+  display: inline-block;
+}
+.custom-dream-hero__bottom {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: -2rem;
+  display: flex;
+  justify-content: center;
+  background: none;
+}
+.custom-dream-hero__image {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  max-height: 100rem;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+/*# sourceMappingURL=section-custom-dream-hero.css.map */
