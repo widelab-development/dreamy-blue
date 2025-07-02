@@ -1,0 +1,125 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/*MIXINS*/
+.custom-dream-gallery {
+  background: var(--bg-color);
+  width: 100%;
+}
+.custom-dream-gallery__slider-row {
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+.custom-dream-gallery__slider-row:last-child {
+  margin-bottom: 0;
+}
+.custom-dream-gallery__splide {
+  width: 100%;
+}
+.custom-dream-gallery__splide .splide__track {
+  width: 100%;
+}
+.custom-dream-gallery__splide .splide__list {
+  display: flex;
+  align-items: center;
+}
+.custom-dream-gallery__splide .splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+.custom-dream-gallery__slide {
+  background: none;
+  overflow: hidden;
+  width: 28rem;
+  height: 28rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+@media (max-width: 768px) {
+  .custom-dream-gallery__slide {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+.custom-dream-gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.custom-dream-gallery__middle-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+  width: 100%;
+  max-width: 168rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 992px) {
+  .custom-dream-gallery__middle-row {
+    margin: 2.4rem 0;
+  }
+}
+.custom-dream-gallery__side-img {
+  width: 28rem;
+  height: 28rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-dream-gallery__side-img--right {
+  margin-right: 2.4rem;
+}
+.custom-dream-gallery__side-img--left {
+  margin-left: 2.4rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-gallery__side-img {
+    display: none;
+  }
+}
+.custom-dream-gallery__center {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.4rem;
+  min-width: 0;
+  text-align: center;
+}
+.custom-dream-gallery__subtitle {
+  color: var(--subtitle-color);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.custom-dream-gallery__title {
+  font-family: var(--font-beausite-fit-web);
+  color: var(--title-color);
+  font-size: 7.2rem !important;
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+  line-height: 1.1;
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .custom-dream-gallery__title {
+    font-size: 3.6rem !important;
+  }
+}
+.custom-dream-gallery__desc {
+  color: var(--desc-color);
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 100rem;
+}
+.custom-dream-gallery__desc p {
+  margin: 0;
+}
+/*# sourceMappingURL=section-custom-dream-gallery.css.map */

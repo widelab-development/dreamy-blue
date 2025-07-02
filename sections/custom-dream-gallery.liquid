@@ -1,0 +1,224 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+{{ 'section-custom-dream-gallery.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign title = section.settings.title
+  assign title_color = section.settings.title_color
+  assign desc = section.settings.description
+  assign desc_color = section.settings.desc_color
+  assign subtitle = section.settings.subtitle
+  assign subtitle_color = section.settings.subtitle_color
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-dream-gallery"
+  style="--bg-color: {{ bg_color }}; --title-color: {{ title_color }}; --desc-color: {{ desc_color }}; --subtitle-color: {{ subtitle_color }};"
+>
+  <div class="custom-dream-gallery__slider-row custom-dream-gallery__slider-row--top">
+    <div class="splide custom-dream-gallery__splide custom-dream-gallery__splide--top" id="SplideTop-{{ section.id }}">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {%- for block in section.blocks -%}
+            {%- if block.type == "top_image" -%}
+              <li class="splide__slide custom-dream-gallery__slide">
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.image.alt | escape }}" class="custom-dream-gallery__img" loading="lazy">
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-dream-gallery__middle-row">
+    <div class="custom-dream-gallery__side-img custom-dream-gallery__side-img--left">
+      {%- assign left_img = section.blocks | where: "type", "side_left_img" | first -%}
+      {%- if left_img and left_img.settings.image != blank -%}
+        <img src="{{ left_img.settings.image | image_url: width: 400 }}" alt="{{ left_img.settings.image.alt | escape }}" class="custom-dream-gallery__img" loading="lazy">
+      {%- endif -%}
+    </div>
+    <div class="custom-dream-gallery__center">
+      {%- if subtitle != blank -%}
+        <div class="custom-dream-gallery__subtitle">{{ subtitle }}</div>
+      {%- endif -%}
+      {%- if title != blank -%}
+        <h2 class="custom-dream-gallery__title">{{ title }}</h2>
+      {%- endif -%}
+      {%- if desc != blank -%}
+        <div class="custom-dream-gallery__desc">{{ desc }}</div>
+      {%- endif -%}
+    </div>
+    <div class="custom-dream-gallery__side-img custom-dream-gallery__side-img--right">
+      {%- assign right_img = section.blocks | where: "type", "side_right_img" | first -%}
+      {%- if right_img and right_img.settings.image != blank -%}
+        <img src="{{ right_img.settings.image | image_url: width: 400 }}" alt="{{ right_img.settings.image.alt | escape }}" class="custom-dream-gallery__img" loading="lazy">
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="custom-dream-gallery__slider-row custom-dream-gallery__slider-row--bottom">
+    <div class="splide custom-dream-gallery__splide custom-dream-gallery__splide--bottom" id="SplideBottom-{{ section.id }}">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {%- for block in section.blocks -%}
+            {%- if block.type == "bottom_image" -%}
+              <li class="splide__slide custom-dream-gallery__slide">
+                {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.image.alt | escape }}" class="custom-dream-gallery__img" loading="lazy">
+                {%- endif -%}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Splide('#SplideTop-{{ section.id }}', {
+      type: 'loop',
+      perPage: 6,
+      gap: '24px',
+      pagination: false,
+      arrows: false,
+      drag: true,
+      breakpoints: {
+        1200: { perPage: 4 },
+        768: { perPage: 2.5, gap: '12px' }
+      }
+    }).mount();
+
+    new Splide('#SplideBottom-{{ section.id }}', {
+      type: 'loop',
+      perPage: 6,
+      gap: '24px',
+      pagination: false,
+      arrows: false,
+      drag: true,
+      breakpoints: {
+        1200: { perPage: 4 },
+        768: { perPage: 2.5, gap: '12px' }
+      }
+    }).mount();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Dream Gallery",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#23215c"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "That's why we sell only one thing:"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#fff"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "America’s most adjustable, least returned pillow."
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#b7a6e7"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>DreamyBlue ranks as the pillow brand with the single lowest rate of returns across all online marketplaces.</p>"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "Description Color",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "top_image",
+      "name": "Top Image",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Top Row Image"
+        }
+      ]
+    },
+    {
+      "type": "bottom_image",
+      "name": "Bottom Image",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Bottom Row Image"
+        }
+      ]
+    },
+    {
+      "type": "side_left_img",
+      "name": "Side Left Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Left Side Image"
+        }
+      ]
+    },
+    {
+      "type": "side_right_img",
+      "name": "Side Right Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Right Side Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Dream Gallery",
+      "blocks": [
+        { "type": "top_image" },{ "type": "top_image" },{ "type": "top_image" },{ "type": "top_image" },{ "type": "top_image" },{ "type": "top_image" },
+        { "type": "side_left_img" },
+        { "type": "side_right_img" },
+        { "type": "bottom_image" },{ "type": "bottom_image" },{ "type": "bottom_image" },{ "type": "bottom_image" },{ "type": "bottom_image" },{ "type": "bottom_image" }
+      ]
+    }
+  ]
+}
+{% endschema %}
