@@ -1,0 +1,102 @@
+{{ 'section-custom-dream-center.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign image = section.settings.image
+  assign image_bg_color = section.settings.image_bg_color
+  assign title = section.settings.title
+  assign title_color = section.settings.title_color
+  assign description = section.settings.description
+  assign desc_color = section.settings.desc_color
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-dream-center"
+  style="--bg-color: {{ bg_color }};"
+>
+  <div class="custom-dream-center__container">
+    <div class="custom-dream-center__image-col" style="--image-bg: {{ image_bg_color }};">
+      {%- if image != blank -%}
+        <div class="custom-dream-center__image-bg">
+          <img
+            src="{{ image | image_url: width: 700 }}"
+            alt="{{ image.alt | default: title | escape }}"
+            class="custom-dream-center__image"
+            width="700"
+            height="auto"
+            loading="lazy"
+          >
+        </div>
+      {%- else -%}
+        <div class="custom-dream-center__image-bg">
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="custom-dream-center__content-col">
+      {%- if title != blank -%}
+        <h2 class="custom-dream-center__title" style="color: {{ title_color }};">{{ title }}</h2>
+      {%- endif -%}
+      {%- if description != blank -%}
+        <div class="custom-dream-center__desc" style="color: {{ desc_color }};">{{ description }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Dream Center",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#23215c"
+    },
+    {
+      "type": "color",
+      "id": "image_bg_color",
+      "label": "Image Background Color",
+      "default": "#8fc6f7"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Pillow Image"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "Comfort is subjective."
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>From the starfish to the fetal, no body uses the exact same position as the next human. What’s plush to you, another might call stuffy. <b>Adjustability = happiness.</b></p>"
+    },
+    {
+      "type": "color",
+      "id": "desc_color",
+      "label": "Description Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Dream Center"
+    }
+  ]
+}
+{% endschema %}
