@@ -1,0 +1,108 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/*MIXINS*/
+.custom-dream-center {
+  background-color: var(--bg-color);
+  padding: 20rem 0;
+}
+@media (max-width: 992px) {
+  .custom-dream-center {
+    padding: 8rem 0;
+  }
+}
+.custom-dream-center__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 124.8rem;
+  margin: 0 auto;
+  gap: 8rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-center__container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+.custom-dream-center__image-col {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 0;
+}
+@media (max-width: 992px) {
+  .custom-dream-center__image-col {
+    order: 1;
+  }
+}
+.custom-dream-center__content-col {
+  order: 1;
+}
+@media (max-width: 992px) {
+  .custom-dream-center__content-col {
+    order: 0;
+  }
+}
+.custom-dream-center__image-bg {
+  background: var(--image-bg, #8fc6f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+  height: 34rem;
+  border-radius: 0.8rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-center__image-bg {
+    width: 90vw;
+    max-width: 50rem;
+    height: auto;
+    aspect-ratio: 3/2;
+  }
+}
+.custom-dream-center__image {
+  width: 100%;
+  max-width: 67rem;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.custom-dream-center__content-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 36rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-center__content-col {
+    align-items: center;
+    min-width: 0;
+    text-align: center;
+  }
+}
+.custom-dream-center__title {
+  font-family: var(--font-beausite-fit-web);
+  font-size: 7.2rem !important;
+  margin-top: 0;
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 3.2rem;
+}
+@media (max-width: 992px) {
+  .custom-dream-center__title {
+    font-size: 3.8rem !important;
+    margin-bottom: 1.8rem;
+  }
+}
+.custom-dream-center__desc {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  max-width: 46rem;
+}
+.custom-dream-center__desc b {
+  font-weight: 700;
+}
+/*# sourceMappingURL=section-custom-dream-center.css.map */
