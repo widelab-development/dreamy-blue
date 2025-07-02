@@ -13,15 +13,16 @@
       "type": "custom-form",
       "name": "Custom Form",
       "settings": {
+        "image": "shopify://shop_images/Frame_64.png",
         "heading": "Get The Position",
         "description": "<p>Our periodic newsletter on sleep health. It's worth getting up for.</p>",
         "name_placeholder": "Name",
         "email_placeholder": "Email Address",
         "button_text": "Get the Good Stuff!",
-        "section_background_color": "#FFFFFF",
-        "inner_background_color": "#F8F7F5",
-        "button_background_color": "#C7B4D4",
-        "button_text_color": "#FFFFFF"
+        "section_background_color": "#ffffff",
+        "inner_background_color": "#f8f7f5",
+        "button_background_color": "#c7b4d4",
+        "button_text_color": "#ffffff"
       }
     }
   },
