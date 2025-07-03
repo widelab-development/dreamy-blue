@@ -22,8 +22,10 @@
 }
 .custom-featured-products__heading {
   font-size: 7.2rem !important;
+  font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   margin-bottom: 1.6rem;
+  margin-top: 0;
   color: var(--color-midnight-blue);
 }
 @media (max-width: 992px) {
@@ -62,7 +64,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 0.8rem;
   overflow: hidden;
   transition: var(--default-transition);
 }
