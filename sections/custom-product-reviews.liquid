@@ -1,0 +1,142 @@
+{{ 'section-custom-product-reviews.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign heading = section.settings.heading
+  assign container_bg_color = section.settings.container_bg_color
+  assign card_bg_color = section.settings.card_bg_color
+
+  capture stars_svg
+    echo '<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6498 0.919922L13.3874 7.50193L20.4932 8.0716L15.0794 12.7092L16.7334 19.6432L10.6498 15.9274L4.56623 19.6432L6.22026 12.7092L0.80637 8.0716L7.9122 7.50193L10.6498 0.919922Z" fill="#FF9900"/></svg>'
+  endcapture
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-reviews-section"
+>
+  <xo-container
+    class="custom-product-reviews__container"
+    style="--container-bg-color: {{ container_bg_color }};"
+  >
+    {%- if heading != blank -%}
+      <h2 class="custom-product-reviews__heading">{{ heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="custom-product-reviews__grid">
+        {%- for block in section.blocks -%}
+          <div class="custom-product-reviews__card" style="--card-bg-color: {{ card_bg_color }};" {{ block.shopify_attributes }}>
+            <div class="custom-product-reviews__stars">
+              {%- for i in (1..block.settings.rating) -%}{{ stars_svg }}{%- endfor -%}
+            </div>
+            {%- if block.settings.image != blank -%}
+              <div class="custom-product-reviews__image-wrapper">
+                <img
+                  src="{{ block.settings.image | image_url: width: 500 }}"
+                  alt="{{ block.settings.image.alt | default: block.settings.author_name | escape }}"
+                  class="custom-product-reviews__image"
+                  loading="lazy"
+                >
+              </div>
+            {%- else -%}
+              <div class="custom-product-reviews__image-wrapper">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.quote != blank -%}
+              <blockquote class="custom-product-reviews__quote">{{ block.settings.quote }}</blockquote>
+            {%- endif -%}
+            <div class="custom-product-reviews__footer">
+              {%- if block.settings.author_name != blank -%}
+                <p class="custom-product-reviews__author">{{ block.settings.author_name }}</p>
+              {%- endif -%}
+              {%- if block.settings.show_verified_badge -%}
+                <span class="custom-product-reviews__badge">Verified Purchase</span>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </xo-container>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Product Reviews",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Signature Pillow Reviews"
+    },
+    {
+      "type": "color",
+      "id": "container_bg_color",
+      "label": "Container Background",
+      "default": "#fdfaf7"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card Background",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Star Rating",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote",
+          "default": "<p>This is the best pillow I have ever used. Highly recommend to everyone!</p>"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Customer"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_verified_badge",
+          "label": "Show 'Verified Purchase' badge",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Reviews",
+      "blocks": [
+        { "type": "review" },
+        { "type": "review" },
+        { "type": "review" },
+        { "type": "review" }
+      ]
+    }
+  ]
+}
+{% endschema %}
