@@ -4,8 +4,13 @@
 .custom-advantages {
   position: relative;
   background-color: var(--bg-color);
-  padding: 8rem 0;
+  padding: 8rem 0 18rem;
   overflow: hidden;
+}
+@media (max-width: 992px) {
+  .custom-advantages {
+    padding: 4rem 0 6rem;
+  }
 }
 .custom-advantages__fluff-overlay {
   position: absolute;
