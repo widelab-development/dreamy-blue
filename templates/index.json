@@ -13,6 +13,7 @@
       "type": "custom-hero",
       "name": "Custom Hero Banner",
       "settings": {
+        "section_bg_color": "#fdfaf7",
         "heading": "The backbone of your deepest, healthiest sleep.",
         "subheading": "Developed for natural alignment.",
         "description": "Crafted for supernatural comfort.",
@@ -159,7 +160,7 @@
       "name": "Custom Reviews",
       "settings": {
         "overtitle": "Our Pillows Are Award-Winning!",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "autoplay_speed": 3
       }
@@ -317,7 +318,7 @@
         "description": "<p>At every age and life stage, our alignment-focused and adjustable products put control in your hands—while putting your body in the perfect position for rejuvenation.</p>",
         "button_text": "Our Dream",
         "button_link": "",
-        "button_bg_color": "#1a1f36",
+        "button_bg_color": "#1d1c50",
         "button_text_color": "#ffffff"
       }
     },
