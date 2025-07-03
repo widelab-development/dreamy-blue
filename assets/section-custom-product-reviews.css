@@ -1,0 +1,110 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/*MIXINS*/
+.custom-product-reviews-section {
+  padding: 8rem 0;
+}
+@media (max-width: 768px) {
+  .custom-product-reviews-section {
+    padding: 4rem 0;
+  }
+}
+
+.custom-product-reviews__container {
+  background-color: var(--container-bg-color);
+  padding: 5.4rem 8rem;
+}
+@media (max-width: 768px) {
+  .custom-product-reviews__container {
+    padding: 3.2rem;
+  }
+}
+.custom-product-reviews__heading {
+  font-size: 4.8rem;
+  font-family: var(--font-beausite-fit-web);
+  font-weight: 300;
+  margin-bottom: 2.4rem;
+}
+@media (max-width: 768px) {
+  .custom-product-reviews__heading {
+    font-size: 3.6rem;
+    text-align: center;
+  }
+}
+.custom-product-reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4rem;
+}
+@media (max-width: 1200px) {
+  .custom-product-reviews__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .custom-product-reviews__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .custom-product-reviews__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.custom-product-reviews__card {
+  background-color: var(--card-bg-color);
+  padding: 3.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.custom-product-reviews__stars {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.2rem;
+}
+.custom-product-reviews__image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+.custom-product-reviews__image-wrapper .placeholder-svg {
+  width: 100%;
+  height: 100%;
+}
+.custom-product-reviews__image {
+  width: 100%;
+  height: 100%;
+  max-height: 18.4rem;
+  object-fit: cover;
+}
+.custom-product-reviews__quote {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin: 0 0 1.6rem 0;
+  color: var(--color-black);
+}
+.custom-product-reviews__quote p {
+  margin: 0;
+}
+.custom-product-reviews__footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+}
+.custom-product-reviews__author {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 0 !important;
+}
+.custom-product-reviews__badge {
+  background-color: #33AE6A;
+  color: var(--color-white);
+  padding: 0 1.2rem;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=section-custom-product-reviews.css.map */
