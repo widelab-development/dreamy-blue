@@ -52,16 +52,19 @@
   align-items: center;
   justify-content: center;
   min-height: 90rem;
-  padding: 10rem 0;
 }
-@media (max-width: 992px) {
+@media (max-width: 1499px) {
+  .custom-mission__content-wrapper {
+    min-height: 70rem;
+  }
+}
+@media (max-width: 1199px) {
   .custom-mission__content-wrapper {
     min-height: 60rem;
-    padding: 8rem 0;
   }
 }
 .custom-mission__content {
-  max-width: 80rem;
+  max-width: 90rem;
   text-align: center;
 }
 .custom-mission__overtitle {
@@ -72,11 +75,16 @@
   opacity: 0.9;
 }
 .custom-mission__heading {
-  font-size: 8rem !important;
+  font-size: 10rem !important;
   color: var(--text-color);
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: 3.2rem;
+}
+@media (max-width: 1499px) {
+  .custom-mission__heading {
+    font-size: 8rem !important;
+  }
 }
 @media (max-width: 992px) {
   .custom-mission__heading {
