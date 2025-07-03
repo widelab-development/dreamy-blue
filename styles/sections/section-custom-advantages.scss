@@ -3,8 +3,12 @@
 .custom-advantages {
   position: relative;
   background-color: var(--bg-color);
-  padding: rem(80) 0;
+  padding: rem(80) 0 rem(180);
   overflow: hidden;
+
+  @media (max-width: 992px) {
+    padding: rem(40) 0 rem(60);
+  }
 
   &__fluff-overlay {
     position: absolute;
