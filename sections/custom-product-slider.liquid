@@ -1,0 +1,192 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+{{ 'section-custom-product-slider.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign overtitle = section.settings.overtitle
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-slider-section"
+  style="--bg-color: {{ bg_color }};"
+>
+  <xo-container>
+    <div class="custom-product-slider__main-content">
+      <div class="custom-product-slider__text-col">
+        <div class="custom-product-slider__desktop-header">
+          {%- if overtitle != blank -%}
+            <p class="custom-product-slider__overtitle">{{ overtitle }}</p>
+          {%- endif -%}
+        </div>
+        <div class="custom-product-slider__text-items-wrapper">
+          {%- for block in section.blocks -%}
+            <div class="custom-product-slider__text-item" data-index="{{ forloop.index0 }}">
+              <h3 class="custom-product-slider__item-title">{{ block.settings.title }}</h3>
+              <p class="custom-product-slider__item-desc">{{ block.settings.description }}</p>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="custom-product-slider__media-col">
+        <div class="custom-product-slider__mobile-header">
+          <p class="custom-product-slider__overtitle">{{ overtitle }}</p>
+          <div class="custom-product-slider__pagination js-slider-pagination"></div>
+        </div>
+        <div class="custom-product-slider__image-slider-wrapper">
+          <div class="custom-product-slider__image-slider js-product-image-slider">
+            {%- for block in section.blocks -%}
+              <div class="custom-product-slider__image-item" data-index="{{ forloop.index0 }}">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 1400 }}"
+                    alt="{{ block.settings.image.alt | default: block.settings.title | escape }}"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </xo-container>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
+    if (!sectionEl) return;
+
+    const textItems = sectionEl.querySelectorAll('.custom-product-slider__text-item');
+    const imageItems = sectionEl.querySelectorAll('.custom-product-slider__image-item');
+    const imageSliderEl = sectionEl.querySelector('.js-product-image-slider');
+    const paginationContainer = sectionEl.querySelector('.js-slider-pagination');
+    let flkty = null;
+
+    function updateContent(index) {
+      textItems.forEach((item, i) => item.classList.toggle('is-active', i === index));
+      imageItems.forEach((item, i) => item.classList.toggle('is-active', i === index));
+      
+      const dots = paginationContainer.querySelectorAll('.dot');
+      dots.forEach((dot, i) => dot.classList.toggle('is-selected', i === index));
+    }
+
+    function setupTextItemListeners() {
+      textItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const index = parseInt(this.dataset.index, 10);
+          if (flkty && flkty.isActive) {
+            flkty.select(index);
+          } else {
+            updateContent(index);
+          }
+        });
+      });
+    }
+
+    function createPagination() {
+      paginationContainer.innerHTML = '';
+      for (let i = 0; i < imageItems.length; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'dot';
+        dot.setAttribute('aria-label', `View slide ${i + 1}`);
+        dot.addEventListener('click', () => flkty.select(i));
+        paginationContainer.appendChild(dot);
+      }
+    }
+
+    function initOrDestroyFlickity() {
+      const isMobile = window.innerWidth <= 991;
+
+      if (isMobile) {
+        if (!flkty) {
+          createPagination();
+          flkty = new Flickity(imageSliderEl, {
+            cellSelector: '.custom-product-slider__image-item',
+            wrapAround: true,
+            prevNextButtons: false,
+            pageDots: false,
+            draggable: true
+          });
+
+          flkty.on('select', function(index) {
+            updateContent(index);
+          });
+          updateContent(flkty.selectedIndex);
+        }
+      } else {
+        if (flkty) {
+          flkty.destroy();
+          flkty = null;
+        }
+        updateContent(0);
+      }
+    }
+    
+    setupTextItemListeners();
+    initOrDestroyFlickity();
+    window.addEventListener('resize', initOrDestroyFlickity);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Product Slider",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#1D1C50"
+    },
+    {
+      "type": "text",
+      "id": "overtitle",
+      "label": "Overtitle",
+      "default": "How It Works"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Zip..."
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Open the case at the smooth-gliding zipper."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Slider",
+      "blocks": [
+        { "type": "slide" },
+        { "type": "slide" },
+        { "type": "slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}
