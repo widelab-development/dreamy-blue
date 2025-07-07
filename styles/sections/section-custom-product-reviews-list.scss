@@ -2,11 +2,6 @@
 
 .custom-product-reviews-list-section {
   background-color: var(--section-bg-color);
-  padding: rem(80) 0;
-
-  @media (max-width: 991px) {
-    padding: 0;
-  }
 }
 
 .custom-product-reviews-list {
