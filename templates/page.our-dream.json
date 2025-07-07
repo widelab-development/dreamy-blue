@@ -162,17 +162,17 @@
       "settings": {
         "image": "shopify://shop_images/Frame_118.png",
         "background_color": "#1d1c50",
-        "title_color": "#8FBFEF",
-        "desc_color": "#FFFFFF",
+        "title_color": "#8fbfef",
+        "desc_color": "#ffffff",
         "title": "The backbone of your deepest, healthiest sleep.",
         "description": "<p>Developed for natural alignment.<br/>Crafted for supernatural comfort.</p>",
         "button1_text": "Shop Pillows",
         "button1_link": "",
-        "button1_bg": "#8FBFEF",
+        "button1_bg": "#8fbfef",
         "button1_color": "#1d1c50",
         "button2_text": "Find Your Fit",
         "button2_link": "",
-        "button2_color": "#FFFFFF"
+        "button2_color": "#ffffff"
       }
     },
     "custom_form_BhBNYk": {
@@ -186,7 +186,7 @@
         "email_placeholder": "Email Address",
         "button_text": "Get the Good Stuff!",
         "section_background_color": "#1d1c50",
-        "inner_background_color": "#f8f7f5",
+        "inner_background_color": "#f2eee8",
         "button_background_color": "#c7b4d4",
         "button_text_color": "#ffffff"
       }
