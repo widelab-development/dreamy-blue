@@ -228,12 +228,89 @@
         "heading": "Personalizable for every type of sleeper.",
         "description": "<p>Right out of the box, our Signature pillow works wonders for your natural posture and healthy alignment. Then, adjust the fill for a Goldilocks rest on your stomach, back, or side.</p>"
       }
+    },
+    "custom_product_reviews_list_EP4cYp": {
+      "type": "custom-product-reviews-list",
+      "blocks": {
+        "review_YpTqTr": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_gEkEhg": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_eaYere": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_87gUgA": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_4WTYdH": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_pazwB8": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        }
+      },
+      "block_order": [
+        "review_YpTqTr",
+        "review_gEkEhg",
+        "review_eaYere",
+        "review_87gUgA",
+        "review_4WTYdH",
+        "review_pazwB8"
+      ],
+      "name": "Custom Reviews List",
+      "settings": {
+        "section_bg_color": "#FFFFFF",
+        "container_bg_color": "#f8f3ec",
+        "top_line_text": "4.9 | 552 Reviews",
+        "heading": "1,314,000,000 (that’s billion) hours of reformed sleep. Every <i>year.</i>",
+        "button_text": "View more reviews",
+        "button_link": ""
+      }
     }
   },
   "order": [
     "main",
     "main_product_recommendations_TnWBYD",
     "custom_product_reviews_FNMtcH",
-    "custom_product_type_4E9XLT"
+    "custom_product_type_4E9XLT",
+    "custom_product_reviews_list_EP4cYp"
   ]
 }
