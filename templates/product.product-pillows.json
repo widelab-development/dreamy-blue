@@ -355,6 +355,84 @@
         "background_color": "#1D1C50",
         "overtitle": "How It Works"
       }
+    },
+    "custom_product_materials_Btt7m6": {
+      "type": "custom-product-materials",
+      "blocks": {
+        "feature_cnggWC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_2.svg",
+            "text": "Patented pillowcase design"
+          }
+        },
+        "feature_3g3kDd": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_6.svg",
+            "text": "Matrix of down-like poly tufts"
+          }
+        },
+        "feature_xDaLgY": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_3_f10efd79-e1ce-4755-83ea-b53beb0b0d8d.svg",
+            "text": "Double zipper compartments"
+          }
+        },
+        "feature_hCCYUY": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Layer_1_2.svg",
+            "text": "Extra stuffing to adjust to your liking"
+          }
+        },
+        "feature_zKYT6B": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_4.svg",
+            "text": "Machine-wash bamboo rayon"
+          }
+        },
+        "feature_c4iFUw": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Asset_2_2x_127ed1c0-813d-41cc-a0a8-1de26b83925e.png",
+            "text": "OekoTex® certified fabrics"
+          }
+        },
+        "feature_MQ3Jtx": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_5.svg",
+            "text": "Cross-cut memory foam cubes"
+          }
+        },
+        "feature_fbharP": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Asset_3_2x_87d528b4-9d66-4726-bca3-c52b7bfed121.png",
+            "text": "CertiPUR-US certified fillings"
+          }
+        }
+      },
+      "block_order": [
+        "feature_cnggWC",
+        "feature_3g3kDd",
+        "feature_xDaLgY",
+        "feature_hCCYUY",
+        "feature_zKYT6B",
+        "feature_c4iFUw",
+        "feature_MQ3Jtx",
+        "feature_fbharP"
+      ],
+      "name": "Custom Product Materials",
+      "settings": {
+        "bg_image_desktop": "shopify://shop_images/B0000102_copy_1.png",
+        "bg_image_mobile": "shopify://shop_images/B0000102_copy_1_1.png",
+        "overtitle": "Materials & Build",
+        "heading": "Made to make your night."
+      }
     }
   },
   "order": [
@@ -364,6 +442,7 @@
     "custom_product_type_4E9XLT",
     "custom_product_reviews_list_EP4cYp",
     "custom_product_award_JaQjLG",
-    "custom_product_slider_byLtU9"
+    "custom_product_slider_byLtU9",
+    "custom_product_materials_Btt7m6"
   ]
 }
