@@ -304,6 +304,18 @@
         "button_text": "View more reviews",
         "button_link": ""
       }
+    },
+    "custom_product_award_JaQjLG": {
+      "type": "custom-product-award",
+      "name": "Custom Product Award",
+      "settings": {
+        "image": "shopify://shop_images/B0000260_1.png",
+        "content_bg_color": "#1d1c50",
+        "overtitle": "Award-Winning Pillows",
+        "quote": "“Best pillow for all sleeping positions”",
+        "logo": "shopify://shop_images/image_51.png",
+        "logo_link": ""
+      }
     }
   },
   "order": [
@@ -311,6 +323,7 @@
     "main_product_recommendations_TnWBYD",
     "custom_product_reviews_FNMtcH",
     "custom_product_type_4E9XLT",
-    "custom_product_reviews_list_EP4cYp"
+    "custom_product_reviews_list_EP4cYp",
+    "custom_product_award_JaQjLG"
   ]
 }
