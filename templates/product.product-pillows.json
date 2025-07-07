@@ -184,11 +184,56 @@
         "container_bg_color": "#f2eee8",
         "card_bg_color": "#FFFFFF"
       }
+    },
+    "custom_product_type_4E9XLT": {
+      "type": "custom-product-type",
+      "blocks": {
+        "sleeper_type_kbx6pW": {
+          "type": "sleeper_type",
+          "settings": {
+            "image": "shopify://shop_images/B0000043_1.png",
+            "card_title": "Sleep like this...",
+            "button_text": "Back",
+            "button_link": ""
+          }
+        },
+        "sleeper_type_zAnxKy": {
+          "type": "sleeper_type",
+          "settings": {
+            "image": "shopify://shop_images/B0000378_1.png",
+            "card_title": "...this...",
+            "button_text": "Stomach",
+            "button_link": ""
+          }
+        },
+        "sleeper_type_epREDY": {
+          "type": "sleeper_type",
+          "settings": {
+            "image": "shopify://shop_images/B0000360_1.png",
+            "card_title": "...or this.",
+            "button_text": "Side",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "sleeper_type_kbx6pW",
+        "sleeper_type_zAnxKy",
+        "sleeper_type_epREDY"
+      ],
+      "name": "Custom Product Type",
+      "settings": {
+        "background_color": "#ffffff",
+        "overtitle": "Ideal Sleep Type",
+        "heading": "Personalizable for every type of sleeper.",
+        "description": "<p>Right out of the box, our Signature pillow works wonders for your natural posture and healthy alignment. Then, adjust the fill for a Goldilocks rest on your stomach, back, or side.</p>"
+      }
     }
   },
   "order": [
     "main",
     "main_product_recommendations_TnWBYD",
-    "custom_product_reviews_FNMtcH"
+    "custom_product_reviews_FNMtcH",
+    "custom_product_type_4E9XLT"
   ]
 }
