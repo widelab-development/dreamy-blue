@@ -1,0 +1,224 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+{{ 'custom-sticky-two-col.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign title_color = section.settings.title_color
+-%}
+
+{%- style -%}
+  @media (min-width: 992px) {
+  .custom-sticky-two-col__heading {
+    max-width: {{ section.settings.heading_width }}px;
+  }
+  .custom-sticky-two-col__description {
+    max-width: {{ section.settings.description_width }}px;
+  }
+  }
+{%- endstyle -%}
+<section id="shopify-section-{{ section.id }}" style="--title-color: {{ title_color }};" {% render 'section-attr' %}>
+  <div class="custom-sticky-two-col">
+    <xo-container class="custom-sticky-two-col__container">
+      <div class="xo-row custom-sticky-two-col__row">
+        <div class="xo-col xo-col-6 custom-sticky-two-col__left">
+          <div class="custom-sticky-two-col__inner">
+            <p class="custom-sticky-two-col__eyebrow">{{ section.settings.eyebrow }}</p>
+            <xo-animate xo-cascade xo-type="fade-up">
+              <h2 class="custom-sticky-two-col__heading {{ section.settings.heading_tag }}">
+                {{ section.settings.heading }}
+              </h2>
+            </xo-animate>
+            <p class="custom-sticky-two-col__description">{{ section.settings.description }}</p>
+          </div>
+        </div>
+
+        <!-- PRAWY BLOK = Splide slider na mobile -->
+
+        <div
+          class="xo-col xo-col-6 custom-sticky-two-col__right custom-sticky-two-col__right--desktop"
+          data-section-id="{{ section.id }}"
+        >
+          {% for block in section.blocks %}
+            <div class="custom-sticky-two-col__block">
+              {% if block.settings.image %}
+                <img
+                  is="xo-lazyload"
+                  width="810"
+                  height="590"
+                  data-src="{{ block.settings.image | image_url: width: 550, height: 320 }}"
+                  alt="{{ block.settings.image.alt | escape }}"
+                >
+              {% endif %}
+              <h3 class="custom-sticky-two-col__block-title">{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="xo-col xo-col-6 custom-sticky-two-col__right custom-sticky-two-col__right--mobile">
+          <div class="splide js-splide " data-section-id="{{ section.id }}">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for block in section.blocks %}
+                  <li class="splide__slide custom-sticky-two-col__block">
+                    {% if block.settings.image %}
+                      <img
+                        is="xo-lazyload"
+                        width="810"
+                        height="590"
+                        data-src="{{ block.settings.image | image_url: width: 550, height: 320 }}"
+                        alt="{{ block.settings.image.alt | escape }}"
+                      >
+                    {% endif %}
+                    <h3 class="custom-sticky-two-col__block-title">{{ block.settings.title }}</h3>
+                    <p>{{ block.settings.text }}</p>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="splide__arrows"></div>
+          </div>
+        </div>
+      </div>
+    </xo-container>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const CUSTOM_SVG_PREV = `
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.30039" y="1.28818" width="37.6" height="37.6" rx="18.8" stroke="white" stroke-width="0.8"/>
+<path d="M15.0449 29.0162L25.1562 20.0882L15.0449 11.1602" stroke="white" stroke-width="0.64"/>
+</svg>
+`;
+  const CUSTOM_SVG_NEXT = `
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.30039" y="1.28818" width="37.6" height="37.6" rx="18.8" stroke="white" stroke-width="0.8"/>
+<path d="M15.0449 29.0162L25.1562 20.0882L15.0449 11.1602" stroke="white" stroke-width="0.64"/>
+</svg>
+`;
+
+
+  const splide = new Splide('.js-splide', {
+    perPage   : 1,
+    autoWidth: true,
+    type      : 'slide',
+    gap       : '3.6rem',
+    pagination: false,
+    arrows    : true,      
+    classes   : {
+      arrow : 'splide__arrow custom-arrow', 
+    },
+  });
+
+  splide.on('mounted', () => {
+    const { prev, next } = splide.Components.Arrows.arrows;
+
+    prev.innerHTML = CUSTOM_SVG_PREV.trim();
+    next.innerHTML = CUSTOM_SVG_NEXT.trim();
+  });
+
+  splide.mount();
+});
+</script>
+
+{% schema %}
+{
+  "name": "Custom Sticky Two Columns",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "Revolutionary Fill"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Moves like goose down. <br>Molds like memory foam."
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading size",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Heading Color",
+      "default": "#6CB1EA"
+    },
+    {
+      "type": "text",
+      "id": "heading_width",
+      "label": "Heading max width (CSS)",
+      "default": "494"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Reduces friction and encourages motion, so it doesn’t flatten you. Helps memory return to life, repeatedly."
+    },
+    {
+      "type": "text",
+      "id": "description_width",
+      "label": "Description max width (CSS)",
+      "default": "435"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature title"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Feature description text."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Sticky Two Column Layout",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        },
+        {
+          "type": "feature"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
