@@ -103,164 +103,9 @@
         "padding_bottom_mobile": 50
       }
     },
-    "multi_column_style_1_ePNRPr": {
-      "type": "multi-column-style-1",
-      "blocks": {
-        "column_rF3RUE": {
-          "type": "column",
-          "settings": {
-            "aspect_ratio_first": "512/479",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Heading</p>",
-            "enable_overlay": "off"
-          }
-        },
-        "column_VHA9aC": {
-          "type": "column",
-          "settings": {
-            "aspect_ratio_first": "512/479",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Heading</p>",
-            "enable_overlay": "off"
-          }
-        },
-        "column_hAFHPC": {
-          "type": "column",
-          "settings": {
-            "aspect_ratio_first": "512/479",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Heading</p>",
-            "enable_overlay": "off"
-          }
-        }
-      },
-      "block_order": [
-        "column_rF3RUE",
-        "column_VHA9aC",
-        "column_hAFHPC"
-      ],
-      "settings": {
-        "layout": "style-2",
-        "column": "3",
-        "text_tag_name": "h2",
-        "text_heading": "Hover image columns",
-        "font_size_heading": "h5",
-        "text_duration": 1000,
-        "text_effect": "none",
-        "text_heading_width_desktop": 100,
-        "text_heading_width_mobile": 100,
-        "color_scheme": "",
-        "background_color": "",
-        "background_gradient": "",
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 50,
-        "padding_bottom_mobile": 50
-      }
-    },
-    "product_specification_style_14_ziUrqY": {
-      "type": "product-specification-style-14",
-      "blocks": {
-        "detail_infomation_1_eRifq3": {
-          "type": "detail-infomation-1",
-          "settings": {
-            "caption": "Subheading",
-            "font_size_heading": "h1",
-            "sub_heading_1": "Subheading 1",
-            "heading_1": "Heading 1",
-            "sub_heading_2": "Subheading 2",
-            "heading_2": "Heading 2",
-            "color_schema_box": ""
-          }
-        },
-        "detail_infomation_2_w4K7hy": {
-          "type": "detail-infomation-2",
-          "settings": {
-            "caption": "SUBHEADING",
-            "title_list": "<ul><li>Title</li><li>Title</li><li>Title</li><li>Title</li></ul>",
-            "content_list": "<ul><li>Content</li><li>Content</li><li>Content</li><li>Content</li></ul>",
-            "color_schema_box": "background-1"
-          }
-        },
-        "image_p7jmAX": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "detail_infomation_1_eRifq3",
-        "detail_infomation_2_w4K7hy",
-        "image_p7jmAX"
-      ],
-      "settings": {
-        "layout": "image",
-        "font_size_heading": "h5",
-        "heading": "<p>Product specification</p>",
-        "autoplay_time": 3000,
-        "autoplay": "off",
-        "color_schema_box": "",
-        "color_scheme": "",
-        "background_color": "",
-        "background_gradient": "",
-        "use_parallax": true,
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 50,
-        "padding_bottom_mobile": 50
-      }
-    },
-    "collapse_content_3mHbKF": {
-      "type": "collapse-content",
-      "blocks": {
-        "collapse_ALTPUb": {
-          "type": "collapse",
-          "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
-          }
-        },
-        "collapse_HUn4hX": {
-          "type": "collapse",
-          "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
-          }
-        },
-        "collapse_8hKyAU": {
-          "type": "collapse",
-          "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
-          }
-        },
-        "collapse_M3zhjb": {
-          "type": "collapse",
-          "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
-          }
-        }
-      },
-      "block_order": [
-        "collapse_ALTPUb",
-        "collapse_HUn4hX",
-        "collapse_8hKyAU",
-        "collapse_M3zhjb"
-      ],
-      "settings": {
-        "font_size_heading": "h4",
-        "heading": "<p>Collapse content</p>",
-        "color_scheme": "",
-        "background_color": "",
-        "background_gradient": "",
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 50,
-        "padding_bottom_mobile": 50
-      }
-    },
     "main_product_recommendations_TnWBYD": {
       "type": "main-product-recommendations",
+      "disabled": true,
       "settings": {
         "font_size_heading": "h5",
         "heading": "May you also like",
@@ -282,13 +127,68 @@
         "padding_top_mobile": 50,
         "padding_bottom_mobile": 50
       }
+    },
+    "custom_product_reviews_FNMtcH": {
+      "type": "custom-product-reviews",
+      "blocks": {
+        "review_njQapi": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_115_1.png",
+            "rating": 5,
+            "quote": "<p>“I bought this pillow for myself but my cat who is also a side sleeper approves.”</p>",
+            "author_name": "Cathy",
+            "show_verified_badge": true
+          }
+        },
+        "review_M3xyc7": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619.png",
+            "rating": 5,
+            "quote": "<p>I recently bought three pillows one after another… and this is definitely the best. [T]hree months and it still the perfect pillow.</p>",
+            "author_name": "Bryan",
+            "show_verified_badge": true
+          }
+        },
+        "review_gpa9bn": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15621_1.png",
+            "rating": 5,
+            "quote": "<p>This is the best pillow I have ever used. Highly The quality of this pillow is out of this world. [When] you buy this pillow (which I highly suggest) make sure to get a few. to everyone!</p>",
+            "author_name": "Customer A. C.",
+            "show_verified_badge": true
+          }
+        },
+        "review_Mh7C3b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619_1.png",
+            "rating": 5,
+            "quote": "<p>My husband refers to me as “Princess and the pea”! I bought 4 DreamyBlue pillows…..I  recommend it 100%. Thank you DreamyBlue</p>",
+            "author_name": "Gail",
+            "show_verified_badge": true
+          }
+        }
+      },
+      "block_order": [
+        "review_njQapi",
+        "review_M3xyc7",
+        "review_gpa9bn",
+        "review_Mh7C3b"
+      ],
+      "name": "Custom Product Reviews",
+      "settings": {
+        "heading": "Signature Pillow Reviews",
+        "container_bg_color": "#fdfaf7",
+        "card_bg_color": "#FFFFFF"
+      }
     }
   },
   "order": [
     "main",
-    "multi_column_style_1_ePNRPr",
-    "product_specification_style_14_ziUrqY",
-    "collapse_content_3mHbKF",
-    "main_product_recommendations_TnWBYD"
+    "main_product_recommendations_TnWBYD",
+    "custom_product_reviews_FNMtcH"
   ]
 }
