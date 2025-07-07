@@ -1,0 +1,126 @@
+{{ 'section-custom-product-image.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link
+  assign image_desktop = section.settings.image_desktop
+  assign image_mobile = section.settings.image_mobile
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-image-section"
+  style="--bg-color: {{ bg_color }};"
+>
+  <xo-container class="custom-product-image__container">
+    <div class="custom-product-image__content">
+      {%- if heading != blank -%}
+        <h2 class="custom-product-image__heading">{{ heading }}</h2>
+      {%- endif -%}
+
+      <div class="custom-product-image__image-wrapper">
+        <picture>
+          {%- if image_mobile != blank -%}
+            <source
+              media="(max-width: 768px)"
+              srcset="{{ image_mobile | image_url: width: 800 }}"
+            >
+          {%- endif -%}
+          {%- if image_desktop != blank -%}
+            <source
+              media="(min-width: 769px)"
+              srcset="{{ image_desktop | image_url: width: 1200 }}"
+            >
+            <img
+              src="{{ image_desktop | image_url: width: 1200 }}"
+              alt="{{ image_desktop.alt | default: heading | escape }}"
+              loading="lazy"
+              width="{{ image_desktop.width }}"
+              height="{{ image_desktop.height }}"
+            >
+          {%- elsif image_mobile != blank -%}
+            <img
+              src="{{ image_mobile | image_url: width: 800 }}"
+              alt="{{ image_mobile.alt | default: heading | escape }}"
+              loading="lazy"
+              width="{{ image_mobile.width }}"
+              height="{{ image_mobile.height }}"
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </picture>
+      </div>
+
+      {%- if description != blank -%}
+        <p class="custom-product-image__description">{{ description }}</p>
+      {%- endif -%}
+
+      {%- if button_text != blank -%}
+        <a
+          href="{{ button_link | default: '#' }}"
+          class="custom-product-image__button"
+        >
+          {{ button_text }}
+        </a>
+      {%- endif -%}
+    </div>
+  </xo-container>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Product Image",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#8FBFEF"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Sleep like the dead.\nWake like the living."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Experience the life-changing comfort of healthy alignment. Starting tonight."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Add The Signature to Cart"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Image"
+    }
+  ]
+}
+{% endschema %}
