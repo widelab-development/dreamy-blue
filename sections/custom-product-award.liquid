@@ -1,0 +1,104 @@
+{{ 'section-custom-product-award.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign image = section.settings.image
+  assign content_bg_color = section.settings.content_bg_color
+  assign overtitle = section.settings.overtitle
+  assign quote = section.settings.quote
+  assign logo = section.settings.logo
+  assign logo_link = section.settings.logo_link
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-award"
+  style="--content-bg-color: {{ content_bg_color }};"
+>
+  <div class="custom-product-award__grid">
+    <div class="custom-product-award__image-wrapper">
+      {%- if image != blank -%}
+        <img
+          src="{{ image | image_url: width: 1200 }}"
+          alt="{{ image.alt | default: quote | strip_html | escape }}"
+          width="{{ image.width }}"
+          height="{{ image.height }}"
+          loading="lazy"
+        >
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+
+    <div
+      class="custom-product-award__content-wrapper"
+    >
+      <div class="custom-product-award__content">
+        {%- if overtitle != blank -%}
+          <p class="custom-product-award__overtitle">{{ overtitle }}</p>
+        {%- endif -%}
+        {%- if quote != blank -%}
+          <blockquote class="custom-product-award__quote">{{ quote }}</blockquote>
+        {%- endif -%}
+        {%- if logo != blank -%}
+          <div class="custom-product-award__logo-wrapper">
+            <a href="{{ logo_link | default: '#' }}" aria-label="{{ logo.alt | default: 'Award logo' | escape }}">
+              <img
+                src="{{ logo | image_url: width: 400 }}"
+                alt="{{ logo.alt | default: 'Award logo' | escape }}"
+                loading="lazy"
+              >
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Product Award",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (Left side)"
+    },
+    {
+      "type": "color",
+      "id": "content_bg_color",
+      "label": "Content Background Color",
+      "default": "#1d1c50"
+    },
+    {
+      "type": "text",
+      "id": "overtitle",
+      "label": "Overtitle",
+      "default": "Award-Winning Pillows"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "“Best pillow for all sleeping positions”"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "url",
+      "id": "logo_link",
+      "label": "Logo Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Award"
+    }
+  ]
+}
+{% endschema %}

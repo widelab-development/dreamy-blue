@@ -1,0 +1,92 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/*MIXINS*/
+.custom-product-award {
+  background-color: var(--content-bg-color);
+  padding-bottom: 12rem;
+}
+@media (max-width: 991px) {
+  .custom-product-award {
+    padding-bottom: 4rem;
+  }
+}
+.custom-product-award__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 60rem;
+}
+@media (max-width: 991px) {
+  .custom-product-award__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.custom-product-award__image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 991px) {
+  .custom-product-award__image-wrapper {
+    min-height: 40rem;
+  }
+}
+.custom-product-award__image-wrapper img, .custom-product-award__image-wrapper .placeholder-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.custom-product-award__content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .custom-product-award__content-wrapper {
+    padding: 4rem 2rem 0 2rem;
+  }
+}
+.custom-product-award__content {
+  max-width: 64.8rem;
+  width: 100%;
+  color: var(--color-white);
+}
+.custom-product-award__overtitle {
+  font-size: 1.8rem;
+  margin-bottom: 12rem !important;
+  color: var(--color-orange-80);
+}
+@media (max-width: 991px) {
+  .custom-product-award__overtitle {
+    margin-bottom: 4.8rem !important;
+  }
+}
+.custom-product-award__quote {
+  font-size: 7.2rem !important;
+  font-family: var(--font-beausite-fit-web);
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 6rem 0;
+}
+@media (max-width: 991px) {
+  .custom-product-award__quote {
+    font-size: 4.8rem !important;
+    margin: 0 0 2.4rem 0;
+  }
+}
+.custom-product-award__logo-wrapper {
+  background-color: var(--color-white);
+  max-width: 18rem;
+  padding: 0 2.8rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+.custom-product-award__logo-wrapper a {
+  display: block;
+}
+.custom-product-award__logo-wrapper img {
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=section-custom-product-award.css.map */
