@@ -19,14 +19,13 @@
   }
 
   &__heading {
-    font-size: rem(48);
+    font-size: rem(48) !important;
     font-family: var(--font-beausite-fit-web);
     font-weight: 300;
     margin-bottom: rem(24);
 
     @media (max-width: 768px) {
-      font-size: rem(36);
-      text-align: center;
+      font-size: rem(36) !important;
     }
   }
 

@@ -7,7 +7,7 @@
 }
 @media (max-width: 991px) {
   .custom-product-award {
-    padding-bottom: 4rem;
+    padding-bottom: 2.4rem;
   }
 }
 .custom-product-award__grid {
@@ -37,14 +37,14 @@
 }
 .custom-product-award__content-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 6rem 4rem;
+  padding: 18rem 4rem 6rem 4rem;
   text-align: center;
 }
 @media (max-width: 991px) {
   .custom-product-award__content-wrapper {
-    padding: 4rem 2rem 0 2rem;
+    padding: 4rem 0rem 0 2rem;
   }
 }
 .custom-product-award__content {
