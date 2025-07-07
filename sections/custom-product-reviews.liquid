@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 {{ 'section-custom-product-reviews.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
@@ -23,43 +25,107 @@
     {%- endif -%}
 
     {%- if section.blocks.size > 0 -%}
-      <div class="custom-product-reviews__grid">
+      <div class="custom-product-reviews__grid-wrapper js-reviews-wrapper">
         {%- for block in section.blocks -%}
-          <div class="custom-product-reviews__card" style="--card-bg-color: {{ card_bg_color }};" {{ block.shopify_attributes }}>
-            <div class="custom-product-reviews__stars">
-              {%- for i in (1..block.settings.rating) -%}{{ stars_svg }}{%- endfor -%}
-            </div>
-            {%- if block.settings.image != blank -%}
-              <div class="custom-product-reviews__image-wrapper">
-                <img
-                  src="{{ block.settings.image | image_url: width: 500 }}"
-                  alt="{{ block.settings.image.alt | default: block.settings.author_name | escape }}"
-                  class="custom-product-reviews__image"
-                  loading="lazy"
-                >
+          <div class="custom-product-reviews__grid-item">
+            <div class="custom-product-reviews__card" style="--card-bg-color: {{ card_bg_color }};" {{ block.shopify_attributes }}>
+              <div class="custom-product-reviews__stars">
+                {%- for i in (1..block.settings.rating) -%}{{ stars_svg }}{%- endfor -%}
               </div>
-            {%- else -%}
-              <div class="custom-product-reviews__image-wrapper">
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- if block.settings.image != blank -%}
+                <div class="custom-product-reviews__image-wrapper">
+                  <img
+                    src="{{ block.settings.image | image_url: width: 500 }}"
+                    alt="{{ block.settings.image.alt | default: block.settings.author_name | escape }}"
+                    class="custom-product-reviews__image"
+                    loading="lazy"
+                  >
+                </div>
+              {%- else -%}
+                <div class="custom-product-reviews__image-wrapper">
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.quote != blank -%}
+                <blockquote class="custom-product-reviews__quote">{{ block.settings.quote }}</blockquote>
+              {%- endif -%}
+              <div class="custom-product-reviews__footer">
+                {%- if block.settings.author_name != blank -%}
+                  <p class="custom-product-reviews__author">{{ block.settings.author_name }}</p>
+                {%- endif -%}
+                {%- if block.settings.show_verified_badge -%}
+                  <span class="custom-product-reviews__badge">Verified Purchase</span>
+                {%- endif -%}
               </div>
-            {%- endif -%}
-            {%- if block.settings.quote != blank -%}
-              <blockquote class="custom-product-reviews__quote">{{ block.settings.quote }}</blockquote>
-            {%- endif -%}
-            <div class="custom-product-reviews__footer">
-              {%- if block.settings.author_name != blank -%}
-                <p class="custom-product-reviews__author">{{ block.settings.author_name }}</p>
-              {%- endif -%}
-              {%- if block.settings.show_verified_badge -%}
-                <span class="custom-product-reviews__badge">Verified Purchase</span>
-              {%- endif -%}
             </div>
           </div>
         {%- endfor -%}
       </div>
+      <div class="custom-product-reviews__nav">
+        <button class="custom-product-reviews__arrow custom-product-reviews__arrow--prev" aria-label="Previous">
+          <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.7559 0.775815L0.644531 9.70383L10.7559 18.6318" stroke="black" stroke-width="0.64"/>
+          </svg>
+        </button>
+        <button class="custom-product-reviews__arrow custom-product-reviews__arrow--next" aria-label="Next">
+          <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.0439 18.6319L11.1553 9.70389L1.0439 0.775878" stroke="black" stroke-width="0.64"/>
+          </svg>
+        </button>
+      </div>
     {%- endif -%}
   </xo-container>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sliderWrapper = document.querySelector('#shopify-section-{{ section.id }} .js-reviews-wrapper');
+    let flkty = null;
+    const mobileBreakpoint = 1300;
+
+    function initOrDestroyFlickity() {
+      const isMobile = window.innerWidth <= mobileBreakpoint;
+
+      if (isMobile) {
+        if (!flkty) {
+          sliderWrapper.classList.add('is-slider-active');
+          flkty = new Flickity(sliderWrapper, {
+            cellSelector: '.custom-product-reviews__grid-item',
+            cellAlign: 'left',
+            contain: true,
+            pageDots: false,
+            prevNextButtons: false,
+            wrapAround: true,
+            adaptiveHeight: false
+          });
+        }
+      } else {
+        if (flkty) {
+          flkty.destroy();
+          flkty = null;
+          sliderWrapper.classList.remove('is-slider-active');
+          sliderWrapper.style.height = '';
+          const items = sliderWrapper.querySelectorAll('.custom-product-reviews__grid-item');
+          items.forEach(item => {
+            item.style.position = '';
+            item.style.left = '';
+          });
+        }
+      }
+    }
+
+    const prevButton = document.querySelector('#shopify-section-{{ section.id }} .custom-product-reviews__arrow--prev');
+    const nextButton = document.querySelector('#shopify-section-{{ section.id }} .custom-product-reviews__arrow--next');
+
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => flkty && flkty.previous());
+        nextButton.addEventListener('click', () => flkty && flkty.next());
+    }
+
+    initOrDestroyFlickity();
+    window.addEventListener('resize', initOrDestroyFlickity);
+  });
+</script>
 
 {% schema %}
 {

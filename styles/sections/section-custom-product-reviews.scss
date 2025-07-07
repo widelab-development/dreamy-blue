@@ -3,7 +3,7 @@
 .custom-product-reviews-section {
   padding: rem(80) 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
     padding: rem(40) 0;
   }
 }
@@ -12,6 +12,7 @@
   &__container {
     background-color: var(--container-bg-color);
     padding: rem(54) rem(80);
+    overflow: hidden;
 
     @media (max-width: 768px) {
       padding: rem(32);
@@ -19,29 +20,49 @@
   }
 
   &__heading {
-    font-size: rem(48) !important;
+    font-size: rem(48);
     font-family: var(--font-beausite-fit-web);
     font-weight: 300;
-    margin-bottom: rem(24);
+    margin-bottom: rem(40);
 
     @media (max-width: 768px) {
-      font-size: rem(36) !important;
+      font-size: rem(36);
     }
   }
 
-  &__grid {
+  &__grid-wrapper {
     display: grid;
+    grid-auto-rows: 1fr;
     grid-template-columns: repeat(4, 1fr);
     gap: rem(24);
 
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 1300px) {
+      display: block;
     }
-    @media (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__grid-wrapper.is-slider-active {
+    .flickity-viewport {
+      overflow: visible;
+      transition: height 0.3s;
     }
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
+  }
+
+  &__grid-item {
+    display: flex;
+    
+
+    &:not(.is-slider-active &) {
+      height: 100%;
+    }
+    
+    .is-slider-active & {
+      width: calc(100% - 80px);
+      margin-right: rem(16);
+      
+      @media (min-width: 769px) and (max-width: 1300px) {
+        width: 50%;
+      }
     }
   }
 
@@ -50,6 +71,8 @@
     padding: rem(36);
     display: flex;
     flex-direction: column;
+    border-radius: rem(8);
+    width: 100%;
   }
 
   &__stars {
@@ -62,6 +85,7 @@
     width: 100%;
     overflow: hidden;
     margin-bottom: rem(12);
+    aspect-ratio: 1/1;
 
     .placeholder-svg {
       width: 100%;
@@ -72,7 +96,6 @@
   &__image {
     width: 100%;
     height: 100%;
-    max-height: rem(184);
     object-fit: cover;
   }
 
@@ -109,5 +132,32 @@
     font-size: rem(14);
     font-weight: 300;
     white-space: nowrap;
+    height: fit-content;
+  }
+  
+  &__nav {
+    display: none;
+    
+    @media (max-width: 1300px) {
+      display: flex;
+      gap: rem(16);
+      margin-top: rem(32);
+      justify-content: flex-start;
+    }
+  }
+  
+  &__arrow {
+    width: rem(44);
+    height: rem(44);
+    background: transparent;
+    border: 1px solid var(--color-black);
+    border-radius: 50%;
+    font-size: rem(24);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: #f0f0f0;
+    }
   }
 }
