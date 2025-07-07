@@ -1,0 +1,117 @@
+{{ 'section-custom-product-materials.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_image_desktop = section.settings.bg_image_desktop
+  assign bg_image_mobile = section.settings.bg_image_mobile
+  assign overtitle = section.settings.overtitle
+  assign heading = section.settings.heading
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-materials"
+  style="--bg-image-desktop: url('{{ bg_image_desktop | image_url: width: 2400 }}'); --bg-image-mobile: url('{{ bg_image_mobile | image_url: width: 1200 }}');"
+>
+  <xo-container class="custom-product-materials__container">
+    <div class="custom-product-materials__grid">
+      <div class="custom-product-materials__text-col">
+        {%- if overtitle != blank -%}
+          <p class="custom-product-materials__overtitle">{{ overtitle }}</p>
+        {%- endif -%}
+        {%- if heading != blank -%}
+          <h2 class="custom-product-materials__heading">{{ heading }}</h2>
+        {%- endif -%}
+      </div>
+
+      <div class="custom-product-materials__features-col">
+        {%- if section.blocks.size > 0 -%}
+          <div class="custom-product-materials__features-grid">
+            {%- for block in section.blocks -%}
+              <div class="custom-product-materials__feature-item" {{ block.shopify_attributes }}>
+                <div class="custom-product-materials__feature-icon">
+                  {%- if block.settings.icon != blank -%}
+                    <img
+                      src="{{ block.settings.icon | image_url: width: 80 }}"
+                      alt="{{ block.settings.icon.alt | escape }}"
+                      loading="lazy"
+                    >
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                </div>
+                <p class="custom-product-materials__feature-text">{{ block.settings.text }}</p>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </xo-container>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Product Materials",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image_desktop",
+      "label": "Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_mobile",
+      "label": "Background Image (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "overtitle",
+      "label": "Overtitle",
+      "default": "Materials & Build"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Made to make your night."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Patented pillowcase design"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Materials",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}
