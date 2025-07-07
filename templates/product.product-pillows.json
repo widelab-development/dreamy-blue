@@ -433,6 +433,19 @@
         "overtitle": "Materials & Build",
         "heading": "Made to make your night."
       }
+    },
+    "custom_product_image_tFEHBy": {
+      "type": "custom-product-image",
+      "name": "Custom Product Image",
+      "settings": {
+        "background_color": "#8FBFEF",
+        "heading": "Sleep like the dead.\nWake like the living.",
+        "image_desktop": "shopify://shop_images/Signature_Pillow_8.png",
+        "image_mobile": "shopify://shop_images/Signature_Pillow_8_1.png",
+        "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
+        "button_text": "Add The Signature to Cart",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -443,6 +456,7 @@
     "custom_product_reviews_list_EP4cYp",
     "custom_product_award_JaQjLG",
     "custom_product_slider_byLtU9",
-    "custom_product_materials_Btt7m6"
+    "custom_product_materials_Btt7m6",
+    "custom_product_image_tFEHBy"
   ]
 }
