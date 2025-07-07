@@ -1,0 +1,85 @@
+@use "../settings/init" as *;
+
+.custom-product-image-section {
+  background-color: var(--bg-color);
+  padding: rem(120) 0;
+
+  @media (max-width: 768px) {
+    padding: rem(48) 0 rem(32) 0;
+  }
+}
+
+.custom-product-image {
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: rem(1100);
+  }
+
+  &__heading {
+    font-size: rem(120) !important;
+    font-weight: 300;
+    font-family: var(--font-beausite-fit-web);
+    color: var(--color-black);
+
+    @media (max-width: 768px) {
+      font-size: rem(34.5) !important;
+    }
+  }
+
+  &__image-wrapper {
+    max-width: rem(1100);
+    width: 100%;
+    margin-top: rem(-60);
+
+    @media (max-width: 768px) {
+      margin-top: rem(-36);
+    }
+
+    img, .placeholder-svg {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__description {
+    font-size: rem(18);
+    font-weight: 300;
+    color: var(--color-black);
+    max-width: rem(700);
+    margin-bottom: rem(36);
+
+    @media (max-width: 768px) {
+        margin-bottom: rem(24);
+    }
+  }
+
+  &__button {
+    background-color: var(--color-midnight-blue);
+    color: var(--color-white);
+    padding: rem(12) rem(72);
+    border-radius: rem(120);
+    text-decoration: none;
+    font-size: rem(18);
+    font-weight: 300;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 100%;
+      padding: rem(16);
+    }
+  }
+}
