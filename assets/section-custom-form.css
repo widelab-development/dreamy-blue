@@ -77,18 +77,18 @@
 .custom-form__input {
   width: 100%;
   padding: 1.6rem 2.4rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-midnight-blue);
   border-radius: 4rem;
   background-color: transparent;
   font-size: 1.6rem;
   text-align: left;
 }
 .custom-form__input::placeholder {
-  color: #888;
+  color: #918f8b;
 }
 .custom-form__input:focus {
   outline: none;
-  border-color: #333;
+  border-color: var(--color-midnight-blue);
 }
 .custom-form__button {
   width: 100%;
