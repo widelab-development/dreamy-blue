@@ -20,15 +20,14 @@
   }
 }
 .custom-product-reviews__heading {
-  font-size: 4.8rem;
+  font-size: 4.8rem !important;
   font-family: var(--font-beausite-fit-web);
   font-weight: 300;
   margin-bottom: 2.4rem;
 }
 @media (max-width: 768px) {
   .custom-product-reviews__heading {
-    font-size: 3.6rem;
-    text-align: center;
+    font-size: 3.6rem !important;
   }
 }
 .custom-product-reviews__grid {
