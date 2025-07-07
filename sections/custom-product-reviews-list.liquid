@@ -1,0 +1,167 @@
+{{ 'section-custom-product-reviews-list.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign section_bg_color = section.settings.section_bg_color
+  assign container_bg_color = section.settings.container_bg_color
+  assign top_line_text = section.settings.top_line_text
+  assign heading = section.settings.heading
+  assign button_text = section.settings.button_text
+  assign button_link = section.settings.button_link
+
+  capture stars_svg
+    echo '<svg width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10.6498 0.919922L13.3874 7.50193L20.4932 8.0716L15.0794 12.7092L16.7334 19.6432L10.6498 15.9274L4.56623 19.6432L6.22026 12.7092L0.80637 8.0716L7.9122 7.50193L10.6498 0.919922Z"/></svg>'
+  endcapture
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-reviews-list-section"
+  style="--section-bg-color: {{ section_bg_color }};"
+>
+  <xo-container
+    class="custom-product-reviews-list__container"
+    style="--container-bg-color: {{ container_bg_color }};"
+  >
+    <div class="custom-product-reviews-list__header">
+      <div class="custom-product-reviews-list__top-line">
+        {%- if top_line_text != blank -%}
+          <span>{{ top_line_text }}</span>
+        {%- endif -%}
+        <div class="custom-product-reviews-list__stars--header">
+          {%- for i in (1..5) -%}{{ stars_svg }}{%- endfor -%}
+        </div>
+      </div>
+      {%- if heading != blank -%}
+        <h2 class="custom-product-reviews-list__heading">{{ heading }}</h2>
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="custom-product-reviews-list__grid">
+        {%- for block in section.blocks -%}
+          <div class="custom-product-reviews-list__card" {{ block.shopify_attributes }}>
+            <div class="custom-product-reviews-list__card-aside">
+              {%- if block.settings.show_verified_badge -%}
+                <span class="custom-product-reviews-list__badge">Verified Purchase</span>
+              {%- endif -%}
+            </div>
+            <div class="custom-product-reviews-list__card-main">
+              <div class="custom-product-reviews-list__stars--card">
+                {%- for i in (1..block.settings.rating) -%}{{ stars_svg }}{%- endfor -%}
+              </div>
+              {%- if block.settings.author_name != blank -%}
+                <p class="custom-product-reviews-list__author">{{ block.settings.author_name }}</p>
+              {%- endif -%}
+              {%- if block.settings.content != blank -%}
+                <div class="custom-product-reviews-list__content">{{ block.settings.content }}</div>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if button_text != blank -%}
+      <div class="custom-product-reviews-list__footer">
+        <a href="{{ button_link | default: '#' }}" class="custom-product-reviews-list__button">
+          {{ button_text }}
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="#4B4B4B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    {%- endif -%}
+  </xo-container>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Reviews List",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background (Outer)",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "container_bg_color",
+      "label": "Container Background",
+      "default": "#F8F3EC"
+    },
+    {
+      "type": "text",
+      "id": "top_line_text",
+      "label": "Top Line Text",
+      "default": "4.9 | 552 Reviews"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "1,314,000,000 (that’s billion) hours of reformed sleep. Every year."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "View more reviews"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Star Rating",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Name Namison"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_verified_badge",
+          "label": "Show 'Verified Purchase' badge",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Reviews List",
+      "blocks": [
+        { "type": "review" },
+        { "type": "review" },
+        { "type": "review" },
+        { "type": "review" }
+      ]
+    }
+  ]
+}
+{% endschema %}
