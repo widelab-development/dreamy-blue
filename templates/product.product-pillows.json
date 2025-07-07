@@ -157,7 +157,7 @@
             "image": "shopify://shop_images/Frame_15621_1.png",
             "rating": 5,
             "quote": "<p>This is the best pillow I have ever used. Highly The quality of this pillow is out of this world. [When] you buy this pillow (which I highly suggest) make sure to get a few. to everyone!</p>",
-            "author_name": "Customer A. C.",
+            "author_name": "A. C.",
             "show_verified_badge": true
           }
         },
@@ -182,7 +182,7 @@
       "settings": {
         "heading": "Signature Pillow Reviews",
         "container_bg_color": "#f2eee8",
-        "card_bg_color": "#FFFFFF"
+        "card_bg_color": "#ffffff"
       }
     },
     "custom_product_type_4E9XLT": {
@@ -297,7 +297,7 @@
       ],
       "name": "Custom Reviews List",
       "settings": {
-        "section_bg_color": "#FFFFFF",
+        "section_bg_color": "#ffffff",
         "container_bg_color": "#f8f3ec",
         "top_line_text": "4.9 | 552 Reviews",
         "heading": "1,314,000,000 (that’s billion) hours of reformed sleep. Every <i>year.</i>",
@@ -352,7 +352,7 @@
       ],
       "name": "Custom Product Slider",
       "settings": {
-        "background_color": "#1D1C50",
+        "background_color": "#1d1c50",
         "overtitle": "How It Works"
       }
     },
@@ -438,7 +438,7 @@
       "type": "custom-product-image",
       "name": "Custom Product Image",
       "settings": {
-        "background_color": "#8FBFEF",
+        "background_color": "#8fbfef",
         "heading": "Sleep like the dead.\nWake like the living.",
         "image_desktop": "shopify://shop_images/Signature_Pillow_8.png",
         "image_mobile": "shopify://shop_images/Signature_Pillow_8_1.png",
@@ -457,10 +457,10 @@
         "name_placeholder": "Name",
         "email_placeholder": "Email Address",
         "button_text": "Get the Good Stuff!",
-        "section_background_color": "#FFFFFF",
+        "section_background_color": "#ffffff",
         "inner_background_color": "#f3eee8",
         "button_background_color": "#b67bbb",
-        "button_text_color": "#FFFFFF"
+        "button_text_color": "#ffffff"
       }
     }
   },
