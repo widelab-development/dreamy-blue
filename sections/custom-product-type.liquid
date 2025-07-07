@@ -1,0 +1,203 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+{{ 'section-custom-product-type.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign overtitle = section.settings.overtitle
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-type"
+  style="--bg-color: {{ bg_color }};"
+>
+  <xo-container>
+    <div class="custom-product-type__header">
+      {%- if overtitle != blank -%}
+        <p class="custom-product-type__overtitle">{{ overtitle }}</p>
+      {%- endif -%}
+      {%- if heading != blank -%}
+        <h2 class="custom-product-type__heading">{{ heading }}</h2>
+      {%- endif -%}
+      {%- if description != blank -%}
+        <div class="custom-product-type__description">{{ description }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="custom-product-type__grid-container">
+        <div class="custom-product-type__grid js-product-type-slider">
+          {%- for block in section.blocks -%}
+            <div class="custom-product-type__card" {{ block.shopify_attributes }}>
+              <div class="custom-product-type__frame">
+                {%- if block.settings.card_title != blank -%}
+                  <p class="custom-product-type__card-title">{{ block.settings.card_title }}</p>
+                {%- endif -%}
+                <div class="custom-product-type__image-wrapper">
+                  {%- if block.settings.image != blank -%}
+                    <img
+                      src="{{ block.settings.image | image_url: width: 800 }}"
+                      alt="{{ block.settings.image.alt | default: block.settings.button_text | escape }}"
+                      class="custom-product-type__image"
+                      loading="lazy"
+                    >
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
+                  {%- if block.settings.button_text != blank -%}
+                    <a
+                      href="{{ block.settings.button_link | default: '#' }}"
+                      class="custom-product-type__card-button"
+                    >
+                      {{ block.settings.button_text }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="custom-product-type__nav-mobile">
+        <button type="button" class="custom-product-type__nav-button custom-product-type__nav-button--prev" aria-label="Previous">
+          <svg class="custom-product-type__nav-icon" width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.8555 0.98895L0.74414 9.91696L10.8555 18.845" stroke="black" stroke-width="0.64"/>
+          </svg>          
+        </button>
+        <button type="button" class="custom-product-type__nav-button custom-product-type__nav-button--next" aria-label="Next">
+          <svg class="custom-product-type__nav-icon" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.03703 14.7217L8.96484 7.72168L1.03703 0.721679" stroke="#000000"/>
+          </svg>
+        </button>
+      </div>
+    {%- endif -%}
+  </xo-container>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
+    if (!sectionEl) return;
+
+    const sliderEl = sectionEl.querySelector('.js-product-type-slider');
+    const prevButton = sectionEl.querySelector('.custom-product-type__nav-button--prev');
+    const nextButton = sectionEl.querySelector('.custom-product-type__nav-button--next');
+    let flkty = null;
+
+    function initOrDestroyFlickity() {
+      const isMobile = window.innerWidth < 992;
+
+      if (isMobile && !flkty) {
+        flkty = new Flickity(sliderEl, {
+          cellAlign: 'center',
+          contain: true,
+          prevNextButtons: false,
+          pageDots: false,
+          wrapAround: true
+        });
+
+        prevButton.addEventListener('click', () => flkty.previous());
+        nextButton.addEventListener('click', () => flkty.next());
+
+      } else if (!isMobile && flkty) {
+        flkty.destroy();
+        flkty = null;
+      }
+    }
+
+    initOrDestroyFlickity();
+    window.addEventListener('resize', initOrDestroyFlickity);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Product Type",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fdfaf7"
+    },
+    {
+      "type": "text",
+      "id": "overtitle",
+      "label": "Overtitle",
+      "default": "Ideal Sleep Type"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "For wide shoulders and side sleepers."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>From night one, The Sapphire works wonders for your sleep style. Want more? Adjust the fill and tuck into the gusset for aligned sleep on your side, back, or anywhere those broad shoulders take you.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "sleeper_type",
+      "name": "Sleeper Type",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Sleep like this..."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Back"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Type",
+      "blocks": [
+        {
+          "type": "sleeper_type"
+        },
+        {
+          "type": "sleeper_type",
+          "settings": {
+            "card_title": "...this...",
+            "button_text": "Stomach"
+          }
+        },
+        {
+          "type": "sleeper_type",
+          "settings": {
+            "card_title": "...or this.",
+            "button_text": "Side"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
