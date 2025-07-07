@@ -316,6 +316,45 @@
         "logo": "shopify://shop_images/image_51.png",
         "logo_link": ""
       }
+    },
+    "custom_product_slider_byLtU9": {
+      "type": "custom-product-slider",
+      "blocks": {
+        "slide_qymhbK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/B0000428_2.png",
+            "title": "Zip...",
+            "description": "Open the case at the smooth-gliding zipper."
+          }
+        },
+        "slide_Ceb7xx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/B0000378_1.png",
+            "title": "Adjust…",
+            "description": "Add or remove fill. (Included Extrazzz™ bag stores excess.)"
+          }
+        },
+        "slide_DyDaEJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Frame_118.png",
+            "title": "Love!",
+            "description": "No need to shift or settle. Fall inline. Fall asleep. Fall in love."
+          }
+        }
+      },
+      "block_order": [
+        "slide_qymhbK",
+        "slide_Ceb7xx",
+        "slide_DyDaEJ"
+      ],
+      "name": "Custom Product Slider",
+      "settings": {
+        "background_color": "#1D1C50",
+        "overtitle": "How It Works"
+      }
     }
   },
   "order": [
@@ -324,6 +363,7 @@
     "custom_product_reviews_FNMtcH",
     "custom_product_type_4E9XLT",
     "custom_product_reviews_list_EP4cYp",
-    "custom_product_award_JaQjLG"
+    "custom_product_award_JaQjLG",
+    "custom_product_slider_byLtU9"
   ]
 }
