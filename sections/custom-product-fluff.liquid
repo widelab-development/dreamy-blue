@@ -1,0 +1,172 @@
+{{ 'section-custom-product-fluff.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_color = section.settings.background_color
+  assign fluff_image_desktop = section.settings.fluff_image_desktop
+  assign fluff_image_mobile = section.settings.fluff_image_mobile
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-fluff-section"
+  style="--bg-color: {{ bg_color }};"
+>
+  {%- if fluff_image_desktop != blank or fluff_image_mobile != blank -%}
+    <div class="custom-product-fluff__fluff-image-wrapper">
+      <picture>
+        {%- if fluff_image_mobile != blank -%}
+          <source
+            media="(max-width: 768px)"
+            srcset="{{ fluff_image_mobile | image_url: width: 1000 }}"
+          >
+        {%- endif -%}
+        {%- if fluff_image_desktop != blank -%}
+          <source
+            media="(min-width: 769px)"
+            srcset="{{ fluff_image_desktop | image_url: width: 2400 }}"
+          >
+          <img
+            src="{{ fluff_image_desktop | image_url: width: 2400 }}"
+            alt=""
+            role="presentation"
+            loading="lazy"
+            class="custom-product-fluff__fluff-image"
+          >
+        {%- else -%}
+          <img
+            src="{{ fluff_image_mobile | image_url: width: 1000 }}"
+            alt=""
+            role="presentation"
+            loading="lazy"
+            class="custom-product-fluff__fluff-image"
+          >
+        {%- endif -%}
+      </picture>
+    </div>
+  {%- endif -%}
+
+  <xo-container class="custom-product-fluff__container">
+    <div class="custom-product-fluff__header">
+      {%- if heading != blank -%}
+        <h2 class="custom-product-fluff__heading">{{ heading }}</h2>
+      {%- endif -%}
+      {%- if description != blank -%}
+        <div class="custom-product-fluff__description">{{ description }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="custom-product-fluff__blocks-grid">
+        {%- for block in section.blocks -%}
+          <div
+            class="custom-product-fluff__product-block"
+            style="--block-bg-color: {{ block.settings.background_color }};"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.overtitle != blank -%}
+              <p class="custom-product-fluff__block-overtitle">{{ block.settings.overtitle }}</p>
+            {%- endif -%}
+            {%- if block.settings.title != blank -%}
+              <h3 class="custom-product-fluff__block-title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            {%- if block.settings.button_text != blank -%}
+              <a
+                href="{{ block.settings.button_link | default: '#' }}"
+                class="custom-product-fluff__block-button"
+              >
+                {{ block.settings.button_text }}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </xo-container>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Product Fluff",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background",
+      "default": "#1D1C50"
+    },
+    {
+      "type": "image_picker",
+      "id": "fluff_image_desktop",
+      "label": "Fluff Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "fluff_image_mobile",
+      "label": "Fluff Image (Mobile)"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Every night, better than the rest."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Combining the purest materials, finest fabrics, and most adjustable till system, DreamyBlue invites you to customize your sleep experience at will.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_block",
+      "name": "Product Block",
+      "settings": [
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Block Background Color",
+          "default": "#8FBFEF"
+        },
+        {
+          "type": "text",
+          "id": "overtitle",
+          "label": "Overtitle",
+          "default": "Signature Fill Blend"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "The Light Stuff"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Add to Cart"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Fluff",
+      "blocks": [
+        { "type": "product_block" },
+        { "type": "product_block" }
+      ]
+    }
+  ]
+}
+{% endschema %}
