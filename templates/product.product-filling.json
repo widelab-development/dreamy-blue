@@ -127,10 +127,68 @@
         "padding_top_mobile": 50,
         "padding_bottom_mobile": 50
       }
+    },
+    "custom_product_reviews_PBEjER": {
+      "type": "custom-product-reviews",
+      "blocks": {
+        "review_gTTpyL": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_115_1.png",
+            "rating": 5,
+            "quote": "<p>“I bought this pillow for myself but my cat who is also a side sleeper approves.”</p>",
+            "author_name": "Cathy",
+            "show_verified_badge": true
+          }
+        },
+        "review_PLzn4p": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619.png",
+            "rating": 5,
+            "quote": "<p>I recently bought three pillows one after another… and this is definitely the best. [T]hree months and it still the perfect pillow.</p>",
+            "author_name": "Bryan",
+            "show_verified_badge": true
+          }
+        },
+        "review_PjRHin": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15621_1.png",
+            "rating": 5,
+            "quote": "<p>The quality of this pillow is out of this world. [When] you buy this pillow (which I highly suggest) make sure to get a few.</p>",
+            "author_name": "A. C.",
+            "show_verified_badge": true
+          }
+        },
+        "review_jHX9g6": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619_1.png",
+            "rating": 5,
+            "quote": "<p>My husband refers to me as “Princess and the pea”! I bought 4 DreamyBlue pillows…..I  recommend it 100%. Thank you DreamyBlue</p>",
+            "author_name": "Gail",
+            "show_verified_badge": true
+          }
+        }
+      },
+      "block_order": [
+        "review_gTTpyL",
+        "review_PLzn4p",
+        "review_PjRHin",
+        "review_jHX9g6"
+      ],
+      "name": "Custom Product Reviews",
+      "settings": {
+        "heading": "DreamyBlue Reviews",
+        "container_bg_color": "#fdfaf7",
+        "card_bg_color": "#FFFFFF"
+      }
     }
   },
   "order": [
     "main",
-    "main_product_recommendations_TnWBYD"
+    "main_product_recommendations_TnWBYD",
+    "custom_product_reviews_PBEjER"
   ]
 }
