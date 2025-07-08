@@ -2,10 +2,11 @@
 
 .custom-product-diffrences-section {
   background-color: var(--section-bg-color);
-  padding: rem(72) 0 rem(90) 0;
+  padding: rem(40) 0;
 
-  @media (max-width: 991px) {
-    padding: rem(40) 0;
+  @media (min-width: 992px) {
+    background-color: var(--color-white);
+    padding: rem(72) 0 rem(90) 0;
   }
 }
 
@@ -13,6 +14,11 @@
   &__container {
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 992px) {
+      background-color: var(--section-bg-color);
+      padding: rem(120);;
+    }
   }
 
   &__header {
@@ -20,39 +26,40 @@
   }
 
   &__overtitle {
-    font-size: rem(18);
+    font-size: rem(14);
     color: var(--color-white);
-    margin-bottom: rem(54) !important;
+    margin-bottom: rem(36) !important;
 
-    @media (max-width: 768px) {
-        font-size: rem(14) !important;
-        margin-bottom: rem(36) !important;
+    @media (min-width: 992px) {
+      font-size: rem(18);
+      margin-bottom: rem(54) !important;
     }
   }
 
   &__heading {
-    font-size: rem(120) !important;
+    font-size: rem(42) !important;
     font-weight: 300;
     margin-bottom: rem(36) !important;
     font-family: var(--font-beausite-fit-web);
+    color: var(--color-black);
 
-    @media (max-width: 768px) {
-        font-size: rem(42) !important;
-        margin-bottom: rem(36) !important;
+    @media (min-width: 992px) {
+      font-size: rem(120) !important;
     }
   }
 
   &__description {
-    font-size: rem(18);
+    font-size: rem(12) !important;
     color: var(--color-black);
-    margin-bottom: rem(72) !important;
+    margin-bottom: rem(36) !important;
     max-width: rem(880);
     margin-left: auto;
     margin-right: auto;
-
-    @media (max-width: 768px) {
-        font-size: rem(12) !important;
-        margin-bottom: rem(36) !important;
+    opacity: 0.9;
+    
+    @media (min-width: 992px) {
+      font-size: rem(18) !important;
+      margin-bottom: rem(72) !important;
     }
     
     p {
@@ -61,12 +68,12 @@
   }
 
   &__cards-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: rem(8);
+    display: block;
 
-    @media (max-width: 991px) {
-      display: block;
+    @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(8);
     }
   }
 
@@ -78,43 +85,47 @@
   }
 
   &__card-item {
-    display: flex;
     height: auto;
     
     .is-slider-active & {
       width: calc(100% / 1.3); 
       margin-right: rem(16);
     }
+    
+    @media (min-width: 992px) {
+      display: flex;
+    }
   }
   
   &__card {
     background-color: var(--card-bg-color);
-    padding: rem(58);
+    padding: rem(36) rem(24);
     width: 100%;
 
-    @media (max-width: 991px) {
-      padding: rem(36) rem(24);
+    @media (min-width: 992px) {
+      padding: rem(58);
     }
   }
 
   &__card-title {
-    font-size: rem(36) !important;
+    font-size: rem(24) !important;
     font-family: var(--font-beausite-fit-web);
     font-weight: 300;
-    margin-bottom: rem(60) !important;
+    margin-bottom: rem(24) !important;
+    color: var(--color-black);
 
-    @media (max-width: 991px) {
-        font-size: rem(24) !important;
-        margin-bottom: rem(24) !important;
+    @media (min-width: 992px) {
+      font-size: rem(36) !important;
+      margin-bottom: rem(60) !important;
     }
   }
 
   &__card-content {
-    font-size: rem(18);
+    font-size: rem(14) !important;
     color: var(--color-black);
-
-    @media (max-width: 991px) {
-        font-size: rem(14) !important;
+    
+    @media (min-width: 992px) {
+      font-size: rem(18) !important;
     }
     
     p {
@@ -141,5 +152,9 @@
     border-radius: 50%;
     font-size: rem(24);
     cursor: pointer;
+
+    svg path {
+      stroke: var(--color-black);
+    }
   }
 }
