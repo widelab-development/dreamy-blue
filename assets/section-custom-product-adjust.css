@@ -1,0 +1,88 @@
+/* stylelint-disable */
+/* stylelint-enable */
+/*MIXINS*/
+.custom-product-adjust-section {
+  background-color: var(--bg-color);
+  padding: 7.2rem 0 17.2rem 0;
+}
+@media (max-width: 768px) {
+  .custom-product-adjust-section {
+    padding: 3.6rem 0;
+  }
+}
+
+.custom-product-adjust__header {
+  text-align: center;
+}
+.custom-product-adjust__overtitle {
+  font-size: 1.8rem;
+  color: var(--color-purple-100);
+  margin-bottom: 5.4rem !important;
+}
+@media (max-width: 768px) {
+  .custom-product-adjust__overtitle {
+    margin-bottom: 2.4rem !important;
+  }
+}
+.custom-product-adjust__heading {
+  font-size: 4.8rem !important;
+  font-weight: 300;
+  font-family: var(--font-beausite-fit-web);
+  color: var(--color-black);
+  margin-bottom: 5.4rem !important;
+}
+@media (max-width: 768px) {
+  .custom-product-adjust__heading {
+    font-size: 4.2rem;
+    margin-bottom: 2.4rem !important;
+  }
+}
+.custom-product-adjust__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.6rem;
+}
+@media (max-width: 992px) {
+  .custom-product-adjust__grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
+.custom-product-adjust__item {
+  text-align: center;
+}
+.custom-product-adjust__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 2.4rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .custom-product-adjust__card {
+    padding: 2rem;
+  }
+}
+.custom-product-adjust__image-wrapper {
+  width: 100%;
+  aspect-ratio: 411/270;
+  overflow: hidden;
+  margin-bottom: 2.4rem;
+}
+.custom-product-adjust__image-wrapper img, .custom-product-adjust__image-wrapper .placeholder-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.custom-product-adjust__description {
+  font-size: 2.4rem;
+  max-width: 32rem;
+  color: var(--color-black);
+}
+@media (max-width: 768px) {
+  .custom-product-adjust__description {
+    font-size: 2rem !important;
+  }
+}
+/*# sourceMappingURL=section-custom-product-adjust.css.map */
