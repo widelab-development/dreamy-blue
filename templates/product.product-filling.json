@@ -326,6 +326,22 @@
         "heading": "Every night, better than the rest.",
         "description": "<p>Combining the purest materials, finest fabrics, and most adjustable till system, DreamyBlue invites you to customize your sleep experience at will.</p>"
       }
+    },
+    "custom_form_RQrzyc": {
+      "type": "custom-form",
+      "name": "Custom Form",
+      "settings": {
+        "image": "shopify://shop_images/Frame_64.png",
+        "heading": "Get The Position",
+        "description": "<p>Our periodic newsletter on sleep health. It's worth getting up for.</p>",
+        "name_placeholder": "Name",
+        "email_placeholder": "Email Address",
+        "button_text": "Get the Good Stuff!",
+        "section_background_color": "#FFFFFF",
+        "inner_background_color": "#f3eee8",
+        "button_background_color": "#b67bbb",
+        "button_text_color": "#FFFFFF"
+      }
     }
   },
   "order": [
@@ -335,6 +351,7 @@
     "custom_product_stuff_6bLi7a",
     "custom_product_adjust_NmYWLG",
     "custom_product_diffrences_U4Ciax",
-    "custom_product_fluff_JmwCjT"
+    "custom_product_fluff_JmwCjT",
+    "custom_form_RQrzyc"
   ]
 }
