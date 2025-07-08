@@ -1,0 +1,119 @@
+{{ 'section-custom-product-adjust.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign background_color = section.settings.background_color
+  assign overtitle = section.settings.overtitle
+  assign heading = section.settings.heading
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-adjust-section"
+  style="--bg-color: {{ background_color }};"
+>
+  <xo-container class="custom-product-adjust__container">
+    <div class="custom-product-adjust__header">
+      {%- if overtitle != blank -%}
+        <p class="custom-product-adjust__overtitle">{{ overtitle }}</p>
+      {%- endif -%}
+      {%- if heading != blank -%}
+        <h2 class="custom-product-adjust__heading">{{ heading }}</h2>
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="custom-product-adjust__grid">
+        {%- for block in section.blocks -%}
+          <div class="custom-product-adjust__item" {{ block.shopify_attributes }}>
+            <div class="custom-product-adjust__card">
+              <div class="custom-product-adjust__image-wrapper">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 822 }}"
+                    alt="{{ block.settings.image.alt | default: block.settings.description | escape }}"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+              {%- if block.settings.description != blank -%}
+                <p class="custom-product-adjust__description">{{ block.settings.description }}</p>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </xo-container>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Product Adjust",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F8F3EC"
+    },
+    {
+      "type": "text",
+      "id": "overtitle",
+      "label": "Overtitle",
+      "default": "How to Adjust"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Got the stuff? Get your pillow."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Adjustment Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Open the case at the smooth-gliding zipper."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Adjust",
+      "blocks": [
+        {
+          "type": "step"
+        },
+        {
+          "type": "step",
+          "settings": {
+            "description": "Add 1 or 2 fistfuls of fill, distributing it equally."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "description": "Test-sleep on it again before adding more."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
