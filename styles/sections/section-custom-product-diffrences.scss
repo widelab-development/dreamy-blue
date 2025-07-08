@@ -1,0 +1,146 @@
+@use "../settings/init" as *;
+
+.custom-product-diffrences-section {
+  background-color: var(--section-bg-color);
+  padding: rem(72) 0 rem(90) 0;
+
+  @media (max-width: 991px) {
+    padding: rem(40) 0;
+  }
+}
+
+.custom-product-diffrences {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__overtitle {
+    font-size: rem(18);
+    color: var(--color-white);
+    margin-bottom: rem(54) !important;
+
+    @media (max-width: 768px) {
+        font-size: rem(14) !important;
+        margin-bottom: rem(36) !important;
+    }
+  }
+
+  &__heading {
+    font-size: rem(120) !important;
+    font-weight: 300;
+    margin-bottom: rem(36) !important;
+    font-family: var(--font-beausite-fit-web);
+
+    @media (max-width: 768px) {
+        font-size: rem(42) !important;
+        margin-bottom: rem(36) !important;
+    }
+  }
+
+  &__description {
+    font-size: rem(18);
+    color: var(--color-black);
+    margin-bottom: rem(72) !important;
+    max-width: rem(880);
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+        font-size: rem(12) !important;
+        margin-bottom: rem(36) !important;
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
+
+  &__cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(8);
+
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+
+  &__cards-wrapper.is-slider-active {
+    .flickity-viewport {
+      overflow: visible;
+      transition: height 0.3s;
+    }
+  }
+
+  &__card-item {
+    display: flex;
+    height: auto;
+    
+    .is-slider-active & {
+      width: calc(100% / 1.3); 
+      margin-right: rem(16);
+    }
+  }
+  
+  &__card {
+    background-color: var(--card-bg-color);
+    padding: rem(58);
+    border-radius: rem(8);
+    width: 100%;
+
+    @media (max-width: 991px) {
+      padding: rem(36) rem(24);
+    }
+  }
+
+  &__card-title {
+    font-size: rem(36) !important;
+    font-family: var(--font-beausite-fit-web);
+    font-weight: 300;
+    margin-bottom: rem(60) !important;
+
+    @media (max-width: 991px) {
+        font-size: rem(24) !important;
+        margin-bottom: rem(24) !important;
+    }
+  }
+
+  &__card-content {
+    font-size: rem(18);
+    color: var(--color-black);
+
+    @media (max-width: 991px) {
+        font-size: rem(14) !important;
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
+
+  &__nav {
+    display: none;
+    
+    @media (max-width: 991px) {
+      display: flex;
+      gap: rem(12);
+      justify-content: center;
+      margin-top: rem(36); 
+    }
+  }
+  
+  &__arrow {
+    width: rem(44);
+    height: rem(44);
+    background: transparent;
+    border: rem(1) solid var(--color-black);
+    border-radius: 50%;
+    font-size: rem(24);
+    cursor: pointer;
+  }
+}

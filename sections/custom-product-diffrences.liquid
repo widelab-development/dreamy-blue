@@ -1,0 +1,183 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+{{ 'section-custom-product-diffrences.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign section_bg_color = section.settings.section_bg_color
+  assign card_bg_color = section.settings.card_bg_color
+  assign overtitle = section.settings.overtitle
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-diffrences-section"
+  style="--section-bg-color: {{ section_bg_color }};"
+>
+  <xo-container class="custom-product-diffrences__container">
+    <div class="custom-product-diffrences__header">
+      {%- if overtitle != blank -%}
+        <p class="custom-product-diffrences__overtitle">{{ overtitle }}</p>
+      {%- endif -%}
+      {%- if heading != blank -%}
+        <h2 class="custom-product-diffrences__heading">{{ heading }}</h2>
+      {%- endif -%}
+      {%- if description != blank -%}
+        <div class="custom-product-diffrences__description">{{ description }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div
+        class="custom-product-diffrences__cards-wrapper js-diffrences-slider"
+      >
+        {%- for block in section.blocks -%}
+          <div class="custom-product-diffrences__card-item">
+            <div class="custom-product-diffrences__card" style="--card-bg-color: {{ card_bg_color }};">
+              {%- if block.settings.title != blank -%}
+                <h3 class="custom-product-diffrences__card-title">{{ block.settings.title }}</h3>
+              {%- endif -%}
+              {%- if block.settings.content != blank -%}
+                <div class="custom-product-diffrences__card-content">{{ block.settings.content }}</div>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="custom-product-diffrences__nav">
+        <button class="custom-product-diffrences__arrow custom-product-diffrences__arrow--prev" aria-label="Previous">
+            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.3555 0.919858L1.24414 9.84787L11.3555 18.7759" stroke="black" stroke-width="0.64"/>
+            </svg>
+        </button>
+        <button class="custom-product-diffrences__arrow custom-product-diffrences__arrow--next" aria-label="Next">
+            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.644483 18.7759L10.7559 9.84793L0.644483 0.919921" stroke="black" stroke-width="0.64"/>
+            </svg>
+        </button>
+      </div>
+    {%- endif -%}
+  </xo-container>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const sliderWrapper = document.querySelector('#shopify-section-{{ section.id }} .js-diffrences-slider');
+    let flkty = null;
+    const mobileBreakpoint = 991;
+
+    function initOrDestroyFlickity() {
+      const isMobile = window.innerWidth <= mobileBreakpoint;
+
+      if (isMobile) {
+        if (!flkty) {
+          sliderWrapper.classList.add('is-slider-active');
+          flkty = new Flickity(sliderWrapper, {
+            cellSelector: '.custom-product-diffrences__card-item',
+            cellAlign: 'left',
+            contain: true,
+            pageDots: false,
+            prevNextButtons: false,
+            wrapAround: true,
+            adaptiveHeight: true
+          });
+        }
+      } else {
+        if (flkty) {
+          flkty.destroy();
+          flkty = null;
+          sliderWrapper.classList.remove('is-slider-active');
+          sliderWrapper.style.height = '';
+          const items = sliderWrapper.querySelectorAll('.custom-product-diffrences__card-item');
+          items.forEach(item => {
+            item.style.position = '';
+            item.style.left = '';
+          });
+        }
+      }
+    }
+
+    const prevButton = document.querySelector('#shopify-section-{{ section.id }} .custom-product-diffrences__arrow--prev');
+    const nextButton = document.querySelector('#shopify-section-{{ section.id }} .custom-product-diffrences__arrow--next');
+
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => flkty && flkty.previous());
+        nextButton.addEventListener('click', () => flkty && flkty.next());
+    }
+
+    initOrDestroyFlickity();
+    window.addEventListener('resize', initOrDestroyFlickity);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Differences",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background",
+      "default": "#B67BBA"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "overtitle",
+      "label": "Overtitle",
+      "default": "Material Differences"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why we care about fabrics, function, and fit."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>When it comes to sleep quality, posture, and restfulness, how your pillow is made makes (or breaks) the night. We won’t let the wrong pillow ruin your fave 8 hours.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "difference",
+      "name": "Difference Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Skip the sniffles."
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Goose down has earned a reputation for exceptional loft and flexibility. Unfortunately, it flattens quickly, causing the same issues as a too-soft pillow. Plus, the material itself can trigger allergies, causing itchy eyes, postnasal drip, and breathing issues that can also affect your sleep quality.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Differences",
+      "blocks": [
+        { "type": "difference" },
+        { "type": "difference" },
+        { "type": "difference" }
+      ]
+    }
+  ]
+}
+{% endschema %}
