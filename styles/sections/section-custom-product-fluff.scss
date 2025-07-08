@@ -1,13 +1,14 @@
 @use "../settings/init" as *;
 
 .custom-product-fluff-section {
-  position: relative;
-  background-color: var(--bg-color);
-  padding: rem(438) 0 rem(200) rem(0);
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg-color);
+    padding: rem(438) 0 rem(200) rem(0);
 
-  @media (max-width: 768px) {
-    padding: rem(173) 0 rem(16) rem(0);
-  }
+    @media (max-width: 768px) {
+        padding: rem(173) 0 rem(16) rem(0);
+    }
 }
 
 .custom-product-fluff {
@@ -62,6 +63,9 @@
     font-size: rem(18);
     color: var(--color-white);
     margin-bottom: rem(60) !important;
+    max-width: rem(746);
+    margin-left: auto;
+    margin-right: auto;
 
     @media (max-width: 768px) {
         font-size: rem(14) !important;
