@@ -289,6 +289,43 @@
         "heading": "Why we care about fabrics, function, and fit.",
         "description": "<p>When it comes to sleep quality, posture, and restfulness, how your pillow is made makes (or breaks) the night. We won’t let the wrong pillow ruin your fave 8 hours.</p>"
       }
+    },
+    "custom_product_fluff_JmwCjT": {
+      "type": "custom-product-fluff",
+      "blocks": {
+        "product_block_edF99P": {
+          "type": "product_block",
+          "settings": {
+            "background_color": "#8FBFEF",
+            "overtitle": "Signature Fill Blend",
+            "title": "The Light Stuff",
+            "button_text": "Add to Cart",
+            "button_link": ""
+          }
+        },
+        "product_block_zA3GJj": {
+          "type": "product_block",
+          "settings": {
+            "background_color": "#8FBFEF",
+            "overtitle": "Signature Fill Blend",
+            "title": "The Light Stuff",
+            "button_text": "Add to Cart",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_block_edF99P",
+        "product_block_zA3GJj"
+      ],
+      "name": "Custom Product Fluff",
+      "settings": {
+        "background_color": "#1D1C50",
+        "fluff_image_desktop": "shopify://shop_images/fluff-desktop.png",
+        "fluff_image_mobile": "shopify://shop_images/fluff-mobile.png",
+        "heading": "Every night, better than the rest.",
+        "description": "<p>Combining the purest materials, finest fabrics, and most adjustable till system, DreamyBlue invites you to customize your sleep experience at will.</p>"
+      }
     }
   },
   "order": [
@@ -297,6 +334,7 @@
     "custom_product_reviews_PBEjER",
     "custom_product_stuff_6bLi7a",
     "custom_product_adjust_NmYWLG",
-    "custom_product_diffrences_U4Ciax"
+    "custom_product_diffrences_U4Ciax",
+    "custom_product_fluff_JmwCjT"
   ]
 }
