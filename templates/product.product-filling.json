@@ -92,7 +92,7 @@
         "product_media_style": "style-1",
         "hide_variants": false,
         "show_image_variants_grouping": false,
-        "enable_sticky_cart": true,
+        "enable_sticky_cart": false,
         "gallery_type": "carousel",
         "color_scheme": "background-1",
         "background_color": "",
@@ -103,164 +103,9 @@
         "padding_bottom_mobile": 50
       }
     },
-    "multi_column_style_1_ePNRPr": {
-      "type": "multi-column-style-1",
-      "blocks": {
-        "column_rF3RUE": {
-          "type": "column",
-          "settings": {
-            "aspect_ratio_first": "512/479",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Heading</p>",
-            "enable_overlay": "off"
-          }
-        },
-        "column_VHA9aC": {
-          "type": "column",
-          "settings": {
-            "aspect_ratio_first": "512/479",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Heading</p>",
-            "enable_overlay": "off"
-          }
-        },
-        "column_hAFHPC": {
-          "type": "column",
-          "settings": {
-            "aspect_ratio_first": "512/479",
-            "aspect_ratio_second": "512/577",
-            "title": "<p>Heading</p>",
-            "enable_overlay": "off"
-          }
-        }
-      },
-      "block_order": [
-        "column_rF3RUE",
-        "column_VHA9aC",
-        "column_hAFHPC"
-      ],
-      "settings": {
-        "layout": "style-2",
-        "column": "3",
-        "text_tag_name": "h2",
-        "text_heading": "Hover image columns",
-        "font_size_heading": "h5",
-        "text_duration": 1000,
-        "text_effect": "none",
-        "text_heading_width_desktop": 100,
-        "text_heading_width_mobile": 100,
-        "color_scheme": "",
-        "background_color": "",
-        "background_gradient": "",
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 50,
-        "padding_bottom_mobile": 50
-      }
-    },
-    "product_specification_style_14_ziUrqY": {
-      "type": "product-specification-style-14",
-      "blocks": {
-        "detail_infomation_1_eRifq3": {
-          "type": "detail-infomation-1",
-          "settings": {
-            "caption": "Subheading",
-            "font_size_heading": "h1",
-            "sub_heading_1": "Subheading 1",
-            "heading_1": "Heading 1",
-            "sub_heading_2": "Subheading 2",
-            "heading_2": "Heading 2",
-            "color_schema_box": ""
-          }
-        },
-        "detail_infomation_2_w4K7hy": {
-          "type": "detail-infomation-2",
-          "settings": {
-            "caption": "SUBHEADING",
-            "title_list": "<ul><li>Title</li><li>Title</li><li>Title</li><li>Title</li></ul>",
-            "content_list": "<ul><li>Content</li><li>Content</li><li>Content</li><li>Content</li></ul>",
-            "color_schema_box": "background-1"
-          }
-        },
-        "image_p7jmAX": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "detail_infomation_1_eRifq3",
-        "detail_infomation_2_w4K7hy",
-        "image_p7jmAX"
-      ],
-      "settings": {
-        "layout": "image",
-        "font_size_heading": "h5",
-        "heading": "<p>Product specification</p>",
-        "autoplay_time": 3000,
-        "autoplay": "off",
-        "color_schema_box": "",
-        "color_scheme": "",
-        "background_color": "",
-        "background_gradient": "",
-        "use_parallax": true,
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 50,
-        "padding_bottom_mobile": 50
-      }
-    },
-    "collapse_content_3mHbKF": {
-      "type": "collapse-content",
-      "blocks": {
-        "collapse_ALTPUb": {
-          "type": "collapse",
-          "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
-          }
-        },
-        "collapse_HUn4hX": {
-          "type": "collapse",
-          "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
-          }
-        },
-        "collapse_8hKyAU": {
-          "type": "collapse",
-          "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
-          }
-        },
-        "collapse_M3zhjb": {
-          "type": "collapse",
-          "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
-          }
-        }
-      },
-      "block_order": [
-        "collapse_ALTPUb",
-        "collapse_HUn4hX",
-        "collapse_8hKyAU",
-        "collapse_M3zhjb"
-      ],
-      "settings": {
-        "font_size_heading": "h4",
-        "heading": "<p>Collapse content</p>",
-        "color_scheme": "",
-        "background_color": "",
-        "background_gradient": "",
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 50,
-        "padding_bottom_mobile": 50
-      }
-    },
     "main_product_recommendations_TnWBYD": {
       "type": "main-product-recommendations",
+      "disabled": true,
       "settings": {
         "font_size_heading": "h5",
         "heading": "May you also like",
@@ -282,13 +127,214 @@
         "padding_top_mobile": 50,
         "padding_bottom_mobile": 50
       }
+    },
+    "custom_product_reviews_PBEjER": {
+      "type": "custom-product-reviews",
+      "blocks": {
+        "review_gTTpyL": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_115_1.png",
+            "rating": 5,
+            "quote": "<p>“I bought this pillow for myself but my cat who is also a side sleeper approves.”</p>",
+            "author_name": "Cathy",
+            "show_verified_badge": true
+          }
+        },
+        "review_PLzn4p": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619.png",
+            "rating": 5,
+            "quote": "<p>I recently bought three pillows one after another… and this is definitely the best. [T]hree months and it still the perfect pillow.</p>",
+            "author_name": "Bryan",
+            "show_verified_badge": true
+          }
+        },
+        "review_PjRHin": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15621_1.png",
+            "rating": 5,
+            "quote": "<p>The quality of this pillow is out of this world. [When] you buy this pillow (which I highly suggest) make sure to get a few.</p>",
+            "author_name": "A. C.",
+            "show_verified_badge": true
+          }
+        },
+        "review_jHX9g6": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619_1.png",
+            "rating": 5,
+            "quote": "<p>My husband refers to me as “Princess and the pea”! I bought 4 DreamyBlue pillows…..I  recommend it 100%. Thank you DreamyBlue</p>",
+            "author_name": "Gail",
+            "show_verified_badge": true
+          }
+        }
+      },
+      "block_order": [
+        "review_gTTpyL",
+        "review_PLzn4p",
+        "review_PjRHin",
+        "review_jHX9g6"
+      ],
+      "name": "Custom Product Reviews",
+      "settings": {
+        "heading": "DreamyBlue Reviews",
+        "container_bg_color": "#fdfaf7",
+        "card_bg_color": "#FFFFFF"
+      }
+    },
+    "custom_product_stuff_6bLi7a": {
+      "type": "custom-product-stuff",
+      "name": "Custom Product Stuff",
+      "settings": {
+        "section_bg_color": "#8FBFEF",
+        "show_top_block": true,
+        "image_top": "shopify://shop_images/Pillow_Pic_copy_1.png",
+        "content_bg_top": "#8FBFEF",
+        "overtitle_top": "Signature Fill Blend",
+        "heading_top": "The Light Stuff",
+        "desc_top": "<p>More of that classic DreamyBlue comfort? We won’t judge you for testing a little extra! We can’t get enough of this fill blend either. With molding memory foam and free-moving poly tufts, you’ll fall into alignment, every night.</p>",
+        "feature1_top": "Latex-Free",
+        "feature2_top": "Down-Free",
+        "feature3_top": "Worry-Free",
+        "btn_text_top": "Shop Light",
+        "btn_link_top": "",
+        "show_bottom_block": true,
+        "image_bottom": "shopify://shop_images/7U8A8041_1.png",
+        "content_bg_bottom": "#8FBFEF",
+        "overtitle_bottom": "Sapphire Fill Blend",
+        "heading_bottom": "The Cool Stuff",
+        "desc_bottom": "<p>High-temp nights keeping you awake? Sick of waking up in a pool of sweat? Time to sleep it cool! Kiss your face and neck fresher than a dream with our cool blend of memory foam, poly tufts, and embedded cooling gel beads.</p>",
+        "feature1_bottom": "Latex-Free",
+        "feature2_bottom": "Down-Free",
+        "feature3_bottom": "Worry-Free",
+        "btn_text_bottom": "Shop Cool",
+        "btn_link_bottom": ""
+      }
+    },
+    "custom_product_adjust_NmYWLG": {
+      "type": "custom-product-adjust",
+      "blocks": {
+        "step_ptipTF": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15606_1.png",
+            "description": "Open the case at the smooth-gliding zipper."
+          }
+        },
+        "step_fLV9nU": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15606_3.png",
+            "description": "Add 1 or 2 fistfuls of fill, distributing it equally."
+          }
+        },
+        "step_mqnBaz": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15606_2.png",
+            "description": "Test-sleep on it again before adding more."
+          }
+        }
+      },
+      "block_order": [
+        "step_ptipTF",
+        "step_fLV9nU",
+        "step_mqnBaz"
+      ],
+      "name": "Custom Product Adjust",
+      "settings": {
+        "background_color": "#f8f3ec",
+        "overtitle": "How to Adjust",
+        "heading": "Got the stuff? Get your pillow."
+      }
+    },
+    "custom_product_diffrences_U4Ciax": {
+      "type": "custom-product-diffrences",
+      "blocks": {
+        "difference_Kd7w9B": {
+          "type": "difference",
+          "settings": {
+            "title": "Skip the sniffles.",
+            "content": "<p>Goose down has earned a reputation for exceptional loft and flexibility. Unfortunately, it flattens quickly, causing the same issues as a too-soft pillow. Plus, the material itself can trigger allergies, causing itchy eyes, postnasal drip, and breathing issues that can also affect your sleep quality.</p>"
+          }
+        },
+        "difference_NwLaGK": {
+          "type": "difference",
+          "settings": {
+            "title": "Support your dreams.",
+            "content": "<p>A pillow that’s too soft can cause your neck to sag into a “c” shape, triggering tension and pinched nerves on one side of your neck, jaw, and face. Lack of support can also cause mobility issues for people with chronic conditions such as arthritis, fibromyalgia, and hypermobility disorders.</p>"
+          }
+        },
+        "difference_FJFzCE": {
+          "type": "difference",
+          "settings": {
+            "title": "Go with the flow.",
+            "content": "<p>On the other side, a pillow that’s too firm can make it difficult for your body to adjust as you move throughout the night, causing stiffness and soreness in your neck, shoulders, and upper back. Ultra-dense memory foam also has a tendency to retain heat, which can be uncomfortable for hot sleepers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "difference_Kd7w9B",
+        "difference_NwLaGK",
+        "difference_FJFzCE"
+      ],
+      "name": "Custom Differences",
+      "settings": {
+        "section_bg_color": "#B67BBA",
+        "card_bg_color": "#FFFFFF",
+        "overtitle": "Material Differences",
+        "heading": "Why we care about fabrics, function, and fit.",
+        "description": "<p>When it comes to sleep quality, posture, and restfulness, how your pillow is made makes (or breaks) the night. We won’t let the wrong pillow ruin your fave 8 hours.</p>"
+      }
+    },
+    "custom_product_fluff_JmwCjT": {
+      "type": "custom-product-fluff",
+      "blocks": {
+        "product_block_edF99P": {
+          "type": "product_block",
+          "settings": {
+            "background_color": "#8FBFEF",
+            "overtitle": "Signature Fill Blend",
+            "title": "The Light Stuff",
+            "button_text": "Add to Cart",
+            "button_link": ""
+          }
+        },
+        "product_block_zA3GJj": {
+          "type": "product_block",
+          "settings": {
+            "background_color": "#8FBFEF",
+            "overtitle": "Signature Fill Blend",
+            "title": "The Light Stuff",
+            "button_text": "Add to Cart",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_block_edF99P",
+        "product_block_zA3GJj"
+      ],
+      "name": "Custom Product Fluff",
+      "settings": {
+        "background_color": "#1D1C50",
+        "fluff_image_desktop": "shopify://shop_images/fluff-desktop.png",
+        "fluff_image_mobile": "shopify://shop_images/fluff-mobile.png",
+        "heading": "Every night, better than the rest.",
+        "description": "<p>Combining the purest materials, finest fabrics, and most adjustable till system, DreamyBlue invites you to customize your sleep experience at will.</p>"
+      }
     }
   },
   "order": [
     "main",
-    "multi_column_style_1_ePNRPr",
-    "product_specification_style_14_ziUrqY",
-    "collapse_content_3mHbKF",
-    "main_product_recommendations_TnWBYD"
+    "main_product_recommendations_TnWBYD",
+    "custom_product_reviews_PBEjER",
+    "custom_product_stuff_6bLi7a",
+    "custom_product_adjust_NmYWLG",
+    "custom_product_diffrences_U4Ciax",
+    "custom_product_fluff_JmwCjT"
   ]
 }
