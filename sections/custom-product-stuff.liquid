@@ -1,0 +1,335 @@
+{{ 'section-custom-product-stuff.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign section_bg_color = section.settings.section_bg_color
+  assign checkmark_svg = '<svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.5L4.33333 8L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+
+  assign show_top_block = section.settings.show_top_block
+  assign image_top = section.settings.image_top
+  assign overtitle_top = section.settings.overtitle_top
+  assign heading_top = section.settings.heading_top
+  assign desc_top = section.settings.desc_top
+  assign feature1_top = section.settings.feature1_top
+  assign feature2_top = section.settings.feature2_top
+  assign feature3_top = section.settings.feature3_top
+  assign btn_text_top = section.settings.btn_text_top
+  assign btn_link_top = section.settings.btn_link_top
+  assign content_bg_top = section.settings.content_bg_top
+
+  assign show_bottom_block = section.settings.show_bottom_block
+  assign image_bottom = section.settings.image_bottom
+  assign overtitle_bottom = section.settings.overtitle_bottom
+  assign heading_bottom = section.settings.heading_bottom
+  assign desc_bottom = section.settings.desc_bottom
+  assign feature1_bottom = section.settings.feature1_bottom
+  assign feature2_bottom = section.settings.feature2_bottom
+  assign feature3_bottom = section.settings.feature3_bottom
+  assign btn_text_bottom = section.settings.btn_text_bottom
+  assign btn_link_bottom = section.settings.btn_link_bottom
+  assign content_bg_bottom = section.settings.content_bg_bottom
+-%}
+
+<section
+  id="shopify-section-{{ section.id }}"
+  class="custom-product-stuff"
+  style="--section-bg-color: {{ section_bg_color }};">
+  <div class="custom-product-stuff__wrapper">
+    {%- if show_top_block and image_top != blank and heading_top != blank -%}
+      <div class="custom-product-stuff__block">
+        <div class="custom-product-stuff__image-col">
+          <img
+            src="{{ image_top | image_url: width: 1200 }}"
+            alt="{{ image_top.alt | default: heading_top | escape }}"
+            loading="lazy">
+        </div>
+        <div class="custom-product-stuff__content-col" style="--content-bg: {{ content_bg_top }};">
+          <div class="custom-product-stuff__content">
+            <p class="custom-product-stuff__overtitle">{{ overtitle_top }}</p>
+            <h2 class="custom-product-stuff__heading">{{ heading_top }}</h2>
+            <div class="custom-product-stuff__desc">{{ desc_top }}</div>
+            <ul class="custom-product-stuff__features">
+              <li>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.21898 13.0884C10.577 13.0884 13.2993 10.3661 13.2993 7.00804C13.2993 3.64998 10.577 0.927734 7.21898 0.927734C3.86092 0.927734 1.13867 3.64998 1.13867 7.00804C1.13867 10.3661 3.86092 13.0884 7.21898 13.0884Z"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                  <path
+                    d="M4.42188 7.04309L6.38944 9.27532L10.0112 4.74121"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                </svg>
+                <span>{{ feature1_top }}</span>
+              </li>
+              <li>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.21898 13.0884C10.577 13.0884 13.2993 10.3661 13.2993 7.00804C13.2993 3.64998 10.577 0.927734 7.21898 0.927734C3.86092 0.927734 1.13867 3.64998 1.13867 7.00804C1.13867 10.3661 3.86092 13.0884 7.21898 13.0884Z"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                  <path
+                    d="M4.42188 7.04309L6.38944 9.27532L10.0112 4.74121"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                </svg>
+                <span>{{ feature2_top }}</span>
+              </li>
+              <li>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.21898 13.0884C10.577 13.0884 13.2993 10.3661 13.2993 7.00804C13.2993 3.64998 10.577 0.927734 7.21898 0.927734C3.86092 0.927734 1.13867 3.64998 1.13867 7.00804C1.13867 10.3661 3.86092 13.0884 7.21898 13.0884Z"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                  <path
+                    d="M4.42188 7.04309L6.38944 9.27532L10.0112 4.74121"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                </svg>
+                <span>{{ feature3_top }}</span>
+              </li>
+            </ul>
+            <a href="{{ btn_link_top | default: '#' }}" class="custom-product-stuff__button">{{ btn_text_top }}</a>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if show_bottom_block and image_bottom != blank and heading_bottom != blank -%}
+      <div class="custom-product-stuff__block custom-product-stuff__block--reverse">
+        <div class="custom-product-stuff__image-col">
+          <img
+            src="{{ image_bottom | image_url: width: 1200 }}"
+            alt="{{ image_bottom.alt | default: heading_bottom | escape }}"
+            loading="lazy">
+        </div>
+        <div class="custom-product-stuff__content-col" style="--content-bg: {{ content_bg_bottom }};">
+          <div class="custom-product-stuff__content">
+            <p class="custom-product-stuff__overtitle">{{ overtitle_bottom }}</p>
+            <h2 class="custom-product-stuff__heading">{{ heading_bottom }}</h2>
+            <div class="custom-product-stuff__desc">{{ desc_bottom }}</div>
+            <ul class="custom-product-stuff__features">
+              <li>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.21898 13.0884C10.577 13.0884 13.2993 10.3661 13.2993 7.00804C13.2993 3.64998 10.577 0.927734 7.21898 0.927734C3.86092 0.927734 1.13867 3.64998 1.13867 7.00804C1.13867 10.3661 3.86092 13.0884 7.21898 13.0884Z"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                  <path
+                    d="M4.42188 7.04309L6.38944 9.27532L10.0112 4.74121"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                </svg>
+                <span>{{ feature1_bottom }}</span>
+              </li>
+              <li>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.21898 13.0884C10.577 13.0884 13.2993 10.3661 13.2993 7.00804C13.2993 3.64998 10.577 0.927734 7.21898 0.927734C3.86092 0.927734 1.13867 3.64998 1.13867 7.00804C1.13867 10.3661 3.86092 13.0884 7.21898 13.0884Z"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                  <path
+                    d="M4.42188 7.04309L6.38944 9.27532L10.0112 4.74121"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                </svg>
+                <span>{{ feature2_bottom }}</span>
+              </li>
+              <li>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.21898 13.0884C10.577 13.0884 13.2993 10.3661 13.2993 7.00804C13.2993 3.64998 10.577 0.927734 7.21898 0.927734C3.86092 0.927734 1.13867 3.64998 1.13867 7.00804C1.13867 10.3661 3.86092 13.0884 7.21898 13.0884Z"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                  <path
+                    d="M4.42188 7.04309L6.38944 9.27532L10.0112 4.74121"
+                    stroke="#1D1C50"
+                    stroke-width="0.64"
+                    stroke-miterlimit="10" />
+                </svg>
+                <span>{{ feature3_bottom }}</span>
+              </li>
+            </ul>
+            <a href="{{ btn_link_bottom | default: '#' }}" class="custom-product-stuff__button">{{ btn_text_bottom }}</a>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom Product Stuff",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Section Background",
+        "default": "#8FBFEF"
+      },
+      {
+        "type": "header",
+        "content": "Top Block"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_top_block",
+        "label": "Show Top Block",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "image_top",
+        "label": "Image"
+      }, {
+        "type": "color",
+        "id": "content_bg_top",
+        "label": "Content Background",
+        "default": "#8FBFEF"
+      }, {
+        "type": "text",
+        "id": "overtitle_top",
+        "label": "Overtitle",
+        "default": "Signature Fill Blend"
+      }, {
+        "type": "text",
+        "id": "heading_top",
+        "label": "Heading",
+        "default": "The Light Stuff"
+      }, {
+        "type": "richtext",
+        "id": "desc_top",
+        "label": "Description",
+        "default": "<p>More of that classic DreamyBlue comfort? We won’t judge you for testing a little extra! We can’t get enough of this fill blend either. With molding memory foam and free-moving poly tufts, you’ll fall into alignment, every night.</p>"
+      }, {
+        "type": "text",
+        "id": "feature1_top",
+        "label": "Feature 1",
+        "default": "Latex-Free"
+      }, {
+        "type": "text",
+        "id": "feature2_top",
+        "label": "Feature 2",
+        "default": "Down-Free"
+      }, {
+        "type": "text",
+        "id": "feature3_top",
+        "label": "Feature 3",
+        "default": "Worry-Free"
+      }, {
+        "type": "text",
+        "id": "btn_text_top",
+        "label": "Button Text",
+        "default": "Shop Light"
+      }, {
+        "type": "url",
+        "id": "btn_link_top",
+        "label": "Button Link"
+      }, {
+        "type": "header",
+        "content": "Bottom Block"
+      }, {
+        "type": "checkbox",
+        "id": "show_bottom_block",
+        "label": "Show Bottom Block",
+        "default": true
+      }, {
+        "type": "image_picker",
+        "id": "image_bottom",
+        "label": "Image"
+      }, {
+        "type": "color",
+        "id": "content_bg_bottom",
+        "label": "Content Background",
+        "default": "#8FBFEF"
+      }, {
+        "type": "text",
+        "id": "overtitle_bottom",
+        "label": "Overtitle",
+        "default": "Sapphire Fill Blend"
+      }, {
+        "type": "text",
+        "id": "heading_bottom",
+        "label": "Heading",
+        "default": "The Cool Stuff"
+      }, {
+        "type": "richtext",
+        "id": "desc_bottom",
+        "label": "Description",
+        "default": "<p>High-temp nights keeping you awake? Sick of waking up in a pool of sweat? Time to sleep it cool! Kiss your face and neck fresher than a dream with our cool blend of memory foam, poly tufts, and embedded cooling gel beads.</p>"
+      }, {
+        "type": "text",
+        "id": "feature1_bottom",
+        "label": "Feature 1",
+        "default": "Latex-Free"
+      }, {
+        "type": "text",
+        "id": "feature2_bottom",
+        "label": "Feature 2",
+        "default": "Down-Free"
+      }, {
+        "type": "text",
+        "id": "feature3_bottom",
+        "label": "Feature 3",
+        "default": "Worry-Free"
+      }, {
+        "type": "text",
+        "id": "btn_text_bottom",
+        "label": "Button Text",
+        "default": "Shop Cool"
+      }, {
+        "type": "url",
+        "id": "btn_link_bottom",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Product Stuff"
+      }
+    ]
+  }
+{% endschema %}
