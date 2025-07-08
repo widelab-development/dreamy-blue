@@ -213,12 +213,90 @@
         "btn_text_bottom": "Shop Cool",
         "btn_link_bottom": ""
       }
+    },
+    "custom_product_adjust_NmYWLG": {
+      "type": "custom-product-adjust",
+      "blocks": {
+        "step_ptipTF": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15606_1.png",
+            "description": "Open the case at the smooth-gliding zipper."
+          }
+        },
+        "step_fLV9nU": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15606_3.png",
+            "description": "Add 1 or 2 fistfuls of fill, distributing it equally."
+          }
+        },
+        "step_mqnBaz": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15606_2.png",
+            "description": "Test-sleep on it again before adding more."
+          }
+        }
+      },
+      "block_order": [
+        "step_ptipTF",
+        "step_fLV9nU",
+        "step_mqnBaz"
+      ],
+      "name": "Custom Product Adjust",
+      "settings": {
+        "background_color": "#f8f3ec",
+        "overtitle": "How to Adjust",
+        "heading": "Got the stuff? Get your pillow."
+      }
+    },
+    "custom_product_diffrences_U4Ciax": {
+      "type": "custom-product-diffrences",
+      "blocks": {
+        "difference_Kd7w9B": {
+          "type": "difference",
+          "settings": {
+            "title": "Skip the sniffles.",
+            "content": "<p>Goose down has earned a reputation for exceptional loft and flexibility. Unfortunately, it flattens quickly, causing the same issues as a too-soft pillow. Plus, the material itself can trigger allergies, causing itchy eyes, postnasal drip, and breathing issues that can also affect your sleep quality.</p>"
+          }
+        },
+        "difference_NwLaGK": {
+          "type": "difference",
+          "settings": {
+            "title": "Support your dreams.",
+            "content": "<p>A pillow that’s too soft can cause your neck to sag into a “c” shape, triggering tension and pinched nerves on one side of your neck, jaw, and face. Lack of support can also cause mobility issues for people with chronic conditions such as arthritis, fibromyalgia, and hypermobility disorders.</p>"
+          }
+        },
+        "difference_FJFzCE": {
+          "type": "difference",
+          "settings": {
+            "title": "Go with the flow.",
+            "content": "<p>On the other side, a pillow that’s too firm can make it difficult for your body to adjust as you move throughout the night, causing stiffness and soreness in your neck, shoulders, and upper back. Ultra-dense memory foam also has a tendency to retain heat, which can be uncomfortable for hot sleepers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "difference_Kd7w9B",
+        "difference_NwLaGK",
+        "difference_FJFzCE"
+      ],
+      "name": "Custom Differences",
+      "settings": {
+        "section_bg_color": "#B67BBA",
+        "card_bg_color": "#FFFFFF",
+        "overtitle": "Material Differences",
+        "heading": "Why we care about fabrics, function, and fit.",
+        "description": "<p>When it comes to sleep quality, posture, and restfulness, how your pillow is made makes (or breaks) the night. We won’t let the wrong pillow ruin your fave 8 hours.</p>"
+      }
     }
   },
   "order": [
     "main",
     "main_product_recommendations_TnWBYD",
     "custom_product_reviews_PBEjER",
-    "custom_product_stuff_6bLi7a"
+    "custom_product_stuff_6bLi7a",
+    "custom_product_adjust_NmYWLG",
+    "custom_product_diffrences_U4Ciax"
   ]
 }
