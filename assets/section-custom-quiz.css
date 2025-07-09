@@ -18,35 +18,46 @@
   display: flex;
   align-items: start;
   justify-content: center;
-  padding: 6rem 4rem;
+  padding: 8.5rem 4rem;
 }
 @media (max-width: 992px) {
   .custom-quiz__content-wrapper {
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
   }
 }
 .custom-quiz__content {
   max-width: 55rem;
   width: 100%;
+  padding-left: 2.4rem;
+}
+@media (max-width: 992px) {
+  .custom-quiz__content {
+    padding-left: 0;
+  }
 }
 .custom-quiz__header {
   margin-bottom: 4rem;
 }
 .custom-quiz__heading {
-  font-size: 7.2rem;
+  font-size: 7.2rem !important;
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1;
   margin-bottom: 3.2rem;
 }
 @media (max-width: 992px) {
   .custom-quiz__heading {
-    font-size: 4.8rem;
+    font-size: 4.2rem !important;
   }
 }
 .custom-quiz__description {
   font-size: 1.8rem;
   line-height: 1.6;
   max-width: 40rem;
+}
+@media (max-width: 992px) {
+  .custom-quiz__description {
+    font-size: 1.4rem !important;
+  }
 }
 .custom-quiz__description p {
   margin: 0;
