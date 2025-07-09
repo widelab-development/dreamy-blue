@@ -462,12 +462,57 @@
         "button_background_color": "#b67bbb",
         "button_text_color": "#ffffff"
       }
+    },
+    "custom_sticky_two_col_bR3hrC": {
+      "type": "custom-sticky-two-col",
+      "blocks": {
+        "feature_DB9iQy": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Frame_118_6dd2ffca-03b4-4c74-beb3-633427947785.webp",
+            "title": "Memory meets motion.",
+            "text": "Shredded memory foam and down-like poly tufts combine both support and cradling."
+          }
+        },
+        "feature_n6zTY6": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Frame_118_1_03eacbd2-983b-4890-b50a-25c6b4976dab.webp",
+            "title": "Adjust to your body’s liking.",
+            "text": "Easy-access zipper and bonus fill encourage you to find the loft you love."
+          }
+        },
+        "feature_WREUwc": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Frame_118_6dd2ffca-03b4-4c74-beb3-633427947785.webp",
+            "title": "Rest and breathe easy.",
+            "text": "Fill is CertiPUR-US Certified, made to order, and free of latex, down, or other worries."
+          }
+        }
+      },
+      "block_order": [
+        "feature_DB9iQy",
+        "feature_n6zTY6",
+        "feature_WREUwc"
+      ],
+      "name": "Sticky Two Column Layout",
+      "settings": {
+        "eyebrow": "Revolutionary Fill",
+        "heading": "Moves like goose down. Molds like memory foam.",
+        "heading_tag": "h2",
+        "title_color": "#6CB1EA",
+        "heading_width": "494",
+        "description": "Reduces friction and encourages motion, so it doesn’t flatten you. Helps memory return to life, repeatedly.",
+        "description_width": "435"
+      }
     }
   },
   "order": [
     "main",
     "main_product_recommendations_TnWBYD",
     "custom_product_reviews_FNMtcH",
+    "custom_sticky_two_col_bR3hrC",
     "custom_product_type_4E9XLT",
     "custom_product_reviews_list_EP4cYp",
     "custom_product_award_JaQjLG",
