@@ -5,7 +5,7 @@
   padding: rem(120) 0;
 
   @media (max-width: 992px) {
-    padding: rem(80) 0;
+    padding: rem(20) 0;
   }
   
   &__inner {
@@ -28,7 +28,7 @@
     height: 100%;
 
     @media (max-width: 992px) {
-      min-height: 400px;
+      max-height: rem(269);
     }
 
     img, .placeholder-svg {
@@ -36,6 +36,10 @@
       height: 100%;
       object-fit: cover;
       display: block;
+
+      @media (max-width: 992px) {
+        max-height: rem(269);
+      }
     }
   }
 
@@ -46,7 +50,7 @@
     padding: rem(60) rem(40);
 
     @media (max-width: 992px) {
-      padding: rem(60) rem(20);
+      padding: rem(54) rem(25);
     }
   }
 
@@ -80,6 +84,7 @@
 
     @media (max-width: 992px) {
       font-size: rem(14) !important;
+      max-width: rem(268);
     }
 
     p {
@@ -100,6 +105,10 @@
     font-size: rem(16);
     text-align: left;
 
+    @media (max-width: 992px) {
+      font-size: rem(14) !important;
+    }
+
     &::placeholder {
       color: #918f8b;
     }
@@ -118,11 +127,15 @@
     border: none;
     border-radius: rem(40);
     text-decoration: none;
-    font-size: rem(16);
-    font-weight: 500;
+    font-size: rem(18);
+    font-weight: 300;
     cursor: pointer;
     transition: opacity 0.2s ease;
     margin-top: rem(12);
+
+    @media (max-width: 992px) {
+      font-size: rem(14.4) !important;
+    }
 
     &:hover {
       opacity: 0.85;

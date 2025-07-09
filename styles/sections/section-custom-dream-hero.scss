@@ -7,16 +7,19 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     width: 100%;
   }
 
   &__top {
-    padding: rem(100) 0 rem(72) 0;
+    padding: rem(90) 0 rem(72) 0;
     background-color: var(--bg-color);
     text-align: center;
     z-index: 2;
     position: relative;
+
+    @media (max-width: 992px) {
+      padding: rem(36) 0 rem(20) 0;
+    }
   }
 
   &__container {
@@ -30,13 +33,14 @@
 
   &__title {
     color: var(--title-color);
-    font-size: rem(64);
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: rem(32);
+    font-size: rem(90) !important;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: rem(36) !important;
 
     @media (max-width: 992px) {
-      font-size: rem(38);
+      font-size: rem(32) !important;
+      margin-bottom: rem(18) !important;
     }
   }
 
@@ -44,7 +48,15 @@
     color: var(--desc-color);
     font-size: rem(18);
     line-height: 1.6;
-    margin-bottom: rem(40);
+    margin-bottom: rem(36);
+    max-width: rem(820);
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 992px) {
+      font-size: rem(14) !important;
+      margin-bottom: rem(24);
+    }
 
     p {
       margin: 0;
@@ -56,19 +68,30 @@
     gap: rem(24);
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: rem(24);
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      gap: rem(18);
+    }
   }
 
   &__button {
     display: inline-block;
     border: none;
     border-radius: rem(120);
-    padding: rem(12) rem(64);
+    padding: rem(12) rem(69);
     font-size: rem(18);
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     transition: var(--default-transition);
+
+    @media (max-width: 992px) {
+      font-size: rem(14.4) !important;
+      width: 100%;
+    }
 
     &--primary {
       background-color: var(--color-blue-80);
@@ -83,9 +106,9 @@
       background: none;
       color: var(--color-neutral-cream);
       font-weight: 400;
-      padding-right: rem(16);
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: rem(12);
       opacity: 1;
 
@@ -116,7 +139,6 @@
     width: 100%;
     max-width: 100vw;
     height: auto;
-    max-height: rem(1000);
     display: block;
     object-fit: cover;
     object-position: center;
