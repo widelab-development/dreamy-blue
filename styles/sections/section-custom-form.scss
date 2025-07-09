@@ -61,7 +61,11 @@
   }
 
   &__header {
-    margin-bottom: rem(40);
+    margin-bottom: rem(72) !important;
+
+    @media (max-width: 992px) {
+      margin-bottom: rem(36) !important;
+    }
   }
 
   &__heading {
