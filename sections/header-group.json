@@ -49,8 +49,8 @@
     "header": {
       "type": "header",
       "settings": {
-        "header_style": "style-1",
-        "sticky_header_type": "down",
+        "header_style": "style-2",
+        "sticky_header_type": "none",
         "menu": "main-menu",
         "secondary_menu": "main-menu",
         "menu_type": "default",
