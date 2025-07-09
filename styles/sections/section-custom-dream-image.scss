@@ -2,7 +2,11 @@
 
 .custom-dream-image {
     background-color: var(--bg-color);
-    padding-top: rem(80);
+    padding-top: rem(200);
+
+    @media (max-width: 992px) {
+      padding-top: rem(36);
+    }
 
   &__grid {
     display: grid;
@@ -15,11 +19,13 @@
   }
 
   &__image-wrapper {
+    order: 0;
     width: 100%;
     height: 100%;
 
     @media (max-width: 992px) {
-      min-height: 400px;
+      order: 1;
+      min-height: rem(255);
     }
 
     img, .placeholder-svg {
@@ -37,10 +43,11 @@
     align-items: center;
     justify-content: center;
     padding: rem(60) rem(40);
+    order: 0;
 
     @media (max-width: 992px) {
-      padding: rem(60) rem(24);
-      order: -1;
+      padding: rem(24) rem(24) 0 rem(24);
+      order: 1;
     }
   }
 
@@ -59,6 +66,7 @@
 
     @media (max-width: 992px) {
       font-size: rem(36) !important;
+      text-align: center;
     }
   }
 
@@ -66,6 +74,13 @@
     font-size: rem(18);
     line-height: 1.6;
     margin-bottom: rem(40);
+
+    @media (max-width: 992px) {
+      text-align: center;
+      font-size: rem(14.4) !important;
+      margin-bottom: rem(24) !important;
+    }
+
 
     p {
       margin: 0;
@@ -85,7 +100,7 @@
     justify-content: center;
     border: none;
     border-radius: rem(120);
-    padding: rem(12) rem(60);
+    padding: rem(12) rem(69);
     font-size: rem(18);
     font-weight: 300;
     text-decoration: none;
@@ -94,6 +109,7 @@
 
     @media (max-width: 992px) {
       width: 100%;
+      font-size: rem(14.4) !important;
     }
 
     &--primary {
@@ -108,7 +124,7 @@
     &--secondary {
       background: none;
       color: var(--button2-color);
-      gap: rem(8);
+      gap: rem(24);
       opacity: 1;
 
       &:hover {

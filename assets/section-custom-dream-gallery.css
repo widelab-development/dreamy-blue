@@ -31,14 +31,16 @@
 .custom-dream-gallery__slide {
   background: none;
   overflow: hidden;
-  width: 28rem;
-  height: 28rem;
+  width: 32rem !important;
+  height: 32rem !important;
+  margin-right: 5.4rem !important;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
 @media (max-width: 768px) {
   .custom-dream-gallery__slide {
-    width: 12rem;
-    height: 12rem;
+    margin-right: 1.2rem !important;
+    width: 10.2rem !important;
+    height: 10.2rem !important;
   }
 }
 .custom-dream-gallery__img {
@@ -51,9 +53,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 4rem 0;
+  margin: 5.4rem 0;
   width: 100%;
-  max-width: 168rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -63,18 +64,18 @@
   }
 }
 .custom-dream-gallery__side-img {
-  width: 28rem;
-  height: 28rem;
+  width: 32rem;
+  height: 32rem;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .custom-dream-gallery__side-img--right {
-  margin-right: 2.4rem;
+  margin-right: 5.4rem;
 }
 .custom-dream-gallery__side-img--left {
-  margin-left: 2.4rem;
+  margin-left: 5.4rem;
 }
 @media (max-width: 992px) {
   .custom-dream-gallery__side-img {
@@ -94,15 +95,20 @@
 .custom-dream-gallery__subtitle {
   color: var(--subtitle-color);
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.6rem !important;
   font-weight: 400;
-  letter-spacing: 0.01em;
+}
+@media (max-width: 768px) {
+  .custom-dream-gallery__subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.8rem !important;
+  }
 }
 .custom-dream-gallery__title {
   font-family: var(--font-beausite-fit-web);
   color: var(--title-color);
-  font-size: 7.2rem !important;
-  font-weight: 400;
+  font-size: 9rem !important;
+  font-weight: 300;
   margin-bottom: 2.4rem;
   line-height: 1.1;
   margin-top: 0;
@@ -118,6 +124,12 @@
   line-height: 1.5;
   margin: 0 auto;
   max-width: 100rem;
+}
+@media (max-width: 768px) {
+  .custom-dream-gallery__desc {
+    font-size: 1.4rem !important;
+    text-align: center;
+  }
 }
 .custom-dream-gallery__desc p {
   margin: 0;
