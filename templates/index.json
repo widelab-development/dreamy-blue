@@ -278,7 +278,7 @@
       ],
       "name": "Custom Quality",
       "settings": {
-        "heading_top": "1.314 billion hours of reformed sleep. Every year.",
+        "heading_top": "1,314,000,000 (that’s billion) hours of reformed sleep. Every year.",
         "description_top": "<p>Are you ready for 8 hours per night of deep, quality sleep? 450,000+ of our customers can't wait to get back in bed with us.</p>",
         "heading_bottom": "A joint effort. Minus the effort.",
         "description_bottom": "<p>Exceptional, healthy sleep is a collaboration between our product design team and your own at-home testing. </p><p>Right out the box, our pillows do wonders for proper alignment. Then, adjust it at your discretion for the most personal comfort.</p>",
@@ -289,7 +289,7 @@
         "play_icon": "shopify://shop_images/Frame_68.svg",
         "bottom_video_poster": "shopify://shop_images/image_45.png",
         "bottom_video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4",
-        "bottom_video_label": "<b>Watch:</b> How to Adjust"
+        "bottom_video_label": "Watch: How to Adjust"
       }
     },
     "custom_quiz_xiDFUK": {
