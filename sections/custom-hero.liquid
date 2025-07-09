@@ -45,7 +45,11 @@
               href="{% if button2_link != blank %}{{ button2_link }}{% else %}/collections/all{% endif %}"
               class="custom-hero-banner__button custom-hero-banner__button--secondary"
             >
-              {{ button2_text }}<span class="custom-hero-banner__button-arrow">&rsaquo;</span>
+              {{ button2_text }}<span class="custom-hero-banner__button-arrow">
+                <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.03605 14.4711L8.96387 7.47107L1.03605 0.471069" stroke="#FFFEFC"/>
+                </svg>
+              </span>
             </a>
           {% endif %}
         </div>

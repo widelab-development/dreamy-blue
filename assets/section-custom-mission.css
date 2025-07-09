@@ -60,7 +60,7 @@
 }
 @media (max-width: 1199px) {
   .custom-mission__content-wrapper {
-    min-height: 60rem;
+    min-height: 64rem;
   }
 }
 .custom-mission__content {
@@ -74,12 +74,17 @@
   margin-bottom: 2.4rem;
   opacity: 0.9;
 }
+@media (max-width: 992px) {
+  .custom-mission__overtitle {
+    font-size: 1.44rem !important;
+  }
+}
 .custom-mission__heading {
   font-size: 10rem !important;
   color: var(--text-color);
   font-weight: 300;
   line-height: 1.1;
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.8rem !important;
 }
 @media (max-width: 1499px) {
   .custom-mission__heading {
@@ -89,6 +94,7 @@
 @media (max-width: 992px) {
   .custom-mission__heading {
     font-size: 5.6rem !important;
+    margin-bottom: 2.4rem !important;
   }
 }
 .custom-mission__description {
@@ -96,7 +102,13 @@
   line-height: 1.6;
   max-width: 76.8rem;
   color: var(--color-black);
-  margin: 0 auto 4rem;
+  margin: 0 auto 4.8rem;
+}
+@media (max-width: 992px) {
+  .custom-mission__description {
+    font-size: 1.4rem !important;
+    margin: 0 auto 2.4rem;
+  }
 }
 .custom-mission__description p {
   margin: 0;
@@ -105,12 +117,17 @@
   display: inline-block;
   background-color: var(--btn-bg-color);
   color: var(--btn-text-color);
-  padding: 1.2rem 10rem;
+  padding: 1.2rem 11.6rem;
   border-radius: 12rem;
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 300;
   transition: opacity 0.2s ease;
+}
+@media (max-width: 992px) {
+  .custom-mission__button {
+    width: 100%;
+  }
 }
 .custom-mission__button:hover {
   opacity: 0.85;

@@ -32,7 +32,6 @@
     background: var(--color-midnight-blue);
     color: var(--color-blue-40);
     padding: rem(54) rem(120) rem(80) rem(120);
-    max-width: rem(700);
     margin-left: rem(48);
 
     @media (max-width: 992px) {
@@ -47,6 +46,7 @@
 
   &__heading {
     font-size: rem(60);
+    line-height: 1 !important;
     margin-top: 0;
     font-weight: 300;
     font-family: var(--font-beausite-fit-web);
@@ -58,15 +58,19 @@
       font-size: rem(42) !important;
       text-align: center;
       max-width: 100%;
-      color: var(--color-white);
+      margin-bottom: rem(20) !important;
     }
   }
 
   &__subheading,
   &__desc {
     font-size: rem(18);
+    line-height: 1.6;
     color: var(--color-white);
-    margin-bottom: rem(8);
+
+    @media (max-width: 992px) {
+      font-size: rem(14) !important;
+    }
 
     strong {
       font-weight: 600;
@@ -83,10 +87,12 @@
 
   &__buttons {
     display: flex;
-    gap: rem(32);
+    flex-wrap: nowrap;
+    gap: rem(24);
     margin-top: rem(24);
 
     @media (max-width: 992px) {
+      flex-wrap: wrap;
       flex-direction: column;
       gap: rem(16);
       align-items: center;
@@ -95,22 +101,27 @@
 
   &__button {
     display: inline-block;
-    padding: rem(12) rem(36);
-    border-radius: rem(32);
-    font-size: rem(20);
-    font-weight: 400;
+    padding: rem(12) rem(69);
+    border-radius: rem(120);
+    font-size: rem(18);
+    line-height: 1.6;
+    font-weight: 300;
     text-align: center;
     text-decoration: none;
     transition: var(--default-transition);
 
     @media (max-width: 992px) {
-      font-size: rem(14);
+      font-size: rem(14) !important;
       padding: rem(16) rem(24);
     }
 
     &--primary {
-      background: var(--color-blue-40);
-      color: var(--color-midnight-blue);
+      background: var(--color-blue-80);
+      color: var(--color-black);
+
+      @media (max-width: 992px) {
+        width: 100%;
+      }
 
       &:hover {
         background: var(--color-blue-120);
@@ -120,29 +131,18 @@
     &--secondary {
       background: transparent;
       color: var(--color-neutral-cream);
-      opacity: 0.8;
+      opacity: 1;
       border: none;
       display: flex;
       align-items: center;
-      gap: rem(8);
+      gap: rem(24);
 
       &:hover {
-        opacity: 1;
+        opacity: 0.8;
       }
 
       @media (max-width: 992px) {
         justify-content: center;
-      }
-    }
-
-    &-arrow {
-      font-size: rem(28);
-      line-height: rem(28);
-      display: inline-block;
-      margin-bottom: rem(4);
-
-      @media (max-width: 992px) {
-        font-size: rem(20);
       }
     }
   }
