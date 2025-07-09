@@ -182,17 +182,17 @@
       "settings": {
         "heading": "DreamyBlue Reviews",
         "container_bg_color": "#fdfaf7",
-        "card_bg_color": "#FFFFFF"
+        "card_bg_color": "#ffffff"
       }
     },
     "custom_product_stuff_6bLi7a": {
       "type": "custom-product-stuff",
       "name": "Custom Product Stuff",
       "settings": {
-        "section_bg_color": "#8FBFEF",
+        "section_bg_color": "#8fbfef",
         "show_top_block": true,
         "image_top": "shopify://shop_images/Pillow_Pic_copy_1.png",
-        "content_bg_top": "#8FBFEF",
+        "content_bg_top": "#8fbfef",
         "overtitle_top": "Signature Fill Blend",
         "heading_top": "The Light Stuff",
         "desc_top": "<p>More of that classic DreamyBlue comfort? We won’t judge you for testing a little extra! We can’t get enough of this fill blend either. With molding memory foam and free-moving poly tufts, you’ll fall into alignment, every night.</p>",
@@ -203,7 +203,7 @@
         "btn_link_top": "",
         "show_bottom_block": true,
         "image_bottom": "shopify://shop_images/7U8A8041_1.png",
-        "content_bg_bottom": "#8FBFEF",
+        "content_bg_bottom": "#8fbfef",
         "overtitle_bottom": "Sapphire Fill Blend",
         "heading_bottom": "The Cool Stuff",
         "desc_bottom": "<p>High-temp nights keeping you awake? Sick of waking up in a pool of sweat? Time to sleep it cool! Kiss your face and neck fresher than a dream with our cool blend of memory foam, poly tufts, and embedded cooling gel beads.</p>",
@@ -283,8 +283,8 @@
       ],
       "name": "Custom Differences",
       "settings": {
-        "section_bg_color": "#B67BBA",
-        "card_bg_color": "#FFFFFF",
+        "section_bg_color": "#b67bba",
+        "card_bg_color": "#ffffff",
         "overtitle": "Material Differences",
         "heading": "Why we care about fabrics, function, and fit.",
         "description": "<p>When it comes to sleep quality, posture, and restfulness, how your pillow is made makes (or breaks) the night. We won’t let the wrong pillow ruin your fave 8 hours.</p>"
@@ -296,7 +296,7 @@
         "product_block_edF99P": {
           "type": "product_block",
           "settings": {
-            "background_color": "#8FBFEF",
+            "background_color": "#8fbfef",
             "overtitle": "Signature Fill Blend",
             "title": "The Light Stuff",
             "button_text": "Add to Cart",
@@ -306,7 +306,7 @@
         "product_block_zA3GJj": {
           "type": "product_block",
           "settings": {
-            "background_color": "#8FBFEF",
+            "background_color": "#8fbfef",
             "overtitle": "Signature Fill Blend",
             "title": "The Light Stuff",
             "button_text": "Add to Cart",
@@ -320,7 +320,7 @@
       ],
       "name": "Custom Product Fluff",
       "settings": {
-        "background_color": "#1D1C50",
+        "background_color": "#1d1c50",
         "fluff_image_desktop": "shopify://shop_images/fluff-desktop.png",
         "fluff_image_mobile": "shopify://shop_images/fluff-mobile.png",
         "heading": "Every night, better than the rest.",
@@ -333,14 +333,14 @@
       "settings": {
         "image": "shopify://shop_images/Frame_64.png",
         "heading": "Get The Position",
-        "description": "<p>Our periodic newsletter on sleep health. It's worth getting up for.</p>",
+        "description": "<p>Our periodic newsletter on sleep health. <em>It's worth getting up for.</em></p>",
         "name_placeholder": "Name",
         "email_placeholder": "Email Address",
         "button_text": "Get the Good Stuff!",
-        "section_background_color": "#FFFFFF",
+        "section_background_color": "#ffffff",
         "inner_background_color": "#f3eee8",
         "button_background_color": "#b67bbb",
-        "button_text_color": "#FFFFFF"
+        "button_text_color": "#ffffff"
       }
     }
   },
