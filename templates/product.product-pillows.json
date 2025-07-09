@@ -92,7 +92,7 @@
         "product_media_style": "style-1",
         "hide_variants": false,
         "show_image_variants_grouping": false,
-        "enable_sticky_cart": true,
+        "enable_sticky_cart": false,
         "gallery_type": "carousel",
         "color_scheme": "background-1",
         "background_color": "",
