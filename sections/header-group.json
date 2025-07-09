@@ -48,6 +48,7 @@
     },
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "header_style": "style-2",
         "sticky_header_type": "none",
