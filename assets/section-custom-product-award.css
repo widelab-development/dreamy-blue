@@ -7,7 +7,7 @@
 }
 @media (max-width: 991px) {
   .custom-product-award {
-    padding-bottom: 2.4rem;
+    padding-bottom: 3.6rem;
   }
 }
 .custom-product-award__grid {
@@ -66,7 +66,7 @@
   font-size: 7.2rem !important;
   font-family: var(--font-beausite-fit-web);
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1;
   margin: 0 0 6rem 0;
 }
 @media (max-width: 991px) {
@@ -77,16 +77,30 @@
 }
 .custom-product-award__logo-wrapper {
   background-color: var(--color-white);
-  max-width: 18rem;
+  max-width: 23.7rem;
+  max-height: 8.5rem;
   padding: 0 2.8rem;
   border-radius: 1rem;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .custom-product-award__logo-wrapper {
+    max-width: 12rem;
+    max-height: 4.4rem;
+    padding: 0 2rem;
+  }
 }
 .custom-product-award__logo-wrapper a {
   display: block;
 }
 .custom-product-award__logo-wrapper img {
   width: 100%;
-  height: auto;
+  height: 8.5rem;
+}
+@media (max-width: 768px) {
+  .custom-product-award__logo-wrapper img {
+    width: 12rem;
+    height: 4.4rem;
+  }
 }
 /*# sourceMappingURL=section-custom-product-award.css.map */

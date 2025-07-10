@@ -3,7 +3,11 @@
 .custom-product-slider-section {
   background-color: var(--bg-color);
   padding: rem(80) 0;
-  color: white;
+  color: var(--color-white);
+
+  @media (max-width: 991px) {
+    padding: rem(36) 0;
+  }
 }
 
 .custom-product-slider {
