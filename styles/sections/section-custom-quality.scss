@@ -4,7 +4,7 @@
     padding: rem(120) 0;
 
     @media (max-width: 992px) {
-        padding: rem(80) 0;
+        padding: rem(36) 0;
     }
 
     &__top {
@@ -37,7 +37,7 @@
         max-width: rem(980);
 
         @media (max-width: 992px) {
-            font-size: rem(40);
+            font-size: rem(36) !important;
             text-align: left;
             margin-bottom: rem(20) !important;
         }
@@ -56,6 +56,7 @@
         @media (max-width: 992px) {
             justify-self: flex-start;
             text-align: left;
+            font-size: rem(14) !important;
         }
     }
 
@@ -83,7 +84,6 @@
 
         @media (max-width: 992px) {
             grid-template-columns: 1fr;
-            padding-bottom: rem(40);
         }
     }
 
@@ -119,6 +119,10 @@
         margin-bottom: rem(60);
         max-width: rem(500);
 
+        @media (max-width: 992px) {
+            font-size: rem(14) !important;
+        }
+
         p {
             margin: 0;
         }
@@ -141,11 +145,20 @@
         font-weight: 300;
         transition: var(--default-transition);
 
+        @media (max-width: 992px) {
+            font-size: rem(14) !important;
+        }
+
         &--primary {
             background-color: var(--color-blue-80);
             color: var(--color-black);
             padding: rem(12) rem(64);
             border-radius: rem(120);
+
+            @media (max-width: 992px) {
+                width: 100%;
+                text-align: center;
+            }
 
             &:hover {
                 background-color: var(--color-blue-120);

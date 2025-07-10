@@ -36,6 +36,11 @@
   position: relative;
   z-index: 2;
 }
+@media (max-width: 992px) {
+  .custom-advantages__container {
+    padding: 0;
+  }
+}
 .custom-advantages__header {
   color: var(--text-color);
   text-align: center;

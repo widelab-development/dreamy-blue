@@ -9,6 +9,7 @@
 
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
+      min-height: auto;
     }
   }
 
@@ -19,8 +20,11 @@
     align-items: start;
     justify-content: center;
     padding: rem(85) rem(40);
+    order: 0;
+    
 
     @media (max-width: 992px) {
+      order: 1;
       padding: rem(40) rem(20);
     }
   }
@@ -69,6 +73,7 @@
     background-color: #f8f7f5;
     border-radius: rem(16);
     padding: rem(32);
+    order: 0;
     
     > * {
       width: 100%;
@@ -84,8 +89,10 @@
   &__image-wrapper {
     width: 100%;
     height: 100%;
+    order: 1;
 
     @media (max-width: 992px) {
+      order: 0;
       aspect-ratio: 1 / 1;
     }
 
