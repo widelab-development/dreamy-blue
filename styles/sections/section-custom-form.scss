@@ -106,11 +106,13 @@
     border: 1px solid var(--color-midnight-blue);
     border-radius: rem(40);
     background-color: transparent;
-    font-size: rem(16);
+    font-size: rem(18) !important;
+    min-height: rem(60);
     text-align: left;
 
     @media (max-width: 992px) {
-      font-size: rem(14) !important;
+      font-size: rem(14.4) !important;
+      min-height: rem(54);
     }
 
     &::placeholder {

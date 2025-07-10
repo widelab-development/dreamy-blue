@@ -124,7 +124,7 @@ ul {
 .content-for-layout .h6 {
   font-family: var(--font-beausite-fit-web);
   font-weight: 300;
-  line-height: 110%;
+  line-height: 100%;
   margin: 0 0 2.4rem 0;
 }
 .content-for-layout h1,
