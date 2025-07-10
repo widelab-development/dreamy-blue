@@ -25,7 +25,6 @@
     },
     "main_page_heading_7nkTMe": {
       "type": "main-page-heading",
-      "disabled": true,
       "settings": {
         "font_size_heading": "h2",
         "heading": "<p>Blog</p>",
