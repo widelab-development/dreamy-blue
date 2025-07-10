@@ -110,7 +110,7 @@
 .custom-advantages__card {
   background-color: var(--card-bg-color);
   color: var(--card-text-color);
-  padding: 7.2rem 3.2rem;
+  padding: 10rem 4rem !important;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -118,6 +118,11 @@
   justify-content: center;
   min-height: 30rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 992px) {
+  .custom-advantages__card {
+    padding: 3.6rem 3.2rem !important;
+  }
 }
 .custom-advantages__card:hover {
   transform: translateY(-5px);
@@ -152,17 +157,18 @@
   }
 }
 .custom-advantages__card-text {
-  font-size: 2.2rem;
-  line-height: 1.5;
-  font-weight: 400;
-  max-width: 26rem;
+  font-size: 3.6rem !important;
+  font-family: var(--font-beausite-fit-web);
+  line-height: 1;
+  font-weight: 300;
+  max-width: 35.8rem;
 }
 .custom-advantages__card-text p {
   margin: 0;
 }
 @media (max-width: 992px) {
   .custom-advantages__card-text {
-    font-size: 2rem;
+    font-size: 2.3rem !important;
   }
 }
 /*# sourceMappingURL=section-custom-advantages.css.map */

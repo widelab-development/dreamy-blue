@@ -111,7 +111,7 @@
   &__card {
     background-color: var(--card-bg-color);
     color: var(--card-text-color);
-    padding: rem(72) rem(32);
+    padding: rem(100) rem(40) !important;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -119,6 +119,10 @@
     justify-content: center;
     min-height: rem(300);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @media (max-width: 992px) {
+      padding: rem(36) rem(32) !important;
+    }
 
     &:hover {
       transform: translateY(-5px);
@@ -155,17 +159,18 @@
   }
 
   &__card-text {
-    font-size: rem(22);
-    line-height: 1.5;
-    font-weight: 400;
-    max-width: rem(260);
+    font-size: rem(36) !important;
+    font-family: var(--font-beausite-fit-web);
+    line-height: 1;
+    font-weight: 300;
+    max-width: rem(358);
 
     p {
       margin: 0;
     }
     
     @media (max-width: 992px) {
-      font-size: rem(20);
+      font-size: rem(23) !important;
     }
   }
 }
