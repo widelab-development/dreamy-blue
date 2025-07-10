@@ -3,7 +3,7 @@
 /*MIXINS*/
 .custom-product-slider-section {
   background-color: var(--bg-color);
-  padding: 8rem 0;
+  padding: 8rem 0 15rem 0;
   color: var(--color-white);
 }
 @media (max-width: 991px) {
@@ -18,15 +18,21 @@
   gap: 20rem;
   align-items: center;
 }
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .custom-product-slider__main-content {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
 }
+.custom-product-slider__text-col {
+  max-width: 54rem;
+  margin-left: auto;
+}
 @media (max-width: 991px) {
   .custom-product-slider__text-col {
     order: 2;
+    margin-left: 0;
+    max-width: 100%;
   }
 }
 @media (max-width: 991px) {
@@ -45,6 +51,7 @@
   .custom-product-slider__overtitle {
     margin-top: 0rem !important;
     margin-bottom: 2.4rem !important;
+    font-size: 1.4rem !important;
   }
 }
 .custom-product-slider__text-items-wrapper {
@@ -53,10 +60,15 @@
 }
 .custom-product-slider__text-item {
   position: relative;
-  padding: 2.4rem;
+  padding: 3.6rem;
   border-radius: 0.8rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+@media (max-width: 991px) {
+  .custom-product-slider__text-item {
+    padding: 1.6rem;
+  }
 }
 .custom-product-slider__text-item::after {
   content: "";

@@ -80,8 +80,11 @@
   }
 
   &__eyebrow {
-    font-size: rem(14);
-    margin-bottom: rem(12);
+
+    @media (max-width: 768px) {
+      font-size: rem(14) !important;
+      margin-bottom: rem(12) !important;
+    }
   }
 
   h3.custom-sticky-two-col__block-title {

@@ -44,6 +44,7 @@
     font-size: rem(120) !important;
     font-weight: 300;
     font-family: var(--font-beausite-fit-web);
+    line-height: 1 !important;
 
     @media (max-width: 991px) {
       font-size: rem(62) !important;
@@ -53,7 +54,7 @@
 
   &__features-col {
     background-color: white;
-    padding: rem(48) rem(48) rem(24) rem(48);
+    padding: rem(48) 0 rem(24) rem(48);
     height: max-content;
     align-self: flex-end;
 
@@ -79,7 +80,7 @@
     padding-bottom: rem(12);
     margin-bottom: rem(12);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    max-width: rem(300);
+    max-width: rem(340);
 
     &:nth-last-of-type(1), &:nth-last-of-type(2) {
       border-bottom: none;
@@ -110,5 +111,9 @@
   &__feature-text {
     font-size: rem(18);
     color: var(--color-black);
+
+    @media (max-width: 991px) {
+      font-size: rem(14.4) !important;
+    }
   }
 }

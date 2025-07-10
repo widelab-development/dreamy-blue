@@ -94,6 +94,13 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .custom-product-reviews-list__badge {
+    font-size: 1.12rem !important;
+    max-height: 1.8rem !important;
+    padding: 0 0.8rem;
+  }
+}
 .custom-product-reviews-list__card-main {
   flex: 1;
 }
@@ -102,6 +109,12 @@
   gap: 0.1rem;
   color: var(--color-black);
   margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .custom-product-reviews-list__stars--card svg {
+    width: 1.4rem !important;
+    height: 1.4rem !important;
+  }
 }
 .custom-product-reviews-list__author {
   font-size: 2.4rem;

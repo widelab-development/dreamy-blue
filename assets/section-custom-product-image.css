@@ -53,11 +53,11 @@
   font-weight: 300;
   color: var(--color-black);
   max-width: 70rem;
-  margin-bottom: 3.6rem;
+  margin-bottom: 2.4rem !important;
 }
 @media (max-width: 768px) {
   .custom-product-image__description {
-    margin-bottom: 2.4rem;
+    font-size: 1.4rem !important;
   }
 }
 .custom-product-image__button {

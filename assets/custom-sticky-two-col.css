@@ -64,9 +64,11 @@
     line-height: 1;
   }
 }
-.custom-sticky-two-col__eyebrow {
-  font-size: 1.4rem;
-  margin-bottom: 1.2rem;
+@media (max-width: 768px) {
+  .custom-sticky-two-col__eyebrow {
+    font-size: 1.4rem !important;
+    margin-bottom: 1.2rem !important;
+  }
 }
 .custom-sticky-two-col h3.custom-sticky-two-col__block-title {
   font-size: 2.6rem;

@@ -2,7 +2,7 @@
 
 .custom-product-slider-section {
   background-color: var(--bg-color);
-  padding: rem(80) 0;
+  padding: rem(80) 0 rem(150) 0;
   color: var(--color-white);
 
   @media (max-width: 991px) {
@@ -17,15 +17,19 @@
     gap: rem(200);
     align-items: center;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       grid-template-columns: 1fr;
       gap: rem(40);
     }
   }
 
   &__text-col {
+    max-width: rem(540);
+    margin-left: auto;
     @media (max-width: 991px) {
       order: 2;
+      margin-left: 0;
+      max-width: 100%;
     }
   }
 
@@ -45,6 +49,7 @@
     @media (max-width: 991px) {
       margin-top: rem(0) !important;
       margin-bottom: rem(24) !important;
+      font-size: rem(14) !important;
     }
   }
   
@@ -55,10 +60,14 @@
 
   &__text-item {
     position: relative;
-    padding: rem(24);
+    padding: rem(36);
     border-radius: rem(8);
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    @media (max-width: 991px) {
+      padding: rem(16);
+    }
 
     &::after {
         content: "";
