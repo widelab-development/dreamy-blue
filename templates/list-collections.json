@@ -30,6 +30,54 @@
         "padding_bottom_mobile": 67
       }
     },
+    "custom_featured_products_fURTDE": {
+      "type": "custom-featured-products",
+      "blocks": {
+        "product_card_7zVNUD": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "custom_image": "shopify://shop_images/Signature_Pillow_5.png",
+            "overtitle": "The Signature",
+            "description": "",
+            "background_color": "#8fbfef",
+            "text_color": "#6cb1ea"
+          }
+        },
+        "product_card_ygx8Mm": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "custom_image": "shopify://shop_images/sapphire_2.png",
+            "overtitle": "The Sapphire",
+            "description": "",
+            "background_color": "#c49bc9",
+            "text_color": "#b67bba"
+          }
+        },
+        "product_card_h6aWFW": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "custom_image": "shopify://shop_images/Moon_Pillow_1.png",
+            "overtitle": "Blue Moon",
+            "description": "",
+            "background_color": "#e2a383",
+            "text_color": "#d88a68"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_7zVNUD",
+        "product_card_ygx8Mm",
+        "product_card_h6aWFW"
+      ],
+      "name": "Custom Featured Products",
+      "settings": {
+        "heading": "Find your perfect sleep.",
+        "subheading": ""
+      }
+    },
     "custom_quality_LBdePM": {
       "type": "custom-quality",
       "blocks": {
@@ -106,58 +154,29 @@
         "bottom_video_label": ""
       }
     },
-    "custom_featured_products_fURTDE": {
-      "type": "custom-featured-products",
-      "blocks": {
-        "product_card_7zVNUD": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "custom_image": "shopify://shop_images/Signature_Pillow_5.png",
-            "overtitle": "The Signature",
-            "description": "",
-            "background_color": "#8fbfef",
-            "text_color": "#6cb1ea"
-          }
-        },
-        "product_card_ygx8Mm": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "custom_image": "shopify://shop_images/sapphire_2.png",
-            "overtitle": "The Sapphire",
-            "description": "",
-            "background_color": "#c49bc9",
-            "text_color": "#b67bba"
-          }
-        },
-        "product_card_h6aWFW": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "custom_image": "shopify://shop_images/Moon_Pillow_1.png",
-            "overtitle": "Blue Moon",
-            "description": "",
-            "background_color": "#e2a383",
-            "text_color": "#d88a68"
-          }
-        }
-      },
-      "block_order": [
-        "product_card_7zVNUD",
-        "product_card_ygx8Mm",
-        "product_card_h6aWFW"
-      ],
-      "name": "Custom Featured Products",
+    "custom_mission_PizwPa": {
+      "type": "custom-mission",
+      "name": "Custom Mission",
       "settings": {
-        "heading": "Find your perfect sleep.",
-        "subheading": ""
+        "background_color": "#b67bba",
+        "text_color": "#ffffff",
+        "animation_desktop_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Desktop_Strokes.json?v=1751281361",
+        "animation_mobile_top_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Mobile_Strokes_Top.json?v=1751281361",
+        "animation_mobile_bottom_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Mobile_Strokes_Bottom.json?v=1751281361",
+        "overtitle": "Our Mission",
+        "heading": "Change your pillow.",
+        "description": "<p>At every age and life stage, our alignment-focused and adjustable products put control in your hands—while putting your body in the perfect position for rejuvenation.</p>",
+        "button_text": "Our Dream",
+        "button_link": "",
+        "button_bg_color": "#1d1c50",
+        "button_text_color": "#ffffff"
       }
     }
   },
   "order": [
     "main",
     "custom_featured_products_fURTDE",
-    "custom_quality_LBdePM"
+    "custom_quality_LBdePM",
+    "custom_mission_PizwPa"
   ]
 }
