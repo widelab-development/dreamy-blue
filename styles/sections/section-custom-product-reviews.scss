@@ -4,7 +4,7 @@
   padding: rem(80) 0;
 
   @media (max-width: 1300px) {
-    padding: rem(40) 0;
+    padding: 0;
   }
 }
 
@@ -20,13 +20,13 @@
   }
 
   &__heading {
-    font-size: rem(48);
+    font-size: rem(48) !important;
     font-family: var(--font-beausite-fit-web);
     font-weight: 300;
-    margin-bottom: rem(40);
+    margin-bottom: rem(24) !important;
 
     @media (max-width: 768px) {
-      font-size: rem(36);
+      font-size: rem(24) !important;
     }
   }
 
@@ -57,7 +57,7 @@
     }
     
     .is-slider-active & {
-      width: calc(100% - 80px);
+      width: calc(100% - 40px);
       margin-right: rem(16);
       
       @media (min-width: 769px) and (max-width: 1300px) {
@@ -84,7 +84,7 @@
     width: 100%;
     overflow: hidden;
     margin-bottom: rem(12);
-    aspect-ratio: 1/1;
+    aspect-ratio: 285 / 184;
 
     .placeholder-svg {
       width: 100%;
@@ -95,7 +95,10 @@
   &__image {
     width: 100%;
     height: 100%;
+    max-width: rem(285);
+    max-height: rem(184);
     object-fit: cover;
+  
   }
 
   &__quote {
@@ -103,6 +106,10 @@
     line-height: 1.6;
     margin: 0 0 rem(16) 0;
     color: var(--color-black);
+
+    @media (max-width: 768px) {
+      font-size: rem(14) !important;
+    }
 
     p {
       margin: 0;
@@ -121,9 +128,16 @@
     font-size: rem(18);
     font-weight: 300;
     margin-bottom: 0 !important;
+
+    @media (max-width: 768px) {
+      font-size: rem(14) !important;
+    }
   }
 
   &__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: #33AE6A;
     color: var(--color-white);
     padding: 0 rem(12);
@@ -131,7 +145,11 @@
     font-size: rem(14);
     font-weight: 300;
     white-space: nowrap;
-    height: fit-content;
+    height: rem(22);
+
+    @media (max-width: 768px) {
+      font-size: rem(12) !important;
+    }
   }
   
   &__nav {
