@@ -11,6 +11,7 @@
   "sections": {
     "main_breadcrumb_ABzfNr": {
       "type": "main-breadcrumb",
+      "disabled": true,
       "settings": {
         "align": "left",
         "color_scheme": "",
@@ -24,10 +25,11 @@
     },
     "main_page_heading_7nkTMe": {
       "type": "main-page-heading",
+      "disabled": true,
       "settings": {
-        "font_size_heading": "h1",
-        "heading": "<p>Page heading</p>",
-        "sub_heading": "<p>Subheading</p>",
+        "font_size_heading": "h2",
+        "heading": "<p>Blog</p>",
+        "sub_heading": "<p>How to get the best sleep of your life</p>",
         "align": "left",
         "color_scheme": "",
         "background_color": "",
@@ -41,8 +43,8 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "limit": 6,
-        "columns_desktop": 3,
+        "limit": 9,
+        "columns_desktop": 4,
         "columns_spacing": 16,
         "rows_spacing": 36,
         "article_card_show_image": true,
