@@ -137,6 +137,8 @@
 @media (max-width: 768px) {
   .custom-product-reviews__badge {
     font-size: 1.2rem !important;
+    height: 1.8rem !important;
+    padding: 0 0.8rem;
   }
 }
 .custom-product-reviews__nav {

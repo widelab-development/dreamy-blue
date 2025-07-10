@@ -78,39 +78,47 @@
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
-    if (!sectionEl) return;
+document.addEventListener('DOMContentLoaded', function() {
+  const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
+  if (!sectionEl) return;
 
-    const sliderEl = sectionEl.querySelector('.js-product-type-slider');
-    const prevButton = sectionEl.querySelector('.custom-product-type__nav-button--prev');
-    const nextButton = sectionEl.querySelector('.custom-product-type__nav-button--next');
-    let flkty = null;
+  const sliderEl = sectionEl.querySelector('.js-product-type-slider');
+  const prevButton = sectionEl.querySelector('.custom-product-type__nav-button--prev');
+  const nextButton = sectionEl.querySelector('.custom-product-type__nav-button--next');
+  let flkty = null;
 
-    function initOrDestroyFlickity() {
-      const isMobile = window.innerWidth < 992;
+  function initOrDestroyFlickity() {
+    const isMobile = window.innerWidth < 992;
 
-      if (isMobile && !flkty) {
-        flkty = new Flickity(sliderEl, {
-          cellAlign: 'center',
-          contain: true,
-          prevNextButtons: false,
-          pageDots: false,
-          wrapAround: true
-        });
+    if (isMobile && !flkty) {
+      flkty = new Flickity(sliderEl, {
+        cellAlign: 'center',
+        contain: true,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true,
+        selectedAttraction: 0.1, 
+        friction: 0.6            
+      });
 
-        prevButton.addEventListener('click', () => flkty.previous());
-        nextButton.addEventListener('click', () => flkty.next());
+      prevButton.replaceWith(prevButton.cloneNode(true));
+      nextButton.replaceWith(nextButton.cloneNode(true));
 
-      } else if (!isMobile && flkty) {
-        flkty.destroy();
-        flkty = null;
-      }
+      const newPrevButton = sectionEl.querySelector('.custom-product-type__nav-button--prev');
+      const newNextButton = sectionEl.querySelector('.custom-product-type__nav-button--next');
+
+      newPrevButton.addEventListener('click', () => flkty.previous());
+      newNextButton.addEventListener('click', () => flkty.next());
+
+    } else if (!isMobile && flkty) {
+      flkty.destroy();
+      flkty = null;
     }
+  }
 
-    initOrDestroyFlickity();
-    window.addEventListener('resize', initOrDestroyFlickity);
-  });
+  initOrDestroyFlickity();
+  window.addEventListener('resize', initOrDestroyFlickity);
+});
 </script>
 
 {% schema %}

@@ -55,10 +55,10 @@
     font-weight: 300;
     color: var(--color-black);
     max-width: rem(700);
-    margin-bottom: rem(36);
+    margin-bottom: rem(24) !important;
 
     @media (max-width: 768px) {
-        margin-bottom: rem(24);
+      font-size: rem(14) !important;
     }
   }
 

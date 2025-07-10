@@ -45,6 +45,7 @@
   font-size: 12rem !important;
   font-weight: 300;
   font-family: var(--font-beausite-fit-web);
+  line-height: 1 !important;
 }
 @media (max-width: 991px) {
   .custom-product-materials__heading {
@@ -54,7 +55,7 @@
 }
 .custom-product-materials__features-col {
   background-color: white;
-  padding: 4.8rem 4.8rem 2.4rem 4.8rem;
+  padding: 4.8rem 0 2.4rem 4.8rem;
   height: max-content;
   align-self: flex-end;
 }
@@ -80,7 +81,7 @@
   padding-bottom: 1.2rem;
   margin-bottom: 1.2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  max-width: 30rem;
+  max-width: 34rem;
 }
 .custom-product-materials__feature-item:nth-last-of-type(1), .custom-product-materials__feature-item:nth-last-of-type(2) {
   border-bottom: none;
@@ -106,5 +107,10 @@
 .custom-product-materials__feature-text {
   font-size: 1.8rem;
   color: var(--color-black);
+}
+@media (max-width: 991px) {
+  .custom-product-materials__feature-text {
+    font-size: 1.44rem !important;
+  }
 }
 /*# sourceMappingURL=section-custom-product-materials.css.map */

@@ -7,7 +7,7 @@
 }
 @media (max-width: 991px) {
   .custom-product-type {
-    padding: 4.8rem 0;
+    padding: 3.6rem 0 4.8rem 0;
   }
 }
 .custom-product-type__header {
