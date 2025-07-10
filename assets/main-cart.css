@@ -31,9 +31,52 @@ body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-tabl
   display: grid;
   grid-template-columns: 16rem 1fr;
   gap: 4rem;
+  padding: 0;
 }
 body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__img {
   width: 100%;
   height: 13.4rem;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__title {
+  margin-bottom: 0.6rem;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__title p {
+  color: var(--color-black);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__price {
+  margin-bottom: 3rem;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__price .xo-cart-item__final-price {
+  color: var(--color-black);
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__quantity-item {
+  margin-bottom: 1.2rem;
+  padding: 0;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__quantity-item .xo-quantity {
+  width: 11.2rem;
+  height: 4.5rem;
+  padding: 0rem 0.2rem;
+  border: 0.1rem solid var(--color-black);
+  border-radius: 0;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__quantity-item .xo-quantity .xo-quantity__button svg {
+  width: 2rem;
+  height: 2rem;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__quantity-item .xo-quantity .xo-quantity__number {
+  font-size: 1.6rem;
+}
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__content .xo-cart-item__remove {
+  color: var(--color-black);
+  font-size: 1.6rem;
+  line-height: 1;
+  opacity: 0.6;
 }
 /*# sourceMappingURL=main-cart.css.map */
