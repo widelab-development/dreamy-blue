@@ -1,0 +1,53 @@
+@use "../settings/init" as *;
+
+body {
+  .shopify-section {
+    h1 {
+      &.xo-page-heading__heading {
+        margin-bottom: rem(12);
+        color: var(--color-black);
+        font-family: var(--font-beausite-fit-web);
+        font-weight: 300;
+        font-size: rem(36);
+        line-height: 1;
+
+        p {
+          color: var(--color-black);
+          font-family: var(--font-beausite-fit-web);
+          font-weight: 300;
+          font-size: rem(36);
+          line-height: 1;
+        }
+      }
+    }
+
+    .xo-main-cart__container {
+      .xo-main-cart__left {
+        .xo-cart-table__body-row {
+          border: unset;
+        }
+
+        .xo-cart-table__row-product {
+          display: block;
+          box-sizing: border-box;
+          width: calc(100% + rem(40));
+          margin-left: rem(-20);
+          padding: rem(32) rem(20);
+          border-top: rem(1) solid var(--color-black);
+
+          .xo-cart-item {
+            display: grid;
+            grid-template-columns: rem(160) 1fr;
+            gap: rem(40);
+
+            .xo-cart-item__img {
+              width: 100%;
+              height: rem(134);
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
