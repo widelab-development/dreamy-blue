@@ -16,6 +16,8 @@
   --color-orange-100: #D88A68;
   --font-twk-lausanne: "twk_lausanne";
   --font-beausite-fit-web: "beausite_fit_web";
+  --font-heading-family: "beausite_fit_web";
+  --font-body-family: "twk_lausanne";
 }
 
 @font-face {

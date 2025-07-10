@@ -4,6 +4,14 @@
   assign sub_heading = section.settings.sub_heading
   assign align = section.settings.align
 %}
+{%- style -%}
+.xo-page-heading__heading{
+  margin-bottom:8px;
+}
+.xo-page-heading__description{
+  padding:0;
+}
+{% endstyle %}
 
 <section {% render 'section-attr' %}>
   <xo-container class='main-page__heading'>

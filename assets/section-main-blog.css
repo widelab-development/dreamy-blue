@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 2.6rem;
-  border-top: 0.1rem solid rgba(var(--color-border), 0.4);
 }
 @media (min-width: 768px) {
   .xo-main-blog__content {
