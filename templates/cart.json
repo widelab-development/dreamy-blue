@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-page-heading": {
       "type": "main-page-heading",
       "settings": {
         "font_size_heading": "h2",
-        "heading": "<p>Your cart<\/p>",
+        "heading": "<p>Your cart</p>",
         "sub_heading": "",
         "align": "left",
         "color_scheme": "",
@@ -73,11 +82,11 @@
         "text_heading_width_desktop": 100,
         "text_heading_width_mobile": 100,
         "collection": "impact-ring-stand-case",
-        "aspect_ratio_collection_desktop": "1592\/701",
-        "aspect_ratio_collection_mobile": "330\/228",
+        "aspect_ratio_collection_desktop": "1592/701",
+        "aspect_ratio_collection_mobile": "330/228",
         "color_schema_collection": "",
         "button_text": "Shop all",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_style": "secondary",
         "button_size": "xs",
         "color_scheme": "",
@@ -88,11 +97,28 @@
         "padding_top_mobile": 59,
         "padding_bottom_mobile": 64
       }
+    },
+    "custom_form_ibw936": {
+      "type": "custom-form",
+      "name": "Custom Form",
+      "settings": {
+        "image": "shopify://shop_images/B0000125_2.png",
+        "heading": "Get The Position",
+        "description": "<p>Our periodic newsletter on sleep health. It's worth getting up for.</p>",
+        "name_placeholder": "Name",
+        "email_placeholder": "Email Address",
+        "button_text": "Get the Good Stuff!",
+        "section_background_color": "#FFFFFF",
+        "inner_background_color": "#F8F7F5",
+        "button_background_color": "#C7B4D4",
+        "button_text_color": "#FFFFFF"
+      }
     }
   },
   "order": [
     "main-page-heading",
     "main_cart_AxiBwR",
-    "featured_collection_style_5_DVNfnH"
+    "featured_collection_style_5_DVNfnH",
+    "custom_form_ibw936"
   ]
 }
