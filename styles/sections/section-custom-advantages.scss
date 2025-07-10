@@ -39,7 +39,6 @@
   &__header {
     color: var(--text-color);
     text-align: center;
-    max-width: rem(800);
     margin: 0 auto rem(287);
     padding-top: rem(200);
 
@@ -62,14 +61,14 @@
   }
 
   &__heading {
-    font-size: rem(80) !important;
+    font-size: rem(120) !important;
     font-weight: 300;
     line-height: 1.2;
     color: var(--color-blue-80);
     margin: 0 auto rem(24);
     
     @media (max-width: 992px) {
-      font-size: rem(42) !important;
+      font-size: rem(60) !important;
     }
   }
 
@@ -117,10 +116,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: rem(300);
+    min-height: rem(500);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     @media (max-width: 992px) {
+      min-height: rem(238);
       padding: rem(36) rem(32) !important;
     }
 
@@ -160,7 +160,7 @@
 
   &__card-text {
     font-size: rem(36) !important;
-    font-family: var(--font-beausite-fit-web);
+    font-family: var(--font-beausite-fit-web) !important;
     line-height: 1;
     font-weight: 300;
     max-width: rem(358);

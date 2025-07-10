@@ -28,7 +28,7 @@
 .custom-quiz__content {
   max-width: 55rem;
   width: 100%;
-  padding-left: 2.4rem;
+  padding-left: 3.6rem;
 }
 @media (max-width: 992px) {
   .custom-quiz__content {
@@ -39,7 +39,7 @@
   margin-bottom: 4rem;
 }
 .custom-quiz__heading {
-  font-size: 7.2rem !important;
+  font-size: 6rem !important;
   font-weight: 300;
   line-height: 1;
   margin-bottom: 3.2rem;
@@ -47,6 +47,7 @@
 @media (max-width: 992px) {
   .custom-quiz__heading {
     font-size: 4.2rem !important;
+    margin-bottom: 2rem !important;
   }
 }
 .custom-quiz__description {

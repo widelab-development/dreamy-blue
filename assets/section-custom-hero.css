@@ -7,7 +7,10 @@
 }
 @media (max-width: 992px) {
   .custom-hero-banner-section {
-    padding: 2rem 0 0 0;
+    padding: 0;
+  }
+  .custom-hero-banner-section xo-container {
+    padding: 0;
   }
 }
 
