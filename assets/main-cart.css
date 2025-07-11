@@ -2,8 +2,18 @@
 /* stylelint-enable */
 /*MIXINS*/
 body #xo-main-content > .shopify-section:nth-child(2) .xo-section {
-  margin-bottom: 0;
+  margin-bottom: 3.6rem;
   padding-bottom: 0;
+}
+@media (min-width: 992px) {
+  body #xo-main-content > .shopify-section:nth-child(2) .xo-section {
+    margin-bottom: 8rem;
+  }
+}
+@media (min-width: 1400px) {
+  body #xo-main-content > .shopify-section:nth-child(2) .xo-section {
+    margin-bottom: 12rem;
+  }
 }
 body #xo-main-content > .shopify-section:nth-child(3) .xo-section {
   margin-top: 0;

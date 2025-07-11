@@ -5,8 +5,16 @@ body {
     &>.shopify-section {
       &:nth-child(2) {
         .xo-section {
-          margin-bottom: 0;
+          margin-bottom: rem(36);
           padding-bottom: 0;
+
+          @include media-breakpoint-up(lg) {
+            margin-bottom: rem(80);
+          }
+
+          @include media-breakpoint-up(xxl) {
+            margin-bottom: rem(120);
+          }
         }
       }
 
