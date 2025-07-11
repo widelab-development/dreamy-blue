@@ -23,8 +23,120 @@ body {
 
     .xo-main-cart__container {
       .xo-main-cart__left {
+        .xo-cart-table__table {
+          @include media-breakpoint-up(md) {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+          }
+
+          thead {
+            @include media-breakpoint-up(md) {
+              display: block;
+            }
+
+            .xo-cart-table__head-row {
+              @include media-breakpoint-up(md) {
+                display: grid;
+                grid-template-columns: 1fr rem(140) rem(140);
+                gap: rem(32);
+                margin-bottom: rem(60);
+                padding: 0;
+                border: unset;
+              }
+
+              th {
+                @include media-breakpoint-up(md) {
+                  width: auto;
+                  padding: 0;
+                  color: var(--color-black);
+                  font-size: rem(18);
+                  line-height: 1.6;
+                  opacity: 1;
+                }
+
+                &.xo-cart-table__head-quantity,
+                &.xo-cart-table__head-total {
+                  @include media-breakpoint-up(md) {
+                    text-align: center !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .xo-cart-table__body {
+          @include media-breakpoint-up(md) {
+            display: block;
+          }
+        }
+
         .xo-cart-table__body-row {
           border: unset;
+
+          @include media-breakpoint-up(md) {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr rem(120) rem(120);
+            gap: rem(32);
+            padding: rem(36);
+            border-top: rem(1) solid var(--color-black);
+            box-sizing: border-box;
+          }
+
+          @include media-breakpoint-up(xxl) {
+            gap: rem(40);
+          }
+
+          .xo-quantity {
+            width: rem(112);
+            height: rem(45);
+            padding: rem(0) rem(2);
+            border: rem(1) solid var(--color-black);
+            border-radius: 0;
+
+            @include media-breakpoint-up(md) {
+              width: rem(125);
+              height: rem(50);
+              padding-left: rem(8);
+              padding-right: rem(8);
+            }
+
+            .xo-quantity__button {
+              svg {
+                width: rem(20);
+                height: rem(20);
+              }
+            }
+
+            .xo-quantity__number {
+              font-size: rem(16);
+
+              @include media-breakpoint-up(md) {
+                font-size: rem(18);
+              }
+            }
+          }
+
+          .xo-cart-table__row-quantity,
+          .xo-cart-table__row-total {
+            @include media-breakpoint-up(md) {
+              padding: 0;
+            }
+          }
+
+          .xo-cart-table__row-total {
+            .xo-cart-table__price {
+              @include media-breakpoint-up(md) {
+                top: 0;
+                color: var(--color-black);
+                font-size: rem(24);
+                font-weight: 600;
+                line-height: 1;
+              }
+            }
+          }
         }
 
         .xo-cart-table__row-product {
@@ -34,6 +146,14 @@ body {
           margin-left: rem(-20);
           padding: rem(32) rem(20);
           border-top: rem(1) solid var(--color-black);
+
+          @include media-breakpoint-up(md) {
+            display: inline-block;
+            width: unset;
+            margin: 0;
+            padding: unset;
+            border: unset;
+          }
 
           .xo-cart-item {
             display: grid;
@@ -47,14 +167,24 @@ body {
             }
 
             .xo-cart-item__content {
+              @include media-breakpoint-up(md) {
+                padding: 0;
+              }
+
               .xo-cart-item__title {
                 margin-bottom: rem(6);
+                opacity: 1;
 
                 p {
                   color: var(--color-black);
                   font-size: rem(16);
                   line-height: 1.6;
                   font-weight: 300;
+                  opacity: 1;
+
+                  @include media-breakpoint-up(md) {
+                    font-size: rem(18);
+                  }
                 }
               }
 
@@ -72,25 +202,6 @@ body {
               .xo-cart-item__quantity-item {
                 margin-bottom: rem(12);
                 padding: 0;
-
-                .xo-quantity {
-                  width: rem(112);
-                  height: rem(45);
-                  padding: rem(0) rem(2);
-                  border: rem(1) solid var(--color-black);
-                  border-radius: 0;
-
-                  .xo-quantity__button {
-                    svg {
-                      width: rem(20);
-                      height: rem(20);
-                    }
-                  }
-
-                  .xo-quantity__number {
-                    font-size: rem(16);
-                  }
-                }
               }
 
               .xo-cart-item__remove {
@@ -98,9 +209,25 @@ body {
                 font-size: rem(16);
                 line-height: 1;
                 opacity: .6;
+
+                @include media-breakpoint-up(md) {
+                  position: absolute;
+                  top: rem(104);
+                  right: rem(36);
+                  opacity: 1;
+
+                  .xo-btn,
+                  .xo-btn__content,
+                  .xo-btn__loading {
+                    color: var(--color-black);
+                    font-size: rem(18);
+                  }
+                }
               }
             }
           }
+
+          .xo-cart-table__quantity-item {}
         }
       }
     }
