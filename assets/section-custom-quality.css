@@ -34,7 +34,7 @@
   font-size: 6rem !important;
   font-family: var(--font-beausite-fit-web);
   font-weight: 300;
-  line-height: 1 !important;
+  line-height: 100% !important;
   margin: 0 !important;
   max-width: 98rem;
 }
@@ -121,6 +121,7 @@
 @media (max-width: 992px) {
   .custom-quality__description-bottom {
     font-size: 1.4rem !important;
+    margin-bottom: 4rem !important;
   }
 }
 .custom-quality__description-bottom p {
@@ -272,6 +273,11 @@
 .custom-quality__play-label b {
   font-weight: 800;
   color: var(--color-blue-80);
+}
+@media (max-width: 992px) {
+  .custom-quality__play-label {
+    font-size: 1.6rem !important;
+  }
 }
 
 .custom-quality-modal {

@@ -32,7 +32,7 @@
         font-size: rem(60) !important;
         font-family: var(--font-beausite-fit-web);
         font-weight: 300;
-        line-height: 1 !important;
+        line-height: 100% !important;
         margin: 0 !important;
         max-width: rem(980);
 
@@ -121,6 +121,7 @@
 
         @media (max-width: 992px) {
             font-size: rem(14) !important;
+            margin-bottom: rem(40) !important;
         }
 
         p {
@@ -284,6 +285,10 @@
         b {
             font-weight: 800;
             color: var(--color-blue-80)
+        }
+
+        @media (max-width: 992px) {
+            font-size: rem(16) !important;
         }
     }
 }
