@@ -7,21 +7,29 @@ body {
         transition: background-color .3s ease-in-out;
       }
 
-      &:has(.xo-menu-horizontal > li:hover) {
-        &:has(.xo-menu-horizontal__mega-menu) {
+      &:hover {
+        @include media-breakpoint-up(lg-2) {
+          background-color: var(--color-midnight-blue);
+        }
+
+        .xo-header__content .xo-header__desktop .xo-menu-horizontal li a {
           @include media-breakpoint-up(lg-2) {
-            background-color: var(--color-midnight-blue);
+            color: var(--color-white) !important;
           }
+        }
 
-          .xo-menu-horizontal__link {
-            @include media-breakpoint-up(lg-2) {
-              color: var(--color-white) !important;
-            }
+        .xo-header__logo-img {
+          @include media-breakpoint-up(lg-2) {
+            filter: brightness(0) saturate(100%) invert(77%) sepia(29%) saturate(682%) hue-rotate(182deg) brightness(98%) contrast(98%);
           }
+        }
 
-          .xo-header__logo-img {
-            @include media-breakpoint-up(lg-2) {
-              filter: brightness(0) saturate(100%) invert(77%) sepia(29%) saturate(682%) hue-rotate(182deg) brightness(98%) contrast(98%);
+        .xo-header__right {
+          xo-tooltip {
+            svg {
+              @include media-breakpoint-up(lg-2) {
+                color: var(--color-white);
+              }
             }
           }
         }
@@ -215,6 +223,56 @@ body {
             @include media-breakpoint-up(lg-2) {
               width: auto;
               height: rem(55);
+            }
+          }
+        }
+
+        .xo-header__right {
+          @include media-breakpoint-up(lg-2) {
+            display: flex;
+            align-items: center;
+            gap: rem(36);
+          }
+
+          xo-tooltip {
+            @include media-breakpoint-up(lg-2) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: rem(40);
+              height: rem(40);
+            }
+
+            &:first-child {
+              @include media-breakpoint-up(lg-2) {
+                display: none;
+              }
+            }
+
+            &:nth-child(2) {
+              @include media-breakpoint-up(lg-2) {
+                order: 2;
+              }
+            }
+
+            &:nth-child(3) {
+              @include media-breakpoint-up(lg-2) {
+                order: 1;
+              }
+            }
+
+            svg {
+              @include media-breakpoint-up(lg-2) {
+                width: rem(20);
+                height: auto;
+              }
+            }
+
+            .xo-header__right-number {
+              @include media-breakpoint-up(lg-2) {
+                color: var(--color-black);
+                background-color: var(--color-blue-100);
+              }
             }
           }
         }
