@@ -2,6 +2,13 @@
 
 .custom-product-stuff {
   background-color: var(--section-bg-color);
+  margin-top: rem(40);
+  padding-bottom: rem(128);
+
+  @media (max-width: 991px) {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 
   &__wrapper {
     display: flex;
@@ -43,7 +50,7 @@
 
   &__content-col {
     background-color: var(--content-bg);
-    padding: rem(80) 10%;
+    padding: rem(160) rem(80) rem(32) rem(80);
     text-align: center;
     height: 100%;
     display: flex;
@@ -106,6 +113,7 @@
     display: flex;
     justify-content: center;
     gap: rem(28);
+    color: var(--color-midnight-blue);
 
     @media (max-width: 768px) {
         font-size: rem(11.2) !important;
@@ -134,11 +142,14 @@
     border-radius: rem(150);
     text-decoration: none;
     font-size: rem(22.5);
+    min-height: rem(66);
+    min-width: rem(300);
     font-weight: 300;
     transition: background-color 0.2s, color 0.2s;
 
     @media (max-width: 768px) {
         width: 100%;
+        min-height: rem(54);
         font-size: rem(18) !important;
         padding: rem(12) rem(24);
     }

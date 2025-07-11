@@ -95,11 +95,12 @@
 
 .xo-header__sticky {
   position: relative;
-  background-color: transparent;
+  background-color: #fff;
   z-index: 10;
   width: 100%;
   transition: all 0.5s cubic-bezier(0.31, 0.41, 0.38, 0.96);
   will-change: transform;
+  padding-top: 0 !important;
 }
 
 .xo-header__container {
