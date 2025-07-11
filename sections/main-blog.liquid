@@ -7,10 +7,25 @@
   assign column_gap = section.settings.columns_spacing
   assign row_gap = section.settings.rows_spacing
 %}
+{%- style -%}
+.xo-container--custom-narrow {
+  max-width: 1450px;
+}
+.xo-article-card__heading{
+  font-size: 18px;
+  opacity:1;
+  color: var(--color-black);
+}
+@media screen and (min-width: 768px) {
+  .xo-article-card__heading{
+  font-size: 24px;
+}
+}
+{%- endstyle -%}
 
 <section {% render 'section-attr' %}>
   <div class='xo-main-blog'>
-    <xo-container class='xo-main-blog__container'>
+    <xo-container class='xo-main-blog__container xo-container--custom-narrow'>
       <div class='xo-main-blog__content'>
         {%- paginate blog.articles by limit -%}
           <div class='xo-main-blog__article'>
