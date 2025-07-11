@@ -25,6 +25,7 @@
     },
     "main_page_heading_7nkTMe": {
       "type": "main-page-heading",
+      "disabled": true,
       "settings": {
         "font_size_heading": "h2",
         "heading": "",
@@ -39,10 +40,24 @@
         "padding_bottom_mobile": 31
       }
     },
+    "custom_blog_heading_BX6Wzc": {
+      "type": "custom-blog-heading",
+      "name": "Custom Blog Heqading",
+      "settings": {
+        "heading": "Blog",
+        "subheading": "How to get the best sleep of your life",
+        "heading_size": "h1",
+        "align": "left",
+        "padding_top_desktop": 221,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 132,
+        "padding_bottom_mobile": 0
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
-        "limit": 9,
+        "limit": 3,
         "columns_desktop": 3,
         "columns_spacing": 36,
         "rows_spacing": 54,
@@ -82,6 +97,7 @@
   "order": [
     "main_breadcrumb_ABzfNr",
     "main_page_heading_7nkTMe",
+    "custom_blog_heading_BX6Wzc",
     "main",
     "custom_form_XHjYXV"
   ]

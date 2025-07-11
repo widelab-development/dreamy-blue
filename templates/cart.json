@@ -56,23 +56,19 @@
     "featured_collection_style_5_DVNfnH": {
       "type": "featured-collection-style-5",
       "settings": {
-        "layout": "carousel",
+        "layout": "grid",
         "column_desktop": 3,
-        "column_mobile": "2",
-        "product_display": 1,
+        "column_mobile": "1",
+        "product_display": 3,
         "product_per_view": 3,
         "autoplay": "off",
         "autoplay_time": 3000,
         "product_card_aspect_ratio": "1",
         "card_color_scheme": "inverse",
         "product_list": [
-          "limone-case",
-          "hills-1",
-          "banahills",
-          "matte-case",
-          "limone",
-          "hills",
-          "extreme-case-compatible"
+          "dreamyblue-extra-zzz-s",
+          "dreamyblue-extra-zzz-s-1",
+          "dreamyblue-extra-zzz-s_3"
         ],
         "text_tag_name": "h2",
         "text_heading": "Need some extra fluff in your life?",
@@ -110,10 +106,10 @@
         "name_placeholder": "Name",
         "email_placeholder": "Email Address",
         "button_text": "Get the Good Stuff!",
-        "section_background_color": "#FFFFFF",
-        "inner_background_color": "#F8F7F5",
-        "button_background_color": "#C7B4D4",
-        "button_text_color": "#FFFFFF"
+        "section_background_color": "#1d1c50",
+        "inner_background_color": "#f2eee8",
+        "button_background_color": "#b67bba",
+        "button_text_color": "#ffffff"
       }
     }
   },

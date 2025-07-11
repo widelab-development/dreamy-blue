@@ -58,7 +58,7 @@
                         data-video-provider="{{ block.settings.video.type }}"
                         data-video-id="{{ block.settings.video.id }}">
                         {%- if play_icon != blank -%}
-                          <img src="{{ play_icon | image_url: width: 100 }}" alt="Play video icon" class="custom-quality__play-icon-custom">
+                          <img src="{{ play_icon | image_url: width: 100 }}" alt="Play video icon" class="custom-quality__play-icon-custom" width="60" height="60">
                         {%- else -%}
                           <span class="custom-quality__play-icon-default">{% render 'icon-play' %}</span>
                         {%- endif -%}
@@ -73,7 +73,7 @@
           </div>
         {%- endif -%}
       </div>
-
+{%- if bottom_video_poster != blank -%}
       <div class="custom-quality__bottom">
         <div class="custom-quality__bottom-content">
           {%- if heading_bottom != blank -%}
@@ -124,7 +124,7 @@
                    data-video-provider="{{ bottom_video.type }}"
                    data-video-id="{{ bottom_video.id }}">
                   {%- if play_icon != blank -%}
-                    <img src="{{ play_icon | image_url: width: 150 }}" alt="Play video icon" class="custom-quality__play-icon-custom">
+                    <img src="{{ play_icon | image_url: width: 150 }}" alt="Play video icon" class="custom-quality__play-icon-custom" width="60" height="60">
                   {%- else -%}
                     <span class="custom-quality__play-icon-default">{% render 'icon-play' %}</span>
                   {%- endif -%}
@@ -134,11 +134,10 @@
                 </button>
               {%- endif -%}
             </div>
-          {%- else -%}
-            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
         </div>
       </div>
+      {%- endif -%}
     </xo-container>
   </div>
 

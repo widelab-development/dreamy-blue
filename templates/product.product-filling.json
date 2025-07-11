@@ -181,7 +181,7 @@
       "name": "Custom Product Reviews",
       "settings": {
         "heading": "DreamyBlue Reviews",
-        "container_bg_color": "#fdfaf7",
+        "container_bg_color": "#f2eee8",
         "card_bg_color": "#ffffff"
       }
     },
@@ -284,7 +284,7 @@
       "name": "Custom Differences",
       "settings": {
         "section_bg_color": "#b67bba",
-        "card_bg_color": "#ffffff",
+        "card_bg_color": "#f9f7f4",
         "overtitle": "Material Differences",
         "heading": "Why we care about fabrics, function, and fit.",
         "description": "<p>When it comes to sleep quality, posture, and restfulness, how your pillow is made makes (or breaks) the night. We won’t let the wrong pillow ruin your fave 8 hours.</p>"

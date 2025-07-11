@@ -24,6 +24,8 @@
   %}
 {% endcomment %}
 
+{{ 'featured_collection-cart.css' | asset_url | stylesheet_tag }}
+
 {%- assign placeholder_image = 'collection-1' -%}
 {%- assign heading_default = default_heading -%}
 {%- assign heading = heading | default: heading_default -%}

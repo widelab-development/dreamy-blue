@@ -118,10 +118,10 @@
         "padding_bottom_mobile": 39
       }
     },
-    "custom_featured_products_AcwxYC": {
-      "type": "custom-featured-products",
+    "custom_featured_products_collection_WXdWct": {
+      "type": "custom-featured-products-collection",
       "blocks": {
-        "product_card_HBbrcN": {
+        "product_card_j8xc3V": {
           "type": "product_card",
           "settings": {
             "product": "",
@@ -132,7 +132,7 @@
             "text_color": "#6cb1ea"
           }
         },
-        "product_card_yih3Kb": {
+        "product_card_AKcFak": {
           "type": "product_card",
           "settings": {
             "product": "",
@@ -143,7 +143,7 @@
             "text_color": "#b67bba"
           }
         },
-        "product_card_bdx88z": {
+        "product_card_xWFKtA": {
           "type": "product_card",
           "settings": {
             "product": "",
@@ -153,17 +153,149 @@
             "background_color": "#e2a383",
             "text_color": "#d88a68"
           }
+        },
+        "product_card_RHAwDM": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "custom_image": "shopify://shop_images/Pillows_copy_1_913f67d3-3384-444c-823b-e1b6db696e10.png",
+            "overtitle": "The Extrazzz",
+            "description": "",
+            "background_color": "#efe6e1",
+            "text_color": "#e3d4cc"
+          }
+        },
+        "quiz_block_ByQemL": {
+          "type": "quiz_block",
+          "settings": {
+            "quiz_heading": "Need help? <br>Take the quiz.",
+            "quiz_subtext": "This quick quiz helps you find the right pillow for you.",
+            "background_color": "#1d1c50",
+            "text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
-        "product_card_HBbrcN",
-        "product_card_yih3Kb",
-        "product_card_bdx88z"
+        "product_card_j8xc3V",
+        "product_card_AKcFak",
+        "product_card_xWFKtA",
+        "product_card_RHAwDM",
+        "quiz_block_ByQemL"
       ],
-      "name": "Custom Featured Products",
+      "name": "Custom Featured Prod Col",
       "settings": {
         "heading": "Find your perfect sleep.",
         "subheading": ""
+      }
+    },
+    "custom_quality_4TGWdW": {
+      "type": "custom-quality",
+      "blocks": {
+        "media_item_7Aq3YV": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_36.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_xfypU7": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_42.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_JePxT4": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_38.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_wWV9Hq": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_39.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_ByaiqB": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_41.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_tRXTc4": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_40.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_hWCMaL": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_84.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "media_item_7Aq3YV",
+        "media_item_xfypU7",
+        "media_item_JePxT4",
+        "media_item_wWV9Hq",
+        "media_item_ByaiqB",
+        "media_item_tRXTc4",
+        "media_item_hWCMaL"
+      ],
+      "name": "Custom Quality",
+      "settings": {
+        "heading_top": "1,314,000,000 (that’s billion) hours of reformed sleep. Every <i>year.</i>",
+        "description_top": "<p>Are you ready for 8 hours per night of deep, quality sleep? 450,000+ of our customers can't wait to get back in bed with us.</p>",
+        "heading_bottom": "",
+        "description_bottom": "",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "play_icon": "shopify://shop_images/Frame_68.svg",
+        "bottom_video_label": ""
+      }
+    },
+    "custom_mission_QbkrrM": {
+      "type": "custom-mission",
+      "name": "Custom Mission",
+      "settings": {
+        "background_color": "#b67bba",
+        "text_color": "#ffffff",
+        "animation_desktop_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Desktop_Strokes.json?v=1751281361",
+        "animation_mobile_top_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Mobile_Strokes_Top.json?v=1751281361",
+        "animation_mobile_bottom_url": "https://cdn.shopify.com/s/files/1/0760/6337/5619/files/Mobile_Strokes_Bottom.json?v=1751281361",
+        "overtitle": "Our Mission",
+        "heading": "Change your pillow.",
+        "description": "<p>At every age and life stage, our alignment-focused and adjustable products put control in your hands—while putting your body in the perfect position for rejuvenation.</p>",
+        "button_text": "Our Dream",
+        "button_link": "",
+        "button_bg_color": "#1d1c50",
+        "button_text_color": "#ffffff"
+      }
+    },
+    "custom_form_GLfA9q": {
+      "type": "custom-form",
+      "name": "Custom Form",
+      "settings": {
+        "image": "shopify://shop_images/Frame_64.png",
+        "heading": "Get The Position",
+        "description": "<p>Our periodic newsletter on sleep health. <em>It's worth getting up for.</em></p>",
+        "name_placeholder": "Name",
+        "email_placeholder": "Email Address",
+        "button_text": "Get the Good Stuff!",
+        "section_background_color": "#ffffff",
+        "inner_background_color": "#f2eee8",
+        "button_background_color": "#b67bba",
+        "button_text_color": "#ffffff"
       }
     }
   },
@@ -171,6 +303,9 @@
     "main_page_heading_style_2_eUCwiw",
     "category_style_1_RUiU9H",
     "main-collection",
-    "custom_featured_products_AcwxYC"
+    "custom_featured_products_collection_WXdWct",
+    "custom_quality_4TGWdW",
+    "custom_mission_QbkrrM",
+    "custom_form_GLfA9q"
   ]
 }

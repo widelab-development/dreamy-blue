@@ -30,10 +30,10 @@
         "padding_bottom_mobile": 67
       }
     },
-    "custom_featured_products_fURTDE": {
-      "type": "custom-featured-products",
+    "custom_featured_products_collection_QpPrUC": {
+      "type": "custom-featured-products-collection",
       "blocks": {
-        "product_card_7zVNUD": {
+        "product_card_h99GwE": {
           "type": "product_card",
           "settings": {
             "product": "",
@@ -44,7 +44,7 @@
             "text_color": "#6cb1ea"
           }
         },
-        "product_card_ygx8Mm": {
+        "product_card_fVgzkP": {
           "type": "product_card",
           "settings": {
             "product": "",
@@ -55,7 +55,7 @@
             "text_color": "#b67bba"
           }
         },
-        "product_card_h6aWFW": {
+        "product_card_cqWtkX": {
           "type": "product_card",
           "settings": {
             "product": "",
@@ -65,14 +65,36 @@
             "background_color": "#e2a383",
             "text_color": "#d88a68"
           }
+        },
+        "product_card_RXeGcw": {
+          "type": "product_card",
+          "settings": {
+            "product": "",
+            "custom_image": "shopify://shop_images/Pillows_copy_1_913f67d3-3384-444c-823b-e1b6db696e10.png",
+            "overtitle": "The Extrazzz",
+            "description": "",
+            "background_color": "#efe6e1",
+            "text_color": "#e3d4cc"
+          }
+        },
+        "quiz_block_x6JHmC": {
+          "type": "quiz_block",
+          "settings": {
+            "quiz_heading": "Need help? <br>Take the quiz.",
+            "quiz_subtext": "This quick quiz helps you find the right pillow for you.",
+            "background_color": "#1d1c50",
+            "text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
-        "product_card_7zVNUD",
-        "product_card_ygx8Mm",
-        "product_card_h6aWFW"
+        "product_card_h99GwE",
+        "product_card_fVgzkP",
+        "product_card_cqWtkX",
+        "product_card_RXeGcw",
+        "quiz_block_x6JHmC"
       ],
-      "name": "Custom Featured Products",
+      "name": "Custom Featured Prod Col",
       "settings": {
         "heading": "Find your perfect sleep.",
         "subheading": ""
@@ -191,7 +213,7 @@
   },
   "order": [
     "main",
-    "custom_featured_products_fURTDE",
+    "custom_featured_products_collection_QpPrUC",
     "custom_quality_LBdePM",
     "custom_mission_PizwPa",
     "custom_form_JDWPkW"

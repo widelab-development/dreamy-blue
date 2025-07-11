@@ -7,14 +7,64 @@
   assign column_gap = section.settings.columns_spacing
   assign row_gap = section.settings.rows_spacing
 %}
+{%- style -%}
+  .xo-container--custom-narrow {
+    max-width: 1450px;
+  }
+  .xo-article-card__heading {
+    font-size: 18px;
+    opacity: 1;
+    color: var(--color-black);
+  }
+  .xo-pagination__page {
+    color: var(--color-black);
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+  .xo-pagination__list {
+    gap: 2.3rem;
+  }
+  .xo-pagination__list:first-child {
+    margin-right: 0.9rem;
+  }
+  .xo-pagination__list:last-child {
+    margin-left: 0.9rem;
+  }
+  .xo-pagination__page--next,
+  .xo-pagination__page--prev {
+    color: var(--color-black);
+    border-radius: 50%;
+    border: 1px solid var(--color-black);
+  }
+  .xo-pagination__list-item:hover {
+    background-color: transparent;
+  }
+  @media screen and (min-width: 768px) {
+    .xo-article-card__heading {
+      font-size: 24px;
+    }
+    .xo-pagination__list {
+      gap: 3rem;
+    }
+    .xo-pagination__list:first-child {
+      margin-right: 1.8rem;
+    }
+    .xo-pagination__list:last-child {
+      margin-left: 1.8rem;
+    }
+  }
+{%- endstyle -%}
 
 <section {% render 'section-attr' %}>
-  <div class='xo-main-blog'>
-    <xo-container class='xo-main-blog__container'>
-      <div class='xo-main-blog__content'>
+  <div class="xo-main-blog">
+    <xo-container class="xo-main-blog__container xo-container--custom-narrow">
+      <div class="xo-main-blog__content">
         {%- paginate blog.articles by limit -%}
-          <div class='xo-main-blog__article'>
-            <xo-grid class='xo-main-blog__grid' style='--lg: {{ column_desktop }}; --md: 2; --xs: 1; --col-gap: {{ column_gap }}px; --row-gap: {{ row_gap }}px;'>
+          <div class="xo-main-blog__article">
+            <xo-grid
+              class="xo-main-blog__grid"
+              style="--lg: {{ column_desktop }}; --md: 2; --xs: 1; --col-gap: {{ column_gap }}px; --row-gap: {{ row_gap }}px;"
+            >
               {%- for article in blog.articles -%}
                 {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
                 {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
@@ -39,7 +89,7 @@
             </xo-grid>
           </div>
           <xo-animate xo-cascade>
-            <div class='xo-main-blog__pagination'>
+            <div class="xo-main-blog__pagination">
               {% render 'pagination', paginate: paginate, anchor: '' %}
             </div>
           </xo-animate>
@@ -210,8 +260,6 @@
       "default": 50
     }
   ],
-  "blocks": [
-
-  ]
+  "blocks": []
 }
 {% endschema %}
