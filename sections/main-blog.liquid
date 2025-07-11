@@ -21,6 +21,15 @@
   width: 3.6rem;
   height: 3.6rem;
 }
+.xo-pagination__list{
+  gap: 3rem;
+}
+.xo-pagination__list:first-child{
+  margin-right: 1.8rem;
+}
+.xo-pagination__list:last-child{
+  margin-left: 1.8rem;
+}
 .xo-pagination__page--next, .xo-pagination__page--prev{
   color: var(--color-black);
   border-radius: 50%;
@@ -31,8 +40,17 @@
 }
 @media screen and (min-width: 768px) {
   .xo-article-card__heading{
-  font-size: 24px;
-}
+    font-size: 24px;
+  }
+  .xo-pagination__list{
+    gap: 2.3rem;
+  }
+  .xo-pagination__list:first-child{
+    margin-right: 0.9rem;
+  }
+  .xo-pagination__list:last-child{
+    margin-left: 0.9rem;
+  }
 }
 {%- endstyle -%}
 
