@@ -187,12 +187,89 @@
         "heading": "Find your perfect sleep.",
         "subheading": ""
       }
+    },
+    "custom_quality_4TGWdW": {
+      "type": "custom-quality",
+      "blocks": {
+        "media_item_7Aq3YV": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_36.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_xfypU7": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_42.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_JePxT4": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_38.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_wWV9Hq": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_39.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_ByaiqB": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_41.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_tRXTc4": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_40.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        },
+        "media_item_hWCMaL": {
+          "type": "media_item",
+          "settings": {
+            "poster_image": "shopify://shop_images/image_84.png",
+            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "media_item_7Aq3YV",
+        "media_item_xfypU7",
+        "media_item_JePxT4",
+        "media_item_wWV9Hq",
+        "media_item_ByaiqB",
+        "media_item_tRXTc4",
+        "media_item_hWCMaL"
+      ],
+      "name": "Custom Quality",
+      "settings": {
+        "heading_top": "1,314,000,000 (that’s billion) hours of reformed sleep. Every <i>year.</i>",
+        "description_top": "<p>Are you ready for 8 hours per night of deep, quality sleep? 450,000+ of our customers can't wait to get back in bed with us.</p>",
+        "heading_bottom": "",
+        "description_bottom": "",
+        "button_1_text": "",
+        "button_1_link": "",
+        "button_2_text": "",
+        "button_2_link": "",
+        "play_icon": "shopify://shop_images/Frame_68.svg",
+        "bottom_video_label": ""
+      }
     }
   },
   "order": [
     "main_page_heading_style_2_eUCwiw",
     "category_style_1_RUiU9H",
     "main-collection",
-    "custom_featured_products_collection_WXdWct"
+    "custom_featured_products_collection_WXdWct",
+    "custom_quality_4TGWdW"
   ]
 }
