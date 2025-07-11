@@ -32,10 +32,10 @@
   &__content {
     max-width: rem(550);
     width: 100%;
-    padding-left: rem(36);
+    margin-right: rem(48);
 
     @media (max-width: 992px) {
-      padding-left: 0;
+      margin-right: 0;
     }
   }
 
