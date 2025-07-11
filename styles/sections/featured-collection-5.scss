@@ -43,6 +43,7 @@ body {
           height: rem(188);
           transform: unset !important;
           opacity: 1 !important;
+          visibility: visible !important;
 
           .xo-image {
             height: 100%;
@@ -118,6 +119,10 @@ body {
   }
 
   .featured-collection-5__banner {
+    display: none !important;
+  }
+
+  xo-tooltip-content {
     display: none !important;
   }
 }

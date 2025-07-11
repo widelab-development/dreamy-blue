@@ -44,6 +44,7 @@ body .featured-collection-5__content .xo-product-card .xo-product-image .xo-prod
   height: 18.8rem;
   transform: unset !important;
   opacity: 1 !important;
+  visibility: visible !important;
 }
 body .featured-collection-5__content .xo-product-card .xo-product-image .xo-product-image__first .xo-image {
   height: 100%;
@@ -107,6 +108,9 @@ body .featured-collection-5__content .xo-product-card .xo-product-card__actions 
   display: none !important;
 }
 body .featured-collection-5__banner {
+  display: none !important;
+}
+body xo-tooltip-content {
   display: none !important;
 }
 /*# sourceMappingURL=featured-collection-5.css.map */
