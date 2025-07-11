@@ -19,7 +19,7 @@
 @media (min-width: 992px) {
   .custom-product-diffrences__container {
     background-color: var(--section-bg-color);
-    padding: 12rem;
+    padding: 7.2rem 12rem 9.3rem 12rem;
   }
 }
 .custom-product-diffrences__header {

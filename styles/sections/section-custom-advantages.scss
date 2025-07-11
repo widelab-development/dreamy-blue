@@ -166,12 +166,12 @@
 
   &__card-text {
     font-size: rem(36) !important;
-    font-family: var(--font-beausite-fit-web) !important;
     line-height: 1;
     font-weight: 300;
     max-width: rem(358);
 
     p {
+      font-family: var(--font-beausite-fit-web);
       margin: 0;
     }
     

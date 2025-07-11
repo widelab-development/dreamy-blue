@@ -163,12 +163,12 @@
 }
 .custom-advantages__card-text {
   font-size: 3.6rem !important;
-  font-family: var(--font-beausite-fit-web) !important;
   line-height: 1;
   font-weight: 300;
   max-width: 35.8rem;
 }
 .custom-advantages__card-text p {
+  font-family: var(--font-beausite-fit-web);
   margin: 0;
 }
 @media (max-width: 992px) {
