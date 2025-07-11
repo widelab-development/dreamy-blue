@@ -6,6 +6,7 @@
 {{ 'cart-discount-list.css' | asset_url | stylesheet_tag }}
 {{ 'cart-tax-note.css' | asset_url | stylesheet_tag }}
 {{ 'cart-attribute.css' | asset_url | stylesheet_tag }}
+{{ 'main-cart.css' | asset_url | stylesheet_tag }}
 
 {% capture continue_shopping %}
   {% render 'cart-continue-shopping' %}
@@ -52,14 +53,16 @@
                   {% case block.type %}
                     {% when '@app' %}
                       {% render block %}
-                    {% when 'free_shipping' %}
-                      {% render 'cart-free-shipping' %}
-                    {% when 'note' %}
-                      <xo-cart-will-change xo-unique-id='xo-cart-note-{{ section_id }}'>
-                        {% if cart != empty %}
-                          {% render 'cart-note', uid: 'main-cart', type: block.settings.type %}
-                        {% endif %}
-                      </xo-cart-will-change>
+                    {% comment %}
+                      {% when 'free_shipping' %}
+                        {% render 'cart-free-shipping' %}
+                      {% when 'note' %}
+                        <xo-cart-will-change xo-unique-id='xo-cart-note-{{ section_id }}'>
+                          {% if cart != empty %}
+                            {% render 'cart-note', uid: 'main-cart', type: block.settings.type %}
+                          {% endif %}
+                        </xo-cart-will-change>
+                    {% endcomment %}
                   {% endcase %}
                 {% endfor %}
                 {% if cart_attr_blocks.size > 0 %}
