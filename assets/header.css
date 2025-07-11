@@ -22,8 +22,8 @@
   }
 }
 @media (min-width: 1140px) {
-  body .xo-header .xo-header__sticky:hover .xo-header__right xo-tooltip svg {
-    color: var(--color-white);
+  body .xo-header .xo-header__sticky:hover .xo-header__right xo-tooltip svg path {
+    stroke: var(--color-white);
   }
 }
 @media (min-width: 1140px) {

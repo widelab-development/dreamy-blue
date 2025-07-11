@@ -27,8 +27,10 @@ body {
         .xo-header__right {
           xo-tooltip {
             svg {
-              @include media-breakpoint-up(lg-2) {
-                color: var(--color-white);
+              path {
+                @include media-breakpoint-up(lg-2) {
+                  stroke: var(--color-white);
+                }
               }
             }
           }
