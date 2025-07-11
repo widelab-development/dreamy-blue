@@ -181,7 +181,7 @@
       "name": "Custom Product Reviews",
       "settings": {
         "heading": "DreamyBlue Reviews",
-        "container_bg_color": "#fdfaf7",
+        "container_bg_color": "#f2eee8",
         "card_bg_color": "#ffffff"
       }
     },
