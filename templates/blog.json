@@ -48,9 +48,9 @@
         "subheading": "How to get the best sleep of your life",
         "heading_size": "h1",
         "align": "left",
-        "padding_top_desktop": 72,
-        "padding_bottom_desktop": 54,
-        "padding_top_mobile": 36,
+        "padding_top_desktop": 221,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 132,
         "padding_bottom_mobile": 0
       }
     },
