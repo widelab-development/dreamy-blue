@@ -13,8 +13,8 @@
   margin-top: 10rem;
 }
 @media (max-width: 992px) {
-  .custom-quality__bottom {
-    margin-top: 6rem;
+  .custom-quality__top {
+    margin-bottom: 2.4rem;
   }
 }
 .custom-quality__top-header {
@@ -135,6 +135,7 @@
 }
 @media (max-width: 992px) {
   .custom-quality__buttons {
+    gap: 2.4rem;
     justify-content: center;
   }
 }
