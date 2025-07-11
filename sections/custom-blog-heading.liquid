@@ -1,0 +1,124 @@
+{% liquid
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading
+  assign heading_size = section.settings.heading_size
+  assign align = section.settings.align
+
+  assign pt_desktop = section.settings.padding_top_desktop | default: 50
+  assign pb_desktop = section.settings.padding_bottom_desktop | default: 50
+  assign pt_mobile = section.settings.padding_top_mobile | default: 30
+  assign pb_mobile = section.settings.padding_bottom_mobile | default: 30
+%}
+
+{%- style -%}
+  .xo-section--{{ section.id }} {
+    padding-top: {{ pt_mobile }}px;
+    padding-bottom: {{ pb_mobile }}px;
+  }
+  .xo-section--{{ section.id }} .heading-title {
+      margin-bottom: 6px;
+      font-size: 72px;
+  }
+  .xo-section--{{ section.id }} .heading-subtitle {
+      margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .xo-section--{{ section.id }} {
+      padding-top: {{ pt_desktop }}px;
+      padding-bottom: {{ pb_desktop }}px;
+    }
+    .xo-section--{{ section.id }} .heading-title {
+      margin-bottom: 8px;
+      font-size: 90px;
+    }
+    .xo-container--custom-narrow {
+      max-width: 1450px;
+    }
+  }
+{%- endstyle -%}
+
+<section {% render 'section-attr' %}>
+  <xo-container class="custom-blog__heading xo-container--custom-narrow">
+    <xo-animate xo-cascade>
+      <{{ heading_size }} class="heading-title {{ align }}">
+        {{ heading | escape }}
+      </{{ heading_size }}>
+      <p class="heading-subtitle {{ align }}">
+        {{ subheading | escape }}
+      </p>
+    </xo-animate>
+  </xo-container>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Blog Heqading",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Blog"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "How to get the best sleep of your life"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading tag",
+      "default": "h1",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "align",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "padding_top_desktop",
+      "label": "Padding top (desktop)",
+      "default": 72
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_desktop",
+      "label": "Padding bottom (desktop)",
+      "default": 54
+    },
+    {
+      "type": "number",
+      "id": "padding_top_mobile",
+      "label": "Padding top (mobile)",
+      "default": 36
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom (mobile)",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Blog Heqading",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
