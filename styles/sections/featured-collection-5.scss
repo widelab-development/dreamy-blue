@@ -172,4 +172,9 @@ body {
   xo-tooltip-content {
     display: none !important;
   }
+
+  .xo-product-variant-modal {
+    --color-button: 29, 28, 80;
+    --color-secondary-button-text: 29, 27, 80;
+  }
 }
