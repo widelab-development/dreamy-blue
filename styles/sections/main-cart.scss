@@ -3,6 +3,8 @@
 body {
   #xo-main-content {
     &>.shopify-section {
+      background-color: var(--color-neutral-cream);
+
       &:nth-child(2) {
         .xo-section {
           margin-bottom: rem(36);

@@ -1,6 +1,9 @@
 /* stylelint-disable */
 /* stylelint-enable */
 /*MIXINS*/
+body #xo-main-content > .shopify-section {
+  background-color: var(--color-neutral-cream);
+}
 body #xo-main-content > .shopify-section:nth-child(2) .xo-section {
   margin-bottom: 3.6rem;
   padding-bottom: 0;
