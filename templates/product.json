@@ -31,7 +31,7 @@
         "ca89121c-8974-4f5c-852d-875abeb6041c": {
           "type": "variants",
           "settings": {
-            "variant_style": "select",
+            "variant_style": "boxed",
             "variant_color_style": "color"
           }
         },
