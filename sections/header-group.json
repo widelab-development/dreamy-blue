@@ -79,6 +79,13 @@
             "sub_heading": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store."
           }
         },
+        "collection_item_KQfFdF": {
+          "type": "collection-item",
+          "settings": {
+            "collection": "the-signature",
+            "color_scheme_box": "scheme_1"
+          }
+        },
         "collection_item_HERG7y": {
           "type": "collection-item",
           "settings": {
@@ -120,30 +127,17 @@
             "collection": "",
             "color_scheme_box": "scheme_1"
           }
-        },
-        "introducing_card_tErNTH": {
-          "type": "introducing-card",
-          "settings": {
-            "heading": "Heading",
-            "sub_heading": "Showcase a benefit of your product",
-            "aspect_ratio": "3/2",
-            "color_scheme_box": "scheme_1",
-            "button_text": "Button",
-            "button_link": "shopify://collections/all",
-            "button_style": "primary",
-            "button_size": "sm"
-          }
         }
       },
       "block_order": [
         "text_U4PHJ8",
+        "collection_item_KQfFdF",
         "collection_item_HERG7y",
         "collection_item_MBbQVq",
         "collection_item_cJmzTB",
         "collection_item_AECXqJ",
         "collection_item_X7BXGj",
-        "collection_item_qJkkMh",
-        "introducing_card_tErNTH"
+        "collection_item_qJkkMh"
       ],
       "settings": {
         "layout": "category",
