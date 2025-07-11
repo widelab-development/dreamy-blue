@@ -3,6 +3,7 @@
 /*MIXINS*/
 @media (min-width: 1140px) {
   body .xo-header .xo-header__sticky {
+    background-color: var(--color-neutral-cream);
     transition: background-color 0.3s ease-in-out;
   }
 }
@@ -29,6 +30,7 @@
 @media (min-width: 1140px) {
   body .xo-header .xo-header__container {
     background-color: transparent;
+    box-shadow: unset;
   }
 }
 @media (min-width: 1140px) {

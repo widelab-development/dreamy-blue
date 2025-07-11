@@ -4,6 +4,7 @@ body {
   .xo-header {
     .xo-header__sticky {
       @include media-breakpoint-up(lg-2) {
+        background-color: var(--color-neutral-cream);
         transition: background-color .3s ease-in-out;
       }
 
@@ -41,6 +42,7 @@ body {
     .xo-header__container {
       @include media-breakpoint-up(lg-2) {
         background-color: transparent;
+        box-shadow: unset;
       }
     }
 
