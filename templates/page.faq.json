@@ -9,6 +9,53 @@
  */
 {
   "sections": {
+    "custom_faq_c99Q8z": {
+      "type": "custom-faq",
+      "blocks": {
+        "collapse_qqjHP3": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>Heading</p>",
+            "content": "<p>Showcase a benefit of your product</p>"
+          }
+        },
+        "collapse_btJ6mN": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>Heading</p>",
+            "content": "<p>Showcase a benefit of your product</p>"
+          }
+        },
+        "collapse_LWkJyq": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>Heading</p>",
+            "content": "<p>Showcase a benefit of your product</p>"
+          }
+        },
+        "collapse_m4bjUw": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>Heading</p>",
+            "content": "<p>Showcase a benefit of your product</p>"
+          }
+        }
+      },
+      "block_order": [
+        "collapse_qqjHP3",
+        "collapse_btJ6mN",
+        "collapse_LWkJyq",
+        "collapse_m4bjUw"
+      ],
+      "name": "FAQ with Top Image",
+      "settings": {
+        "bg_image": "shopify://shop_images/Frame_15612.webp",
+        "bg_color": "#1E1E5A",
+        "top_heading": "FAQ",
+        "font_size_heading": "h3",
+        "heading": "Frequently Asked <br>Questions"
+      }
+    },
     "custom_form_BhBNYk": {
       "type": "custom-form",
       "name": "Custom Form",
@@ -27,6 +74,7 @@
     }
   },
   "order": [
+    "custom_faq_c99Q8z",
     "custom_form_BhBNYk"
   ]
 }
