@@ -16,6 +16,12 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .custom-reviews__content {
+    padding: 0 2rem;
+  }
 }
 .custom-reviews__overtitle {
   font-size: 1.8rem;
