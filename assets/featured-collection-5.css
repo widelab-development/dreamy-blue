@@ -25,6 +25,9 @@ body .featured-collection-5__heading .xo-text__heading {
     font-size: 4.8rem;
   }
 }
+body .featured-collection-5__grid {
+  row-gap: 2.2rem;
+}
 body .featured-collection-5__content .xo-product-card {
   position: relative;
   background-color: var(--color-neutral-cream-110);
@@ -101,8 +104,49 @@ body .featured-collection-5__content .xo-product-card .xo-product-card__actions 
   }
 }
 body .featured-collection-5__content .xo-product-card .xo-product-card__actions .xo-product-card__add {
+  width: min-content;
   transform: unset !important;
   opacity: 1 !important;
+}
+body .featured-collection-5__content .xo-product-card .xo-product-card__actions .xo-product-card__add .xo-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.4rem;
+  width: 26.6rem;
+  max-width: unset;
+  padding: 1.4rem 2rem 1.6rem 2rem;
+  text-align: center;
+  background-color: var(--color-midnight-blue);
+  border: unset;
+  border-radius: 2.7rem;
+  transition: background-color 0.3s ease-in-out;
+}
+@media (min-width: 992px) {
+  body .featured-collection-5__content .xo-product-card .xo-product-card__actions .xo-product-card__add .xo-btn-icon {
+    max-width: 23.8rem;
+    padding: 1rem 2rem 1.2rem 2rem;
+  }
+}
+body .featured-collection-5__content .xo-product-card .xo-product-card__actions .xo-product-card__add .xo-btn-icon:hover {
+  background-color: var(--color-purple-100);
+}
+body .featured-collection-5__content .xo-product-card .xo-product-card__actions .xo-product-card__add .xo-btn-icon::after {
+  position: static;
+  content: "Add to Cart";
+  display: inline-block;
+  color: var(--color-white);
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+@media (min-width: 992px) {
+  body .featured-collection-5__content .xo-product-card .xo-product-card__actions .xo-product-card__add .xo-btn-icon::after {
+    font-size: 1.8rem;
+  }
+}
+body .featured-collection-5__content .xo-product-card .xo-product-card__actions .xo-product-card__add .xo-btn-icon span {
+  display: none;
 }
 body .featured-collection-5__content .xo-product-card .xo-product-card__actions > .tooltip {
   display: none !important;
