@@ -281,6 +281,22 @@
         "button_bg_color": "#1d1c50",
         "button_text_color": "#ffffff"
       }
+    },
+    "custom_form_GLfA9q": {
+      "type": "custom-form",
+      "name": "Custom Form",
+      "settings": {
+        "image": "shopify://shop_images/Frame_64.png",
+        "heading": "Get The Position",
+        "description": "<p>Our periodic newsletter on sleep health. <em>It's worth getting up for.</em></p>",
+        "name_placeholder": "Name",
+        "email_placeholder": "Email Address",
+        "button_text": "Get the Good Stuff!",
+        "section_background_color": "#ffffff",
+        "inner_background_color": "#f2eee8",
+        "button_background_color": "#b67bba",
+        "button_text_color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -289,6 +305,7 @@
     "main-collection",
     "custom_featured_products_collection_WXdWct",
     "custom_quality_4TGWdW",
-    "custom_mission_QbkrrM"
+    "custom_mission_QbkrrM",
+    "custom_form_GLfA9q"
   ]
 }
