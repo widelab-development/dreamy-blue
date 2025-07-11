@@ -39,13 +39,14 @@
 .custom-product-diffrences__heading {
   font-size: 4.2rem !important;
   font-weight: 300;
-  margin-bottom: 3.6rem !important;
+  margin-bottom: 1.6rem !important;
   font-family: var(--font-beausite-fit-web);
   color: var(--color-black);
 }
 @media (min-width: 992px) {
   .custom-product-diffrences__heading {
     font-size: 12rem !important;
+    margin-bottom: 3.6rem !important;
   }
 }
 .custom-product-diffrences__description {
@@ -84,7 +85,7 @@
   height: auto;
 }
 .is-slider-active .custom-product-diffrences__card-item {
-  width: 76.9230769231%;
+  width: 90.9090909091%;
   margin-right: 1.6rem;
 }
 @media (min-width: 992px) {
