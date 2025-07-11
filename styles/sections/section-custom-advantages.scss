@@ -7,7 +7,7 @@
   overflow: hidden;
 
   @media (max-width: 992px) {
-    padding: rem(40) 0 rem(60);
+    padding: rem(40) 0 0;
   }
 
   &__fluff-overlay {
@@ -21,7 +21,7 @@
     will-change: transform;
 
     @media (max-width: 992px) {
-      top: rem(-60);
+      top: rem(-16);
     }
 
     img {
@@ -51,6 +51,8 @@
     @media (max-width: 992px) {
       padding-top: rem(100);
       margin-bottom: rem(60);
+      padding-left: rem(20);
+      padding-right: rem(20);
     }
   }
   
@@ -63,6 +65,7 @@
 
     @media (max-width: 992px) {
       margin-bottom: rem(32);
+      font-size: rem(14);
     }
   }
 
@@ -89,7 +92,7 @@
     }
     
     @media (max-width: 992px) {
-      font-size: rem(16);
+      font-size: rem(14);
     }
   }
   

@@ -9,7 +9,7 @@
 }
 @media (max-width: 992px) {
   .custom-advantages {
-    padding: 4rem 0 6rem;
+    padding: 4rem 0 0;
   }
 }
 .custom-advantages__fluff-overlay {
@@ -24,7 +24,7 @@
 }
 @media (max-width: 992px) {
   .custom-advantages__fluff-overlay {
-    top: -6rem;
+    top: -1.6rem;
   }
 }
 .custom-advantages__fluff-overlay img {
@@ -51,6 +51,8 @@
   .custom-advantages__header {
     padding-top: 10rem;
     margin-bottom: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 .custom-advantages__overtitle {
@@ -63,6 +65,7 @@
 @media (max-width: 992px) {
   .custom-advantages__overtitle {
     margin-bottom: 3.2rem;
+    font-size: 1.4rem;
   }
 }
 .custom-advantages__heading {
@@ -88,7 +91,7 @@
 }
 @media (max-width: 992px) {
   .custom-advantages__description {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 .custom-advantages__bottom-wrapper {

@@ -121,6 +121,7 @@
 
         @media (max-width: 992px) {
             font-size: rem(14) !important;
+            margin-bottom: rem(40) !important;
         }
 
         p {
@@ -284,6 +285,10 @@
         b {
             font-weight: 800;
             color: var(--color-blue-80)
+        }
+
+        @media (max-width: 992px) {
+            font-size: rem(16) !important;
         }
     }
 }
