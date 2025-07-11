@@ -73,7 +73,7 @@
           </div>
         {%- endif -%}
       </div>
-
+{%- if bottom_video_poster != blank -%}
       <div class="custom-quality__bottom">
         <div class="custom-quality__bottom-content">
           {%- if heading_bottom != blank -%}
@@ -137,6 +137,7 @@
           {%- endif -%}
         </div>
       </div>
+      {%- endif -%}
     </xo-container>
   </div>
 
