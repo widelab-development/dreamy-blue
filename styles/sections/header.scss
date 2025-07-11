@@ -77,8 +77,6 @@ body {
                 background-color: var(--color-midnight-blue);
                 border-top: rem(1) solid #8FBFEF66;
                 border-radius: 0;
-                opacity: 1;
-                visibility: visible;
               }
 
               .xo-section {
@@ -122,6 +120,71 @@ body {
                     @include media-breakpoint-up(lg-2) {
                       align-items: flex-start;
                       padding: 0;
+                    }
+
+                    xo-carousel-list {
+                      @include media-breakpoint-up(lg-2) {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: rem(24);
+                      }
+
+                      xo-carousel-slide {
+                        @include media-breakpoint-up(lg-2) {
+                          width: 100%;
+                          padding: 0;
+                        }
+
+                        .collection-card-v2 {
+                          @include media-breakpoint-up(lg-2) {
+                            width: 100%;
+                            height: auto;
+                            padding: 0;
+                            border-radius: 0;
+                            border: unset !important
+                          }
+
+                          .collection-card-v2__title {
+                            @include media-breakpoint-up(lg-2) {
+                              display: none;
+                            }
+                          }
+
+                          .collection-card-v2__link {
+                            @include media-breakpoint-up(lg-2) {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              padding: 0;
+                            }
+                          }
+
+                          .collection-card-v2__image {
+                            @include media-breakpoint-up(lg-2) {
+                              width: 100%;
+                              height: 100%;
+                              border-radius: 0;
+                              transform: none !important;
+                            }
+
+                            .xo-image {
+                              @include media-breakpoint-up(lg-2) {
+                                width: 100%;
+                                height: auto;
+                              }
+
+                              img {
+                                @include media-breakpoint-up(lg-2) {
+                                  aspect-ratio: 1/1;
+                                  width: 100%;
+                                  height: auto;
+                                  border-radius: 0;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
 
