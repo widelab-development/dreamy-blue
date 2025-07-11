@@ -1,0 +1,406 @@
+<section {% render 'section-attr' %}>
+  {{ 'section-custom-featured.css' | asset_url | stylesheet_tag }}
+
+  {%- liquid
+    assign heading = section.settings.heading
+    assign subheading = section.settings.subheading
+  -%}
+  {%- style -%}
+    .custom-featured-products__card--quiz {
+      grid-column: 2 / 4;
+      padding: 4rem;
+      background-color: var(--color-midnight-blue);
+      color: white;
+    }
+
+    .quiz-layout {
+      display: flex;
+      gap: 4rem;
+      align-items: flex-start;
+    }
+
+    .quiz-left {
+      flex: 1;
+    }
+
+    .quiz-right {
+      flex: 1.4;
+    }
+
+    .quiz-box {
+      background-color: white;
+      color: black;
+      border-radius: 1rem;
+      padding: 2.4rem;
+    }
+    .custom-featured-products__card--quiz {
+      padding: 7.2rem 7.2rem 7.2rem 9.6rem;
+    }
+    .quiz-question-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #6b6b6b;
+    }
+
+    .quiz-question {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1.6rem;
+    }
+
+    .quiz-answers {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .quiz-answers li {
+      margin-bottom: 1rem;
+    }
+
+    .quiz-answers input[type='radio'] {
+      margin-right: 1rem;
+    }
+
+    .quiz-answers label {
+      display: flex;
+      align-items: center;
+      background: #f5f5f5;
+      padding: 1rem 1.6rem;
+      border-radius: 999px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .quiz-answers label:hover {
+      background: #ebebeb;
+    }
+
+    @media (max-width: 768px) {
+      .custom-featured-products-collection__container{
+        padding-left:0;
+        padding-right:0;
+      }
+      .quiz-layout {
+        flex-direction: column;
+      }
+
+      .quiz-left,
+      .quiz-right {
+        width: 100%;
+      }
+
+      .custom-featured-products__card--quiz {
+        grid-column: 1 / 4;
+        padding: 2rem;
+      }
+      .custom-featured-products__card--quiz {
+      padding: 2.8rem 2rem;
+    }
+  }
+    @media (max-width: 992px) {
+  .custom-featured-products__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .custom-featured-products__card,
+  .custom-featured-products__card--extra,
+  .custom-featured-products__card--quiz {
+    grid-column: auto !important;
+  }
+
+  .quiz-layout {
+    flex-direction: column;
+  }
+
+  .quiz-left, .quiz-right {
+    width: 100%;
+  }
+}
+    
+  {%- endstyle -%}
+  <div class="custom-featured-products">
+    <div class="custom-section">
+      <xo-container class="custom-featured-products__container custom-featured-products-collection__container">
+        <div class="custom-featured-products__header">
+          {%- if heading != blank -%}
+            <h2 class="custom-featured-products__heading">{{ heading | escape }}</h2>
+          {%- endif -%}
+          {%- if subheading != blank -%}
+            <div class="custom-featured-products__subheading">{{ subheading }}</div>
+          {%- endif -%}
+        </div>
+
+        {%- if section.blocks.size > 0 -%}
+          <div class="custom-featured-products__grid">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'product_card' %}
+                  {%- liquid
+                    assign product = block.settings.product
+                    assign overtitle = block.settings.overtitle
+                    assign description = block.settings.description
+                    assign image = block.settings.custom_image | default: product.featured_image
+                  -%}
+
+                  {% assign index = forloop.index %}
+
+                  {% if index <= 3 %}
+                    <!-- First row -->
+                    <a
+                      href="{{ product.url | default: '#' }}"
+                      class="custom-featured-products__card"
+                      style="--card-bg-color: {{ block.settings.background_color }}; --card-text-color: {{ block.settings.text_color }};"
+                      {{ block.shopify_attributes }}
+                    >
+                      <div class="custom-featured-products__card-content">
+                        {% if overtitle != blank %}
+                          <span class="custom-featured-products__card-overtitle">{{ overtitle }}</span>
+                        {% endif %}
+                        {% if description != blank %}
+                          <p class="custom-featured-products__card-description">{{ description }}</p>
+                        {% endif %}
+                      </div>
+                      <div class="custom-featured-products__card-image-wrapper">
+                        {% if image != blank %}
+                          <img
+                            src="{{ image | image_url: width: 500 }}"
+                            alt="{{ image.alt | default: product.title }}"
+                            loading="lazy"
+                            width="{{ image.width }}"
+                            height="{{ image.height }}"
+                          >
+                        {% endif %}
+                      </div>
+                    </a>
+
+                  {% elsif index == 4 %}
+                    <!-- Embrace block (bottom left) -->
+                    <a
+                      href="{{ product.url | default: '#' }}"
+                      class="custom-featured-products__card"
+                      style="--card-bg-color: {{ block.settings.background_color }}; --card-text-color: {{ block.settings.text_color }};"
+                      {{ block.shopify_attributes }}
+                    >
+                      <div class="custom-featured-products__card-content">
+                        {% if overtitle != blank %}
+                          <span class="custom-featured-products__card-overtitle">{{ overtitle }}</span>
+                        {% endif %}
+                        {% if description != blank %}
+                          <p class="custom-featured-products__card-description">{{ description }}</p>
+                        {% endif %}
+                      </div>
+                      <div class="custom-featured-products__card-image-wrapper">
+                        {% if image != blank %}
+                          <img
+                            src="{{ image | image_url: width: 500 }}"
+                            alt="{{ image.alt | default: product.title }}"
+                            loading="lazy"
+                            width="{{ image.width }}"
+                            height="{{ image.height }}"
+                          >
+                        {% endif %}
+                      </div>
+                    </a>
+                  {% endif %}
+
+                {% when 'quiz_block' %}
+                  <!-- Quiz block (bottom right) -->
+                  <div
+                    class="custom-featured-products__card custom-featured-products__card--quiz"
+                    style="--card-bg-color: {{ block.settings.background_color }}; --card-text-color: {{ block.settings.text_color }};"
+                    {{ block.shopify_attributes }}
+                  >
+                    <div class="quiz-layout">
+                      <div class="quiz-left">
+                        {% if block.settings.quiz_heading != blank %}
+                          <h3 class="quiz-heading">{{ block.settings.quiz_heading }}</h3>
+                        {% endif %}
+                        {% if block.settings.quiz_subtext != blank %}
+                          <p class="quiz-subtext">{{ block.settings.quiz_subtext }}</p>
+                        {% endif %}
+                      </div>
+                      <div class="quiz-right">
+                        <div class="quiz-box">
+                          <div class="quiz-question-meta">
+                            <span class="quiz-step">Question 1 of 7</span>
+                            <span class="quiz-category">Sleep Position</span>
+                          </div>
+                          <p class="quiz-question">Let’s talk fluff! What kind of loft do you love?</p>
+                          <ul class="quiz-answers">
+                            <li>
+                              <label><input type="radio" name="q1"> <span>I like a flatter pillow</span></label>
+                            </li>
+                            <li>
+                              <label><input type="radio" name="q1"> <span>Give me maximum height</span></label>
+                            </li>
+                            <li>
+                              <label><input type="radio" name="q1"> <span>I like to switch it up</span></label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        {%- endif -%}
+      </xo-container>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Featured Prod Col",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "3 pillows. 1 perfect posture."
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>It's automatic: when your neck, shoulders, and hips fall into neutral alignment, you naturally rest your best.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image",
+          "info": "If left blank, the product's featured image will be used."
+        },
+        {
+          "type": "text",
+          "id": "overtitle",
+          "label": "Overtitle",
+          "info": "This text appears above the description (e.g., 'The Signature')."
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#E0F2FF"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#1E2A3B"
+        }
+      ]
+    },
+    {
+      "type": "quiz_block",
+      "name": "Quiz Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "quiz_heading",
+          "label": "Quiz Heading",
+          "default": "Need help? Take the quiz."
+        },
+        {
+          "type": "textarea",
+          "id": "quiz_subtext",
+          "label": "Quiz Subtext",
+          "default": "This quick quiz helps you find the right pillow for you."
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#1E1E5A"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Featured Prod Col",
+      "settings": {
+        "heading": "3 pillows. 1 perfect posture.",
+        "subheading": "<p>It's automatic: when your neck, shoulders, and hips fall into neutral alignment, you naturally rest your best.</p>"
+      },
+      "blocks": [
+        {
+          "type": "product_card",
+          "settings": {
+            "overtitle": "The Signature",
+            "description": "The adjustable-fill pillow that changes your sleep, for life.",
+            "background_color": "#8FBFEF",
+            "text_color": "#6CB1EA"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "overtitle": "The Sapphire",
+            "description": "The high-design pillow with supportive gusset and cooling fill.",
+            "background_color": "#C49BC9",
+            "text_color": "#B67BBA"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "overtitle": "Blue Moon",
+            "description": "The crescent pillow for shoulder reach and combo sleep.",
+            "background_color": "#E2A383",
+            "text_color": "#D88A68"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "overtitle": "Blue Moon",
+            "description": "The crescent pillow for shoulder reach and combo sleep.",
+            "background_color": "#EFE6E1",
+            "text_color": "#E3D4CC"
+          }
+        },
+        {
+          "type": "quiz_block",
+          "settings": {
+            "quiz_heading": "Need help? <br>Take the quiz.",
+            "quiz_subtext": "This quick quiz helps you find the right pillow for you.",
+            "background_color": "#1D1C50",
+            "text_color": "#ffffff"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
