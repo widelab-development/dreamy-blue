@@ -119,6 +119,11 @@
   transition: var(--default-transition);
   opacity: 1;
 }
+@media (max-width: 992px) {
+  .custom-featured-products__card-button {
+    font-size: 1.2rem !important;
+  }
+}
 .custom-featured-products__card-button:hover {
   opacity: 0.8;
 }

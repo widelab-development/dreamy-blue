@@ -99,6 +99,11 @@
 .custom-form__field {
   margin-bottom: 2rem;
 }
+@media (max-width: 992px) {
+  .custom-form__field {
+    margin-bottom: 1.8rem;
+  }
+}
 .custom-form__input {
   width: 100%;
   padding: 1.6rem 2.4rem;
@@ -138,6 +143,7 @@
 }
 @media (max-width: 992px) {
   .custom-form__button {
+    margin-top: 0;
     font-size: 1.44rem !important;
   }
 }

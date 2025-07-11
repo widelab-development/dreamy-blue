@@ -93,7 +93,7 @@
 }
 @media (max-width: 992px) {
   .custom-mission__heading {
-    font-size: 5.6rem !important;
+    font-size: 4.8rem !important;
     margin-bottom: 2.4rem !important;
   }
 }
@@ -114,7 +114,9 @@
   margin: 0;
 }
 .custom-mission__button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--btn-bg-color);
   color: var(--btn-text-color);
   padding: 1.2rem 11.6rem;
@@ -126,7 +128,10 @@
 }
 @media (max-width: 992px) {
   .custom-mission__button {
+    padding: 1.2rem 2.4rem;
     width: 100%;
+    max-width: 32rem;
+    height: 5.4rem;
   }
 }
 .custom-mission__button:hover {
