@@ -106,6 +106,7 @@
   .custom-featured-products__card-description {
     font-size: 1.4rem;
     max-width: 24rem;
+    margin: 0 auto 2.4rem auto !important;
   }
 }
 .custom-featured-products__card-button {
