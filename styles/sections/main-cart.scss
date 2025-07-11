@@ -414,6 +414,7 @@ body {
               font-size: rem(15);
               line-height: 1;
               text-transform: uppercase;
+              opacity: 1;
 
               @include media-breakpoint-up(lg) {
                 margin-bottom: rem(24);

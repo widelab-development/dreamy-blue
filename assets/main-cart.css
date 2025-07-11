@@ -382,6 +382,7 @@ body .shopify-section .xo-main-cart__container .xo-main-cart__right .xo-main-car
   font-size: 1.5rem;
   line-height: 1;
   text-transform: uppercase;
+  opacity: 1;
 }
 @media (min-width: 992px) {
   body .shopify-section .xo-main-cart__container .xo-main-cart__right .xo-main-cart__wrapper .xo-cart-totals .xo-cart-totals__subtotal {
