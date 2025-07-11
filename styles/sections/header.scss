@@ -61,9 +61,39 @@ body {
             }
 
             li {
+              @include media-breakpoint-up(lg-2) {
+                height: 100%;
+              }
+
+              &:last-child {
+                a {
+                  @include media-breakpoint-up(lg-2) {
+                    display: flex;
+                    align-items: center;
+                    gap: rem(6);
+                    color: var(--color-purple-100) !important;
+                  }
+
+                  &::before {
+                    @include media-breakpoint-up(lg-2) {
+                      content: '';
+                      display: inline-block;
+                      width: rem(13);
+                      height: rem(13);
+                      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjcwODggNy4yMTU5M0MxMC40NTQ0IDguMDA3OTMgNy44OTExOSAxMC41NzExIDcuMDk5MTkgMTMuODM5OUg2LjYyNDAxQzUuODMyMDEgMTAuNTcxMSAzLjI2ODggOC4wMDc5MyAwIDcuMjE1OTNWNi43NDA3M0MzLjI2ODggNS45NDg3MyA1LjgzMjAxIDMuMzg1NTMgNi42MjQwMSAwLjEzMTEzNEg3LjA5OTE5QzcuODkxMTkgMy4zODU1MyAxMC40NTQ0IDUuOTQ4NzMgMTMuNzA4OCA2Ljc0MDczVjcuMjE1OTNaIiBmaWxsPSIjQzQ5QkM5Ii8+Cjwvc3ZnPgo=");
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      background-size: contain;
+                    }
+                  }
+                }
+              }
+
               a {
                 @include media-breakpoint-up(lg-2) {
                   display: inline-flex;
+                  height: 100%;
+                  align-items: center;
                   padding: rem(4);
                   color: var(--color-black) !important;
                   font-size: rem(18);
@@ -226,6 +256,14 @@ body {
               width: auto;
               height: rem(55);
             }
+          }
+        }
+
+        .xo-header__center,
+        .xo-header__desktop,
+        .xo-menu-horizontal {
+          @include media-breakpoint-up(lg-2) {
+            height: 100%;
           }
         }
 

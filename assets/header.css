@@ -47,8 +47,35 @@
   }
 }
 @media (min-width: 1140px) {
+  body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal li {
+    height: 100%;
+  }
+}
+@media (min-width: 1140px) {
+  body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal li:last-child a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-purple-100) !important;
+  }
+}
+@media (min-width: 1140px) {
+  body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal li:last-child a::before {
+    content: "";
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjcwODggNy4yMTU5M0MxMC40NTQ0IDguMDA3OTMgNy44OTExOSAxMC41NzExIDcuMDk5MTkgMTMuODM5OUg2LjYyNDAxQzUuODMyMDEgMTAuNTcxMSAzLjI2ODggOC4wMDc5MyAwIDcuMjE1OTNWNi43NDA3M0MzLjI2ODggNS45NDg3MyA1LjgzMjAxIDMuMzg1NTMgNi42MjQwMSAwLjEzMTEzNEg3LjA5OTE5QzcuODkxMTkgMy4zODU1MyAxMC40NTQ0IDUuOTQ4NzMgMTMuNzA4OCA2Ljc0MDczVjcuMjE1OTNaIiBmaWxsPSIjQzQ5QkM5Ii8+Cjwvc3ZnPgo=");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+@media (min-width: 1140px) {
   body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal li a {
     display: inline-flex;
+    height: 100%;
+    align-items: center;
     padding: 0.4rem;
     color: var(--color-black) !important;
     font-size: 1.8rem;
@@ -187,6 +214,13 @@
   body .xo-header .xo-header__body .xo-header__content .xo-header__left .xo-header__logo-img {
     width: auto;
     height: 5.5rem;
+  }
+}
+@media (min-width: 1140px) {
+  body .xo-header .xo-header__body .xo-header__content .xo-header__center,
+  body .xo-header .xo-header__body .xo-header__content .xo-header__desktop,
+  body .xo-header .xo-header__body .xo-header__content .xo-menu-horizontal {
+    height: 100%;
   }
 }
 @media (min-width: 1140px) {
