@@ -1,0 +1,123 @@
+@use "../settings/init" as *;
+
+body {
+  .featured-collection-5__heading {
+    margin: 0 0 rem(18) 0;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: rem(60);
+    }
+
+    .xo-text__heading {
+      color: var(--color-black);
+      font-size: rem(32);
+      line-height: 1;
+      justify-content: center;
+
+      @include media-breakpoint-up(md) {
+        justify-content: unset;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: rem(48);
+      }
+    }
+  }
+
+  .featured-collection-5__content {
+    .xo-product-card {
+      position: relative;
+      background-color: var(--color-neutral-cream-110);
+      border-radius: 0;
+
+      .xo-product-image {
+        margin-bottom: rem(18);
+        padding: rem(34) rem(34) 0 rem(34);
+
+        @include media-breakpoint-up(xl) {
+          margin-bottom: rem(36);
+          padding: rem(54) rem(54) 0 rem(54);
+        }
+
+        .xo-product-image__first {
+          height: rem(188);
+          transform: unset !important;
+          opacity: 1 !important;
+
+          .xo-image {
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .xo-product-image__secondary {
+          display: none !important;
+        }
+      }
+
+      .xo-product-card__information {
+        padding: rem(0) rem(34) rem(106) rem(34);
+
+        @include media-breakpoint-up(xl) {
+          padding: rem(0) rem(54) rem(142) rem(54);
+        }
+
+        .xo-product-card__title {
+          margin-bottom: 0;
+
+          a {
+            color: var(--color-black);
+            font-family: var(--font-beausite-fit-web);
+            font-size: rem(30);
+            line-height: 1.1;
+            text-decoration: none;
+
+            @include media-breakpoint-up(xl) {
+              font-size: rem(48);
+            }
+          }
+        }
+
+        .xo-product-card__price-badge {
+          display: none;
+        }
+      }
+
+      .xo-product-card__header {
+        position: static;
+      }
+
+      .xo-product-card__actions {
+        position: absolute;
+        left: 50%;
+        bottom: 3.4rem;
+        top: unset;
+        right: unset;
+        transform: translateX(-50%);
+        opacity: 1;
+
+        @include media-breakpoint-up(xl) {
+          bottom: rem(54);
+        }
+
+        .xo-product-card__add {
+          transform: unset !important;
+          opacity: 1 !important;
+        }
+
+        &>.tooltip {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .featured-collection-5__banner {
+    display: none !important;
+  }
+}
