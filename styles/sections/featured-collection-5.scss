@@ -49,6 +49,14 @@ body {
           opacity: 1 !important;
           visibility: visible !important;
 
+          @include media-breakpoint-up(md) {
+            height: rem(220);
+          }
+
+          @include media-breakpoint-up(lg) {
+            height: rem(290);
+          }
+
           .xo-image {
             height: 100%;
 

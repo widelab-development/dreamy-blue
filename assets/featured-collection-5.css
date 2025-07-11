@@ -49,6 +49,16 @@ body .featured-collection-5__content .xo-product-card .xo-product-image .xo-prod
   opacity: 1 !important;
   visibility: visible !important;
 }
+@media (min-width: 768px) {
+  body .featured-collection-5__content .xo-product-card .xo-product-image .xo-product-image__first {
+    height: 22rem;
+  }
+}
+@media (min-width: 992px) {
+  body .featured-collection-5__content .xo-product-card .xo-product-image .xo-product-image__first {
+    height: 29rem;
+  }
+}
 body .featured-collection-5__content .xo-product-card .xo-product-image .xo-product-image__first .xo-image {
   height: 100%;
 }

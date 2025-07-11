@@ -167,7 +167,7 @@ body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-tabl
     position: absolute;
     top: 9.2rem;
     right: 3.6rem;
-    opacity: 1;
+    opacity: 0.6;
   }
   body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__body-row .xo-cart-table__remove-text .xo-btn,
   body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__body-row .xo-cart-table__remove-text .xo-btn__content,
@@ -238,7 +238,6 @@ body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-tabl
 @media (min-width: 768px) {
   body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__info .xo-cart-item__options .xo-cart-item__options-item {
     font-size: 1.8rem;
-    opacity: 0.9;
   }
 }
 body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__info .xo-cart-item__options .xo-cart-item__options-item span {

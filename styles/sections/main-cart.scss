@@ -190,7 +190,7 @@ body {
               position: absolute;
               top: rem(92);
               right: rem(36);
-              opacity: 1;
+              opacity: .6;
 
               .xo-btn,
               .xo-btn__content,
@@ -260,7 +260,6 @@ body {
 
                   @include media-breakpoint-up(md) {
                     font-size: rem(18);
-                    opacity: .9;
                   }
 
                   span {
