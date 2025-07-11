@@ -1,6 +1,24 @@
 @use "../settings/init" as *;
 
 body {
+  #xo-main-content {
+    &>.shopify-section {
+      &:nth-child(2) {
+        .xo-section {
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        .xo-section {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
   .shopify-section {
     h1 {
       &.xo-page-heading__heading {
@@ -11,12 +29,21 @@ body {
         font-size: rem(36);
         line-height: 1;
 
+        @include media-breakpoint-up(xl) {
+          margin-bottom: rem(60);
+          font-size: rem(72);
+        }
+
         p {
           color: var(--color-black);
           font-family: var(--font-beausite-fit-web);
           font-weight: 300;
           font-size: rem(36);
           line-height: 1;
+
+          @include media-breakpoint-up(xl) {
+            font-size: rem(72);
+          }
         }
       }
     }
@@ -259,6 +286,122 @@ body {
           }
 
           .xo-cart-table__quantity-item {}
+        }
+
+        .xo-main-cart__button {
+          border-color: var(--color-black);
+
+          .xo-btn,
+          .xo-btn__content,
+          .xo-btn__loading,
+          .xo-btn__icon,
+          .xo-btn__icon svg,
+          .xo-btn__text {
+            color: var(--color-black);
+            font-size: rem(14);
+            line-height: 1.6;
+
+            @include media-breakpoint-up(lg) {
+              font-size: rem(18);
+            }
+          }
+
+          .xo-btn__text {
+            padding: 0;
+          }
+        }
+      }
+
+      .xo-main-cart__right {
+        padding: rem(36) rem(20);
+        background-color: var(--color-purple-100);
+        border-radius: 0;
+
+        @include media-breakpoint-up(lg) {
+          padding: rem(36);
+        }
+
+        .xo-main-cart__wrapper {
+          margin-bottom: rem(36);
+          padding: 0;
+
+          .xo-cart-totals {
+            display: block;
+            padding-bottom: rem(36);
+            border-bottom: rem(1) solid var(--color-white);
+
+            @include media-breakpoint-up(lg) {
+              padding-bottom: rem(54);
+            }
+
+            .xo-cart-totals__subtotal {
+              display: block;
+              margin-bottom: rem(18);
+              color: var(--color-white);
+              font-size: rem(15);
+              line-height: 1;
+              text-transform: uppercase;
+
+              @include media-breakpoint-up(lg) {
+                margin-bottom: rem(24);
+              }
+            }
+
+            .xo-cart-totals__value {
+              color: var(--color-white);
+              font-size: rem(48);
+              font-weight: 300;
+              line-height: 1;
+            }
+          }
+
+          .xo-cart-tax-note {
+            display: block;
+            padding: rem(12);
+            color: var(--color-white);
+            font-size: rem(14);
+            line-height: 1;
+            opacity: 1;
+          }
+        }
+
+        .xo-main-cart__action {
+          .xo-btn {
+            color: var(--color-black);
+            background-color: var(--color-white);
+            border-color: var(--color-white);
+
+            &:hover {
+              .xo-btn__content {
+                text-shadow: 0 -3rem 0 transparent, 0 0 0 color-mix(in srgb, rgba(var(--color-black)) calc(1 * 100%), transparent);
+              }
+            }
+
+            &::before {
+              background-color: var(--color-purple-80);
+            }
+
+            .xo-btn__text {
+              display: flex;
+              align-items: center;
+              gap: rem(12);
+              color: var(--color-black);
+              font-size: rem(18);
+
+              &::after {
+                content: "";
+                position: relative;
+                top: rem(2);
+                display: block;
+                width: rem(18);
+                height: rem(12);
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAyMSAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeDE9IjAuNTYyNSIgeTE9IjUuMjIzNDMiIHgyPSIxOS40MzY2IiB5Mj0iNS4yMjM0MiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPHBhdGggZD0iTTE0LjkzMDggMTAuNzI5MUwxOS40Mzc1IDUuNTU3NDlMMTQuOTMwOCAwLjM4NTg2NCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg==");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+              }
+            }
+          }
         }
       }
     }
