@@ -1,0 +1,322 @@
+@use "../settings/init" as *;
+
+body {
+  .xo-header {
+    .xo-header__sticky {
+      @include media-breakpoint-up(lg-2) {
+        transition: background-color .3s ease-in-out;
+      }
+
+      &:hover {
+        @include media-breakpoint-up(lg-2) {
+          background-color: var(--color-midnight-blue);
+        }
+
+        .xo-header__content .xo-header__desktop .xo-menu-horizontal li a {
+          @include media-breakpoint-up(lg-2) {
+            color: var(--color-white) !important;
+          }
+        }
+
+        .xo-header__logo-img {
+          @include media-breakpoint-up(lg-2) {
+            filter: brightness(0) saturate(100%) invert(77%) sepia(29%) saturate(682%) hue-rotate(182deg) brightness(98%) contrast(98%);
+          }
+        }
+
+        .xo-header__right {
+          xo-tooltip {
+            svg {
+              path {
+                @include media-breakpoint-up(lg-2) {
+                  stroke: var(--color-white);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .xo-header__container {
+      @include media-breakpoint-up(lg-2) {
+        background-color: transparent;
+      }
+    }
+
+    .xo-header__body {
+      @include media-breakpoint-up(lg-2) {
+        padding-top: 0;
+      }
+
+      .xo-header__content {
+        @include media-breakpoint-up(lg-2) {
+          height: rem(95);
+        }
+
+        .xo-header__desktop {
+          .xo-menu-horizontal {
+            @include media-breakpoint-up(xl) {
+              gap: rem(58);
+            }
+
+            li {
+              @include media-breakpoint-up(lg-2) {
+                height: 100%;
+              }
+
+              &:last-child {
+                a {
+                  @include media-breakpoint-up(lg-2) {
+                    display: flex;
+                    align-items: center;
+                    gap: rem(6);
+                    color: var(--color-purple-100) !important;
+                  }
+
+                  &::before {
+                    @include media-breakpoint-up(lg-2) {
+                      content: '';
+                      display: inline-block;
+                      width: rem(13);
+                      height: rem(13);
+                      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjcwODggNy4yMTU5M0MxMC40NTQ0IDguMDA3OTMgNy44OTExOSAxMC41NzExIDcuMDk5MTkgMTMuODM5OUg2LjYyNDAxQzUuODMyMDEgMTAuNTcxMSAzLjI2ODggOC4wMDc5MyAwIDcuMjE1OTNWNi43NDA3M0MzLjI2ODggNS45NDg3MyA1LjgzMjAxIDMuMzg1NTMgNi42MjQwMSAwLjEzMTEzNEg3LjA5OTE5QzcuODkxMTkgMy4zODU1MyAxMC40NTQ0IDUuOTQ4NzMgMTMuNzA4OCA2Ljc0MDczVjcuMjE1OTNaIiBmaWxsPSIjQzQ5QkM5Ii8+Cjwvc3ZnPgo=");
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      background-size: contain;
+                    }
+                  }
+                }
+              }
+
+              a {
+                @include media-breakpoint-up(lg-2) {
+                  display: inline-flex;
+                  height: 100%;
+                  align-items: center;
+                  padding: rem(4);
+                  color: var(--color-black) !important;
+                  font-size: rem(18);
+                  line-height: 1;
+                  transition: color .3s ease-in-out;
+                }
+
+                .xo-menu-horizontal__arrow {
+                  @include media-breakpoint-up(lg-2) {
+                    display: none;
+                  }
+                }
+              }
+            }
+
+            .xo-menu-horizontal__mega-menu {
+              @include media-breakpoint-up(lg-2) {
+                top: rem(95);
+                left: rem(-22);
+                width: 100vw;
+                background-color: var(--color-midnight-blue);
+                border-top: rem(1) solid #8FBFEF66;
+                border-radius: 0;
+              }
+
+              .xo-section {
+                @include media-breakpoint-up(lg-2) {
+                  background-color: unset;
+                }
+              }
+
+              .mega-menu-1__container {
+                @include media-breakpoint-up(lg-2) {
+                  padding-left: rem(53);
+                  padding-right: rem(53);
+                  padding-top: rem(72);
+                  padding-bottom: rem(72);
+                }
+
+                .mega-menu-1__grid {
+                  @include media-breakpoint-up(lg-2) {
+                    display: grid;
+                    grid-template-columns: 25% 1fr;
+                    gap: rem(32);
+                    align-items: flex-start;
+                  }
+
+                  .mega-menu-1__item--left,
+                  .mega-menu-1__item--center {
+                    @include media-breakpoint-up(lg-2) {
+                      grid-column-start: unset;
+                      grid-column-end: unset;
+                    }
+                  }
+
+                  .mega-menu-1__item--left {
+                    @include media-breakpoint-up(lg-2) {
+                      align-items: flex-start;
+                      padding: 0;
+                    }
+                  }
+
+                  .mega-menu-1__item--center {
+                    @include media-breakpoint-up(lg-2) {
+                      align-items: flex-start;
+                      padding: 0;
+                    }
+
+                    xo-carousel-list {
+                      @include media-breakpoint-up(lg-2) {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: rem(24);
+                      }
+
+                      xo-carousel-slide {
+                        @include media-breakpoint-up(lg-2) {
+                          width: 100%;
+                          padding: 0;
+                        }
+
+                        .collection-card-v2 {
+                          @include media-breakpoint-up(lg-2) {
+                            width: 100%;
+                            height: auto;
+                            padding: 0;
+                            border-radius: 0;
+                            border: unset !important
+                          }
+
+                          .collection-card-v2__title {
+                            @include media-breakpoint-up(lg-2) {
+                              display: none;
+                            }
+                          }
+
+                          .collection-card-v2__link {
+                            @include media-breakpoint-up(lg-2) {
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              padding: 0;
+                            }
+                          }
+
+                          .collection-card-v2__image {
+                            @include media-breakpoint-up(lg-2) {
+                              width: 100%;
+                              height: 100%;
+                              border-radius: 0;
+                              transform: none !important;
+                            }
+
+                            .xo-image {
+                              @include media-breakpoint-up(lg-2) {
+                                width: 100%;
+                                height: auto;
+                              }
+
+                              img {
+                                @include media-breakpoint-up(lg-2) {
+                                  aspect-ratio: 1/1;
+                                  width: 100%;
+                                  height: auto;
+                                  border-radius: 0;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  .mega-menu-1__item--right {
+                    @include media-breakpoint-up(lg-2) {
+                      display: none !important;
+                    }
+                  }
+
+                  .mega-menu-1__heading {
+                    @include media-breakpoint-up(lg-2) {
+                      margin: 0;
+                      color: var(--color-white);
+                      font-family: var(--font-beausite-fit-web);
+                      font-size: rem(30);
+                      font-weight: 300;
+                      line-height: 1.1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .xo-header__left {
+          .xo-header__logo-img {
+            @include media-breakpoint-up(lg-2) {
+              width: auto;
+              height: rem(55);
+            }
+          }
+        }
+
+        .xo-header__center,
+        .xo-header__desktop,
+        .xo-menu-horizontal {
+          @include media-breakpoint-up(lg-2) {
+            height: 100%;
+          }
+        }
+
+        .xo-header__right {
+          @include media-breakpoint-up(lg-2) {
+            display: flex;
+            align-items: center;
+            gap: rem(36);
+          }
+
+          xo-tooltip {
+            @include media-breakpoint-up(lg-2) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: rem(40);
+              height: rem(40);
+            }
+
+            &:first-child {
+              @include media-breakpoint-up(lg-2) {
+                display: none;
+              }
+            }
+
+            &:nth-child(2) {
+              @include media-breakpoint-up(lg-2) {
+                order: 2;
+              }
+            }
+
+            &:nth-child(3) {
+              @include media-breakpoint-up(lg-2) {
+                order: 1;
+              }
+            }
+
+            svg {
+              @include media-breakpoint-up(lg-2) {
+                width: rem(20);
+                height: auto;
+              }
+            }
+
+            .xo-header__right-number {
+              @include media-breakpoint-up(lg-2) {
+                color: var(--color-black);
+                background-color: var(--color-blue-100);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
