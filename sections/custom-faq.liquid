@@ -4,7 +4,7 @@
 {{ 'collapse-content-box-1.css' | asset_url | stylesheet_tag }}
 {{ 'collapse.css' | asset_url | stylesheet_tag }}
 
-<section {% render 'section-attr' %} style="position: relative; background-color: {{ section.settings.bg_color }}">
+<section {% render 'section-attr' %} style="position: relative; background-color: #1D1C50;">
   {% if section.settings.bg_image != blank %}
     <div class="faq-top-bg" style="background-image: url({{ section.settings.bg_image | image_url: width: 2000 }});">
       {% if section.settings.top_heading != blank %}
@@ -17,7 +17,11 @@
 
   <div class="faq-white-box">
     <xo-container class="collapse-content__container">
-      {% render 'collapse-content-box-1', class: section.settings.font_size_heading, heading: section.settings.heading, block: section.blocks %}
+      {% render 'collapse-content-box-1',
+        class: section.settings.font_size_heading,
+        heading: section.settings.heading,
+        block: section.blocks
+      %}
     </xo-container>
   </div>
 </section>
@@ -33,7 +37,9 @@
     justify-content: center;
     min-height: 92.5rem;
   }
-
+  .faq-top-background-section .xo-section{
+    background: var(--color-midnight-blue);
+  }
   .faq-top-bg__overlay {
     position: absolute;
     top: 26rem;
@@ -54,33 +60,42 @@
   .faq-white-box {
     position: relative;
     z-index: 2;
-    background-color: #F8F3EC;
-    padding: 6rem;
+    background-color: #f8f3ec;
+    padding: 12rem 2.5rem;
     max-width: var(--xo-container-width, 1400px);
     margin: -20rem auto 0 auto;
   }
   .collapse-content-box-1__item {
-  background-color: #ffffff;
-}
-.xo-collapse__trigger-title{
-color: #000 ;
-}
+    background-color: #ffffff;
+  }
+  .xo-collapse__trigger-title {
+    color: #000;
+  }
+  .collapse-content-box-1 {
+    width: 92.6rem;
+    max-width: 100%;
+  }
+  .collapse-content-box-1__heading {
+    padding-bottom: 4.8rem;
+  }
 
   @media (max-width: 768px) {
     .faq-top-bg__overlay {
-    top: 14.9rem;
-  }
+      top: 14.9rem;
+    }
     .faq-top-bg__heading {
       font-size: 7.6rem !important;
     }
-
+    .collapse-content-box-1__heading {
+      padding-bottom: 1.2rem;
+    }
     .faq-white-box {
-      padding: 4rem 2rem;
+      padding: 3.6rem 0.5rem;
       margin-top: -6rem;
     }
     .faq-top-bg {
-    min-height: 47.1rem;
-  }
+      min-height: 47.1rem;
+    }
   }
 </style>
 
@@ -151,12 +166,7 @@ color: #000 ;
   "presets": [
     {
       "name": "FAQ with Top Image",
-      "blocks": [
-        { "type": "collapse" },
-        { "type": "collapse" },
-        { "type": "collapse" },
-        { "type": "collapse" }
-      ]
+      "blocks": [{ "type": "collapse" }, { "type": "collapse" }, { "type": "collapse" }, { "type": "collapse" }]
     }
   ]
 }
