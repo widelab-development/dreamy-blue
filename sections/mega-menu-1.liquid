@@ -1,10 +1,12 @@
 {{ 'section-mega-menu-1.css' | asset_url | stylesheet_tag }}
 {{ 'collection-link.css' | asset_url | stylesheet_tag }}
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
 
 {% liquid
   assign layout = section.settings.layout
   assign index = section.settings.index_nav
 %}
+
 
 {% if layout == 'category' %}
   {% capture style %}
@@ -98,6 +100,7 @@
   {% endcapture %}
 {% endif %}
 
+
 <template xo-mega-menu-name='header-mega-menu' xo-mega-menu-index='{{ index }}'>
   <div class='mega-menu-1{% if layout %} mega-menu-1--{{ layout }}{% endif %}'>
     <div data-id='{{ section.id }}' {% render 'section-attr' %}>
@@ -126,24 +129,32 @@
                 <div class='mega-menu-1__wrapper'>
                   {% for block in section.blocks %}
                     {% case block.type %}
-                      {% when 'collection-item' %}
-                        {% liquid
-                          assign collection = block.settings.collection
-                          assign color_schema_box = block.settings.color_scheme_box
-                        %}
-                        {% render 'collection-card-v2',
-                          collection: collection,
-                          color_schema_card: color_schema_box,
-                          layout: 'horizontal',
-                          padding_vertical: 7,
-                          padding_horizontal: 7,
-                          image_size: 'sm'
-                        %}
+                      {% when 'product-item' %}
+                        {%- liquid
+                          assign product = block.settings.product
+                          assign custom_image = block.settings.custom_image
+                          assign image_to_display = custom_image | default: product.featured_image
+                        -%}
+                        {% if product != blank and image_to_display != blank %}
+                          <div class='mega-menu-product-card mega-menu-product-card--horizontal color-{{ block.settings.color_scheme_box }}'>
+                            <a href='{{ product.url }}' class='mega-menu-product-card__link'>
+                              <div class='mega-menu-product-card__image-wrapper'>
+                                <img
+                                  src='{{ image_to_display | image_url: width: 120 }}'
+                                  alt='{{ image_to_display.alt | default: product.title | escape }}'
+                                  width='60'
+                                  height='{{ 60 | divided_by: image_to_display.aspect_ratio | ceil }}'
+                                  loading='lazy'>
+                              </div>
+                            </a>
+                          </div>
+                        {% endif %}
                     {% endcase %}
                   {% endfor %}
                 </div>
               {% endif %}
             </div>
+
 
             <div class='mega-menu-1__item mega-menu-1__item--center' style='--xl: 7; --lg: 6; --md: 12; --xs: 12'>
               {% if layout != 'both' %}
@@ -170,17 +181,28 @@
                       {% elsif layout == 'category' %}
                         {% for block in section.blocks %}
                           {% case block.type %}
-                            {% when 'collection-item' %}
-                              <xo-carousel-slide>
-                                {% render 'collection-card-v2',
-                                  collection: block.settings.collection,
-                                  layout: 'vertical',
-                                  padding_vertical: 18,
-                                  padding_horizontal: 18,
-                                  color_schema_card: block.settings.color_scheme_box,
-                                  image_size: 'xl'
-                                %}
-                              </xo-carousel-slide>
+                            {% when 'product-item' %}
+                              {%- liquid
+                                assign product = block.settings.product
+                                assign custom_image = block.settings.custom_image
+                                assign image_to_display = custom_image | default: product.featured_image
+                              -%}
+                              {% if product != blank and image_to_display != blank %}
+                                <xo-carousel-slide>
+                                  <div class='mega-menu-product-card color-{{ block.settings.color_scheme_box }}'>
+                                    <a href='{{ product.url }}' class='mega-menu-product-card__link'>
+                                      <div class='mega-menu-product-card__image-wrapper'>
+                                        <img
+                                          src='{{ image_to_display | image_url: width: 400 }}'
+                                          alt='{{ image_to_display.alt | default: product.title | escape }}'
+                                          width='200'
+                                          height='{{ 200 | divided_by: image_to_display.aspect_ratio | ceil }}'
+                                          loading='lazy'>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </xo-carousel-slide>
+                              {% endif %}
                           {% endcase %}
                         {% endfor %}
                       {% endif %}
@@ -209,6 +231,7 @@
               {% endif %}
             </div>
 
+
             <div class='mega-menu-1__item mega-menu-1__item--right' style='--xl: 3; --lg: 3; --md: 6; --xs: 12'>
               {% for block in section.blocks %}
                 {% case block.type %}
@@ -236,6 +259,7 @@
       </div>
     </div>
 
+
     <div class='mega-menu-1__mobile'>
       <div class='mega-menu-1__container'>
         <xo-grid class='mega-menu-1__grid'>
@@ -261,24 +285,32 @@
               <div class='mega-menu-1__wrapper'>
                 {% for block in section.blocks %}
                   {% case block.type %}
-                    {% when 'collection-item' %}
-                      {% liquid
-                        assign collection = block.settings.collection
-                        assign color_schema_box = block.settings.color_scheme_box
-                      %}
-                      {% render 'collection-card-v2',
-                        collection: collection,
-                        color_schema_card: color_schema_box,
-                        layout: 'horizontal',
-                        padding_vertical: 7,
-                        padding_horizontal: 7,
-                        image_size: 'sm'
-                      %}
+                    {% when 'product-item' %}
+                      {%- liquid
+                        assign product = block.settings.product
+                        assign custom_image = block.settings.custom_image
+                        assign image_to_display = custom_image | default: product.featured_image
+                      -%}
+                      {% if product != blank and image_to_display != blank %}
+                        <div class='mega-menu-product-card mega-menu-product-card--horizontal color-{{ block.settings.color_scheme_box }}'>
+                          <a href='{{ product.url }}' class='mega-menu-product-card__link'>
+                              <div class='mega-menu-product-card__image-wrapper'>
+                                <img
+                                  src='{{ image_to_display | image_url: width: 120 }}'
+                                  alt='{{ image_to_display.alt | default: product.title | escape }}'
+                                  width='60'
+                                  height='{{ 60 | divided_by: image_to_display.aspect_ratio | ceil }}'
+                                  loading='lazy'>
+                              </div>
+                          </a>
+                        </div>
+                      {% endif %}
                   {% endcase %}
                 {% endfor %}
               </div>
             {% endif %}
           </div>
+
 
           <div class='mega-menu-1__item mega-menu-1__item--center' style='--lg: 12; --md: 12; --xs: 12'>
             {% if layout == 'category' %}
@@ -291,17 +323,28 @@
                   <xo-carousel-list>
                     {% for block in section.blocks %}
                       {% case block.type %}
-                        {% when 'collection-item' %}
-                          <xo-carousel-slide>
-                            {% render 'collection-card-v2',
-                              collection: block.settings.collection,
-                              layout: 'vertical',
-                              padding_vertical: 10,
-                              padding_horizontal: 10,
-                              color_schema_card: block.settings.color_scheme_box,
-                              image_size: 'xl'
-                            %}
-                          </xo-carousel-slide>
+                        {% when 'product-item' %}
+                          {%- liquid
+                            assign product = block.settings.product
+                            assign custom_image = block.settings.custom_image
+                            assign image_to_display = custom_image | default: product.featured_image
+                          -%}
+                          {% if product != blank and image_to_display != blank %}
+                            <xo-carousel-slide>
+                              <div class='mega-menu-product-card color-{{ block.settings.color_scheme_box }}'>
+                                <a href='{{ product.url }}' class='mega-menu-product-card__link'>
+                                  <div class='mega-menu-product-card__image-wrapper'>
+                                    <img
+                                      src='{{ image_to_display | image_url: width: 400 }}'
+                                      alt='{{ image_to_display.alt | default: product.title | escape }}'
+                                      width='200'
+                                      height='{{ 200 | divided_by: image_to_display.aspect_ratio | ceil }}'
+                                      loading='lazy'>
+                                  </div>
+                                </a>
+                              </div>
+                            </xo-carousel-slide>
+                          {% endif %}
                       {% endcase %}
                     {% endfor %}
                   </xo-carousel-list>
@@ -334,6 +377,7 @@
             {% endif %}
           </div>
 
+
           <div class='mega-menu-1__item mega-menu-1__item--right' style='--lg: 12; --md: 12; --xs: 12'>
             {% for block in section.blocks %}
               {% case block.type %}
@@ -361,6 +405,7 @@
     </div>
   </div>
 </template>
+
 
 {% schema %}
 {
@@ -541,18 +586,27 @@
       ]
     },
     {
-      "name": "t:sections.mega_menu_1.settings.collection_name.name",
-      "type": "collection-item",
+      "name": "Product",
+      "type": "product-item",
       "settings": [
         {
-          "type": "collection",
-          "id": "collection",
-          "label": "t:sections.mega_menu_1.settings.collection.label"
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom image"
+        },
+        {
+          "type": "paragraph",
+          "content": "Optional. Replaces the default product image."
         },
         {
           "type": "color_scheme",
           "id": "color_scheme_box",
-          "label": "t:sections.mega_menu_1.settings.color_scheme_box.label",
+          "label": "Color scheme",
           "default": "scheme_1"
         }
       ]
@@ -703,27 +757,21 @@
           "type": "link-list",
           "settings": {
             "heading": "Heading",
-            "collection_list": [
-
-  ]
+            "collection_list": []
           }
         },
         {
           "type": "link-list",
           "settings": {
             "heading": "Heading",
-            "collection_list": [
-
-  ]
+            "collection_list": []
           }
         },
         {
           "type": "link-list",
           "settings": {
             "heading": "Heading",
-            "collection_list": [
-
-  ]
+            "collection_list": []
           }
         },
         {
