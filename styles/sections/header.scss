@@ -96,7 +96,6 @@ body {
                   display: inline-flex;
                   height: 100%;
                   align-items: center;
-                  padding: rem(4);
                   color: var(--color-black) !important;
                   font-size: rem(18);
                   line-height: 1;
@@ -155,6 +154,38 @@ body {
                     @include media-breakpoint-up(lg-2) {
                       align-items: flex-start;
                       padding: 0;
+                    }
+
+                    .mega-menu-1__wrapper {
+                      display: flex;
+                      flex-direction: column;
+                      gap: rem(10);
+                      margin-top: rem(20); 
+                    }
+
+                    .mega-menu-product-card--horizontal {
+                      .mega-menu-product-card__link {
+                        display: flex;
+                        align-items: center;
+                        height: auto;
+                      }
+
+                      .mega-menu-product-card__image-wrapper {
+                        flex-shrink: 0;
+                        width: rem(60);
+                        height: rem(60);
+                        margin-right: rem(15);
+                        border-radius: rem(6);
+                        overflow: hidden;
+
+                        img {
+                          width: 100%;
+                          height: 100%;
+                          object-fit: cover;
+                          object-position: center;
+                          display: block;
+                        }
+                      }
                     }
                   }
 
@@ -223,6 +254,34 @@ body {
                                   border-radius: 0;
                                 }
                               }
+                            }
+                          }
+                        }
+
+                        .mega-menu-product-card {
+                          display: flex;
+                          height: 100%;
+                          text-align: center;
+
+                          &__link {
+                            display: block;
+                            height: 100%;
+                            width: 100%;
+                          }
+
+                          &__image-wrapper {
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            border-radius: 0;
+
+                            img {
+                              width: 100%;
+                              height: calc(100% + rem(2));
+                              margin-top: rem(-1);
+                              object-fit: cover;
+                              object-position: center;
+                              display: block;
                             }
                           }
                         }
