@@ -79,41 +79,45 @@
             "sub_heading": ""
           }
         },
-        "collection_item_KQfFdF": {
-          "type": "collection-item",
+        "product_item_M8x6cp": {
+          "type": "product-item",
           "settings": {
-            "collection": "the-signature",
+            "product": "the-signature",
+            "custom_image": "shopify://shop_images/Frame_18.png",
             "color_scheme_box": "scheme_1"
           }
         },
-        "collection_item_HERG7y": {
-          "type": "collection-item",
+        "product_item_4PEnKe": {
+          "type": "product-item",
           "settings": {
-            "collection": "the-signature",
+            "product": "the-sapphire",
+            "custom_image": "shopify://shop_images/Frame_19_1.png",
             "color_scheme_box": "scheme_1"
           }
         },
-        "collection_item_MBbQVq": {
-          "type": "collection-item",
+        "product_item_yRBNK9": {
+          "type": "product-item",
           "settings": {
-            "collection": "",
+            "product": "the-blue-moon",
+            "custom_image": "shopify://shop_images/Frame_20.png",
             "color_scheme_box": "scheme_1"
           }
         },
-        "collection_item_cJmzTB": {
-          "type": "collection-item",
+        "product_item_HENyit": {
+          "type": "product-item",
           "settings": {
-            "collection": "",
+            "product": "the-cool-stuff",
+            "custom_image": "shopify://shop_images/Frame_21.png",
             "color_scheme_box": "scheme_1"
           }
         }
       },
       "block_order": [
         "text_U4PHJ8",
-        "collection_item_KQfFdF",
-        "collection_item_HERG7y",
-        "collection_item_MBbQVq",
-        "collection_item_cJmzTB"
+        "product_item_M8x6cp",
+        "product_item_4PEnKe",
+        "product_item_yRBNK9",
+        "product_item_HENyit"
       ],
       "settings": {
         "layout": "category",
