@@ -124,7 +124,7 @@
         "product_card_j8xc3V": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "the-signature",
             "custom_image": "shopify://shop_images/Signature_Pillow_5.png",
             "overtitle": "The Signature",
             "description": "",
@@ -135,7 +135,7 @@
         "product_card_AKcFak": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "the-sapphire",
             "custom_image": "shopify://shop_images/sapphire_2.png",
             "overtitle": "The Sapphire",
             "description": "",
@@ -146,7 +146,7 @@
         "product_card_xWFKtA": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "the-blue-moon",
             "custom_image": "shopify://shop_images/Moon_Pillow_1.png",
             "overtitle": "Blue Moon",
             "description": "",
@@ -157,7 +157,7 @@
         "product_card_RHAwDM": {
           "type": "product_card",
           "settings": {
-            "product": "",
+            "product": "the-light-stuff",
             "custom_image": "shopify://shop_images/Pillows_copy_1_913f67d3-3384-444c-823b-e1b6db696e10.png",
             "overtitle": "The Extrazzz",
             "description": "",
