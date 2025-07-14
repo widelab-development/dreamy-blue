@@ -16,7 +16,7 @@
           "type": "quantity_option",
           "settings": {
             "quantity": 1,
-            "label": "Buy 1 Pillows",
+            "label": "Buy 1 Pillow",
             "discount_text": "",
             "discount_percentage": 0
           }
