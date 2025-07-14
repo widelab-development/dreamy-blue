@@ -10,7 +10,7 @@
 .xo-header--style-3,
 .xo-header--style-4,
 .xo-header--style-5 {
-  position: absolute;
+  position: sticky;
   z-index: 100;
   top: 0;
 }
