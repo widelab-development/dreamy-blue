@@ -123,6 +123,7 @@
 }
 .main-product__variants label {
   background-color: white;
+  font-size: 1.6rem;
   padding: 1.2rem 2.4rem;
   border-radius: 9.6rem;
   cursor: pointer;
@@ -331,6 +332,7 @@
 }
 .main-product__content {
   padding: 0;
+  max-width: 52.7rem;
 }
 .main-product__content--pd {
   padding-top: 2rem;

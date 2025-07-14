@@ -132,6 +132,7 @@
   
       label {
         background-color: white;
+        font-size: rem(16);
         padding: rem(12) rem(24);
         border-radius: rem(96);
         cursor: pointer;
@@ -366,6 +367,7 @@
 
     &__content {
         padding: 0;
+        max-width: rem(527);
     }
     
     &__content--pd {
