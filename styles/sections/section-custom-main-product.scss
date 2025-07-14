@@ -352,8 +352,15 @@
         }
     
         img {
-            width: rem(20);
-            height: rem(20);
+            height: rem(30.4);
+            width: rem(30.4);
+        }
+
+        &:nth-last-of-type(1) {
+            img {
+                height: rem(30.4);
+                width: max-content;
+            }
         }
     }
 
