@@ -12,95 +12,60 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor_Fd6fHH": {
-          "type": "vendor",
-          "settings": {}
-        },
-        "bedc5e2d-642d-4448-8569-c7fcfd527042": {
-          "type": "title",
-          "settings": {}
-        },
-        "4dabf9d3-3372-4f5a-9edf-1e1f03527b1b": {
-          "type": "description",
-          "settings": {}
-        },
-        "b1d95bc4-490b-4b8c-914a-89b1323d2a43": {
-          "type": "price",
-          "settings": {}
-        },
-        "ca89121c-8974-4f5c-852d-875abeb6041c": {
-          "type": "variants",
+        "feature_item_wWb7jD": {
+          "type": "feature_item",
           "settings": {
-            "variant_style": "select",
-            "variant_color_style": "color"
+            "icon": "shopify://shop_images/Group_16.svg",
+            "text": "Brand new shredded memory foam"
           }
         },
-        "ae0ed4c8-948a-46c7-b292-5f2687b8c94e": {
-          "type": "buy_button",
+        "feature_item_3FYhjP": {
+          "type": "feature_item",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": false
+            "icon": "shopify://shop_images/Group_8.svg",
+            "text": "Feather-free matrix of fluffy poly tufts"
           }
         },
-        "collapse_AxRGhw": {
-          "type": "collapse",
+        "feature_item_Deqb9G": {
+          "type": "feature_item",
           "settings": {
-            "collapse_text": "Collapse heading",
-            "collapse_content": "<p>More information about collapse</p>"
+            "icon": "shopify://shop_images/Group_15.svg",
+            "text": "Blue beads of cooling gel (The Cool Stuff)"
           }
         },
-        "collapse_T7TQKY": {
-          "type": "collapse",
+        "feature_item_RyDWXR": {
+          "type": "feature_item",
           "settings": {
-            "collapse_text": "Collapse heading",
-            "collapse_content": "<p>More information about collapse</p>"
+            "icon": "shopify://shop_images/Group_13.svg",
+            "text": "Adjustable fill w/ easy-access zipper"
           }
         },
-        "collapse_8pHWMQ": {
-          "type": "collapse",
+        "feature_item_RKapKR": {
+          "type": "feature_item",
           "settings": {
-            "collapse_text": "Collapse heading",
-            "collapse_content": "<p>More information about collapse</p>"
+            "icon": "shopify://shop_images/Frame_97.png",
+            "text": "CertiPUR-US and OekoTex® certified"
           }
-        },
-        "collapse_HxgPKn": {
-          "type": "collapse",
-          "settings": {
-            "collapse_text": "Collapse heading",
-            "collapse_content": "<p>More information about collapse</p>"
-          }
-        },
-        "line_nB8MEt": {
-          "type": "line",
-          "settings": {}
         }
       },
       "block_order": [
-        "vendor_Fd6fHH",
-        "bedc5e2d-642d-4448-8569-c7fcfd527042",
-        "4dabf9d3-3372-4f5a-9edf-1e1f03527b1b",
-        "b1d95bc4-490b-4b8c-914a-89b1323d2a43",
-        "ca89121c-8974-4f5c-852d-875abeb6041c",
-        "ae0ed4c8-948a-46c7-b292-5f2687b8c94e",
-        "collapse_AxRGhw",
-        "collapse_T7TQKY",
-        "collapse_8pHWMQ",
-        "collapse_HxgPKn",
-        "line_nB8MEt"
+        "feature_item_wWb7jD",
+        "feature_item_3FYhjP",
+        "feature_item_Deqb9G",
+        "feature_item_RyDWXR",
+        "feature_item_RKapKR"
       ],
       "settings": {
         "product_media_style": "style-1",
-        "hide_variants": false,
-        "show_image_variants_grouping": false,
         "enable_sticky_cart": false,
-        "gallery_type": "carousel",
-        "color_scheme": "background-1",
-        "background_color": "",
-        "background_gradient": "",
-        "padding_top_desktop": 100,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 100,
-        "padding_bottom_mobile": 50
+        "subtitle": "Fill ‘er up. Or down. With the stuff of dreams.",
+        "show_custom_reviews": true,
+        "rating_average": "5.0",
+        "rating_count": "18,425",
+        "guarantee1_icon": "shopify://shop_images/Group_17.svg",
+        "guarantee1_text": "Free Nationwide Shipping",
+        "guarantee2_icon": "shopify://shop_images/Group_18_1.svg",
+        "guarantee2_text": "30-Day Money-Back Guarantee"
       }
     },
     "main_product_recommendations_TnWBYD": {
