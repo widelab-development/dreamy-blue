@@ -322,8 +322,12 @@
   }
 }
 .main-product__feature-item img {
-  width: 2rem;
-  height: 2rem;
+  height: 3.04rem;
+  width: 3.04rem;
+}
+.main-product__feature-item:nth-last-of-type(1) img {
+  height: 3.04rem;
+  width: max-content;
 }
 .main-product__content {
   padding: 0;
