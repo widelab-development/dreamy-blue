@@ -193,7 +193,7 @@
                                     <a href='{{ product.url }}' class='mega-menu-product-card__link'>
                                       <div class='mega-menu-product-card__image-wrapper'>
                                         <img
-                                          src='{{ image_to_display | image_url: width: 400 }}'
+                                          src='{{ image_to_display | image_url: width: 450 }}'
                                           alt='{{ image_to_display.alt | default: product.title | escape }}'
                                           width='450'
                                           height='{{ 450 | divided_by: image_to_display.aspect_ratio | ceil }}'
@@ -335,7 +335,7 @@
                                 <a href='{{ product.url }}' class='mega-menu-product-card__link'>
                                   <div class='mega-menu-product-card__image-wrapper'>
                                     <img
-                                      src='{{ image_to_display | image_url: width: 400 }}'
+                                      src='{{ image_to_display | image_url: width: 450 }}'
                                       alt='{{ image_to_display.alt | default: product.title | escape }}'
                                       width='450'
                                       height='{{ 450 | divided_by: image_to_display.aspect_ratio | ceil }}'
