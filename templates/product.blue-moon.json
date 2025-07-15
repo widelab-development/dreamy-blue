@@ -92,63 +92,6 @@
         "padding_bottom_mobile": 50
       }
     },
-    "custom_product_reviews_FNMtcH": {
-      "type": "custom-product-reviews",
-      "blocks": {
-        "review_njQapi": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/Frame_115_1.png",
-            "rating": 5,
-            "quote": "<p>“I bought this pillow for myself but my cat who is also a side sleeper approves.”</p>",
-            "author_name": "Cathy",
-            "show_verified_badge": true
-          }
-        },
-        "review_M3xyc7": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/Frame_15619.png",
-            "rating": 5,
-            "quote": "<p>I recently bought three pillows one after another… and this is definitely the best. [T]hree months and it still the perfect pillow.</p>",
-            "author_name": "Bryan",
-            "show_verified_badge": true
-          }
-        },
-        "review_gpa9bn": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/Frame_15621_1.png",
-            "rating": 5,
-            "quote": "<p>This is the best pillow I have ever used. Highly The quality of this pillow is out of this world. [When] you buy this pillow (which I highly suggest) make sure to get a few. to everyone!</p>",
-            "author_name": "A. C.",
-            "show_verified_badge": true
-          }
-        },
-        "review_Mh7C3b": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/Frame_15619_1.png",
-            "rating": 5,
-            "quote": "<p>My husband refers to me as “Princess and the pea”! I bought 4 DreamyBlue pillows…..I  recommend it 100%. Thank you DreamyBlue</p>",
-            "author_name": "Gail",
-            "show_verified_badge": true
-          }
-        }
-      },
-      "block_order": [
-        "review_njQapi",
-        "review_M3xyc7",
-        "review_gpa9bn",
-        "review_Mh7C3b"
-      ],
-      "name": "Custom Product Reviews",
-      "settings": {
-        "heading": "Signature Pillow Reviews",
-        "container_bg_color": "#f2eee8",
-        "card_bg_color": "#ffffff"
-      }
-    },
     "custom_sticky_two_col_bR3hrC": {
       "type": "custom-sticky-two-col",
       "blocks": {
@@ -475,7 +418,6 @@
   "order": [
     "main",
     "main_product_recommendations_TnWBYD",
-    "custom_product_reviews_FNMtcH",
     "custom_sticky_two_col_bR3hrC",
     "custom_product_type_4E9XLT",
     "custom_product_reviews_list_EP4cYp",
