@@ -46,6 +46,22 @@
         "padding_bottom_mobile": 13
       }
     },
+    "top_announcement_bar_ihAgki": {
+      "type": "top-announcement-bar",
+      "name": "Top Announcement Bar",
+      "settings": {
+        "background_color": "#B67BBA",
+        "show_left": true,
+        "left_text": "Get $50 off! Click here",
+        "left_link": "",
+        "show_center": true,
+        "center_text": "NEW Blue Moon Pillow Now Shipping",
+        "center_link": "shopify://products/the-blue-moon",
+        "show_right": true,
+        "right_text": "Shipping & Returns",
+        "right_link": ""
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -129,22 +145,6 @@
         "padding_bottom_desktop": 0,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0
-      }
-    },
-    "top_announcement_bar_ihAgki": {
-      "type": "top-announcement-bar",
-      "name": "Top Announcement Bar",
-      "settings": {
-        "background_color": "#B67BBA",
-        "show_left": true,
-        "left_text": "Get $50 off! Click here",
-        "left_link": "",
-        "show_center": true,
-        "center_text": "NEW Blue Moon Pillow Now Shipping",
-        "center_link": "",
-        "show_right": true,
-        "right_text": "Shipping & Returns",
-        "right_link": ""
       }
     }
   },
