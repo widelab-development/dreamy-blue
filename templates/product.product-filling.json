@@ -14,46 +14,15 @@
       "blocks": {
         "feature_item_wWb7jD": {
           "type": "feature_item",
+          "repeater": "{{ product.metafields.custom.product_features.value }}",
           "settings": {
-            "icon": "shopify://shop_images/Group_16.svg",
-            "text": "Brand new shredded memory foam"
-          }
-        },
-        "feature_item_3FYhjP": {
-          "type": "feature_item",
-          "settings": {
-            "icon": "shopify://shop_images/Group_8.svg",
-            "text": "Feather-free matrix of fluffy poly tufts"
-          }
-        },
-        "feature_item_Deqb9G": {
-          "type": "feature_item",
-          "settings": {
-            "icon": "shopify://shop_images/Group_15.svg",
-            "text": "Blue beads of cooling gel (The Cool Stuff)"
-          }
-        },
-        "feature_item_RyDWXR": {
-          "type": "feature_item",
-          "settings": {
-            "icon": "shopify://shop_images/Group_13.svg",
-            "text": "Adjustable fill w/ easy-access zipper"
-          }
-        },
-        "feature_item_RKapKR": {
-          "type": "feature_item",
-          "settings": {
-            "icon": "shopify://shop_images/Frame_97.png",
-            "text": "CertiPUR-US and OekoTex® certified"
+            "icon": "{{ block.repeater.icon.value }}",
+            "text": "{{ block.repeater.text.value }}"
           }
         }
       },
       "block_order": [
-        "feature_item_wWb7jD",
-        "feature_item_3FYhjP",
-        "feature_item_Deqb9G",
-        "feature_item_RyDWXR",
-        "feature_item_RKapKR"
+        "feature_item_wWb7jD"
       ],
       "settings": {
         "product_media_style": "style-1",
