@@ -119,129 +119,131 @@
         class='xo-header__sticky{% if header_style %} xo-header__sticky--{{ header_style }}{% endif %}{% if template contains 'collection-3' %} xo-header__sticky--modifier{% endif %}'
       >
         <div class='xo-header__container{% if template.name == 'index' or template contains 'home-1' or template contains 'home-2' or template contains 'home-3' %} xo-header__container--transparent{% endif %}{% if settings.enable_border_radius %} xo-header__container--radius{% endif %} xo-header__container--{{ header_style }} color-{{ section.settings.color_scheme }}'>
-          {% if header_style == 'style-5' %}
-            {{ header_top }}
-          {% endif %}
-
-          <div class='xo-header__content{% if header_style == 'style-1' or header_style == 'style-2' or header_style == 'style-5' %}{% if logo_position == 'center' or menu_type == 'drawer' %} xo-header__content--reverse{% endif %}{% endif %}{% if header_style == 'style-5' %} xo-header__content--modifier{% endif %}'>
-            {% if header_style == 'style-4' %}
-              <div class='xo-header__box-first{% if settings.enable_border_radius %} xo-header__box-first--radius{% endif %}'>
+          <xo-container>
+            {% if header_style == 'style-5' %}
+              {{ header_top }}
             {% endif %}
-            {% if logo_position == 'left' or menu_type == 'drawer' %}
-              {{ header_logo }}
-            {%- else -%}
-              {% if header_style == 'style-4' or header_style == 'style-3' %}
+
+            <div class='xo-header__content{% if header_style == 'style-1' or header_style == 'style-2' or header_style == 'style-5' %}{% if logo_position == 'center' or menu_type == 'drawer' %} xo-header__content--reverse{% endif %}{% endif %}{% if header_style == 'style-5' %} xo-header__content--modifier{% endif %}'>
+              {% if header_style == 'style-4' %}
+                <div class='xo-header__box-first{% if settings.enable_border_radius %} xo-header__box-first--radius{% endif %}'>
+              {% endif %}
+              {% if logo_position == 'left' or menu_type == 'drawer' %}
                 {{ header_logo }}
               {%- else -%}
-                {{ header_menu }}
-              {% endif %}
-            {% endif %}
-            {% if header_style == 'style-3' or header_style == 'style-4' or menu_type == 'drawer' %}
-              <div
-                class='xo-header__box-sedcond {% if settings.enable_border_radius %}xo-header__box-second--radius xo-header__box-second--{{ header_style }}-radius{% endif %} {% if header_style %}xo-header__box-second--{{ header_style }}{% endif %}'
-              >
-            {% endif %}
-            {% if logo_position == 'left' or menu_type == 'drawer' %}
-              {{ header_menu }}
-            {%- else -%}
-              {% if header_style == 'style-4' or header_style == 'style-3' %}
-                {{ header_menu }}
-              {%- else -%}
-                {{ header_logo }}
-              {% endif %}
-            {% endif %}
-
-            <div class='xo-header__right{% if header_style == 'style-1' or header_style == 'style-2' or header_style == 'style-5' %}{% if logo_position == 'center' and menu_type != "drawer" %} xo-header__right--width{% endif %}{% endif %}{% if header_style == 'style-5' %} xo-header__right--modifier{% endif %}'>
-              {% if header_style != 'style-5' %}
-                {% if show_currency_selector == 'show' %}
-                  <div class='xo-header__right-item xo-header__right-item--language' tabindex='0'>
-                    {% render 'language-select', selector_position: 'header' %}
-                  </div>
-                {% endif %}
-                {% if show_language_selector == 'show' %}
-                  <div class='xo-header__right-item xo-header__right-item--currency' tabindex='0'>
-                    {% render 'currency-select', selector_position: 'header' %}
-                  </div>
+                {% if header_style == 'style-4' or header_style == 'style-3' %}
+                  {{ header_logo }}
+                {%- else -%}
+                  {{ header_menu }}
                 {% endif %}
               {% endif %}
-
-              <xo-tooltip
-                xo-title='{{ 'general.tooltip.search' | t }}'
-                xo-placement='bottom-center'
-                class='tooltip{% if settings.enable_border_radius %} tooltip--radius{% endif %}'
-              >
-                <xo-modal-trigger
-                  class='xo-header__right-item xo-header__right-item--search'
-                  xo-name='search'
-                  tabindex='0'
-                  role='button'
-                  aria-label='search-button'
+              {% if header_style == 'style-3' or header_style == 'style-4' or menu_type == 'drawer' %}
+                <div
+                  class='xo-header__box-sedcond {% if settings.enable_border_radius %}xo-header__box-second--radius xo-header__box-second--{{ header_style }}-radius{% endif %} {% if header_style %}xo-header__box-second--{{ header_style }}{% endif %}'
                 >
-                  {% render 'icon', name: 'search', size: '1.6rem' %}
-                </xo-modal-trigger>
-              </xo-tooltip>
+              {% endif %}
+              {% if logo_position == 'left' or menu_type == 'drawer' %}
+                {{ header_menu }}
+              {%- else -%}
+                {% if header_style == 'style-4' or header_style == 'style-3' %}
+                  {{ header_menu }}
+                {%- else -%}
+                  {{ header_logo }}
+                {% endif %}
+              {% endif %}
 
-              {%- if shop.customer_accounts_enabled -%}
+              <div class='xo-header__right{% if header_style == 'style-1' or header_style == 'style-2' or header_style == 'style-5' %}{% if logo_position == 'center' and menu_type != "drawer" %} xo-header__right--width{% endif %}{% endif %}{% if header_style == 'style-5' %} xo-header__right--modifier{% endif %}'>
+                {% if header_style != 'style-5' %}
+                  {% if show_currency_selector == 'show' %}
+                    <div class='xo-header__right-item xo-header__right-item--language' tabindex='0'>
+                      {% render 'language-select', selector_position: 'header' %}
+                    </div>
+                  {% endif %}
+                  {% if show_language_selector == 'show' %}
+                    <div class='xo-header__right-item xo-header__right-item--currency' tabindex='0'>
+                      {% render 'currency-select', selector_position: 'header' %}
+                    </div>
+                  {% endif %}
+                {% endif %}
+
                 <xo-tooltip
-                  xo-title='{{ 'general.tooltip.sign_in' | t }}'
+                  xo-title='{{ 'general.tooltip.search' | t }}'
                   xo-placement='bottom-center'
                   class='tooltip{% if settings.enable_border_radius %} tooltip--radius{% endif %}'
                 >
-                  <a
-                    href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
-                    class='xo-header__right-item xo-header__right-item--account'
-                    aria-label='Account'
-                    title='Account'
-                  >
-                    {% if customer %}
-                      {% render 'icon', name: 'user', size: '1.6rem' %}
-                    {% else %}
-                      {% render 'icon', name: 'user', size: '1.6rem' %}
-                    {% endif %}
-                  </a>
-                </xo-tooltip>
-              {%- endif -%}
-
-              <xo-tooltip
-                xo-title='{{ 'general.tooltip.cart' | t }}'
-                xo-placement='bottom-center'
-                class='tooltip{% if settings.enable_border_radius %} tooltip--radius{% endif %}'
-              >
-                {% if settings.cart_type == 'page' or settings.cart_type == 'notification' %}
-                  <a
-                    class='xo-header__right-item xo-header__right-item--cart'
-                    href='{{ routes.cart_url }}'
-                    aria-label='Cart'
-                  >
-                    {% render 'icon', name: 'cart', size: '1.6rem' %}
-                    <div>
-                      <xo-cart-size class='xo-header__right-number'>{{ cart.item_count }}</xo-cart-size>
-                    </div>
-                  </a>
-                {% else %}
                   <xo-modal-trigger
-                    class='xo-header__right-item xo-header__right-item--cart'
-                    xo-name='cart'
+                    class='xo-header__right-item xo-header__right-item--search'
+                    xo-name='search'
                     tabindex='0'
                     role='button'
-                    aria-label='cart-button'
+                    aria-label='search-button'
                   >
-                    {% render 'icon', name: 'cart', size: '1.6rem' %}
-                    <div>
-                      <xo-cart-size class='xo-header__right-number'>{{ cart.item_count }}</xo-cart-size>
-                    </div>
+                    {% render 'icon', name: 'search', size: '1.6rem' %}
                   </xo-modal-trigger>
-                {% endif %}
-              </xo-tooltip>
-            </div>
+                </xo-tooltip>
 
-            {% if header_style == 'style-3' or header_style == 'style-4' or menu_type == 'drawer' %}
+                {%- if shop.customer_accounts_enabled -%}
+                  <xo-tooltip
+                    xo-title='{{ 'general.tooltip.sign_in' | t }}'
+                    xo-placement='bottom-center'
+                    class='tooltip{% if settings.enable_border_radius %} tooltip--radius{% endif %}'
+                  >
+                    <a
+                      href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
+                      class='xo-header__right-item xo-header__right-item--account'
+                      aria-label='Account'
+                      title='Account'
+                    >
+                      {% if customer %}
+                        {% render 'icon', name: 'user', size: '1.6rem' %}
+                      {% else %}
+                        {% render 'icon', name: 'user', size: '1.6rem' %}
+                      {% endif %}
+                    </a>
+                  </xo-tooltip>
+                {%- endif -%}
+
+                <xo-tooltip
+                  xo-title='{{ 'general.tooltip.cart' | t }}'
+                  xo-placement='bottom-center'
+                  class='tooltip{% if settings.enable_border_radius %} tooltip--radius{% endif %}'
+                >
+                  {% if settings.cart_type == 'page' or settings.cart_type == 'notification' %}
+                    <a
+                      class='xo-header__right-item xo-header__right-item--cart'
+                      href='{{ routes.cart_url }}'
+                      aria-label='Cart'
+                    >
+                      {% render 'icon', name: 'cart', size: '1.6rem' %}
+                      <div>
+                        <xo-cart-size class='xo-header__right-number'>{{ cart.item_count }}</xo-cart-size>
+                      </div>
+                    </a>
+                  {% else %}
+                    <xo-modal-trigger
+                      class='xo-header__right-item xo-header__right-item--cart'
+                      xo-name='cart'
+                      tabindex='0'
+                      role='button'
+                      aria-label='cart-button'
+                    >
+                      {% render 'icon', name: 'cart', size: '1.6rem' %}
+                      <div>
+                        <xo-cart-size class='xo-header__right-number'>{{ cart.item_count }}</xo-cart-size>
+                      </div>
+                    </xo-modal-trigger>
+                  {% endif %}
+                </xo-tooltip>
               </div>
-            {% endif %}
-            {% if header_style == 'style-4' %}
-              </div>
-            {% endif %}
-          </div>
+
+              {% if header_style == 'style-3' or header_style == 'style-4' or menu_type == 'drawer' %}
+                </div>
+              {% endif %}
+              {% if header_style == 'style-4' %}
+                </div>
+              {% endif %}
+            </div>
+          </xo-container>
         </div>
       </xo-animate>
     </xo-sticky>

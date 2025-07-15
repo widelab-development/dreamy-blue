@@ -113,6 +113,10 @@
   .xo-header__container {
     padding: 0 2.2rem;
   }
+
+  .xo-header__container xo-container{
+    padding: 0;
+  }
 }
 
 .xo-header__content {
