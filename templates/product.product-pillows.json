@@ -96,7 +96,7 @@
       "settings": {
         "product_media_style": "style-1",
         "enable_sticky_cart": false,
-        "subtitle": "Our original pillow, with adjustable fill.",
+        "subtitle": "{{ product.metafields.custom.product_subtitle.value }}",
         "show_custom_reviews": true,
         "rating_average": "5.0",
         "rating_count": "18,425",
