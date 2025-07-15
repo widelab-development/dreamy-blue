@@ -86,14 +86,14 @@
     if (typeof Splide !== 'undefined' && window.splide && window.splide.Extensions) {
       new Splide('#SplideTop-{{ section.id }}', {
         type        : 'loop',
-        drag        : 'free',
+        drag        : false,
         focus       : 'center',
         perPage     : 6,
         arrows      : false,
         pagination  : false,
         autoScroll: {
           speed       : -1,
-          pauseOnHover: true,
+          pauseOnHover: false,
         },
         breakpoints: {
           1200: { perPage: 4 },
@@ -103,14 +103,14 @@
 
       new Splide('#SplideBottom-{{ section.id }}', {
         type        : 'loop',
-        drag        : 'free',
+        drag        : false,
         focus       : 'center',
         perPage     : 6,
         arrows      : false,
         pagination  : false,
         autoScroll: {
           speed       : 1,
-          pauseOnHover: true,
+          pauseOnHover: false,
         },
         breakpoints: {
           1200: { perPage: 4 },
