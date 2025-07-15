@@ -98,19 +98,19 @@
         "review_njQapi": {
           "type": "review",
           "settings": {
-            "image": "shopify://shop_images/Frame_115_1.png",
+            "image": "shopify://shop_images/Frame_115_1_cc244744-57d5-490e-b1b8-94b6e2448cbf.png",
             "rating": 5,
-            "quote": "<p>“I bought this pillow for myself but my cat who is also a side sleeper approves.”</p>",
-            "author_name": "Cathy",
+            "quote": "<p>“Soooo soft and luxurious!! Amazing sleep”</p>",
+            "author_name": "Oteka",
             "show_verified_badge": true
           }
         },
         "review_M3xyc7": {
           "type": "review",
           "settings": {
-            "image": "shopify://shop_images/Frame_15619.png",
+            "image": "shopify://shop_images/Frame_115.png",
             "rating": 5,
-            "quote": "<p>I recently bought three pillows one after another… and this is definitely the best. [T]hree months and it still the perfect pillow.</p>",
+            "quote": "<p>“I’ve tried nearly every high-end memory foam pillow on the market, but this one is different. I had been waking up with back pain for weeks, and the very first night I used this pillow, it stopped.”</p>",
             "author_name": "Bryan",
             "show_verified_badge": true
           }
@@ -118,20 +118,10 @@
         "review_gpa9bn": {
           "type": "review",
           "settings": {
-            "image": "shopify://shop_images/Frame_15621_1.png",
+            "image": "shopify://shop_images/Frame_115_2.png",
             "rating": 5,
-            "quote": "<p>This is the best pillow I have ever used. Highly The quality of this pillow is out of this world. [When] you buy this pillow (which I highly suggest) make sure to get a few. to everyone!</p>",
-            "author_name": "A. C.",
-            "show_verified_badge": true
-          }
-        },
-        "review_Mh7C3b": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/Frame_15619_1.png",
-            "rating": 5,
-            "quote": "<p>My husband refers to me as “Princess and the pea”! I bought 4 DreamyBlue pillows…..I  recommend it 100%. Thank you DreamyBlue</p>",
-            "author_name": "Gail",
+            "quote": "<p>The quality of this pillow is out of this world. [When] you buy this pillow (which I highly suggest) make sure to get a few.</p>",
+            "author_name": "Ashley",
             "show_verified_badge": true
           }
         }
@@ -139,12 +129,11 @@
       "block_order": [
         "review_njQapi",
         "review_M3xyc7",
-        "review_gpa9bn",
-        "review_Mh7C3b"
+        "review_gpa9bn"
       ],
       "name": "Custom Product Reviews",
       "settings": {
-        "heading": "Signature Pillow Reviews",
+        "heading": "Sapphire Pillow Reviews",
         "container_bg_color": "#f2eee8",
         "card_bg_color": "#ffffff"
       }
@@ -185,11 +174,11 @@
       "name": "Sticky Two Column Layout",
       "settings": {
         "eyebrow": "Revolutionary Fill",
-        "heading": "Moves like goose down. Molds like memory foam.",
+        "heading": "Support. Motion. Cooling. All in a single next-gen fill.",
         "heading_tag": "h2",
-        "title_color": "#6cb1ea",
+        "title_color": "#c49bc9",
         "heading_width": "494",
-        "description": "Problem: Feather and down provide motion, but don’t hug your body. Memory foam does the opposite. Solution: We reinvented the fill.",
+        "description": "This custom blend combines shredded memory foam, embedded cooling gel beads, and fluffy poly tufts. Yes, our insides are outstanding.",
         "description_width": "435"
       }
     },
