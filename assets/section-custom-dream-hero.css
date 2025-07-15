@@ -4,6 +4,7 @@
 .custom-dream-hero {
   background-color: var(--bg-color);
   color: var(--desc-color);
+  overflow: hidden;
 }
 .custom-dream-hero__wrapper {
   display: flex;
@@ -134,5 +135,14 @@
   display: block;
   object-fit: cover;
   object-position: center;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  animation: reveal-image-diagonal 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes reveal-image-diagonal {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 /*# sourceMappingURL=section-custom-dream-hero.css.map */
