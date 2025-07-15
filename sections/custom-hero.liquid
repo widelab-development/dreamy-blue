@@ -8,9 +8,18 @@
   assign button1_link = section.settings.button1_link
   assign button2_text = section.settings.button2_text
   assign button2_link = section.settings.button2_link
+
+  assign background_video = section.settings.background_video
   assign background_image_desktop = section.settings.background_image_desktop | image_url: width: 2000
   assign background_image_mobile = section.settings.background_image_mobile | image_url: width: 1000
   assign section_bg_color = section.settings.section_bg_color
+
+  assign show_top_bar = section.settings.show_top_bar
+  assign amazon_logo = section.settings.amazon_logo
+  assign rating_value = section.settings.rating_value
+  assign rating_count = section.settings.rating_count
+  assign happy_sleepers_icon = section.settings.happy_sleepers_icon
+  assign happy_sleepers_text = section.settings.happy_sleepers_text
 -%}
 
 <section
@@ -19,10 +28,46 @@
   style="--section-bg-color: {{ section_bg_color }};"
 >
   <xo-container>
+    {%- if show_top_bar -%}
+      <div class="custom-hero-top-bar">
+        <div class="custom-hero-top-bar__left">
+          {%- if amazon_logo != blank -%}
+            {{ amazon_logo | image_url: width: 150 | image_tag: class: 'custom-hero-top-bar__amazon-logo', widths: '100, 150', sizes: '100px' }}
+          {%- endif -%}
+          {%- if rating_value != blank -%}
+            <span class="custom-hero-top-bar__rating-value">{{ rating_value }}</span>
+          {%- endif -%}
+          <div class="custom-hero-top-bar__stars">
+            {%- for i in (1..5) -%}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
+            {%- endfor -%}
+          </div>
+          {%- if rating_count != blank -%}
+            <span class="custom-hero-top-bar__rating-count">{{ rating_count }}</span>
+          {%- endif -%}
+        </div>
+        <div class="custom-hero-top-bar__right">
+          {%- if happy_sleepers_icon != blank -%}
+             {{ happy_sleepers_icon | image_url: width: 50 | image_tag: class: 'custom-hero-top-bar__happy-icon', widths: '30, 50', sizes: '30px' }}
+          {%- endif -%}
+          {%- if happy_sleepers_text != blank -%}
+            <span class="custom-hero-top-bar__happy-text">{{ happy_sleepers_text }}</span>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
     <div
       class="custom-hero-banner"
-      style="--bg-desktop: url('{{ background_image_desktop }}'); --bg-mobile: url('{{ background_image_mobile }}');"
+      {% if background_video == blank %}
+        style="--bg-desktop: url('{{ background_image_desktop }}'); --bg-mobile: url('{{ background_image_mobile }}');"
+      {% endif %}
     >
+      {%- if background_video != blank -%}
+        <div class="custom-hero-banner__video-wrapper">
+          {{- background_video | video_tag: autoplay: true, loop: true, muted: true, controls: false, preload: "auto" -}}
+        </div>
+      {%- endif -%}
       <div class="custom-hero-banner__content-box">
         {% if heading != blank %}
           <h2 class="custom-hero-banner__heading">{{ heading }}</h2>
@@ -71,6 +116,10 @@
       "default": "#fdfaf7"
     },
     {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
       "type": "textarea",
       "id": "heading",
       "label": "Heading",
@@ -113,14 +162,64 @@
       "default": "/collections/all"
     },
     {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "video",
+      "id": "background_video",
+      "label": "Background video",
+      "info": "If a video is selected, it will replace the background images. Upload from Settings > Files."
+    },
+    {
       "type": "image_picker",
       "id": "background_image_desktop",
-      "label": "Background image (desktop)"
+      "label": "Background image (desktop)",
+      "info": "Used if no video is selected."
     },
     {
       "type": "image_picker",
       "id": "background_image_mobile",
-      "label": "Background image (mobile)"
+      "label": "Background image (mobile)",
+      "info": "Used if no video is selected."
+    },
+    {
+        "type": "header",
+        "content": "Top Bar Settings"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_top_bar",
+        "label": "Show Top Bar",
+        "default": true
+    },
+    {
+        "type": "image_picker",
+        "id": "amazon_logo",
+        "label": "Amazon Logo"
+    },
+    {
+        "type": "text",
+        "id": "rating_value",
+        "label": "Rating Value",
+        "default": "4.5"
+    },
+    {
+        "type": "text",
+        "id": "rating_count",
+        "label": "Rating Count",
+        "default": "18,425 ratings"
+    },
+    {
+        "type": "image_picker",
+        "id": "happy_sleepers_icon",
+        "label": "Happy Sleepers Icon"
+    },
+    {
+        "type": "text",
+        "id": "happy_sleepers_text",
+        "label": "Happy Sleepers Text",
+        "default": "Thousands of happy sleepers"
     }
   ],
   "presets": [

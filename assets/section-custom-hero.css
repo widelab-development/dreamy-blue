@@ -3,15 +3,87 @@
 /*MIXINS*/
 .custom-hero-banner-section {
   background-color: var(--section-bg-color);
-  padding: 4rem 0 0 0;
+  padding: 0;
 }
 @media (max-width: 992px) {
-  .custom-hero-banner-section {
-    padding: 0;
-  }
   .custom-hero-banner-section xo-container {
     padding: 0;
   }
+}
+
+.custom-hero-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3.6rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.4rem;
+  background-color: var(--color-neutral-cream-110);
+}
+@media (max-width: 992px) {
+  .custom-hero-top-bar {
+    gap: 0.8rem;
+    margin-bottom: 0;
+    padding: 1rem 2.8rem;
+    justify-content: center;
+  }
+}
+.custom-hero-top-bar__left, .custom-hero-top-bar__right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+@media (max-width: 992px) {
+  .custom-hero-top-bar__right {
+    display: none;
+  }
+}
+.custom-hero-top-bar__amazon-logo {
+  height: 3.2rem;
+  width: 8.7rem;
+}
+@media (max-width: 992px) {
+  .custom-hero-top-bar__amazon-logo {
+    height: 2.5rem;
+    width: 6.9rem;
+  }
+}
+.custom-hero-top-bar__rating-value {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+@media (max-width: 992px) {
+  .custom-hero-top-bar__rating-value {
+    font-size: 1.44rem !important;
+  }
+}
+.custom-hero-top-bar__stars {
+  display: flex;
+  color: #FF9900;
+}
+.custom-hero-top-bar__rating-count {
+  font-size: 1.8rem;
+  color: #6583CB;
+  line-height: 1.6;
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  .custom-hero-top-bar__rating-count {
+    font-size: 1.4rem !important;
+  }
+}
+.custom-hero-top-bar__happy-icon {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+.custom-hero-top-bar__happy-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-black);
 }
 
 .custom-hero-banner {
@@ -31,6 +103,29 @@
     justify-content: center;
     background-image: var(--bg-mobile) !important;
   }
+  .custom-hero-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+}
+.custom-hero-banner__video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.custom-hero-banner__video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .custom-hero-banner__content-box {
   position: relative;
@@ -42,7 +137,8 @@
 }
 @media (max-width: 992px) {
   .custom-hero-banner__content-box {
-    background: none;
+    background: transparent;
+    border-radius: 0.8rem;
     margin: 3.2rem 0.8rem;
     padding: 3.2rem 1.6rem;
     max-width: 100%;
