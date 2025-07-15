@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 {{ 'section-custom-dream-gallery.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
@@ -81,32 +82,42 @@
 </section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new Splide('#SplideTop-{{ section.id }}', {
-      type: 'loop',
-      perPage: 6,
-      gap: '24px',
-      pagination: false,
-      arrows: false,
-      drag: true,
-      breakpoints: {
-        1200: { perPage: 4 },
-        768: { perPage: 2.5, gap: '12px' }
-      }
-    }).mount();
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof Splide !== 'undefined' && window.splide && window.splide.Extensions) {
+      new Splide('#SplideTop-{{ section.id }}', {
+        type        : 'loop',
+        drag        : 'free',
+        focus       : 'center',
+        perPage     : 6,
+        arrows      : false,
+        pagination  : false,
+        autoScroll: {
+          speed       : -1,
+          pauseOnHover: true,
+        },
+        breakpoints: {
+          1200: { perPage: 4 },
+          768 : { perPage: 2.5, gap: '12px' },
+        },
+      }).mount(window.splide.Extensions);
 
-    new Splide('#SplideBottom-{{ section.id }}', {
-      type: 'loop',
-      perPage: 6,
-      gap: '24px',
-      pagination: false,
-      arrows: false,
-      drag: true,
-      breakpoints: {
-        1200: { perPage: 4 },
-        768: { perPage: 2.5, gap: '12px' }
-      }
-    }).mount();
+      new Splide('#SplideBottom-{{ section.id }}', {
+        type        : 'loop',
+        drag        : 'free',
+        focus       : 'center',
+        perPage     : 6,
+        arrows      : false,
+        pagination  : false,
+        autoScroll: {
+          speed       : 1,
+          pauseOnHover: true,
+        },
+        breakpoints: {
+          1200: { perPage: 4 },
+          768 : { perPage: 2.5, gap: '12px' },
+        },
+      }).mount(window.splide.Extensions);
+    }
   });
 </script>
 
