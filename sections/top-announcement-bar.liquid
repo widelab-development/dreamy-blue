@@ -1,0 +1,123 @@
+{{ 'section-top-announcement-bar.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign bg_color = section.settings.background_color
+
+  assign show_left = section.settings.show_left
+  assign left_text = section.settings.left_text
+  assign left_link = section.settings.left_link
+
+  assign show_center = section.settings.show_center
+  assign center_text = section.settings.center_text
+  assign center_link = section.settings.center_link
+
+  assign show_right = section.settings.show_right
+  assign right_text = section.settings.right_text
+  assign right_link = section.settings.right_link
+-%}
+
+<section class="top-announcement-bar" style="--bar-bg-color: {{ bg_color }};">
+  <div class="top-announcement-bar__container">
+    <div class="top-announcement-bar__content">
+      {%- if show_left and left_text != blank -%}
+        <div class="top-announcement-bar__item top-announcement-bar__item--left">
+          <a href="{{ left_link | default: '#' }}" class="top-announcement-bar__link">{{ left_text }}</a>
+        </div>
+      {%- endif -%}
+
+      {%- if show_center and center_text != blank -%}
+        <div class="top-announcement-bar__item top-announcement-bar__item--center">
+          <a href="{{ center_link | default: '#' }}" class="top-announcement-bar__link">{{ center_text }}</a>
+        </div>
+      {%- endif -%}
+
+      {%- if show_right and right_text != blank -%}
+        <div class="top-announcement-bar__item top-announcement-bar__item--right">
+          <a href="{{ right_link | default: '#' }}" class="top-announcement-bar__link">{{ right_text }}</a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Top Announcement Bar",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#B67BBA"
+    },
+    {
+      "type": "header",
+      "content": "Left Column"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_left",
+        "label": "Show Left Column",
+        "default": true
+    },
+    {
+      "type": "text",
+      "id": "left_text",
+      "label": "Text",
+      "default": "Get $50 off! Click here"
+    },
+    {
+      "type": "url",
+      "id": "left_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Center Column"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_center",
+        "label": "Show Center Column",
+        "default": true
+    },
+    {
+      "type": "text",
+      "id": "center_text",
+      "label": "Text",
+      "default": "NEW Blue Moon Pillow Now Shipping"
+    },
+    {
+      "type": "url",
+      "id": "center_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Right Column"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_right",
+        "label": "Show Right Column",
+        "default": true
+    },
+    {
+      "type": "text",
+      "id": "right_text",
+      "label": "Text",
+      "default": "Shipping & Returns"
+    },
+    {
+      "type": "url",
+      "id": "right_link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Top Announcement Bar"
+    }
+  ]
+}
+{% endschema %}
