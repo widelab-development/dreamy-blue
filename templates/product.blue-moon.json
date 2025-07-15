@@ -54,6 +54,9 @@
         "quantity_option_3ByVVJ",
         "feature_item_i4F7DE"
       ],
+      "custom_css": [
+        ".main-product{padding-bottom:72px;}"
+      ],
       "settings": {
         "product_media_style": "style-1",
         "enable_sticky_cart": false,
