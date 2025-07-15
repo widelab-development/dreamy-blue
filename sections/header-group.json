@@ -83,7 +83,7 @@
           "type": "product-item",
           "settings": {
             "product": "the-signature",
-            "custom_image": "shopify://shop_images/Frame_18.png",
+            "custom_image": "shopify://shop_images/the-signature.png",
             "color_scheme_box": "scheme_1"
           }
         },
@@ -91,7 +91,7 @@
           "type": "product-item",
           "settings": {
             "product": "the-sapphire",
-            "custom_image": "shopify://shop_images/Frame_19_1.png",
+            "custom_image": "shopify://shop_images/Frame_19_b752f0af-08b2-447c-a25e-61aeb8374828.png",
             "color_scheme_box": "scheme_1"
           }
         },
@@ -99,7 +99,7 @@
           "type": "product-item",
           "settings": {
             "product": "the-blue-moon",
-            "custom_image": "shopify://shop_images/Frame_20.png",
+            "custom_image": "shopify://shop_images/Frame_20_0e2cf5e5-1d8d-43ac-9824-b255a772e050.png",
             "color_scheme_box": "scheme_1"
           }
         },
@@ -107,7 +107,7 @@
           "type": "product-item",
           "settings": {
             "product": "the-cool-stuff",
-            "custom_image": "shopify://shop_images/Frame_21.png",
+            "custom_image": "shopify://shop_images/Frame_21_bee2d3b7-1098-4f7c-ab1d-9b0eb26b5330.png",
             "color_scheme_box": "scheme_1"
           }
         }
