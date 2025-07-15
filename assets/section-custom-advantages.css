@@ -12,25 +12,29 @@
     padding: 4rem 0 0;
   }
 }
-.custom-advantages__fluff-overlay {
+.custom-advantages__fluff-overlay-left, .custom-advantages__fluff-overlay-right {
   position: absolute;
   top: -18rem;
-  left: 0;
-  width: 100%;
+  width: 50%;
   height: auto;
   pointer-events: none;
   z-index: 1;
-  will-change: transform;
 }
 @media (max-width: 992px) {
-  .custom-advantages__fluff-overlay {
+  .custom-advantages__fluff-overlay-left, .custom-advantages__fluff-overlay-right {
     top: -1.6rem;
   }
 }
-.custom-advantages__fluff-overlay img {
+.custom-advantages__fluff-overlay-left img, .custom-advantages__fluff-overlay-right img {
   width: 100%;
   height: auto;
   display: block;
+}
+.custom-advantages__fluff-overlay-left {
+  left: 0;
+}
+.custom-advantages__fluff-overlay-right {
+  right: 0;
 }
 .custom-advantages__content-container {
   position: relative;
