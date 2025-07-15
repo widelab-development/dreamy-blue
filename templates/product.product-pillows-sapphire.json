@@ -144,23 +144,23 @@
         "feature_DB9iQy": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/Frame_117_b665fef4-d569-455d-bf52-77c1afb87387.webp",
-            "title": "Memory meets motion.",
-            "text": "Shredded memory foam and down-like poly tufts combine both support and cradling."
+            "image": "shopify://shop_images/Frame_117_1.webp",
+            "title": "Sleep it cool.",
+            "text": "Little blue cooling nodes on our memory foam cubes help control temps and airflow."
           }
         },
         "feature_n6zTY6": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/Frame_118_1_03eacbd2-983b-4890-b50a-25c6b4976dab.webp",
-            "title": "Adjust to your body’s liking.",
-            "text": "Easy-access zipper and bonus fill encourage you to find the loft you love."
+            "image": "shopify://shop_images/Frame_118_2.webp",
+            "title": "Beads, but not sweat.",
+            "text": "A side benefit of the gusseted seam: reduced clamminess from skin-on-skin contact."
           }
         },
         "feature_WREUwc": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/Frame_118_6dd2ffca-03b4-4c74-beb3-633427947785.webp",
+            "image": "shopify://shop_images/Frame_118_3.webp",
             "title": "Rest and breathe easy.",
             "text": "Fill is CertiPUR-US Certified, made to order, and free of latex, down, or other worries."
           }
@@ -175,7 +175,7 @@
       "settings": {
         "eyebrow": "Revolutionary Fill",
         "heading": "Support. Motion. Cooling. All in a single next-gen fill.",
-        "heading_tag": "h2",
+        "heading_tag": "h1",
         "title_color": "#c49bc9",
         "heading_width": "494",
         "description": "This custom blend combines shredded memory foam, embedded cooling gel beads, and fluffy poly tufts. Yes, our insides are outstanding.",
