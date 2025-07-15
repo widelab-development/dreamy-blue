@@ -41,9 +41,10 @@
         },
         "feature_item_i4F7DE": {
           "type": "feature_item",
+          "repeater": "{{ product.metafields.custom.product_features.value }}",
           "settings": {
-            "icon": "shopify://shop_images/Group_16.svg",
-            "text": "Our standard design for all sleepers"
+            "icon": "{{ block.repeater.icon.value }}",
+            "text": "{{ block.repeater.text.value }}"
           }
         },
         "feature_item_yMpjw6": {
