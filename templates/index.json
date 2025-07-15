@@ -21,8 +21,15 @@
         "button1_link": "/collections/all",
         "button2_text": "Find Your Fit",
         "button2_link": "/tools/perfect-product-finder/sleep-position?instore=true",
+        "background_video": "shopify://files/videos/Website Video 02 (1).mp4",
         "background_image_desktop": "shopify://shop_images/Hero_Image_copy-gigapixel2-standard_v2-2x-gigapixel2-standard_v2-2x_1.png",
-        "background_image_mobile": "shopify://shop_images/Frame_14.png"
+        "background_image_mobile": "shopify://shop_images/Frame_14.png",
+        "show_top_bar": true,
+        "amazon_logo": "shopify://shop_images/Frame_30.svg",
+        "rating_value": "4.5",
+        "rating_count": "18,425 ratings",
+        "happy_sleepers_icon": "shopify://shop_images/Layer_1_5.svg",
+        "happy_sleepers_text": "Thousands of happy sleepers"
       }
     },
     "custom_featured_products_baHCh7": {
