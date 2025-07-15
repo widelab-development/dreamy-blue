@@ -1,0 +1,488 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "quantity_option_EmwHCH": {
+          "type": "quantity_option",
+          "settings": {
+            "quantity": 1,
+            "label": "Buy 1 Pillow",
+            "discount_text": "",
+            "discount_percentage": 0
+          }
+        },
+        "quantity_option_kgQYfT": {
+          "type": "quantity_option",
+          "settings": {
+            "quantity": 1,
+            "label": "Buy 2 Pillows,",
+            "discount_text": "Save 10%",
+            "discount_percentage": 10
+          }
+        },
+        "quantity_option_3ByVVJ": {
+          "type": "quantity_option",
+          "settings": {
+            "quantity": 3,
+            "label": "Buy 3 Pillows,",
+            "discount_text": "Save 20%",
+            "discount_percentage": 20
+          }
+        },
+        "feature_item_i4F7DE": {
+          "type": "feature_item",
+          "repeater": "{{ product.metafields.custom.product_features.value }}",
+          "settings": {
+            "icon": "{{ block.repeater.icon.value }}",
+            "text": "{{ block.repeater.text.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "quantity_option_EmwHCH",
+        "quantity_option_kgQYfT",
+        "quantity_option_3ByVVJ",
+        "feature_item_i4F7DE"
+      ],
+      "settings": {
+        "product_media_style": "style-1",
+        "enable_sticky_cart": false,
+        "subtitle": "{{ product.metafields.custom.product_subtitle.value }}",
+        "show_custom_reviews": true,
+        "rating_average": "5.0",
+        "rating_count": "18,425",
+        "guarantee1_icon": "shopify://shop_images/Group_17.svg",
+        "guarantee1_text": "Free Nationwide Shipping",
+        "guarantee2_icon": "shopify://shop_images/Group_18_1.svg",
+        "guarantee2_text": "30-Day Money-Back Guarantee"
+      }
+    },
+    "main_product_recommendations_TnWBYD": {
+      "type": "main-product-recommendations",
+      "disabled": true,
+      "settings": {
+        "font_size_heading": "h5",
+        "heading": "May you also like",
+        "button_text": "Shop all",
+        "button_link": "shopify://collections/all",
+        "button_style": "secondary",
+        "button_size": "xs",
+        "product_per_view": 4,
+        "autoplay": "off",
+        "product_per_move": 1,
+        "autoplay_time": 3000,
+        "product_card_aspect_ratio": "1",
+        "card_color_scheme": "inverse",
+        "color_scheme": "background-1",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top_desktop": 50,
+        "padding_bottom_desktop": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom_mobile": 50
+      }
+    },
+    "custom_product_reviews_FNMtcH": {
+      "type": "custom-product-reviews",
+      "blocks": {
+        "review_njQapi": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_115_1.png",
+            "rating": 5,
+            "quote": "<p>“I bought this pillow for myself but my cat who is also a side sleeper approves.”</p>",
+            "author_name": "Cathy",
+            "show_verified_badge": true
+          }
+        },
+        "review_M3xyc7": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619.png",
+            "rating": 5,
+            "quote": "<p>I recently bought three pillows one after another… and this is definitely the best. [T]hree months and it still the perfect pillow.</p>",
+            "author_name": "Bryan",
+            "show_verified_badge": true
+          }
+        },
+        "review_gpa9bn": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15621_1.png",
+            "rating": 5,
+            "quote": "<p>This is the best pillow I have ever used. Highly The quality of this pillow is out of this world. [When] you buy this pillow (which I highly suggest) make sure to get a few. to everyone!</p>",
+            "author_name": "A. C.",
+            "show_verified_badge": true
+          }
+        },
+        "review_Mh7C3b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_15619_1.png",
+            "rating": 5,
+            "quote": "<p>My husband refers to me as “Princess and the pea”! I bought 4 DreamyBlue pillows…..I  recommend it 100%. Thank you DreamyBlue</p>",
+            "author_name": "Gail",
+            "show_verified_badge": true
+          }
+        }
+      },
+      "block_order": [
+        "review_njQapi",
+        "review_M3xyc7",
+        "review_gpa9bn",
+        "review_Mh7C3b"
+      ],
+      "name": "Custom Product Reviews",
+      "settings": {
+        "heading": "Signature Pillow Reviews",
+        "container_bg_color": "#f2eee8",
+        "card_bg_color": "#ffffff"
+      }
+    },
+    "custom_sticky_two_col_bR3hrC": {
+      "type": "custom-sticky-two-col",
+      "blocks": {
+        "feature_DB9iQy": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Frame_117_b665fef4-d569-455d-bf52-77c1afb87387.webp",
+            "title": "Memory meets motion.",
+            "text": "Shredded memory foam and down-like poly tufts combine both support and cradling."
+          }
+        },
+        "feature_n6zTY6": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Frame_118_1_03eacbd2-983b-4890-b50a-25c6b4976dab.webp",
+            "title": "Adjust to your body’s liking.",
+            "text": "Easy-access zipper and bonus fill encourage you to find the loft you love."
+          }
+        },
+        "feature_WREUwc": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Frame_118_6dd2ffca-03b4-4c74-beb3-633427947785.webp",
+            "title": "Rest and breathe easy.",
+            "text": "Fill is CertiPUR-US Certified, made to order, and free of latex, down, or other worries."
+          }
+        }
+      },
+      "block_order": [
+        "feature_DB9iQy",
+        "feature_n6zTY6",
+        "feature_WREUwc"
+      ],
+      "name": "Sticky Two Column Layout",
+      "settings": {
+        "eyebrow": "Revolutionary Fill",
+        "heading": "Moves like goose down. Molds like memory foam.",
+        "heading_tag": "h2",
+        "title_color": "#6cb1ea",
+        "heading_width": "494",
+        "description": "Problem: Feather and down provide motion, but don’t hug your body. Memory foam does the opposite. Solution: We reinvented the fill.",
+        "description_width": "435"
+      }
+    },
+    "custom_product_type_4E9XLT": {
+      "type": "custom-product-type",
+      "blocks": {
+        "sleeper_type_kbx6pW": {
+          "type": "sleeper_type",
+          "settings": {
+            "image": "shopify://shop_images/B0000043_1.png",
+            "card_title": "Sleep like this...",
+            "button_text": "Back",
+            "button_link": ""
+          }
+        },
+        "sleeper_type_zAnxKy": {
+          "type": "sleeper_type",
+          "settings": {
+            "image": "shopify://shop_images/B0000378_1.png",
+            "card_title": "...this...",
+            "button_text": "Stomach",
+            "button_link": ""
+          }
+        },
+        "sleeper_type_epREDY": {
+          "type": "sleeper_type",
+          "settings": {
+            "image": "shopify://shop_images/B0000360_1.png",
+            "card_title": "...or this.",
+            "button_text": "Side",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "sleeper_type_kbx6pW",
+        "sleeper_type_zAnxKy",
+        "sleeper_type_epREDY"
+      ],
+      "name": "Custom Product Type",
+      "settings": {
+        "background_color": "#ffffff",
+        "overtitle": "Ideal Sleep Type",
+        "heading": "Personalizable for every type of sleeper.",
+        "description": "<p>Right out of the box, our Signature pillow works wonders for your natural posture and healthy alignment. Then, adjust the fill for a Goldilocks rest on your stomach, back, or side.</p>"
+      }
+    },
+    "custom_product_reviews_list_EP4cYp": {
+      "type": "custom-product-reviews-list",
+      "blocks": {
+        "review_YpTqTr": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_gEkEhg": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_eaYere": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_87gUgA": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_4WTYdH": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        },
+        "review_pazwB8": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "author_name": "Name Namison",
+            "content": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>",
+            "show_verified_badge": true
+          }
+        }
+      },
+      "block_order": [
+        "review_YpTqTr",
+        "review_gEkEhg",
+        "review_eaYere",
+        "review_87gUgA",
+        "review_4WTYdH",
+        "review_pazwB8"
+      ],
+      "name": "Custom Reviews List",
+      "settings": {
+        "section_bg_color": "#ffffff",
+        "container_bg_color": "#f8f3ec",
+        "top_line_text": "4.9 | 552 Reviews",
+        "heading": "1,314,000,000 (that’s billion) hours of reformed sleep. Every <i>year.</i>",
+        "button_text": "View more reviews",
+        "button_link": ""
+      }
+    },
+    "custom_product_award_JaQjLG": {
+      "type": "custom-product-award",
+      "name": "Custom Product Award",
+      "settings": {
+        "image": "shopify://shop_images/B0000260_1.png",
+        "content_bg_color": "#1d1c50",
+        "overtitle": "Award-Winning Pillows",
+        "quote": "“Best pillow for all sleeping positions”",
+        "logo": "shopify://shop_images/image_51.png",
+        "logo_link": ""
+      }
+    },
+    "custom_product_slider_byLtU9": {
+      "type": "custom-product-slider",
+      "blocks": {
+        "slide_qymhbK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/B0000428_2.png",
+            "title": "Zip...",
+            "description": "Open the case at the smooth-gliding zipper."
+          }
+        },
+        "slide_Ceb7xx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/B0000378_1.png",
+            "title": "Adjust…",
+            "description": "Add or remove fill. (Included Extrazzz™ bag stores excess.)"
+          }
+        },
+        "slide_DyDaEJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Frame_118.png",
+            "title": "Love!",
+            "description": "No need to shift or settle. Fall inline. Fall asleep. Fall in love."
+          }
+        }
+      },
+      "block_order": [
+        "slide_qymhbK",
+        "slide_Ceb7xx",
+        "slide_DyDaEJ"
+      ],
+      "name": "Custom Product Slider",
+      "settings": {
+        "background_color": "#1d1c50",
+        "overtitle": "How It Works"
+      }
+    },
+    "custom_product_materials_Btt7m6": {
+      "type": "custom-product-materials",
+      "blocks": {
+        "feature_cnggWC": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_2.svg",
+            "text": "Patented pillowcase design"
+          }
+        },
+        "feature_3g3kDd": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_6.svg",
+            "text": "Matrix of down-like poly tufts"
+          }
+        },
+        "feature_xDaLgY": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_3_f10efd79-e1ce-4755-83ea-b53beb0b0d8d.svg",
+            "text": "Double zipper compartments"
+          }
+        },
+        "feature_hCCYUY": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Layer_1_2.svg",
+            "text": "Extra stuffing to adjust to your liking"
+          }
+        },
+        "feature_zKYT6B": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_4.svg",
+            "text": "Machine-wash bamboo rayon"
+          }
+        },
+        "feature_c4iFUw": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Asset_2_2x_127ed1c0-813d-41cc-a0a8-1de26b83925e.png",
+            "text": "OekoTex® certified fabrics"
+          }
+        },
+        "feature_MQ3Jtx": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_5.svg",
+            "text": "Cross-cut memory foam cubes"
+          }
+        },
+        "feature_fbharP": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Asset_3_2x_87d528b4-9d66-4726-bca3-c52b7bfed121.png",
+            "text": "CertiPUR-US certified fillings"
+          }
+        }
+      },
+      "block_order": [
+        "feature_cnggWC",
+        "feature_3g3kDd",
+        "feature_xDaLgY",
+        "feature_hCCYUY",
+        "feature_zKYT6B",
+        "feature_c4iFUw",
+        "feature_MQ3Jtx",
+        "feature_fbharP"
+      ],
+      "name": "Custom Product Materials",
+      "settings": {
+        "bg_image_desktop": "shopify://shop_images/B0000102_copy_1.png",
+        "bg_image_mobile": "shopify://shop_images/B0000102_copy_1_1.png",
+        "overtitle": "Materials & Build",
+        "heading": "Made to make your night."
+      }
+    },
+    "custom_product_image_tFEHBy": {
+      "type": "custom-product-image",
+      "name": "Custom Product Image",
+      "settings": {
+        "background_color": "#8fbfef",
+        "heading": "Sleep like the dead.\nWake like the living.",
+        "image_desktop": "shopify://shop_images/Signature_Pillow_8.png",
+        "image_mobile": "shopify://shop_images/Signature_Pillow_8_1.png",
+        "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
+        "button_text": "Add The Signature to Cart",
+        "button_link": ""
+      }
+    },
+    "custom_form_Fbex8z": {
+      "type": "custom-form",
+      "name": "Custom Form",
+      "settings": {
+        "image": "shopify://shop_images/Frame_64.png",
+        "heading": "Get The Position",
+        "description": "<p>Our periodic newsletter on sleep health. <em>It's worth getting up for.</em></p>",
+        "name_placeholder": "Name",
+        "email_placeholder": "Email Address",
+        "button_text": "Get the Good Stuff!",
+        "section_background_color": "#ffffff",
+        "inner_background_color": "#f3eee8",
+        "button_background_color": "#b67bbb",
+        "button_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_recommendations_TnWBYD",
+    "custom_product_reviews_FNMtcH",
+    "custom_sticky_two_col_bR3hrC",
+    "custom_product_type_4E9XLT",
+    "custom_product_reviews_list_EP4cYp",
+    "custom_product_award_JaQjLG",
+    "custom_product_slider_byLtU9",
+    "custom_product_materials_Btt7m6",
+    "custom_product_image_tFEHBy",
+    "custom_form_Fbex8z"
+  ]
+}
