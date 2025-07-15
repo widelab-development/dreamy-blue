@@ -222,8 +222,8 @@
       "settings": {
         "background_color": "#ffffff",
         "overtitle": "Ideal Sleep Type",
-        "heading": "Personalizable for every type of sleeper.",
-        "description": "<p>Right out of the box, our Signature pillow works wonders for your natural posture and healthy alignment. Then, adjust the fill for a Goldilocks rest on your stomach, back, or side.</p>"
+        "heading": "For wide shoulders and side sleepers.",
+        "description": "<p>From night one, The Sapphire works wonders for your sleep style.<br/>Want more? Adjust the fill and tuck into the gusset for aligned sleep<br/>on your side, back, or anywhere those broad shoulders take you.</p>"
       }
     },
     "custom_product_reviews_list_EP4cYp": {
@@ -306,7 +306,7 @@
       "type": "custom-product-award",
       "name": "Custom Product Award",
       "settings": {
-        "image": "shopify://shop_images/B0000260_1.png",
+        "image": "shopify://shop_images/Frame_22_1.webp",
         "content_bg_color": "#1d1c50",
         "overtitle": "Award-Winning Pillows",
         "quote": "“Best pillow for all sleeping positions”",
@@ -320,7 +320,7 @@
         "slide_qymhbK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/B0000428_2.png",
+            "image": "shopify://shop_images/Frame_22_2.webp",
             "title": "Zip...",
             "description": "Open the case at the smooth-gliding zipper."
           }
