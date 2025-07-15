@@ -95,6 +95,7 @@
     "predictive_search_enabled": true,
     "pill": "<ul><li>Iphone</li><li>Samsung</li><li>Xiaomi</li><li>Airpod</li></ul>",
     "enable_text_suggess": true,
+    "favicon": "shopify://shop_images/Group_2147203479.svg",
     "quick_link": true,
     "logo_width": 90,
     "heading_6_scale": 100,
