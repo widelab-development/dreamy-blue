@@ -208,7 +208,10 @@
         "overtitle_top": "At Our Core:",
         "heading": "The Stuff of Dreams",
         "description": "<p>We fill each pillow with a revolutionary blend that outperforms every other fill type. It’s soft without bottoming out. It maneuvers freely yet never loses form. It’s… night and day.</p>",
-        "fluff_image": "shopify://shop_images/Frame_19.png",
+        "fluff_image_left": "shopify://shop_images/left-fluff.png",
+        "fluff_image_center": "shopify://shop_images/fluff-center-correct.png",
+        "fluff_image_right": "shopify://shop_images/right-fluff.png",
+        "fluff_image_mobile": "shopify://shop_images/Frame_1000003977.png",
         "bottom_background_color": "#b67bba",
         "bottom_text_color": "#1a1f36",
         "overtitle_bottom": "What We're Made Of"
