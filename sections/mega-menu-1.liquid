@@ -195,8 +195,8 @@
                                         <img
                                           src='{{ image_to_display | image_url: width: 400 }}'
                                           alt='{{ image_to_display.alt | default: product.title | escape }}'
-                                          width='400'
-                                          height='{{ 400 | divided_by: image_to_display.aspect_ratio | ceil }}'
+                                          width='450'
+                                          height='{{ 450 | divided_by: image_to_display.aspect_ratio | ceil }}'
                                           loading='lazy'>
                                       </div>
                                     </a>
@@ -337,8 +337,8 @@
                                     <img
                                       src='{{ image_to_display | image_url: width: 400 }}'
                                       alt='{{ image_to_display.alt | default: product.title | escape }}'
-                                      width='400'
-                                      height='{{ 400 | divided_by: image_to_display.aspect_ratio | ceil }}'
+                                      width='450'
+                                      height='{{ 450 | divided_by: image_to_display.aspect_ratio | ceil }}'
                                       loading='lazy'>
                                   </div>
                                 </a>
