@@ -199,7 +199,7 @@
         "sleeper_type_kbx6pW": {
           "type": "sleeper_type",
           "settings": {
-            "image": "shopify://shop_images/B0000043_1.png",
+            "image": "shopify://shop_images/Frame_93_4.webp",
             "card_title": "Sleep like this...",
             "button_text": "Back",
             "button_link": ""
@@ -208,7 +208,7 @@
         "sleeper_type_zAnxKy": {
           "type": "sleeper_type",
           "settings": {
-            "image": "shopify://shop_images/B0000378_1.png",
+            "image": "shopify://shop_images/Frame_95_2.webp",
             "card_title": "...this...",
             "button_text": "Stomach",
             "button_link": ""
@@ -217,7 +217,7 @@
         "sleeper_type_epREDY": {
           "type": "sleeper_type",
           "settings": {
-            "image": "shopify://shop_images/B0000360_1.png",
+            "image": "shopify://shop_images/Frame_94_1.webp",
             "card_title": "...or this.",
             "button_text": "Side",
             "button_link": ""
@@ -233,8 +233,8 @@
       "settings": {
         "background_color": "#ffffff",
         "overtitle": "Ideal Sleep Type",
-        "heading": "Personalizable for every type of sleeper.",
-        "description": "<p>Right out of the box, our Signature pillow works wonders for your natural posture and healthy alignment. Then, adjust the fill for a Goldilocks rest on your stomach, back, or side.</p>"
+        "heading": "Made for dreamers who break the mold.",
+        "description": "<p>You may be chasing better rest or recovering from stress or injury.  You might suffer from snoring, discomfort, or a stiff neck in the morning. At every age and life stage, Blue Moon supports you from every angle.</p>"
       }
     },
     "custom_product_reviews_list_EP4cYp": {
@@ -317,11 +317,11 @@
       "type": "custom-product-award",
       "name": "Custom Product Award",
       "settings": {
-        "image": "shopify://shop_images/B0000260_1.png",
+        "image": "shopify://shop_images/Frame_22_5.webp",
         "content_bg_color": "#1d1c50",
         "overtitle": "Award-Winning Pillows",
-        "quote": "“Best pillow for all sleeping positions”",
-        "logo": "shopify://shop_images/image_51.png",
+        "quote": "“Best pillow for Combo Sleepers”",
+        "logo": "shopify://shop_images/Frame_123.svg",
         "logo_link": ""
       }
     },
@@ -371,7 +371,7 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Group_2.svg",
-            "text": "Patented pillowcase design"
+            "text": "Deep-support half-moon design"
           }
         },
         "feature_3g3kDd": {
@@ -392,7 +392,7 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Layer_1_2.svg",
-            "text": "Extra stuffing to adjust to your liking"
+            "text": "Ergonomic widened neck gusset"
           }
         },
         "feature_zKYT6B": {
@@ -439,19 +439,19 @@
         "bg_image_desktop": "shopify://shop_images/B0000102_copy_1.png",
         "bg_image_mobile": "shopify://shop_images/B0000102_copy_1_1.png",
         "overtitle": "Materials & Build",
-        "heading": "Made to make your night."
+        "heading": "Made to order, \nevery night."
       }
     },
     "custom_product_image_tFEHBy": {
       "type": "custom-product-image",
       "name": "Custom Product Image",
       "settings": {
-        "background_color": "#8fbfef",
-        "heading": "Sleep like the dead.\nWake like the living.",
+        "background_color": "#e2a383",
+        "heading": "Sleep with the Moon.\nRise only with the sun.",
         "image_desktop": "shopify://shop_images/Signature_Pillow_8.png",
         "image_mobile": "shopify://shop_images/Signature_Pillow_8_1.png",
         "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
-        "button_text": "Add The Signature to Cart",
+        "button_text": "Add The Blue Moon to Cart",
         "button_link": ""
       }
     },
