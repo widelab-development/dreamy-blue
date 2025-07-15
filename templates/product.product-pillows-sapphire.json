@@ -144,7 +144,7 @@
         "feature_DB9iQy": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/Frame_117_1.webp",
+            "image": "shopify://shop_images/Frame_117_2.webp",
             "title": "Sleep it cool.",
             "text": "Little blue cooling nodes on our memory foam cubes help control temps and airflow."
           }
@@ -152,7 +152,7 @@
         "feature_n6zTY6": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/Frame_118_2.webp",
+            "image": "shopify://shop_images/Frame_118_6.webp",
             "title": "Beads, but not sweat.",
             "text": "A side benefit of the gusseted seam: reduced clamminess from skin-on-skin contact."
           }
@@ -160,7 +160,7 @@
         "feature_WREUwc": {
           "type": "feature",
           "settings": {
-            "image": "shopify://shop_images/Frame_118_3.webp",
+            "image": "shopify://shop_images/Frame_118_7.webp",
             "title": "Rest and breathe easy.",
             "text": "Fill is CertiPUR-US Certified, made to order, and free of latex, down, or other worries."
           }
@@ -174,7 +174,7 @@
       "name": "Sticky Two Column Layout",
       "settings": {
         "eyebrow": "Revolutionary Fill",
-        "heading": "Support. Motion. Cooling. <br>All in a single next-gen fill.",
+        "heading": "Support. Motion. Cooling. All in a single next-gen fill.",
         "heading_tag": "h1",
         "title_color": "#c49bc9",
         "heading_width": "494",
