@@ -174,7 +174,7 @@
       "name": "Sticky Two Column Layout",
       "settings": {
         "eyebrow": "Revolutionary Fill",
-        "heading": "Support. Motion. Cooling. All in a single next-gen fill.",
+        "heading": "Support. Motion. Cooling. <br>All in a single next-gen fill.",
         "heading_tag": "h1",
         "title_color": "#c49bc9",
         "heading_width": "494",
@@ -188,7 +188,7 @@
         "sleeper_type_kbx6pW": {
           "type": "sleeper_type",
           "settings": {
-            "image": "shopify://shop_images/B0000043_1.png",
+            "image": "shopify://shop_images/Frame_93_2.webp",
             "card_title": "Sleep like this...",
             "button_text": "Back",
             "button_link": ""
@@ -197,7 +197,7 @@
         "sleeper_type_zAnxKy": {
           "type": "sleeper_type",
           "settings": {
-            "image": "shopify://shop_images/B0000378_1.png",
+            "image": "shopify://shop_images/Frame_95_1.webp",
             "card_title": "...this...",
             "button_text": "Stomach",
             "button_link": ""
@@ -206,7 +206,7 @@
         "sleeper_type_epREDY": {
           "type": "sleeper_type",
           "settings": {
-            "image": "shopify://shop_images/B0000360_1.png",
+            "image": "shopify://shop_images/Frame_94.webp",
             "card_title": "...or this.",
             "button_text": "Side",
             "button_link": ""
@@ -425,8 +425,8 @@
       ],
       "name": "Custom Product Materials",
       "settings": {
-        "bg_image_desktop": "shopify://shop_images/B0000102_copy_1.png",
-        "bg_image_mobile": "shopify://shop_images/B0000102_copy_1_1.png",
+        "bg_image_desktop": "shopify://shop_images/Frame_22_3.webp",
+        "bg_image_mobile": "shopify://shop_images/Frame_22_4.webp",
         "overtitle": "Materials & Build",
         "heading": "Made to elevate\nyour sleep."
       }
