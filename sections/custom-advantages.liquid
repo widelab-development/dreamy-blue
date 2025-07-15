@@ -14,35 +14,66 @@
     assign text_color = section.settings.text_color
     assign bottom_box_bg_color = section.settings.bottom_background_color
     assign bottom_box_text_color = section.settings.bottom_text_color
+
     assign fluff_image_left = section.settings.fluff_image_left
+    assign fluff_image_center = section.settings.fluff_image_center
     assign fluff_image_right = section.settings.fluff_image_right
+    assign fluff_image_mobile = section.settings.fluff_image_mobile
   -%}
 
   <div class="custom-advantages"
     style="--bg-color: {{ bg_color }}; --text-color: {{ text_color }}; --bottom-bg-color: {{ bottom_box_bg_color }}; --bottom-text-color: {{ bottom_box_text_color }};">
 
-    {%- if fluff_image_left != blank -%}
-      <div class="custom-advantages__fluff-overlay-left">
-        <img
-          src="{{ fluff_image_left | image_url: width: 2000 }}"
-          alt=""
-          role="presentation"
-          width="{{ fluff_image_left.width }}"
-          height="{{ fluff_image_left.height }}"
-          loading="eager"
-        >
-      </div>
-    {%- endif -%}
+    <div class="custom-advantages__fluff-container--desktop">
+      {%- if fluff_image_left != blank -%}
+        <div class="custom-advantages__fluff-overlay-left">
+          <img
+            src="{{ fluff_image_left | image_url: width: 2000 }}"
+            alt=""
+            role="presentation"
+            width="{{ fluff_image_left.width }}"
+            height="{{ fluff_image_left.height }}"
+            loading="eager"
+          >
+        </div>
+      {%- endif -%}
 
-    {%- if fluff_image_right != blank -%}
-      <div class="custom-advantages__fluff-overlay-right">
+      {%- if fluff_image_center != blank -%}
+        <div class="custom-advantages__fluff-overlay-center">
+          <img
+            src="{{ fluff_image_center | image_url: width: 2000 }}"
+            alt=""
+            role="presentation"
+            width="{{ fluff_image_center.width }}"
+            height="{{ fluff_image_center.height }}"
+            loading="eager"
+          >
+        </div>
+      {%- endif -%}
+
+      {%- if fluff_image_right != blank -%}
+        <div class="custom-advantages__fluff-overlay-right">
+          <img
+            src="{{ fluff_image_right | image_url: width: 2000 }}"
+            alt=""
+            role="presentation"
+            width="{{ fluff_image_right.width }}"
+            height="{{ fluff_image_right.height }}"
+            loading="eager"
+          >
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- if fluff_image_mobile != blank -%}
+      <div class="custom-advantages__fluff-overlay--mobile">
         <img
-          src="{{ fluff_image_right | image_url: width: 2000 }}"
+          src="{{ fluff_image_mobile | image_url: width: 1000 }}"
           alt=""
           role="presentation"
-          width="{{ fluff_image_right.width }}"
-          height="{{ fluff_image_right.height }}"
-          loading="eager"
+          width="{{ fluff_image_mobile.width }}"
+          height="{{ fluff_image_mobile.height }}"
+          loading="lazy"
         >
       </div>
     {%- endif -%}
@@ -97,20 +128,24 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+        return;
+      }
+
       gsap.registerPlugin(ScrollTrigger);
 
       const section = document.getElementById('shopify-section-{{ section.id }}');
       if (!section) return;
 
       const fluffLeft = section.querySelector('.custom-advantages__fluff-overlay-left');
+      const fluffCenter = section.querySelector('.custom-advantages__fluff-overlay-center');
       const fluffRight = section.querySelector('.custom-advantages__fluff-overlay-right');
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
           start: 'top center',
-          end: 'bottom center',
-          toggleActions: 'play reverse play reverse',
+          toggleActions: 'play none none none',
         }
       });
 
@@ -118,6 +153,14 @@
         tl.to(fluffLeft, {
           y: -180,
           x: -300,
+          duration: 2.8,
+          ease: 'power2.out'
+        }, 0);
+      }
+
+      if (fluffCenter) {
+        tl.to(fluffCenter, {
+          y: -220,
           duration: 2.8,
           ease: 'power2.out'
         }, 0);
@@ -177,14 +220,32 @@
       "default": "<p>We fill each pillow with a revolutionary blend that outperforms every other fill type. It’s soft without bottoming out. It maneuvers freely yet never loses form. It’s… night and day.</p>"
     },
     {
+      "type": "header",
+      "content": "Fluff Images (Desktop)"
+    },
+    {
       "type": "image_picker",
       "id": "fluff_image_left",
       "label": "Fluff Image - Left (PNG with transparency)"
     },
     {
       "type": "image_picker",
+      "id": "fluff_image_center",
+      "label": "Fluff Image - Center (PNG with transparency)"
+    },
+    {
+      "type": "image_picker",
       "id": "fluff_image_right",
       "label": "Fluff Image - Right (PNG with transparency)"
+    },
+    {
+      "type": "header",
+      "content": "Fluff Image (Mobile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "fluff_image_mobile",
+      "label": "Fluff Image - Mobile (PNG with transparency)"
     },
     {
       "type": "header",
@@ -252,3 +313,4 @@
   ]
 }
 {% endschema %}
+
