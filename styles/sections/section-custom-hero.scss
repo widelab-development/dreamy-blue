@@ -2,14 +2,93 @@
 
 .custom-hero-banner-section {
   background-color: var(--section-bg-color);
-  padding: rem(40) 0 0 0;
+  padding: 0;
 
   @media (max-width: 992px) {
-    padding: 0;
 
     xo-container {
       padding: 0;
     }
+  }
+}
+
+.custom-hero-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(12) rem(36);
+  margin-bottom: rem(12);
+  border-radius: rem(4);
+  background-color: var(--color-neutral-cream-110);
+
+  @media (max-width: 992px) {
+    gap: rem(8);
+    margin-bottom: 0;
+    padding: rem(10) rem(28);
+    justify-content: center;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+  }
+
+  &__right{
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  
+  &__amazon-logo {
+    height: rem(32);
+    width: rem(87);
+
+    @media (max-width: 992px) {
+      height: rem(25);
+      width: rem(69);
+    }
+  }
+
+  &__rating-value {
+    font-size: rem(18);
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-black);
+
+    @media (max-width: 992px) {
+      font-size: rem(14.4) !important;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    color: #FF9900;
+  }
+
+  &__rating-count {
+    font-size: rem(18);
+    color: #6583CB;
+    line-height: 1.6;
+    font-weight: 600;
+
+    @media (max-width: 992px) {
+      font-size: rem(14) !important;
+    }
+  }
+  
+  &__happy-icon {
+    height: rem(27.5);
+    width: rem(27.5);
+  }
+
+  &__happy-text {
+    font-size: rem(18);
+    line-height: 1.6;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-black);
   }
 }
 
@@ -28,6 +107,32 @@
     min-height: rem(557);
     justify-content: center;
     background-image: var(--bg-mobile) !important;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+  }
+
+  &__video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__content-box {
@@ -39,7 +144,8 @@
     margin-left: rem(48);
 
     @media (max-width: 992px) {
-      background: none;
+      background: transparent; 
+      border-radius: rem(8);
       margin: rem(32) rem(8);
       padding: rem(32) rem(16);
       max-width: 100%;
