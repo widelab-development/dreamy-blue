@@ -360,7 +360,7 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Group_2.svg",
-            "text": "Patented pillowcase design"
+            "text": "Patented, plush pillowcase design"
           }
         },
         "feature_3g3kDd": {
@@ -374,14 +374,14 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Group_3_f10efd79-e1ce-4755-83ea-b53beb0b0d8d.svg",
-            "text": "Double zipper compartments"
+            "text": "Zippered fill-proof compartments"
           }
         },
         "feature_hCCYUY": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Layer_1_2.svg",
-            "text": "Extra stuffing to adjust to your liking"
+            "text": "Deluxe supportive Sapphire gusset"
           }
         },
         "feature_zKYT6B": {
@@ -428,19 +428,19 @@
         "bg_image_desktop": "shopify://shop_images/B0000102_copy_1.png",
         "bg_image_mobile": "shopify://shop_images/B0000102_copy_1_1.png",
         "overtitle": "Materials & Build",
-        "heading": "Made to make your night."
+        "heading": "Made to elevate\nyour sleep."
       }
     },
     "custom_product_image_tFEHBy": {
       "type": "custom-product-image",
       "name": "Custom Product Image",
       "settings": {
-        "background_color": "#8fbfef",
-        "heading": "Sleep like the dead.\nWake like the living.",
-        "image_desktop": "shopify://shop_images/Signature_Pillow_8.png",
-        "image_mobile": "shopify://shop_images/Signature_Pillow_8_1.png",
+        "background_color": "#c49bc9",
+        "heading": "The Sapphire. Rise to\nthe occasion of sleep.",
+        "image_desktop": "shopify://shop_images/Sapphire_Pillow_2_1.png",
+        "image_mobile": "shopify://shop_images/Sapphire_Pillow_2_1_2.png",
         "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
-        "button_text": "Add The Signature to Cart",
+        "button_text": "Add The Sapphire to Cart",
         "button_link": ""
       }
     },
