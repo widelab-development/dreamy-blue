@@ -368,6 +368,13 @@
             "icon": "shopify://shop_images/Asset_3_2x_87d528b4-9d66-4726-bca3-c52b7bfed121.png",
             "text": "CertiPUR-US certified fillings"
           }
+        },
+        "feature_fYcyJq": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_5.svg",
+            "text": "Plush pillowcase with a fine finish"
+          }
         }
       },
       "block_order": [
@@ -378,7 +385,8 @@
         "feature_zKYT6B",
         "feature_c4iFUw",
         "feature_MQ3Jtx",
-        "feature_fbharP"
+        "feature_fbharP",
+        "feature_fYcyJq"
       ],
       "name": "Custom Product Materials",
       "settings": {
