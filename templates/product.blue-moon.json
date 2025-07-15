@@ -55,7 +55,7 @@
         "feature_item_i4F7DE"
       ],
       "custom_css": [
-        ".main-product{padding-bottom:72px;}"
+        ".main-product {padding-bottom: 72px;}"
       ],
       "settings": {
         "product_media_style": "style-1",
@@ -394,8 +394,8 @@
       "settings": {
         "background_color": "#e2a383",
         "heading": "Sleep with the Moon.\nRise only with the sun.",
-        "image_desktop": "shopify://shop_images/Signature_Pillow_8.png",
-        "image_mobile": "shopify://shop_images/Signature_Pillow_8_1.png",
+        "image_desktop": "shopify://shop_images/Blue_Moon_Pillow_3_3.webp",
+        "image_mobile": "shopify://shop_images/Blue_Moon_Pillow_3_2.png",
         "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
         "button_text": "Add The Blue Moon to Cart",
         "button_link": ""
