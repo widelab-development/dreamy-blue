@@ -102,7 +102,7 @@
       "settings": {
         "image": "shopify://shop_images/B0000125_2.png",
         "heading": "Get The Position",
-        "description": "<p>Our periodic newsletter on sleep health. It's worth getting up for.</p>",
+        "description": "<p>Our periodic newsletter on sleep health. <em>It's worth getting up for.</em></p>",
         "name_placeholder": "Name",
         "email_placeholder": "Email Address",
         "button_text": "Get the Good Stuff!",
