@@ -234,7 +234,7 @@
             "overtitle": "Signature Fill Blend",
             "title": "The Light Stuff",
             "button_text": "Add to Cart",
-            "button_link": ""
+            "button_link": "shopify://products/the-light-stuff"
           }
         },
         "product_block_zA3GJj": {
@@ -244,7 +244,7 @@
             "overtitle": "Signature Fill Blend",
             "title": "The Cool Stuff",
             "button_text": "Add to Cart",
-            "button_link": ""
+            "button_link": "shopify://products/the-cool-stuff"
           }
         }
       },
