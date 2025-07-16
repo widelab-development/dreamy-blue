@@ -131,7 +131,7 @@
       "name": "Sticky Two Column Layout",
       "settings": {
         "eyebrow": "Revolutionary Fill",
-        "heading": "The support you need to dig in—                —or roll free.",
+        "heading": "The support you need to dig in— <br>or roll free.",
         "heading_tag": "h1",
         "title_color": "#e2a383",
         "heading_width": "494",
