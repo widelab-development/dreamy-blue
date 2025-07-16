@@ -406,7 +406,7 @@
         "image_mobile": "shopify://shop_images/Blue_Moon_Pillow_3_2.png",
         "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
         "button_text": "Add The Blue Moon to Cart",
-        "button_link": ""
+        "button_link": "shopify://products/the-blue-moon"
       }
     },
     "custom_form_Fbex8z": {
