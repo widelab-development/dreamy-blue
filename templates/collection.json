@@ -125,7 +125,7 @@
           "type": "product_card",
           "settings": {
             "product": "the-signature",
-            "custom_image": "shopify://shop_images/Signature_Pillow_5_3.png",
+            "custom_image": "shopify://shop_images/Signature_Pillow_Product_Image_copy_1.png",
             "overtitle": "The Signature",
             "description": "",
             "background_color": "#8fbfef",
@@ -136,7 +136,7 @@
           "type": "product_card",
           "settings": {
             "product": "the-sapphire",
-            "custom_image": "shopify://shop_images/Signature_Pillow_5_4.png",
+            "custom_image": "shopify://shop_images/sapphire_2_80f3c9ae-2cf8-4efc-9e5c-6217364007eb.png",
             "overtitle": "The Sapphire",
             "description": "",
             "background_color": "#c49bc9",
@@ -147,7 +147,7 @@
           "type": "product_card",
           "settings": {
             "product": "the-blue-moon",
-            "custom_image": "shopify://shop_images/Signature_Pillow_5_5.png",
+            "custom_image": "shopify://shop_images/Moon_Pillow_1_48d41d2c-1039-4ecf-8047-a8777e07fdff.png",
             "overtitle": "Blue Moon",
             "description": "",
             "background_color": "#e2a383",
