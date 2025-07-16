@@ -441,7 +441,7 @@
         "image_mobile": "shopify://shop_images/Sapphire_Pillow_2_1_2.png",
         "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
         "button_text": "Add The Sapphire to Cart",
-        "button_link": ""
+        "button_link": "shopify://products/the-sapphire"
       }
     },
     "custom_form_Fbex8z": {
