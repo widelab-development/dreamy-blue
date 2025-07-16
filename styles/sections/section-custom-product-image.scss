@@ -20,7 +20,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: rem(1100);
+    max-width: rem(1240);
   }
 
   &__heading {
@@ -28,6 +28,7 @@
     font-weight: 300;
     font-family: var(--font-beausite-fit-web);
     color: var(--color-black);
+    margin: 0 !important;
 
     @media (max-width: 768px) {
       font-size: rem(34.5) !important;
@@ -35,9 +36,9 @@
   }
 
   &__image-wrapper {
-    max-width: rem(1100);
+    max-width: rem(1240);
     width: 100%;
-    margin-top: rem(-60);
+    margin-top: rem(-40);
 
     @media (max-width: 768px) {
       margin-top: rem(-36);

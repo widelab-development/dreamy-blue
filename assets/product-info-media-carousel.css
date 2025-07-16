@@ -13,7 +13,7 @@
 
 .xo-product-info-media-carousel__image--radius {
   overflow: hidden;
-  border-radius: var(--toggle-tab-radius);
+  border-radius: 0;
 }
 
 .xo-product-info-media-carousel__list .xo-product-info-media-carousel__image:hover {

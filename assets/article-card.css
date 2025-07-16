@@ -59,7 +59,7 @@
 }
 
 .xo-article-card__image--radius {
-  border-radius: var(--article-image-radius);
+  border-radius: 0;
 }
 .xo-article-card__image--radius::after {
   border-radius: var(--article-image-radius);
