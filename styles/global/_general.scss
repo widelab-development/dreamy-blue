@@ -46,3 +46,13 @@ img {
 	vertical-align: middle;
 }
 
+
+.xo-section {
+	padding-top: rem(72) !important;
+
+	@media (max-width: 768px) {
+		padding-top: rem(36) !important;
+	}
+}
+
+

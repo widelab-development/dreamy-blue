@@ -37,6 +37,17 @@
   .custom-sticky-two-col__block {
     max-width: 50rem;
   }
+  .custom-sticky-two-col__block p {
+    font-size: 1.8rem;
+    max-width: 37.2rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 768px) {
+  .custom-sticky-two-col__block p {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 769px) {
   .custom-sticky-two-col__block img {
     width: 100%;
   }
@@ -83,7 +94,7 @@
   }
   .custom-sticky-two-col__eyebrow {
     font-size: 1.8rem;
-    margin-bottom: 2.3rem;
+    margin-bottom: 2.3rem !important;
   }
 }
 .custom-sticky-two-col__right--mobile {

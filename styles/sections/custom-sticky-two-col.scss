@@ -44,6 +44,15 @@
 
     &__block {
       max-width: rem(500);
+
+      p {
+        font-size: rem(18);
+        max-width: rem(372);
+
+        @media (max-width: 768px) {
+          font-size: rem(14);
+        }
+      }
     }
 
     &__block img {
@@ -102,7 +111,7 @@
 
     &__eyebrow {
       font-size: rem(18);
-      margin-bottom: rem(23);
+      margin-bottom: rem(23) !important;
     }
   }
 

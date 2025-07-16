@@ -340,6 +340,7 @@ body {
               display: flex;
               align-items: center;
               justify-content: center;
+              background-color: transparent;
               width: rem(40);
               height: rem(40);
             }
@@ -369,12 +370,7 @@ body {
               }
             }
 
-            .xo-header__right-number {
-              @include media-breakpoint-up(lg-2) {
-                color: var(--color-black);
-                background-color: var(--color-blue-100);
-              }
-            }
+
           }
         }
       }

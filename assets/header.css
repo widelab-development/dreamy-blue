@@ -286,6 +286,7 @@ body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-men
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
     width: 4rem;
     height: 4rem;
   }
@@ -309,12 +310,6 @@ body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-men
   body .xo-header .xo-header__body .xo-header__content .xo-header__right xo-tooltip svg {
     width: 2rem;
     height: auto;
-  }
-}
-@media (min-width: 1140px) {
-  body .xo-header .xo-header__body .xo-header__content .xo-header__right xo-tooltip .xo-header__right-number {
-    color: var(--color-black);
-    background-color: var(--color-blue-100);
   }
 }
 /*# sourceMappingURL=header.css.map */

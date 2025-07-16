@@ -20,13 +20,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 110rem;
+  max-width: 124rem;
 }
 .custom-product-image__heading {
   font-size: 12rem !important;
   font-weight: 300;
   font-family: var(--font-beausite-fit-web);
   color: var(--color-black);
+  margin: 0 !important;
 }
 @media (max-width: 768px) {
   .custom-product-image__heading {
@@ -34,9 +35,9 @@
   }
 }
 .custom-product-image__image-wrapper {
-  max-width: 110rem;
+  max-width: 124rem;
   width: 100%;
-  margin-top: -6rem;
+  margin-top: -4rem;
 }
 @media (max-width: 768px) {
   .custom-product-image__image-wrapper {

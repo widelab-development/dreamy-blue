@@ -5877,7 +5877,7 @@ xo-modal[xo-name=cart] xo-cart-mini[xo-notification] .xo-modal-content__close {
 .xo-image {
   position: relative;
   border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
-  border-radius: var(--media-radius);
+  border-radius: 0;
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-foreground), var(--media-shadow-opacity));
   overflow: hidden;
 }
@@ -9219,7 +9219,7 @@ xo-modal .xo-cart-mini-item__content .xo-cart-mini-item__quantity--drawer {
 }
 
 .xo-pagination__list-item--radius {
-  border-radius: var(--pagination-radius);
+  border-radius: 0;
 }
 
 .xo-pagination__list-item--current {

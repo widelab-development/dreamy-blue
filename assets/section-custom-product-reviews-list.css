@@ -3,6 +3,12 @@
 /*MIXINS*/
 .custom-product-reviews-list-section {
   background-color: var(--section-bg-color);
+  margin-bottom: 12rem;
+}
+@media (max-width: 992px) {
+  .custom-product-reviews-list-section {
+    margin-bottom: 0rem;
+  }
 }
 
 .custom-product-reviews-list__container {

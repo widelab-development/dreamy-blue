@@ -1,6 +1,15 @@
 /* stylelint-disable */
 /* stylelint-enable */
 /*MIXINS*/
+.custom-featured-products-collection {
+  padding: 0 0 12rem 0 !important;
+}
+@media (max-width: 768px) {
+  .custom-featured-products-collection {
+    padding: 0 0 3.6rem 0 !important;
+  }
+}
+
 .custom-featured-products {
   font-family: var(--font-twk-lausanne), sans-serif;
   padding: 6rem 0;
@@ -111,7 +120,7 @@
   font-weight: 300;
   line-height: 2.4rem;
   margin: 0 auto 3.2rem auto !important;
-  max-width: 34rem;
+  max-width: 30rem;
 }
 @media (max-width: 992px) {
   .custom-featured-products__card-description {

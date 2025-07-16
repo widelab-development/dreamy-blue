@@ -88,6 +88,15 @@ img {
   vertical-align: middle;
 }
 
+.xo-section {
+  padding-top: 7.2rem !important;
+}
+@media (max-width: 768px) {
+  .xo-section {
+    padding-top: 3.6rem !important;
+  }
+}
+
 button,
 a,
 input,

@@ -2,6 +2,11 @@
 
 .custom-product-reviews-list-section {
   background-color: var(--section-bg-color);
+  margin-bottom: rem(120);
+
+  @media (max-width: 992px) {
+    margin-bottom: rem(0);
+  }
 }
 
 .custom-product-reviews-list {

@@ -183,11 +183,7 @@
                 </xo-tooltip>
 
                 {%- if shop.customer_accounts_enabled -%}
-                  <xo-tooltip
-                    xo-title='{{ 'general.tooltip.sign_in' | t }}'
-                    xo-placement='bottom-center'
-                    class='tooltip{% if settings.enable_border_radius %} tooltip--radius{% endif %}'
-                  >
+
                     <a
                       href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
                       class='xo-header__right-item xo-header__right-item--account'
@@ -200,14 +196,9 @@
                         {% render 'icon', name: 'user', size: '1.6rem' %}
                       {% endif %}
                     </a>
-                  </xo-tooltip>
                 {%- endif -%}
 
-                <xo-tooltip
-                  xo-title='{{ 'general.tooltip.cart' | t }}'
-                  xo-placement='bottom-center'
-                  class='tooltip{% if settings.enable_border_radius %} tooltip--radius{% endif %}'
-                >
+
                   {% if settings.cart_type == 'page' or settings.cart_type == 'notification' %}
                     <a
                       class='xo-header__right-item xo-header__right-item--cart'
@@ -233,7 +224,6 @@
                       </div>
                     </xo-modal-trigger>
                   {% endif %}
-                </xo-tooltip>
               </div>
 
               {% if header_style == 'style-3' or header_style == 'style-4' or menu_type == 'drawer' %}
