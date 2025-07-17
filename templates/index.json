@@ -295,11 +295,11 @@
         "button_1_text": "How to Adjust",
         "button_1_link": "",
         "button_2_text": "Get Extrazzz",
-        "button_2_link": "",
+        "button_2_link": "shopify://products/the-cool-stuff",
         "play_icon": "shopify://shop_images/Frame_68.svg",
         "bottom_video_poster": "shopify://shop_images/image_45.png",
         "bottom_video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4",
-        "bottom_video_label": "<b>Watch:</b> How to Adjust"
+        "bottom_video_label": "Watch: How to Adjust"
       }
     },
     "custom_quiz_xiDFUK": {
