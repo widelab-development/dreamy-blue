@@ -64,6 +64,7 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [],
       "settings": {
         "header_style": "style-2",
         "sticky_header_type": "none",
@@ -78,7 +79,7 @@
         "logo_position": "center",
         "show_currency_selector": "hidden",
         "show_language_selector": "hidden",
-        "color_scheme": "background-1"
+        "color_scheme": "background-2"
       }
     },
     "main-predictive-search": {
