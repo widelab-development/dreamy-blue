@@ -327,7 +327,7 @@
         "heading": "Change your pillow.",
         "description": "<p>At every age and life stage, our alignment-focused and adjustable products put control in your hands—while putting your body in the perfect position for rejuvenation.</p>",
         "button_text": "Our Dream",
-        "button_link": "",
+        "button_link": "shopify://pages/our-dream",
         "button_bg_color": "#1d1c50",
         "button_text_color": "#ffffff"
       }
