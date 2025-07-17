@@ -59,7 +59,7 @@
         "center_link": "shopify://products/the-blue-moon",
         "show_right": true,
         "right_text": "Shipping & Returns",
-        "right_link": ""
+        "right_link": "shopify://pages/shipping-refunds"
       }
     },
     "header": {
