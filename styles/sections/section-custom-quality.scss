@@ -260,12 +260,19 @@
     }
 
     &__play-button--large {
+        left: rem(60);
+        bottom: rem(60);
         display: inline-flex;
         align-items: center;
         gap: rem(12);
         padding: rem(10) rem(20);
         border-radius: rem(30px);
         color: var(--color-white);
+
+        @media (max-width: 992px) {
+            left: rem(28);
+            bottom: rem(28);
+        }
 
         .custom-quality__play-icon-custom,
         .custom-quality__play-icon-default {

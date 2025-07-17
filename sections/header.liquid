@@ -116,7 +116,8 @@
     >
       <xo-animate
         xo-type='fade-down'
-        class='xo-header__sticky{% if header_style %} xo-header__sticky--{{ header_style }}{% endif %}{% if template contains 'collection-3' %} xo-header__sticky--modifier{% endif %}'
+        xo-page-id='{{ page.id | default: '' }}'
+        class='xo-header__sticky{% if header_style %} xo-header__sticky--{{ header_style }}{% endif %}{% if template contains 'collection-3' %} xo-header__sticky--modifier{% endif %}{% if page.id == 120052384003 or page.id == 120051958019 %} navy-header{% endif %}'
       >
         <div class='xo-header__container{% if template.name == 'index' or template contains 'home-1' or template contains 'home-2' or template contains 'home-3' %} xo-header__container--transparent{% endif %}{% if settings.enable_border_radius %} xo-header__container--radius{% endif %} xo-header__container--{{ header_style }} color-{{ section.settings.color_scheme }}'>
           <xo-container>

@@ -328,7 +328,7 @@
   padding: 0.4rem;
   min-width: 1.8rem;
   height: 1.8rem;
-  background-color: color-mix(in srgb, rgba(var(--color-accent)) calc(1 * 100%), transparent);
+  background-color: #6CB1EA;
   border-radius: 1.6rem;
   position: absolute;
   top: 50%;
@@ -336,7 +336,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: color-mix(in srgb, rgba(var(--color-foreground-3)) calc(1 * 100%), transparent);
+  color: #fff;
   font-weight: 500;
   font-size: calc(var(--font-body-scale) * 1rem);
   line-height: calc(1 + 0 / var(--font-body-scale));
