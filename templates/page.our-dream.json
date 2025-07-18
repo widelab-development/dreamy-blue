@@ -167,7 +167,7 @@
         "title": "The backbone of your deepest, healthiest sleep.",
         "description": "<p>Developed for natural alignment.<br/>Crafted for supernatural comfort.</p>",
         "button1_text": "Shop Pillows",
-        "button1_link": "",
+        "button1_link": "shopify://collections",
         "button1_bg": "#8fbfef",
         "button1_color": "#1d1c50",
         "button2_text": "Find Your Fit",
