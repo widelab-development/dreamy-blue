@@ -49,10 +49,19 @@ body {
         .xo-header__right {
           xo-tooltip {
             svg {
-              path {
+              path { 
                 @include media-breakpoint-up(lg-2) {
-                  stroke: var(--color-white);
+                  stroke: var(--color-white) !important;
                 }
+              }
+            }
+          }
+        }
+        .xo-header__right-item {
+          @include media-breakpoint-up(lg-2) {
+            svg {
+              path {
+                stroke: var(--color-white) !important;
               }
             }
           }
