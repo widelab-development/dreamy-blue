@@ -452,7 +452,7 @@
         "image_mobile": "shopify://shop_images/Signature_Pillow_8_1.png",
         "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
         "button_text": "Add The Signature to Cart",
-        "button_link": "#"
+        "product": "the-signature"
       }
     },
     "custom_form_Fbex8z": {
