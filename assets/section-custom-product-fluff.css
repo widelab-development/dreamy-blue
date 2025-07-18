@@ -139,6 +139,8 @@
   font-size: 1.8rem;
   font-weight: 300;
   transition: opacity 0.2s ease;
+  cursor: pointer;
+  border: none;
 }
 @media (max-width: 768px) {
   .custom-product-fluff__block-button {
@@ -149,5 +151,8 @@
 }
 .custom-product-fluff__block-button:hover {
   opacity: 0.85;
+}
+.custom-product-fluff__block-button:focus {
+  outline: none;
 }
 /*# sourceMappingURL=section-custom-product-fluff.css.map */
