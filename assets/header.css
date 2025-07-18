@@ -39,7 +39,12 @@ body .xo-header .navy-header .xo-header__body .xo-header__content .xo-header__de
 }
 @media (min-width: 1140px) {
   body .xo-header .xo-header__sticky:hover .xo-header__right xo-tooltip svg path {
-    stroke: var(--color-white);
+    stroke: var(--color-white) !important;
+  }
+}
+@media (min-width: 1140px) {
+  body .xo-header .xo-header__sticky:hover .xo-header__right-item svg path {
+    stroke: var(--color-white) !important;
   }
 }
 @media (min-width: 1140px) {
