@@ -72,6 +72,12 @@
     font-size: rem(18);
     font-weight: 300;
     transition: opacity 0.2s ease;
+    border: none;
+    cursor: pointer;
+
+    &:focus{
+      outline: none;
+    }
 
     &:hover {
       opacity: 0.85;

@@ -156,6 +156,8 @@
             color: var(--color-black);
             padding: rem(12) rem(64);
             border-radius: rem(120);
+            border: none;
+            cursor: pointer;
 
             @media (max-width: 992px) {
                 width: 100%;
@@ -164,6 +166,10 @@
 
             &:hover {
                 background-color: var(--color-blue-120);
+            }
+
+            &:focus{
+                outline: none;
             }
         }
 
