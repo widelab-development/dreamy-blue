@@ -70,6 +70,11 @@
   font-size: 1.8rem;
   font-weight: 300;
   transition: opacity 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+.custom-product-image__button:focus {
+  outline: none;
 }
 .custom-product-image__button:hover {
   opacity: 0.85;

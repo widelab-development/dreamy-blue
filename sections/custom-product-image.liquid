@@ -5,7 +5,7 @@
   assign heading = section.settings.heading
   assign description = section.settings.description
   assign button_text = section.settings.button_text
-  assign button_link = section.settings.button_link
+  assign product = section.settings.product
   assign image_desktop = section.settings.image_desktop
   assign image_mobile = section.settings.image_mobile
 -%}
@@ -59,13 +59,18 @@
         <p class="custom-product-image__description">{{ description }}</p>
       {%- endif -%}
 
-      {%- if button_text != blank -%}
-        <a
-          href="{{ button_link | default: '#' }}"
-          class="custom-product-image__button"
-        >
-          {{ button_text }}
-        </a>
+      {%- if button_text != blank and product != blank -%}
+        {%- form 'product', product, class: 'custom-product-image__form' -%}
+          <input type="hidden" name="id" value="{{ product.first_available_variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <button
+            type="submit"
+            name="add"
+            class="custom-product-image__button"
+          >
+            {{ button_text }}
+          </button>
+        {%- endform -%}
       {%- endif -%}
     </div>
   </xo-container>
@@ -109,12 +114,13 @@
       "type": "text",
       "id": "button_text",
       "label": "Button Text",
-      "default": "Add The Signature to Cart"
+      "default": "Add to Cart"
     },
     {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
+      "type": "product",
+      "id": "product",
+      "label": "Product",
+      "info": "Select a product to be added to the cart when the button is clicked."
     }
   ],
   "presets": [

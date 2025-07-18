@@ -13,6 +13,15 @@
   assign bottom_video_poster = section.settings.bottom_video_poster
   assign bottom_video_label = section.settings.bottom_video_label
   assign play_icon = section.settings.play_icon
+  assign main_mp4_url = ''
+  if bottom_video != blank
+    for source in bottom_video.sources
+      if source.format == 'mp4'
+        assign main_mp4_url = source.url
+        break
+      endif
+    endfor
+  endif
 -%}
 
 <section id="shopify-section-{{ section.id }}" class="custom-quality">
@@ -51,8 +60,8 @@
                           endif
                         endfor
                       -%}
-                      <button 
-                        class="custom-quality__play-button js-video-trigger" 
+                      <button
+                        class="custom-quality__play-button js-video-trigger"
                         aria-label="Play video"
                         data-video-url="{{ block_mp4_url }}"
                         data-video-provider="{{ block.settings.video.type }}"
@@ -83,9 +92,18 @@
             <div class="custom-quality__description-bottom">{{ description_bottom }}</div>
           {%- endif -%}
           <div class="custom-quality__buttons">
-            {%- if button_1_text != blank -%}
-              <a href="{{ button_1_link | default: '#' }}" class="custom-quality__button custom-quality__button--primary">{{ button_1_text }}</a>
+            {%- if button_1_text != blank and bottom_video != blank -%}
+              <button
+                type="button"
+                class="custom-quality__button custom-quality__button--primary js-video-trigger"
+                aria-label="Play video: {{ bottom_video_label | default: 'Watch video' }}"
+                data-video-url="{{ main_mp4_url }}"
+                data-video-provider="{{ bottom_video.type }}"
+                data-video-id="{{ bottom_video.id }}">
+                {{ button_1_text }}
+              </button>
             {%- endif -%}
+
             {%- if button_2_text != blank -%}
               <a href="{{ button_2_link | default: '#' }}" class="custom-quality__button custom-quality__button--secondary">
                 {{ button_2_text }} <span class="custom-quality__button-arrow"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,21 +126,12 @@
                 loading="lazy"
               >
               {%- if bottom_video != blank -%}
-                {%- liquid
-                  assign main_mp4_url = ''
-                  for source in bottom_video.sources
-                    if source.format == 'mp4'
-                      assign main_mp4_url = source.url
-                      break
-                    endif
-                  endfor
-                -%}
                 <button
-                   class="custom-quality__play-button custom-quality__play-button--large js-video-trigger"
-                   aria-label="Play video: {{ bottom_video_label }}"
-                   data-video-url="{{ main_mp4_url }}"
-                   data-video-provider="{{ bottom_video.type }}"
-                   data-video-id="{{ bottom_video.id }}">
+                  class="custom-quality__play-button custom-quality__play-button--large js-video-trigger"
+                  aria-label="Play video: {{ bottom_video_label }}"
+                  data-video-url="{{ main_mp4_url }}"
+                  data-video-provider="{{ bottom_video.type }}"
+                  data-video-id="{{ bottom_video.id }}">
                   {%- if play_icon != blank -%}
                     <img src="{{ play_icon | image_url: width: 150 }}" alt="Play video icon" class="custom-quality__play-icon-custom" width="60" height="60">
                   {%- else -%}
@@ -241,12 +250,14 @@
       "type": "text",
       "id": "button_1_text",
       "label": "Primary Button Text",
+      "info": "This button will open the main video.",
       "default": "How to Adjust"
     },
     {
       "type": "url",
       "id": "button_1_link",
-      "label": "Primary Button Link"
+      "label": "Primary Button Link (Not used if video is set)",
+      "info": "This link is no longer used by the primary button, as it now opens the video."
     },
     {
       "type": "text",
@@ -320,3 +331,4 @@
   ]
 }
 {% endschema %}
+
