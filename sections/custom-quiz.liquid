@@ -3,14 +3,16 @@
 {%- liquid
   assign heading = section.settings.heading
   assign description = section.settings.description
-  assign embed_code = section.settings.embed_code
+  assign quiz_image = section.settings.quiz_image
+  assign quiz_link = section.settings.quiz_link
+  assign open_in_new_tab = section.settings.open_in_new_tab
   assign image = section.settings.image
   assign background_color = section.settings.background_color
   assign text_color = section.settings.text_color
 -%}
 
-<section 
-  {% render 'section-attr' %} 
+<section
+  id="shopify-section-{{ section.id }}"
   class="custom-quiz"
   style="--bg-color: {{ background_color }}; --text-color: {{ text_color }};"
 >
@@ -26,9 +28,23 @@
           {%- endif -%}
         </div>
 
-        {%- if embed_code != blank -%}
+        {%- if quiz_image != blank -%}
           <div class="custom-quiz__embed-wrapper">
-            {{ embed_code }}
+            <a
+              href="{{ quiz_link | default: '#' }}"
+              class="custom-quiz__link"
+              {% if open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+              aria-label="Start the quiz: {{ heading | escape }}"
+            >
+              <img
+                src="{{ quiz_image | image_url: width: 1000 }}"
+                alt="{{ quiz_image.alt | default: 'Start the quiz' | escape }}"
+                width="{{ quiz_image.width }}"
+                height="{{ quiz_image.height }}"
+                loading="lazy"
+                class="custom-quiz__quiz-image"
+              >
+            </a>
           </div>
         {%- endif -%}
       </div>
@@ -73,10 +89,22 @@
       "default": "<p>This quick quiz helps you find the right pillow(s) for exactly how and why you sleep.</p>"
     },
     {
-      "type": "liquid",
-      "id": "embed_code",
-      "label": "Quiz Embed Code",
-      "info": "Paste your quiz embed code here (e.g., from HubSpot, JotForm, Google Forms)."
+      "type": "image_picker",
+      "id": "quiz_image",
+      "label": "Quiz Image",
+      "info": "This image will be displayed in the content area and will link to the quiz."
+    },
+    {
+      "type": "url",
+      "id": "quiz_link",
+      "label": "Quiz Link",
+      "info": "The URL the image will link to."
+    },
+    {
+      "type": "checkbox",
+      "id": "open_in_new_tab",
+      "label": "Open link in a new tab",
+      "default": true
     },
     {
       "type": "header",
@@ -85,7 +113,7 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "Side Image (Right Column)"
     },
     {
       "type": "color",

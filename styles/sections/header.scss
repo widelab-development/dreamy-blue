@@ -1,6 +1,27 @@
 @use "../settings/init" as *;
 
 body {
+
+  .xo-header .navy-header{
+    background-color: var(--color-midnight-blue) !important; 
+  }
+  
+  .xo-header .navy-header .xo-header__right-item svg path {
+    stroke: var(--color-white);
+  }
+  
+  .xo-header .navy-header .xo-header__logo-img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%) !important;
+  }
+  
+  .xo-header .navy-header li a{
+    color: var(--color-white) !important;
+  }
+  
+  .xo-header .navy-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal .xo-menu-horizontal__link{
+    color: var(--color-white) !important;
+  }
+
   .xo-header {
     .xo-header__sticky {
       @include media-breakpoint-up(lg-2) {
@@ -96,7 +117,7 @@ body {
                   display: inline-flex;
                   height: 100%;
                   align-items: center;
-                  color: var(--color-black) !important;
+                  color: var(--color-black);
                   font-size: rem(18);
                   line-height: 1;
                   transition: color .3s ease-in-out;
