@@ -107,6 +107,9 @@
   line-height: 1.2;
   font-family: var(--font-beausite-fit-web);
 }
+.custom-quality__heading-bottom i {
+  font-family: var(--font-beausite-fit-web-light);
+}
 @media (max-width: 992px) {
   .custom-quality__heading-bottom {
     font-size: 4rem !important;

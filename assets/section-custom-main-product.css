@@ -3,11 +3,13 @@
 /*MIXINS*/
 .main-product__container {
   padding-top: 3.6rem;
+  padding-left: 6rem;
 }
 @media (max-width: 992px) {
   .main-product__container {
     padding-top: 1.2rem;
     padding-bottom: 3.6rem;
+    padding-left: 2rem;
   }
 }
 .main-product__grid {
