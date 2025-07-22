@@ -60,17 +60,9 @@
       {%- endif -%}
 
       {%- if button_text != blank and product != blank -%}
-        {%- form 'product', product, class: 'custom-product-image__form' -%}
-          <input type="hidden" name="id" value="{{ product.first_available_variant.id }}">
-          <input type="hidden" name="quantity" value="1">
-          <button
-            type="submit"
-            name="add"
-            class="custom-product-image__button"
-          >
-            {{ button_text }}
-          </button>
-        {%- endform -%}
+        <a href="#" class="custom-product-image__button">
+          {{ button_text }}
+        </a>
       {%- endif -%}
     </div>
   </xo-container>

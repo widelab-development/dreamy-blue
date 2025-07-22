@@ -63,7 +63,7 @@
   &__heading {
     color: var(--title-color);
     margin: 0;
-    margin-bottom: rem(40);
+    margin-bottom: rem(60) !important;
 
     &.h2 {
       font-size: rem(42);
@@ -111,7 +111,7 @@
 
     &__eyebrow {
       font-size: rem(18);
-      margin-bottom: rem(23) !important;
+      margin-bottom: rem(16) !important;
     }
   }
 

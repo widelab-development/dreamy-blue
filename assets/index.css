@@ -16,6 +16,7 @@
   --color-orange-100: #D88A68;
   --font-twk-lausanne: "twk_lausanne";
   --font-beausite-fit-web: "beausite_fit_web";
+  --font-beausite-fit-web-light: "beausite_fit_web_light";
   --font-heading-family: "beausite_fit_web";
   --font-body-family: "twk_lausanne";
 }
@@ -37,6 +38,13 @@
 @font-face {
   font-family: "beausite_fit_web";
   src: url("BeausiteFitWeb-Light.woff2") format("woff2"), url("BeausiteFitWeb-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "beausite_fit_web_light";
+  src: url("BeausiteFitWeb-LightItalic.woff2") format("woff2"), url("BeausiteFitWeb-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;

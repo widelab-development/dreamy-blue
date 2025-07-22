@@ -55,7 +55,7 @@
 .custom-sticky-two-col__heading {
   color: var(--title-color);
   margin: 0;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem !important;
 }
 .custom-sticky-two-col__heading.h2 {
   font-size: 4.2rem;
@@ -94,7 +94,7 @@
   }
   .custom-sticky-two-col__eyebrow {
     font-size: 1.8rem;
-    margin-bottom: 2.3rem !important;
+    margin-bottom: 1.6rem !important;
   }
 }
 .custom-sticky-two-col__right--mobile {
