@@ -81,6 +81,13 @@
             "title": "<p>What are the exact dimensions of each of your pillows?</p>",
             "content": "<p>● The Signature, King Size: 20 inches wide by 36 inches long by 7 inches tall.<br/>● The Signature, Queen Size: 20 inches wide by 30 inches long by 7 inches tall.<br/>● The Sapphire, King Size: 20 inches wide by 36 inches long by 7 inches tall.<br/>● The Sapphire, Queen Size: 20 inches wide by 30 inches long by 7 inches tall.<br/>● The Blue Moon, King Size: Dimensions Needed<br/>● The Blue Moon, Queen Size: Dimensions Needed</p>"
           }
+        },
+        "collapse_Hxnayd": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>What is CertiPUR-US Certification?</p>",
+            "content": "<p>CertiPUR-US is a certification program administered by a not-for-profit organization. Certified foams are: Made without ozone depletersMade without PBDEs, TDCPP or TCEP (”Tris”) flame<br/>retardants, made without mercury, lead, and other heavy metals. Made without<br/>formaldehyde, made without phthalates regulated by the Consumer Product Safety<br/>Commission Low VOC (Volatile Organic Compound) emissions for indoor air quality (less than 0.5 parts per million).</p>"
+          }
         }
       },
       "block_order": [
@@ -93,7 +100,8 @@
         "collapse_WdLMzf",
         "collapse_nwEtnY",
         "collapse_T9TBWX",
-        "collapse_zPHLdN"
+        "collapse_zPHLdN",
+        "collapse_Hxnayd"
       ],
       "name": "FAQ with Top Image",
       "settings": {
