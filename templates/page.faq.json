@@ -36,8 +36,15 @@
         "collapse_m4bjUw": {
           "type": "collapse",
           "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
+            "title": "<p>Is the foam fill adjustable? Can I add or remove fill?</p>",
+            "content": "<p>That’s the whole idea! It’s as easy as Unzip, Adjust, Love. For more visual instructions, check out the video on our homepage.</p>"
+          }
+        },
+        "collapse_Tzdk44": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>Do you have a pillow that works for all sleep types?</p>",
+            "content": "<p>No matter how you sleep, there’s a DreamyBlue pillow designed for you. <a href=\"/products/the-signature\" title=\"The Signature\">The Signature</a> pillow works for side, back, and stomach sleepers; <a href=\"/products/the-sapphire\" title=\"The Sapphire\">The Sapphire</a> pillow is ideal for those with wide or deep shoulders, as well as side sleepers; and <a href=\"/products/the-blue-moon\" title=\"The Blue Moon\">The Blue Moon</a> enables deeper shoulder positioning with extra support around your shoulders and neck—even if you roll throughout the night. All our pillows are adjustable for whatever your Goldilocks setup is.<br/><br/><br/></p>"
           }
         }
       },
@@ -45,7 +52,8 @@
         "collapse_qqjHP3",
         "collapse_btJ6mN",
         "collapse_LWkJyq",
-        "collapse_m4bjUw"
+        "collapse_m4bjUw",
+        "collapse_Tzdk44"
       ],
       "name": "FAQ with Top Image",
       "settings": {
