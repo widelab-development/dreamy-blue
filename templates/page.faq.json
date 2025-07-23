@@ -46,6 +46,20 @@
             "title": "<p>Do you have a pillow that works for all sleep types?</p>",
             "content": "<p>No matter how you sleep, there’s a DreamyBlue pillow designed for you. <a href=\"/products/the-signature\" title=\"The Signature\">The Signature</a> pillow works for side, back, and stomach sleepers; <a href=\"/products/the-sapphire\" title=\"The Sapphire\">The Sapphire</a> pillow is ideal for those with wide or deep shoulders, as well as side sleepers; and <a href=\"/products/the-blue-moon\" title=\"The Blue Moon\">The Blue Moon</a> enables deeper shoulder positioning with extra support around your shoulders and neck—even if you roll throughout the night. All our pillows are adjustable for whatever your Goldilocks setup is.<br/><br/><br/></p>"
           }
+        },
+        "collapse_zJbrAU": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>Does your pillow support my neck for sleep posture?</p>",
+            "content": "<p>Yes. All our pillows are orthopedic pillows. They are designed to promote natural, healthy alignment and provide wonderful support.</p>"
+          }
+        },
+        "collapse_WdLMzf": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>Is the pillow cover made from breathable materials?</p>",
+            "content": "<p>Absolutely. Our pillowcases are made of super-breathable, hypoallergenic, bamboo-derived rayon, while our exclusive shredded memory foam fill is CertiPUR-US Certified and freshly manufactured. We never use recycled, contaminated, or unregulated materials.</p>"
+          }
         }
       },
       "block_order": [
@@ -53,7 +67,9 @@
         "collapse_btJ6mN",
         "collapse_LWkJyq",
         "collapse_m4bjUw",
-        "collapse_Tzdk44"
+        "collapse_Tzdk44",
+        "collapse_zJbrAU",
+        "collapse_WdLMzf"
       ],
       "name": "FAQ with Top Image",
       "settings": {
