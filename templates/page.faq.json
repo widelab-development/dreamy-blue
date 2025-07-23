@@ -60,6 +60,13 @@
             "title": "<p>Is the pillow cover made from breathable materials?</p>",
             "content": "<p>Absolutely. Our pillowcases are made of super-breathable, hypoallergenic, bamboo-derived rayon, while our exclusive shredded memory foam fill is CertiPUR-US Certified and freshly manufactured. We never use recycled, contaminated, or unregulated materials.</p>"
           }
+        },
+        "collapse_nwEtnY": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>What warranty do you offer on my DreamyBlue pillow?</p>",
+            "content": "<p>Lifetime warranty. Period. It doesn’t matter if it’s your first night or if you’ve slept with DreamyBlue for years: if you need any assistance whatsoever, reach out for real service.<br/><br/><br/></p>"
+          }
         }
       },
       "block_order": [
@@ -69,7 +76,8 @@
         "collapse_m4bjUw",
         "collapse_Tzdk44",
         "collapse_zJbrAU",
-        "collapse_WdLMzf"
+        "collapse_WdLMzf",
+        "collapse_nwEtnY"
       ],
       "name": "FAQ with Top Image",
       "settings": {
