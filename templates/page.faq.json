@@ -67,6 +67,13 @@
             "title": "<p>What warranty do you offer on my DreamyBlue pillow?</p>",
             "content": "<p>Lifetime warranty. Period. It doesn’t matter if it’s your first night or if you’ve slept with DreamyBlue for years: if you need any assistance whatsoever, reach out for real service.<br/><br/><br/></p>"
           }
+        },
+        "collapse_T9TBWX": {
+          "type": "collapse",
+          "settings": {
+            "title": "<p>Do I use another pillowcase on top of the regular one?</p>",
+            "content": "<p>That’s not necessary. Our outer cover is machine washable and dryer friendly. However, if you want to personalize your pillow with a different pillowcase, have fun with it!</p>"
+          }
         }
       },
       "block_order": [
@@ -77,7 +84,8 @@
         "collapse_Tzdk44",
         "collapse_zJbrAU",
         "collapse_WdLMzf",
-        "collapse_nwEtnY"
+        "collapse_nwEtnY",
+        "collapse_T9TBWX"
       ],
       "name": "FAQ with Top Image",
       "settings": {
