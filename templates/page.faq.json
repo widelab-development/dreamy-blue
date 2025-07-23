@@ -15,8 +15,8 @@
         "collapse_qqjHP3": {
           "type": "collapse",
           "settings": {
-            "title": "<p>Heading</p>",
-            "content": "<p>Showcase a benefit of your product</p>"
+            "title": "<p>I sense a memory foam smell. How do I get rid of it?</p>",
+            "content": "<p>Rest assured: our memory foam is US Certified and completely safe. The natural memory foam<br/>smell is harmless, and is easily helped by airing out the pillow or by running it in the dryer with a<br/>dryer sheet.</p>"
           }
         },
         "collapse_btJ6mN": {
@@ -50,10 +50,10 @@
       "name": "FAQ with Top Image",
       "settings": {
         "bg_image": "shopify://shop_images/Frame_15612.webp",
-        "bg_color": "#1E1E5A",
+        "bg_color": "#1e1e5a",
         "top_heading": "FAQ",
         "font_size_heading": "h1",
-        "heading": "Frequently Asked <br>Questions"
+        "heading": "Frequently Asked Questions"
       }
     },
     "custom_form_BhBNYk": {
