@@ -64,7 +64,9 @@
     },
     "header": {
       "type": "header",
-      "custom_css": [],
+      "custom_css": [
+        ".xo-media .xo-image{min-height: 72px;}"
+      ],
       "settings": {
         "header_style": "style-2",
         "sticky_header_type": "none",
