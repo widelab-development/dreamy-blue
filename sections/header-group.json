@@ -65,7 +65,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".xo-media .xo-image{min-height: 72px;}"
+        ".xo-media .xo-image {min-height: 72px;}"
       ],
       "settings": {
         "header_style": "style-2",
