@@ -308,7 +308,7 @@
       "settings": {
         "heading": "Answer. Order. Awesome.",
         "description": "<p>This quick quiz helps you find the right pillow(s) for exactly how and why you sleep.</p>",
-        "quiz_image": "shopify://shop_images/Frame_68_1.png",
+        "quiz_image": "shopify://shop_images/Quiz.svg",
         "quiz_link": "https://dreamy-blue.myshopify.com/tools/perfect-product-finder/sleep-position?instore=true",
         "open_in_new_tab": true,
         "image": "shopify://shop_images/Frame_22.png",
