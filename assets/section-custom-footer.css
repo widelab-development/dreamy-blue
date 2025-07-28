@@ -110,6 +110,11 @@
     display: none;
   }
 }
+@media (max-width: 991.98px) {
+  .custom-footer__text {
+    padding: 1rem 0;
+  }
+}
 .custom-footer__logo {
   margin-top: 4.6rem;
   display: flex;
