@@ -114,6 +114,10 @@
 		@include media-breakpoint-up (lg) {
 			display: none;
 		}
+
+		@include media-breakpoint-down (lg) {
+			padding: rem(10) 0;
+		}
 	}
 
 	&__logo {
