@@ -143,7 +143,8 @@
         box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
     
         @media (max-width: 992px) {
-          padding: rem(16) rem(24);
+          font-size: rem(14);
+          padding: rem(16) rem(12);
         }
       }
     
@@ -328,6 +329,12 @@
         width: 20px;
         height: 20px;
       }
+
+      span {
+        @media (max-width: 768px) {
+          max-width: rem(120);
+        }
+      }
     }
   
     &__features {
@@ -352,6 +359,8 @@
 
         @media (max-width: 992px) {
             max-width: 100%;
+            font-size: rem(14) !important;
+            gap: rem(8);
         }
     
         img {

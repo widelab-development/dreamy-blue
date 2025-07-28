@@ -15,6 +15,8 @@
 .custom-product-diffrences__container {
   display: flex;
   flex-direction: column;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 @media (min-width: 992px) {
   .custom-product-diffrences__container {
@@ -86,7 +88,7 @@
 }
 .is-slider-active .custom-product-diffrences__card-item {
   width: 90.9090909091%;
-  margin-right: 1.6rem;
+  margin-right: 0.8rem;
 }
 @media (min-width: 992px) {
   .custom-product-diffrences__card-item {
@@ -148,7 +150,25 @@
   font-size: 2.4rem;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .custom-product-diffrences__arrow {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+}
 .custom-product-diffrences__arrow svg path {
   stroke: var(--color-black);
+}
+@media (max-width: 768px) {
+  .custom-product-diffrences__arrow--prev svg {
+    margin-right: 4px;
+    margin-top: 2px;
+  }
+}
+@media (max-width: 768px) {
+  .custom-product-diffrences__arrow--next svg {
+    margin-left: 4px;
+    margin-top: 2px;
+  }
 }
 /*# sourceMappingURL=section-custom-product-diffrences.css.map */

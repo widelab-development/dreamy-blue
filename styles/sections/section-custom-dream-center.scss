@@ -35,6 +35,7 @@
   }
 
   &__content-col {
+    padding: 0 rem(20);
     order: 1;
 
     @media (max-width: 992px) {

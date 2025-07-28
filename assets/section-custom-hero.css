@@ -164,6 +164,11 @@
     margin-bottom: 2rem !important;
   }
 }
+@media (max-width: 576px) {
+  .custom-hero-banner__heading {
+    max-width: 32rem;
+  }
+}
 .custom-hero-banner__subheading, .custom-hero-banner__desc {
   font-size: 1.8rem;
   line-height: 1.6;

@@ -57,6 +57,7 @@
 @media (max-width: 768px) {
   .custom-product-reviews-list__heading {
     font-size: 3.2rem !important;
+    max-width: 32rem;
   }
 }
 .custom-product-reviews-list__grid {

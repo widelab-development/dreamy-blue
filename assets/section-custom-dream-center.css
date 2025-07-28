@@ -37,6 +37,7 @@
   }
 }
 .custom-dream-center__content-col {
+  padding: 0 2rem;
   order: 1;
 }
 @media (max-width: 992px) {

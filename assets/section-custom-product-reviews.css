@@ -165,4 +165,16 @@
 .custom-product-reviews__arrow:hover {
   background-color: #f0f0f0;
 }
+@media (max-width: 768px) {
+  .custom-product-reviews__arrow--prev svg {
+    margin-right: 4px;
+    margin-top: 2px;
+  }
+}
+@media (max-width: 768px) {
+  .custom-product-reviews__arrow--next svg {
+    margin-left: 4px;
+    margin-top: 2px;
+  }
+}
 /*# sourceMappingURL=section-custom-product-reviews.css.map */

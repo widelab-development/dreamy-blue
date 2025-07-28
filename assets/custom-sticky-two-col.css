@@ -57,6 +57,11 @@
   margin: 0;
   margin-bottom: 6rem !important;
 }
+@media (max-width: 768px) {
+  .custom-sticky-two-col__heading {
+    margin-bottom: 1.2rem !important;
+  }
+}
 .custom-sticky-two-col__heading.h2 {
   font-size: 4.2rem;
   line-height: 1;

@@ -24,7 +24,7 @@
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: rem(36) rem(48);
+		gap: rem(36) rem(36);
 
 		@include media-breakpoint-up (lg) {
 			grid-template-columns: minmax(0, 500px) minmax(0, 500px) minmax(0, 500px) 1fr;
