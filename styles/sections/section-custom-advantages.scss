@@ -169,7 +169,7 @@
 
     @media (max-width: 992px) {
       min-height: rem(238);
-      padding: rem(36) rem(32) !important;
+      padding: rem(36) rem(24) !important;
     }
 
     &:hover {
@@ -219,6 +219,7 @@
     
     @media (max-width: 992px) {
       font-size: rem(23) !important;
+      max-width: rem(320);
     }
   }
 }

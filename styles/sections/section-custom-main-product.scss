@@ -49,11 +49,19 @@
       padding: rem(8) rem(24);
       border-radius: rem(6);
       margin-bottom: rem(12);
+
+      @media (max-width: 768px) {
+        padding: rem(8) rem(20);
+      }
     }
   
     &__rating-average {
       font-size: rem(14);
       color: var(--color-black);
+
+      @media (max-width: 768px) {
+        font-size: rem(12);
+      }
     }
   
     &__stars {
@@ -65,6 +73,11 @@
       svg {
         width: 18px;
         height: 18px;
+
+        @media (max-width: 768px) {
+          width: 16px;
+          height: 16px;
+        }
       }
     }
   
@@ -72,6 +85,10 @@
       font-size: rem(14);
       font-weight: 600;
       color: var(--color-black);
+
+      @media (max-width: 768px) {
+        font-size: rem(12);
+      }
     }
   
     &__title {
@@ -265,12 +282,20 @@
         gap: rem(6);
         display: flex;
         align-items: center;
+
+        @media (max-width: 992px) {
+            font-size: rem(14);
+        }
     }
   
     &__discount-badge {
       color: #E80D0D;
       font-size: rem(16);
       font-weight: 600;
+
+      @media (max-width: 992px) {
+        font-size: rem(14);
+      }
     }
   
     &__quantity-price {
@@ -280,6 +305,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        @media (max-width: 992px) {
+          font-size: rem(14);
+        }
     }
   
     &__price-compare {

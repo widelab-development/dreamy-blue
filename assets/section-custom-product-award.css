@@ -75,6 +75,7 @@
   .custom-product-award__quote {
     font-size: 4.8rem !important;
     margin: 0 0 2.4rem 0;
+    max-width: 32rem;
   }
 }
 .custom-product-award__logo-wrapper {
@@ -90,6 +91,7 @@
     max-width: 12rem;
     max-height: 4.4rem;
     padding: 0 2rem;
+    border-radius: 0.5rem;
   }
 }
 .custom-product-award__logo-wrapper a {

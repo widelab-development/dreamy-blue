@@ -56,6 +56,7 @@
 
     @media (max-width: 768px) {
       font-size: rem(14) !important;
+      max-width: rem(280);
     }
   }
 
@@ -83,6 +84,7 @@
       width: 100%;
       max-width: 100%;
       padding: rem(16);
+      font-size: rem(14);
     }
   }
 }
