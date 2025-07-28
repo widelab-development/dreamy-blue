@@ -66,6 +66,10 @@
 
     p {
       margin: 0;
+
+      @media (max-width: 768px) {
+        max-width: rem(300);
+      }
     }
   }
 

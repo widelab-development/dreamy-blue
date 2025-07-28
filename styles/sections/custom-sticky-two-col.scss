@@ -65,6 +65,10 @@
     margin: 0;
     margin-bottom: rem(60) !important;
 
+    @media (max-width: 768px) {
+      margin-bottom: rem(12) !important;
+    }
+
     &.h2 {
       font-size: rem(42);
       line-height: 1;

@@ -38,11 +38,7 @@
   &__image-wrapper {
     max-width: rem(1240);
     width: 100%;
-    margin-top: rem(-40);
-
-    @media (max-width: 768px) {
-      margin-top: rem(-36);
-    }
+    margin-top: 0;
 
     img, .placeholder-svg {
       width: 100%;

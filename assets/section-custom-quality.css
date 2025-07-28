@@ -130,6 +130,11 @@
 .custom-quality__description-bottom p {
   margin: 0;
 }
+@media (max-width: 768px) {
+  .custom-quality__description-bottom p {
+    max-width: 32rem;
+  }
+}
 .custom-quality__buttons {
   display: flex;
   flex-wrap: wrap;
@@ -151,6 +156,7 @@
 @media (max-width: 992px) {
   .custom-quality__button {
     font-size: 1.4rem !important;
+    min-height: 5.4rem;
   }
 }
 .custom-quality__button--primary {

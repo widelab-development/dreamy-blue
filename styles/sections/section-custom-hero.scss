@@ -170,6 +170,10 @@
       max-width: 100%;
       margin-bottom: rem(20) !important;
     }
+
+    @media (max-width: 576px) {
+      max-width: rem(320);
+    }
   }
 
   &__subheading,

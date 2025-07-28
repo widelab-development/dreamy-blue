@@ -105,6 +105,68 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  .xo-media .xo-image {
+    min-height: 7.2rem;
+  }
+}
+
+.xo-cart-item__options-name {
+  display: none;
+}
+
+#start-over {
+  display: none;
+}
+
+.kkVAjA {
+  margin: 0 auto 0 !important;
+}
+
+.esdXTd {
+  margin: 0 auto 0 !important;
+}
+
+#shopify-section-template--19771884503299__main_cart_AxiBwR .xo-section {
+  padding-top: 0 !important;
+}
+
+.next-question-button {
+  display: none !important;
+}
+
+.button .start-button {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-weight: 300;
+  border-radius: 9.6rem;
+}
+
+@media (max-width: 768px) {
+  .answer-text-with-image {
+    font-size: 1.4rem !important;
+    font-weight: 300 !important;
+  }
+  .welcome-container h1 {
+    font-size: 3.2rem !important;
+  }
+  .jvVUzO p {
+    font-size: 1.4rem !important;
+  }
+  .kaaQLd {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  #shopify-section-template--19827288015107__custom_sticky_two_col_bR3hrC {
+    padding-top: 0 !important;
+  }
+  .testimonial-box-5__left {
+    text-align: center;
+  }
+  .testimonial-box-5__item .testimonial-box--radius {
+    border-radius: 0 !important;
+  }
+}
 button,
 a,
 input,

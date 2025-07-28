@@ -178,5 +178,23 @@
     &:hover {
       background-color: #f0f0f0;
     }
+
+    &--prev {
+      svg{
+        @media (max-width: 768px) {
+          margin-right: 4px;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    &--next {
+      svg{
+        @media (max-width: 768px) {
+          margin-left: 4px;
+          margin-top: 2px;
+        }
+      }
+    }
   }
 }
