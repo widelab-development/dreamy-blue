@@ -317,7 +317,7 @@
       "type": "custom-product-award",
       "name": "Custom Product Award",
       "settings": {
-        "image": "shopify://shop_images/B0000260_1.png",
+        "image": "shopify://shop_images/B0000260_1_1.png",
         "content_bg_color": "#1d1c50",
         "overtitle": "Award-Winning Pillows",
         "quote": "“Best pillow for all sleeping positions”",
