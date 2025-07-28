@@ -66,6 +66,9 @@
 .custom-mission__content {
   max-width: 90rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .custom-mission__overtitle {
   display: block;
@@ -97,6 +100,7 @@
   .custom-mission__heading {
     font-size: 4.8rem !important;
     margin-bottom: 2.4rem !important;
+    max-width: 27rem;
   }
 }
 .custom-mission__description {
@@ -111,6 +115,7 @@
   .custom-mission__description {
     font-size: 1.4rem !important;
     margin: 0 auto 2.4rem;
+    max-width: 32rem;
   }
 }
 .custom-mission__description p {

@@ -67,6 +67,9 @@
   &__content {
     max-width: rem(900);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__overtitle {
@@ -97,6 +100,7 @@
     @media (max-width: 992px) {
       font-size: rem(48) !important;
       margin-bottom: rem(24) !important;
+      max-width: rem(270);
     }
   }
 
@@ -111,6 +115,7 @@
     @media (max-width: 992px) {
       font-size: rem(14) !important;
       margin: 0 auto rem(24);
+      max-width: rem(320);
     }
 
     p {

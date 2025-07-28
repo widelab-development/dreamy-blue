@@ -7,6 +7,7 @@
 
   @media (max-width: 991px) {
     padding: rem(36) 0;
+    margin-bottom: rem(-1);
   }
 }
 
@@ -102,11 +103,19 @@
     font-weight: 300;
     margin: 0 !important;
     color: var(--color-purple-100);
+
+    @media (max-width: 991px) {
+      font-size: rem(23) !important;
+    }
   }
 
   &__item-desc {
     font-size: rem(18) !important;
     font-weight: 300;
+
+    @media (max-width: 991px) {
+      font-size: rem(14) !important;
+    }
   }
   
   &__media-col {
@@ -126,6 +135,10 @@
   &__pagination {
     display: flex;
     gap: rem(8);
+
+    @media (max-width: 991px) {
+      gap: rem(24);
+    }
     
     .dot {
       flex: 1;
