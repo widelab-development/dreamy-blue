@@ -78,6 +78,16 @@
     display: flex;
     gap: 0;
     margin-bottom: rem(12);
+
+    svg {
+      width: rem(18);
+      height: rem(18);
+
+      @media (max-width: 768px) {
+        width: rem(16.56);
+        height: rem(16.56);
+      }
+    }
   }
 
   &__image-wrapper {
