@@ -49,15 +49,26 @@
   gap: 0.1rem;
   color: #FF9900;
 }
-.custom-product-reviews-list__heading {
+.custom-product-reviews-list__heading, .custom-product-reviews-list__heading h2 {
   font-size: 7.2rem !important;
   font-family: var(--font-beausite-fit-web);
   font-weight: 300;
 }
 @media (max-width: 768px) {
-  .custom-product-reviews-list__heading {
+  .custom-product-reviews-list__heading, .custom-product-reviews-list__heading h2 {
     font-size: 3.2rem !important;
     max-width: 32rem;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .custom-product-reviews-list__heading--desktop, .custom-product-reviews-list__heading h2--desktop {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .custom-product-reviews-list__heading--mobile, .custom-product-reviews-list__heading h2--mobile {
+    display: none;
   }
 }
 .custom-product-reviews-list__grid {
