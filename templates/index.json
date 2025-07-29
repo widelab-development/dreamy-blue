@@ -77,6 +77,7 @@
       "name": "Custom Featured Products",
       "settings": {
         "heading": "3 pillows. 1 perfect posture.",
+        "heading_mobile": "<h2>3 pillows.<br>1 perfect posture.</h2>",
         "subheading": "<p>It’s automatic: when your neck, shoulders, and hips (And pelvis and knees, too!) fall into neutral alignment, you naturally rest your best.</p>"
       }
     },
@@ -290,7 +291,7 @@
       "settings": {
         "heading_top": "1,314,000,000 (that’s billion) hours of reformed sleep. Every <i>year.</i>",
         "description_top": "<p>Are you ready for 8 hours per night of deep, quality sleep? 450,000+ of our customers can't wait to get back in bed with us.</p>",
-        "heading_bottom": "A joint effort. <i>Minus the effort.</i>",
+        "heading_bottom": "A joint effort. <br><i>Minus the effort.</i>",
         "description_bottom": "<p>Exceptional, healthy sleep is a collaboration between our product design team and your own at-home testing. </p><p>Right out the box, our pillows do wonders for proper alignment. Then, adjust it at your discretion for the most personal comfort.</p>",
         "button_1_text": "How to Adjust",
         "button_1_link": "",
@@ -299,7 +300,7 @@
         "play_icon": "shopify://shop_images/Frame_68.svg",
         "bottom_video_poster": "shopify://shop_images/image_45.png",
         "bottom_video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4",
-        "bottom_video_label": "<b>Watch:</b> How to Adjust"
+        "bottom_video_label": "Watch: How to Adjust"
       }
     },
     "custom_quiz_xiDFUK": {
