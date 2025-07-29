@@ -223,7 +223,7 @@
         "background_color": "#ffffff",
         "overtitle": "Ideal Sleep Type",
         "heading": "For wide shoulders and side sleepers.",
-        "description": "<p>From night one, The Sapphire works wonders for your sleep style.<br/>Want more? Adjust the fill and tuck into the gusset for aligned sleep<br/>on your side, back, or anywhere those broad shoulders take you.</p>"
+        "description": "<p>From night one, The Sapphire works wonders for your sleep style. Want more? Adjust the fill and tuck into the gusset for aligned sleep on your side, back, or anywhere those broad shoulders take you.</p>"
       }
     },
     "custom_product_reviews_list_EP4cYp": {
@@ -298,6 +298,7 @@
         "container_bg_color": "#f8f3ec",
         "top_line_text": "4.9 | 552 Reviews",
         "heading": "1,314,000,000 (that’s billion) hours of reformed sleep. Every <i>year.</i>",
+        "heading_mobile": "<h2>1,314,000,000 (that’s billion) hours of reformed sleep. Every year.</h2>",
         "button_text": "View more reviews",
         "button_link": ""
       }
