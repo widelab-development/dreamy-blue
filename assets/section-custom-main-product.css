@@ -189,9 +189,8 @@
 }
 @media (max-width: 992px) {
   .main-product__variant-options {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0.4rem;
+    padding-bottom: 2.4rem;
+    margin-bottom: 2.4rem;
   }
 }
 .main-product__quantity-selector {
@@ -379,9 +378,20 @@
   height: 3.04rem;
   width: 3.04rem;
 }
+@media (max-width: 992px) {
+  .main-product__feature-item img {
+    height: 2.7rem;
+    width: 2.7rem;
+  }
+}
 .main-product__feature-item:nth-last-of-type(1) img {
   height: 3.04rem;
   width: max-content;
+}
+@media (max-width: 992px) {
+  .main-product__feature-item:nth-last-of-type(1) img {
+    height: 2.7rem;
+  }
 }
 .main-product__content {
   padding: 0;
