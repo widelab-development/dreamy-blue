@@ -5,13 +5,16 @@
   assign container_bg_color = section.settings.container_bg_color
   assign top_line_text = section.settings.top_line_text
   assign heading = section.settings.heading
+  assign heading_mobile = section.settings.heading_mobile
   assign button_text = section.settings.button_text
   assign button_link = section.settings.button_link
+
 
   capture stars_svg
     echo '<svg width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10.6498 0.919922L13.3874 7.50193L20.4932 8.0716L15.0794 12.7092L16.7334 19.6432L10.6498 15.9274L4.56623 19.6432L6.22026 12.7092L0.80637 8.0716L7.9122 7.50193L10.6498 0.919922Z"/></svg>'
   endcapture
 -%}
+
 
 <section
   id="shopify-section-{{ section.id }}"
@@ -31,10 +34,16 @@
           {%- for i in (1..5) -%}{{ stars_svg }}{%- endfor -%}
         </div>
       </div>
+      
       {%- if heading != blank -%}
-        <h2 class="custom-product-reviews-list__heading">{{ heading }}</h2>
+        <h2 class="custom-product-reviews-list__heading custom-product-reviews-list__heading--desktop">{{ heading }}</h2>
+      {%- endif -%}
+
+      {%- if heading_mobile != blank -%}
+        <div class="custom-product-reviews-list__heading custom-product-reviews-list__heading--mobile">{{ heading_mobile }}</div>
       {%- endif -%}
     </div>
+
 
     {%- if section.blocks.size > 0 -%}
       <div class="custom-product-reviews-list__grid">
@@ -61,6 +70,7 @@
       </div>
     {%- endif -%}
 
+
     {%- if button_text != blank -%}
       <div class="custom-product-reviews-list__footer">
         <a href="{{ button_link | default: '#' }}" class="custom-product-reviews-list__button">
@@ -73,6 +83,7 @@
     {%- endif -%}
   </xo-container>
 </section>
+
 
 {% schema %}
 {
@@ -102,8 +113,15 @@
     {
       "type": "textarea",
       "id": "heading",
-      "label": "Heading",
+      "label": "Heading (Desktop)",
       "default": "1,314,000,000 (that’s billion) hours of reformed sleep. Every year."
+    },
+    {
+      "type": "richtext",
+      "id": "heading_mobile",
+      "label": "Heading (Mobile)",
+      "default": "<h2>1,314,000,000 (that’s billion) hours of reformed sleep. Every year.</h2>",
+      "info": "This heading is only visible on mobile. Use Shift+Enter to create line breaks."
     },
     {
       "type": "text",
