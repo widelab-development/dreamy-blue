@@ -363,25 +363,11 @@
             "text": "Patented, plush pillowcase design"
           }
         },
-        "feature_3g3kDd": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Group_6.svg",
-            "text": "Matrix of down-like poly tufts"
-          }
-        },
         "feature_xDaLgY": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Group_3_f10efd79-e1ce-4755-83ea-b53beb0b0d8d.svg",
             "text": "Zippered fill-proof compartments"
-          }
-        },
-        "feature_hCCYUY": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Layer_1_2.svg",
-            "text": "Deluxe supportive Sapphire gusset"
           }
         },
         "feature_zKYT6B": {
@@ -391,18 +377,32 @@
             "text": "Machine-wash bamboo rayon"
           }
         },
-        "feature_c4iFUw": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/Asset_2_2x_127ed1c0-813d-41cc-a0a8-1de26b83925e.png",
-            "text": "OekoTex® certified fabrics"
-          }
-        },
         "feature_MQ3Jtx": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Group_5.svg",
             "text": "Cross-cut memory foam cubes"
+          }
+        },
+        "feature_3g3kDd": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Group_6.svg",
+            "text": "Matrix of down-like poly tufts"
+          }
+        },
+        "feature_hCCYUY": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Layer_1_2.svg",
+            "text": "Deluxe supportive Sapphire gusset"
+          }
+        },
+        "feature_c4iFUw": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/Asset_2_2x_127ed1c0-813d-41cc-a0a8-1de26b83925e.png",
+            "text": "OekoTex® certified fabrics"
           }
         },
         "feature_fbharP": {
@@ -415,12 +415,12 @@
       },
       "block_order": [
         "feature_cnggWC",
-        "feature_3g3kDd",
         "feature_xDaLgY",
-        "feature_hCCYUY",
         "feature_zKYT6B",
-        "feature_c4iFUw",
         "feature_MQ3Jtx",
+        "feature_3g3kDd",
+        "feature_hCCYUY",
+        "feature_c4iFUw",
         "feature_fbharP"
       ],
       "name": "Custom Product Materials",
