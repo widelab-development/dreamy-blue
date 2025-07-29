@@ -59,6 +59,7 @@
     max-width: 30rem;
     height: 20rem;
     aspect-ratio: 3/2;
+    overflow: hidden;
   }
 }
 .custom-dream-center__image {
@@ -72,6 +73,7 @@
   .custom-dream-center__image {
     max-width: 30rem;
     height: 20rem;
+    transform: scale(1.3);
   }
 }
 .custom-dream-center__content-col {

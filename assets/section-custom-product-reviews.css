@@ -73,6 +73,16 @@
   gap: 0;
   margin-bottom: 1.2rem;
 }
+.custom-product-reviews__stars svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+@media (max-width: 768px) {
+  .custom-product-reviews__stars svg {
+    width: 1.656rem;
+    height: 1.656rem;
+  }
+}
 .custom-product-reviews__image-wrapper {
   width: 100%;
   overflow: hidden;
