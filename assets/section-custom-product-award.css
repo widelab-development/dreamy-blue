@@ -28,6 +28,7 @@
   .custom-product-award__image-wrapper {
     min-height: 34rem;
     max-height: 34rem;
+    overflow: hidden;
   }
 }
 .custom-product-award__image-wrapper img, .custom-product-award__image-wrapper .placeholder-svg {
@@ -35,6 +36,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+@media (max-width: 991px) {
+  .custom-product-award__image-wrapper img, .custom-product-award__image-wrapper .placeholder-svg {
+    transform: scale(1.05);
+  }
 }
 .custom-product-award__content-wrapper {
   display: flex;
@@ -74,7 +80,7 @@
 @media (max-width: 991px) {
   .custom-product-award__quote {
     font-size: 4.8rem !important;
-    margin: 0 0 2.4rem 0;
+    margin: 0 auto 2.4rem auto;
     max-width: 32rem;
   }
 }

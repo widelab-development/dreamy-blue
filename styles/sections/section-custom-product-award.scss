@@ -25,6 +25,7 @@
     @media (max-width: 991px) {
       min-height: rem(340);
       max-height: rem(340);
+      overflow: hidden;
     }
 
     img, .placeholder-svg {
@@ -32,6 +33,10 @@
       height: 100%;
       object-fit: cover;
       display: block;
+
+      @media (max-width: 991px) {
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -73,7 +78,7 @@
 
     @media (max-width: 991px) {
         font-size: rem(48) !important;
-        margin: 0 0 rem(24) 0;
+        margin: 0 auto rem(24) auto;
         max-width: rem(320);
     }
   }
