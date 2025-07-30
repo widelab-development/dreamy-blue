@@ -93,8 +93,8 @@
 
     @media (max-width: 768px) {
       max-width: rem(120);
-      max-height: rem(44);
-      padding: 0 rem(20);
+      max-height: rem(50);
+      padding: 0;
       border-radius: rem(5);
     }
     
@@ -108,7 +108,7 @@
 
       @media (max-width: 768px) {
         width: rem(120);
-        height: rem(44);
+        height: rem(50);
       }
     }
   }
