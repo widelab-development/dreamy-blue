@@ -40,6 +40,10 @@
     width: 100%;
     margin-top: 0;
 
+    @media (max-width: 768px) {
+      margin-top: rem(-8);
+    }
+
     img, .placeholder-svg {
       width: 100%;
       height: auto;

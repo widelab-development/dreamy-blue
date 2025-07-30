@@ -116,7 +116,7 @@ img {
 }
 
 #start-over {
-  display: none;
+  display: none !important;
 }
 
 .kkVAjA {
