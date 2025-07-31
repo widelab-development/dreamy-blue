@@ -55,8 +55,8 @@
         "left_text": "Get $50 off! Click here",
         "left_link": "",
         "show_center": true,
-        "center_text": "NEW! Blue Moon Pillow Now Shipping",
-        "center_link": "shopify://products/the-blue-moon",
+        "center_text": "Free Shipping for all Pillow Orders",
+        "center_link": "shopify://collections",
         "show_right": true,
         "right_text": "Shipping & Returns",
         "right_link": "shopify://pages/shipping-refunds"
