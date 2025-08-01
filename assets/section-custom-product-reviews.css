@@ -156,7 +156,7 @@
 }
 @media (max-width: 1300px) {
   .custom-product-reviews__nav {
-    display: flex;
+    display: none;
     gap: 1.6rem;
     margin-top: 3.2rem;
     justify-content: flex-start;

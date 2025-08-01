@@ -168,7 +168,7 @@
     display: none;
     
     @media (max-width: 1300px) {
-      display: flex;
+      display: none;
       gap: rem(16);
       margin-top: rem(32);
       justify-content: flex-start;
