@@ -171,6 +171,7 @@
             "quiz_heading": "Need help? Take the quiz.",
             "quiz_subtext": "This quick quiz helps you find the right pillow for you.",
             "quiz_image": "shopify://shop_images/Quiz.svg",
+            "quiz_image_mobile": "shopify://shop_images/Frame_68_2.svg",
             "quiz_link": "https://dreamy-blue.myshopify.com/tools/perfect-product-finder/sleep-position?instore=true",
             "quiz_open_new_tab": true,
             "background_color": "#1d1c50",
