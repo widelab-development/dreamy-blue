@@ -255,6 +255,7 @@
         "container_bg_color": "#f8f3ec",
         "top_line_text": "4.9 | 552 Reviews",
         "heading": "1,314,000,000 (that’s billion) hours of reformed sleep. Every <i>year.</i>",
+        "heading_mobile": "<h2>1,314,000,000 (that’s billion) hours of reformed sleep. Every year.</h2>",
         "button_text": "View more reviews",
         "button_link": ""
       }
@@ -267,7 +268,7 @@
         "content_bg_color": "#1d1c50",
         "overtitle": "Award-Winning Pillows",
         "quote": "“Best pillow for Combo Sleepers”",
-        "logo": "shopify://shop_images/Frame_123.svg",
+        "logo": "shopify://shop_images/image_92.png",
         "logo_link": ""
       }
     },
