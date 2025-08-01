@@ -1,5 +1,4 @@
 {%- style -%}
-
   .custom-featured-products-section {
     padding-top: 54px !important;
   }
@@ -44,6 +43,10 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
+  .quiz-right__image--mobile {
+    display: none;
+  }
+
   .custom-featured-products__card--quiz {
     padding: 7.2rem 7.2rem 7.2rem 9.6rem;
   }
@@ -65,6 +68,13 @@
     .custom-featured-products__card--quiz {
       grid-column: 1 / 4;
       padding: 2.8rem 2rem;
+    }
+
+    .quiz-right__image--desktop {
+      display: none;
+    }
+    .quiz-right__image--mobile {
+      display: block;
     }
   }
   @media (max-width: 992px) {
@@ -171,21 +181,42 @@
                         {% endif %}
                       </div>
                       <div class="quiz-right">
-                        {%- if block.settings.quiz_image != blank -%}
+                        {%- if block.settings.quiz_image != blank or block.settings.quiz_image_mobile != blank -%}
                           <a
                             href="{{ block.settings.quiz_link | default: '#' }}"
                             class="quiz-right__link"
                             {% if block.settings.quiz_open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
                             aria-label="Take the quiz: {{ block.settings.quiz_heading | escape }}"
                           >
-                            <img
-                              src="{{ block.settings.quiz_image | image_url: width: 800 }}"
-                              alt="{{ block.settings.quiz_image.alt | default: 'Take the quiz' | escape }}"
-                              loading="lazy"
-                              width="{{ block.settings.quiz_image.width }}"
-                              height="{{ block.settings.quiz_image.height }}"
-                              class="quiz-right__image"
-                            >
+                            {% if block.settings.quiz_image != blank %}
+                              <img
+                                src="{{ block.settings.quiz_image | image_url: width: 800 }}"
+                                alt="{{ block.settings.quiz_image.alt | default: 'Take the quiz' | escape }}"
+                                loading="lazy"
+                                width="{{ block.settings.quiz_image.width }}"
+                                height="{{ block.settings.quiz_image.height }}"
+                                class="quiz-right__image quiz-right__image--desktop"
+                              >
+                            {% endif %}
+                            {% if block.settings.quiz_image_mobile != blank %}
+                              <img
+                                src="{{ block.settings.quiz_image_mobile | image_url: width: 800 }}"
+                                alt="{{ block.settings.quiz_image_mobile.alt | default: 'Take the quiz' | escape }}"
+                                loading="lazy"
+                                width="{{ block.settings.quiz_image_mobile.width }}"
+                                height="{{ block.settings.quiz_image_mobile.height }}"
+                                class="quiz-right__image quiz-right__image--mobile"
+                              >
+                            {% elsif block.settings.quiz_image != blank %}
+                               <img
+                                src="{{ block.settings.quiz_image | image_url: width: 800 }}"
+                                alt="{{ block.settings.quiz_image.alt | default: 'Take the quiz' | escape }}"
+                                loading="lazy"
+                                width="{{ block.settings.quiz_image.width }}"
+                                height="{{ block.settings.quiz_image.height }}"
+                                class="quiz-right__image quiz-right__image--mobile"
+                              >
+                            {% endif %}
                           </a>
                         {%- endif -%}
                       </div>
@@ -280,7 +311,12 @@
         {
           "type": "image_picker",
           "id": "quiz_image",
-          "label": "Quiz Image"
+          "label": "Quiz Image (Desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "quiz_image_mobile",
+          "label": "Quiz Image (Mobile)"
         },
         {
           "type": "url",
