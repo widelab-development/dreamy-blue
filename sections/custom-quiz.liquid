@@ -4,6 +4,7 @@
   assign heading = section.settings.heading
   assign description = section.settings.description
   assign quiz_image = section.settings.quiz_image
+  assign quiz_image_mobile = section.settings.quiz_image_mobile
   assign quiz_link = section.settings.quiz_link
   assign open_in_new_tab = section.settings.open_in_new_tab
   assign image = section.settings.image
@@ -28,7 +29,7 @@
           {%- endif -%}
         </div>
 
-        {%- if quiz_image != blank -%}
+        {%- if quiz_image != blank or quiz_image_mobile != blank -%}
           <div class="custom-quiz__embed-wrapper">
             <a
               href="{{ quiz_link | default: '#' }}"
@@ -36,14 +37,26 @@
               {% if open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
               aria-label="Start the quiz: {{ heading | escape }}"
             >
-              <img
-                src="{{ quiz_image | image_url: width: 1000 }}"
-                alt="{{ quiz_image.alt | default: 'Start the quiz' | escape }}"
-                width="{{ quiz_image.width }}"
-                height="{{ quiz_image.height }}"
-                loading="lazy"
-                class="custom-quiz__quiz-image"
-              >
+              {%- if quiz_image != blank -%}
+                <img
+                  src="{{ quiz_image | image_url: width: 1000 }}"
+                  alt="{{ quiz_image.alt | default: 'Start the quiz' | escape }}"
+                  width="{{ quiz_image.width }}"
+                  height="{{ quiz_image.height }}"
+                  loading="lazy"
+                  class="custom-quiz__quiz-image custom-quiz__quiz-image--desktop"
+                >
+              {%- endif -%}
+              {%- if quiz_image_mobile != blank -%}
+                <img
+                  src="{{ quiz_image_mobile | image_url: width: 1000 }}"
+                  alt="{{ quiz_image_mobile.alt | default: 'Start the quiz' | escape }}"
+                  width="{{ quiz_image_mobile.width }}"
+                  height="{{ quiz_image_mobile.height }}"
+                  loading="lazy"
+                  class="custom-quiz__quiz-image custom-quiz__quiz-image--mobile"
+                >
+              {%- endif -%}
             </a>
           </div>
         {%- endif -%}
@@ -91,8 +104,14 @@
     {
       "type": "image_picker",
       "id": "quiz_image",
-      "label": "Quiz Image",
+      "label": "Quiz Image (Desktop)",
       "info": "This image will be displayed in the content area and will link to the quiz."
+    },
+    {
+      "type": "image_picker",
+      "id": "quiz_image_mobile",
+      "label": "Quiz Image (Mobile)",
+      "info": "This image will be displayed on mobile devices. If empty, the desktop image will be used."
     },
     {
       "type": "url",
