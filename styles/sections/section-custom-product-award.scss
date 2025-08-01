@@ -90,6 +90,7 @@
     padding: 0 rem(28);
     border-radius: rem(10);
     margin: 0 auto;
+    opacity: .8;
 
     @media (max-width: 768px) {
       max-width: rem(120);
@@ -107,7 +108,6 @@
       height: rem(85);
 
       @media (max-width: 768px) {
-        width: rem(120);
         height: rem(50);
       }
     }

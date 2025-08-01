@@ -2,11 +2,11 @@
 
 .top-announcement-bar {
   background-color: var(--bar-bg-color);
-  padding: rem(18) rem(24);
+  padding: rem(12.6) rem(24);
   color: #FFFFFF;
 
   @media (max-width: 992px) {
-    padding: rem(11.5) rem(16);
+    padding: rem(6.5) rem(16) !important;
   }
 
   &__container {

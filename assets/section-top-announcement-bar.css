@@ -3,12 +3,12 @@
 /*MIXINS*/
 .top-announcement-bar {
   background-color: var(--bar-bg-color);
-  padding: 1.8rem 2.4rem;
+  padding: 1.26rem 2.4rem;
   color: #FFFFFF;
 }
 @media (max-width: 992px) {
   .top-announcement-bar {
-    padding: 1.15rem 1.6rem;
+    padding: 0.65rem 1.6rem !important;
   }
 }
 .top-announcement-bar__container {
