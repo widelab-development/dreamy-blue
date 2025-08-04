@@ -39,16 +39,29 @@
     max-width: rem(1240);
     width: 100%;
     margin-top: 0;
-
-    @media (max-width: 768px) {
-      margin-top: rem(-8);
-    }
+    animation: breathe-up-down 3s ease-in-out infinite;
 
     img, .placeholder-svg {
       width: 100%;
       height: auto;
       object-fit: contain;
     }
+
+    @media (max-width: 768px) {
+      animation: breathe-up-down-mobile 3s ease-in-out infinite;
+    }
+  }
+
+  @keyframes breathe-up-down {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes breathe-up-down-mobile {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-16px); }
+    100% { transform: translateY(0); }
   }
 
   &__description {

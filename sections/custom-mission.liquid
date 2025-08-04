@@ -17,7 +17,7 @@
   assign animation_mobile_bottom_url = section.settings.animation_mobile_bottom_url
 -%}
 
-<section 
+<section
   id="shopify-section-{{ section.id }}"
   class="custom-mission"
   style="--bg-color: {{ background_color }}; --text-color: {{ text_color }}; --btn-bg-color: {{ button_bg_color }}; --btn-text-color: {{ button_text_color }};"
@@ -28,8 +28,6 @@
         src="{{ animation_desktop_url }}"
         background="transparent"
         speed="1"
-        loop
-        autoplay
       ></lottie-player>
     </div>
   {%- endif -%}
@@ -40,8 +38,6 @@
         src="{{ animation_mobile_top_url }}"
         background="transparent"
         speed="1"
-        loop
-        autoplay
       ></lottie-player>
     </div>
   {%- endif -%}
@@ -76,12 +72,41 @@
         src="{{ animation_mobile_bottom_url }}"
         background="transparent"
         speed="1"
-        loop
-        autoplay
       ></lottie-player>
     </div>
   {%- endif -%}
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const section = document.getElementById('shopify-section-{{ section.id }}');
+    if (!section) return;
+
+    const observerOptions = {
+      root: null, 
+      rootMargin: '0px',
+      threshold: 0.2 
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const lottiePlayers = section.querySelectorAll('lottie-player');
+          lottiePlayers.forEach(player => {
+            if (player.getLottie) {
+               player.play();
+            } else {
+              player.addEventListener('ready', () => player.play());
+            }
+          });
+          observer.unobserve(section);
+        }
+      });
+    }, observerOptions);
+
+    observer.observe(section);
+  });
+</script>
 
 {% schema %}
 {

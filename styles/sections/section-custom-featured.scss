@@ -94,11 +94,6 @@
         @media (max-width: 992px) {
             min-height: rem(275);
         }
-
-        &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
     }
 
     &__card-content {
@@ -175,6 +170,7 @@
     &__card-image-wrapper {
         padding: 0 rem(32) 0;
         line-height: 0;
+        transition: var(--default-transition);
 
         @media (max-width: 568px) {
             padding: 0;
@@ -185,6 +181,10 @@
             height: auto;
             object-fit: contain;
         }
+    }
+
+    &__card:hover &__card-image-wrapper {
+        transform: scale(1.1);
     }
 
     &__placeholder-svg {

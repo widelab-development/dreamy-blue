@@ -87,6 +87,9 @@
     padding-top: rem(200);
 
     @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding-top: rem(100);
       margin-bottom: rem(60);
       padding-left: rem(20);

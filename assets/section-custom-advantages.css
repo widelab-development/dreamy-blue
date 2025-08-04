@@ -80,6 +80,9 @@
 }
 @media (max-width: 992px) {
   .custom-advantages__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 10rem;
     margin-bottom: 6rem;
     padding-left: 2rem;
