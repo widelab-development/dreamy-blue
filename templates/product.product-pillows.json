@@ -449,8 +449,8 @@
       "settings": {
         "background_color": "#8fbfef",
         "heading": "Sleep like the dead.\nWake like the living.",
-        "image_desktop": "shopify://shop_images/Signature_Pillow_8.png",
-        "image_mobile": "shopify://shop_images/Signature_Pillow_8_1.png",
+        "image_desktop": "shopify://shop_images/Signature-desktop.png",
+        "image_mobile": "shopify://shop_images/signature-mobile-1.png",
         "description": "Experience the life-changing comfort of healthy alignment. Starting tonight.",
         "button_text": "Add The Signature to Cart",
         "product": "the-signature"
