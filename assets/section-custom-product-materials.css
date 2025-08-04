@@ -113,4 +113,13 @@
     font-size: 1.44rem !important;
   }
 }
+.custom-product-materials [data-animate=fade-in] {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.custom-product-materials [data-animate=fade-in].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /*# sourceMappingURL=section-custom-product-materials.css.map */
