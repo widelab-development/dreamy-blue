@@ -16,10 +16,10 @@
     <div class="custom-product-materials__grid">
       <div class="custom-product-materials__text-col">
         {%- if overtitle != blank -%}
-          <p class="custom-product-materials__overtitle">{{ overtitle }}</p>
+          <p class="custom-product-materials__overtitle" data-animate="fade-in">{{ overtitle }}</p>
         {%- endif -%}
         {%- if heading != blank -%}
-          <h2 class="custom-product-materials__heading">{{ heading }}</h2>
+          <h2 class="custom-product-materials__heading" data-animate="fade-in">{{ heading }}</h2>
         {%- endif -%}
       </div>
 
@@ -48,6 +48,31 @@
     </div>
   </xo-container>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const section = document.querySelector('#shopify-section-{{ section.id }}');
+    const animatedElements = section.querySelectorAll('[data-animate="fade-in"]');
+
+    if (!animatedElements.length) return;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animatedElements.forEach((el, index) => {
+            el.style.transitionDelay = `${index * 150}ms`;
+            el.classList.add('is-visible');
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    observer.observe(section);
+  });
+</script>
 
 {% schema %}
 {

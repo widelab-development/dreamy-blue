@@ -116,4 +116,20 @@
       font-size: rem(14.4) !important;
     }
   }
+
+  [data-animate="fade-in"] {
+    opacity: 0;
+    transform: translateY(25px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  [data-animate="fade-in"].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+
+
+
+
