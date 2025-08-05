@@ -52,7 +52,7 @@
       "settings": {
         "background_color": "#b67bba",
         "show_left": true,
-        "left_text": "Get $50 off! Click here",
+        "left_text": "",
         "left_link": "",
         "show_center": true,
         "center_text": "Free Shipping for all Pillow Orders",
