@@ -51,7 +51,7 @@
       "name": "Top Announcement Bar",
       "settings": {
         "background_color": "#b67bba",
-        "show_left": true,
+        "show_left": false,
         "left_text": "",
         "left_link": "",
         "show_center": true,
