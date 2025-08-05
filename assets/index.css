@@ -108,7 +108,6 @@ img {
 @media (max-width: 768px) {
   .xo-media .xo-image {
     min-height: 7.2rem;
-    transform: scale(1.2);
   }
 }
 
