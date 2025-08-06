@@ -125,7 +125,7 @@
         "product_item_HENyit": {
           "type": "product-item",
           "settings": {
-            "product": "the-cool-stuff",
+            "product": "the-light-stuff",
             "custom_image": "shopify://shop_images/Frame_21_bee2d3b7-1098-4f7c-ab1d-9b0eb26b5330.png",
             "color_scheme_box": "scheme_1"
           }
