@@ -81,55 +81,76 @@
         "subheading": "<p>It’s automatic: when your neck, shoulders, and hips (And pelvis and knees, too!) fall into neutral alignment, you naturally rest your best.</p>"
       }
     },
-    "testimonial_style_5_NKAYzj": {
-      "type": "testimonial-style-5",
+    "custom_pillow_talk_X7igea": {
+      "type": "custom-pillow-talk",
       "blocks": {
-        "testimonial_box_MTajCT": {
-          "type": "testimonial-box",
+        "review_slide_zeGcTK": {
+          "type": "review_slide",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
-            "customer_name": "Customer name"
+            "rating": 5,
+            "title": "Amazing Pillow.",
+            "text": "<p>Had this pillow for over 4 years and love it! Adjust the fluff as you desire (comes with a lot of it). Once I did that at the beginning, I never had to add more. It keeps its form. Worth every penny for me!</p>",
+            "author": "Artur",
+            "show_badge": true,
+            "badge_text": "Verified Purchase",
+            "badge_bg_color": "#33ae6a",
+            "badge_text_color": "#FFFFFF"
           }
         },
-        "testimonial_box_Bit3RH": {
-          "type": "testimonial-box",
+        "review_slide_XjTGGy": {
+          "type": "review_slide",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
-            "customer_name": "Customer name"
+            "rating": 5,
+            "title": "Highly recommend!!!",
+            "text": "<p>I don’t easily write reviews, but in this case I had to. This pillow is by far the best pillow I have ever had. Price/quality is amazing… I’ve been having neck problems and problems sleeping for so long, this pillow is a dream in itself. </p>",
+            "author": "Ahnya",
+            "show_badge": true,
+            "badge_text": "Verified Purchase",
+            "badge_bg_color": "#33ae6a",
+            "badge_text_color": "#FFFFFF"
           }
         },
-        "testimonial_box_9R3DMm": {
-          "type": "testimonial-box",
+        "review_slide_TzQQ4U": {
+          "type": "review_slide",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
-            "customer_name": "Customer name"
+            "rating": 5,
+            "title": "We just ordered a second one.",
+            "text": "<p>My husband & I were tired of bad pillows, so have been buying more and more expensive ones, looking for THE ONE.We started by buying only one to see... we both loved it!</p>",
+            "author": "Georgia",
+            "show_badge": true,
+            "badge_text": "Verified Purchase",
+            "badge_bg_color": "#33ae6a",
+            "badge_text_color": "#FFFFFF"
           }
         },
-        "testimonial_box_RM9Rzc": {
-          "type": "testimonial-box",
+        "review_slide_KLUHrb": {
+          "type": "review_slide",
           "settings": {
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>",
-            "customer_name": "Customer name"
+            "rating": 5,
+            "title": "Amazing Pillow.",
+            "text": "<p>Had this pillow for over 4 years and love it! Adjust the fluff as you desire (comes with a lot of it). Once I did that at the beginning, I never had to add more. It keeps its form. Worth every penny for me!</p>",
+            "author": "Artur",
+            "show_badge": true,
+            "badge_text": "Verified Purchase",
+            "badge_bg_color": "#33ae6a",
+            "badge_text_color": "#FFFFFF"
           }
         }
       },
       "block_order": [
-        "testimonial_box_MTajCT",
-        "testimonial_box_Bit3RH",
-        "testimonial_box_9R3DMm",
-        "testimonial_box_RM9Rzc"
+        "review_slide_zeGcTK",
+        "review_slide_XjTGGy",
+        "review_slide_TzQQ4U",
+        "review_slide_KLUHrb"
       ],
-      "name": "t:sections.testimonial_style_5.presets.name",
+      "name": "Custom Pillow Talk",
       "settings": {
-        "font_size_heading": "h4",
-        "heading": "<h2>Pillow Talk</h2><h6>5-star reviews from the tens of thousands of people who’ve had a good night’s sleep.</h6>",
-        "color_scheme": "",
-        "background_color": "#f2eee8",
-        "background_gradient": "",
-        "padding_top_desktop": 50,
-        "padding_bottom_desktop": 50,
-        "padding_top_mobile": 50,
-        "padding_bottom_mobile": 50
+        "background_color": "#ffffff",
+        "content_background_color": "#f2eee8",
+        "heading": "Pillow Talk",
+        "subheading": "5-star reviews from the tens of thousands of people who’ve had a good night’s sleep.",
+        "arrow_color": "#1D1C50",
+        "arrow_bg_color": "#FFFFFF"
       }
     },
     "custom_reviews_JEntRe": {
@@ -356,7 +377,7 @@
   "order": [
     "custom_hero_dhNPbF",
     "custom_featured_products_baHCh7",
-    "testimonial_style_5_NKAYzj",
+    "custom_pillow_talk_X7igea",
     "custom_reviews_JEntRe",
     "custom_advantages_aNnhmg",
     "custom_quality_C7WMnb",
