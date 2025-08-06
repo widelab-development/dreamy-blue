@@ -1,0 +1,284 @@
+{{ 'section-custom-pillow-talk.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+{%- liquid
+  assign section_bg = section.settings.background_color
+  assign content_bg = section.settings.content_background_color
+
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading
+
+  assign arrow_color = section.settings.arrow_color
+  assign arrow_bg_color = section.settings.arrow_bg_color
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} .pillow-talk {
+    background-color: {{ section_bg }};
+  }
+
+  #shopify-section-{{ section.id }} .pillow-talk__content {
+    background-color: {{ content_bg }};
+  }
+
+  #shopify-section-{{ section.id }} .pillow-talk__nav-button {
+    background-color: {{ arrow_bg_color }};
+    color: {{ arrow_color }};
+  }
+</style>
+
+<section class="pillow-talk">
+  <xo-container>
+    <div class="pillow-talk__content">
+      <div class="pillow-talk__info">
+        <div>
+            {% if heading != blank %}
+            <h2 class="pillow-talk__heading">{{ heading }}</h2>
+            {% endif %}
+            {% if subheading != blank %}
+            <p class="pillow-talk__subheading">{{ subheading }}</p>
+            {% endif %}
+        </div>
+
+        <div class="pillow-talk__nav pillow-talk__nav--desktop">
+          <button class="pillow-talk__nav-button pillow-talk__nav-button--prev" type="button">
+            <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3196 0.811078L0.680419 11.9711L13.3196 23.1311" stroke="currentColor" stroke-width="0.8"/>
+            </svg>
+          </button>
+          <button class="pillow-talk__nav-button pillow-talk__nav-button--next" type="button">
+            <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.680359 23.1311L13.3196 11.971L0.68036 0.811035" stroke="currentColor" stroke-width="0.8"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="pillow-talk__slider-wrapper">
+        {%- if section.blocks.size > 0 -%}
+          <div class="pillow-talk__slider" id="pillow-talk-slider-{{ section.id }}">
+            {%- for block in section.blocks -%}
+              <div class="pillow-talk__slide" {{ block.shopify_attributes }}>
+                <div class="pillow-talk-card">
+                  {%- if block.settings.rating > 0 -%}
+                    <div class="pillow-talk-card__stars">
+                      {%- for i in (1..block.settings.rating) -%}
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.35 0.971069L13.0876 7.55307L20.1934 8.12274L14.7795 12.7603L16.4336 19.6944L10.35 15.9786L4.26642 19.6944L5.92045 12.7603L0.506565 8.12274L7.61239 7.55307L10.35 0.971069Z" fill="#FF9900"/>
+                        </svg>
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="pillow-talk-card__title">{{ block.settings.title }}</h3>
+                  {%- endif -%}
+
+                  {%- if block.settings.text != blank -%}
+                    <div class="pillow-talk-card__text">{{ block.settings.text }}</div>
+                  {%- endif -%}
+
+                  <div class="pillow-talk-card__footer">
+                    {%- if block.settings.author != blank -%}
+                      <p class="pillow-talk-card__author">{{ block.settings.author }}</p>
+                    {%- endif -%}
+
+                    {%- if block.settings.show_badge -%}
+                      <span class="pillow-talk-card__badge" style="background-color: {{ block.settings.badge_bg_color }}; color: {{ block.settings.badge_text_color }};">{{ block.settings.badge_text }}</span>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="pillow-talk__nav pillow-talk__nav--mobile">
+        <button class="pillow-talk__nav-button pillow-talk__nav-button--prev" type="button">
+          <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3196 0.811078L0.680419 11.9711L13.3196 23.1311" stroke="currentColor" stroke-width="0.8"/>
+          </svg>
+        </button>
+        <button class="pillow-talk__nav-button pillow-talk__nav-button--next" type="button">
+          <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.680359 23.1311L13.3196 11.971L0.68036 0.811035" stroke="currentColor" stroke-width="0.8"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </xo-container>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sliderEl = document.getElementById('pillow-talk-slider-{{ section.id }}');
+    if (sliderEl) {
+      const flkty = new Flickity(sliderEl, {
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+        imagesLoaded: true
+      });
+
+      const prevButtons = document.querySelectorAll('#shopify-section-{{ section.id }} .pillow-talk__nav-button--prev');
+      const nextButtons = document.querySelectorAll('#shopify-section-{{ section.id }} .pillow-talk__nav-button--next');
+
+      prevButtons.forEach(button => {
+        button.addEventListener('click', () => flkty.previous());
+      });
+
+      nextButtons.forEach(button => {
+        button.addEventListener('click', () => flkty.next());
+      });
+
+      // --- POCZĄTEK ZMIAN ---
+      const setEqualCardHeight = () => {
+        const cards = document.querySelectorAll('#shopify-section-{{ section.id }} .pillow-talk-card');
+        if (!cards.length) return;
+
+        // Resetuj wysokość, aby przeglądarka mogła obliczyć ją na nowo
+        cards.forEach(card => card.style.height = 'auto');
+
+        // Znajdź najwyższą kartę
+        let maxHeight = 0;
+        cards.forEach(card => {
+          if (card.offsetHeight > maxHeight) {
+            maxHeight = card.offsetHeight;
+          }
+        });
+
+        // Ustaw wysokość wszystkich kart na wysokość tej najwyższej
+        cards.forEach(card => card.style.height = `${maxHeight}px`);
+      };
+
+      flkty.on('ready', setEqualCardHeight);
+      flkty.on('resize', setEqualCardHeight);
+      // --- KONIEC ZMIAN ---
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom Pillow Talk",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#F8F3EC"
+    },
+    {
+      "type": "color",
+      "id": "content_background_color",
+      "label": "Content Box Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Pillow Talk"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "5-star reviews from the tens of thousands of people who’ve had a good night’s sleep."
+    },
+    {
+      "type": "header",
+      "content": "Slider Navigation"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Arrow Color",
+      "default": "#1D1C50"
+    },
+    {
+      "type": "color",
+      "id": "arrow_bg_color",
+      "label": "Arrow Background Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review_slide",
+      "name": "Review Slide",
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "label": "Star Rating",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Review Title",
+          "default": "Amazing Pillow."
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Review Text",
+          "default": "<p>Had this pillow for over 4 years and love it! Adjust the fluff as you desire (comes with a lot of it). Once I did that at the beginning, I never had to add more. It keeps its form. Worth every penny for me!</p>"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author Name",
+          "default": "Artur"
+        },
+        {
+          "type": "header",
+          "content": "Verified Badge"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_badge",
+          "label": "Show Verified Badge",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text",
+          "default": "Verified Purchase"
+        },
+        {
+          "type": "color",
+          "id": "badge_bg_color",
+          "label": "Badge Background",
+          "default": "#4CAF50"
+        },
+        {
+          "type": "color",
+          "id": "badge_text_color",
+          "label": "Badge Text Color",
+          "default": "#FFFFFF"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Pillow Talk"
+    }
+  ]
+}
+{% endschema %}
