@@ -19,23 +19,23 @@
 <section class="top-announcement-bar" style="--bar-bg-color: {{ bg_color }};">
   <div class="top-announcement-bar__container">
     <div class="top-announcement-bar__content">
-      {%- if show_left and left_text != blank -%}
-        <div class="top-announcement-bar__item top-announcement-bar__item--left">
+      <div class="top-announcement-bar__item top-announcement-bar__item--left">
+        {%- if show_left and left_text != blank -%}
           <a href="{{ left_link | default: '#' }}" class="top-announcement-bar__link">{{ left_text }}</a>
-        </div>
-      {%- endif -%}
+        {%- endif -%}
+      </div>
 
-      {%- if show_center and center_text != blank -%}
-        <div class="top-announcement-bar__item top-announcement-bar__item--center">
+      <div class="top-announcement-bar__item top-announcement-bar__item--center">
+        {%- if show_center and center_text != blank -%}
           <a href="{{ center_link | default: '#' }}" class="top-announcement-bar__link">{{ center_text }}</a>
-        </div>
-      {%- endif -%}
+        {%- endif -%}
+      </div>
 
-      {%- if show_right and right_text != blank -%}
-        <div class="top-announcement-bar__item top-announcement-bar__item--right">
+      <div class="top-announcement-bar__item top-announcement-bar__item--right">
+        {%- if show_right and right_text != blank -%}
           <a href="{{ right_link | default: '#' }}" class="top-announcement-bar__link">{{ right_text }}</a>
-        </div>
-      {%- endif -%}
+        {%- endif -%}
+      </div>
     </div>
   </div>
 </section>
