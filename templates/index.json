@@ -94,7 +94,7 @@
             "show_badge": true,
             "badge_text": "Verified Purchase",
             "badge_bg_color": "#33ae6a",
-            "badge_text_color": "#FFFFFF"
+            "badge_text_color": "#ffffff"
           }
         },
         "review_slide_XjTGGy": {
@@ -107,7 +107,7 @@
             "show_badge": true,
             "badge_text": "Verified Purchase",
             "badge_bg_color": "#33ae6a",
-            "badge_text_color": "#FFFFFF"
+            "badge_text_color": "#ffffff"
           }
         },
         "review_slide_TzQQ4U": {
@@ -120,7 +120,7 @@
             "show_badge": true,
             "badge_text": "Verified Purchase",
             "badge_bg_color": "#33ae6a",
-            "badge_text_color": "#FFFFFF"
+            "badge_text_color": "#ffffff"
           }
         },
         "review_slide_KLUHrb": {
@@ -133,7 +133,7 @@
             "show_badge": true,
             "badge_text": "Verified Purchase",
             "badge_bg_color": "#33ae6a",
-            "badge_text_color": "#FFFFFF"
+            "badge_text_color": "#ffffff"
           }
         }
       },
@@ -252,50 +252,85 @@
         "media_item_dRn7WL": {
           "type": "media_item",
           "settings": {
-            "poster_image": "shopify://shop_images/image_36.png",
-            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+            "video": "shopify://files/videos/1746742130_output_96e55791-db44-46c5-b146-ff29e06b9fb7.mp4"
           }
         },
         "media_item_8NxXcT": {
           "type": "media_item",
           "settings": {
-            "poster_image": "shopify://shop_images/image_42.png",
-            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+            "video": "shopify://files/videos/Watch This 1 Feature Alone Makes the Dreamy Blue Pillow Worth It on Amazon Live.mp4"
           }
         },
         "media_item_QnRwad": {
           "type": "media_item",
           "settings": {
-            "poster_image": "shopify://shop_images/image_38.png",
-            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+            "video": "shopify://files/videos/Watch DreamBlue Memory Foam Pillow on Amazon Live (1).mp4"
           }
         },
         "media_item_MJx66T": {
           "type": "media_item",
           "settings": {
-            "poster_image": "shopify://shop_images/image_39.png",
-            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+            "video": "shopify://files/videos/Watch My neck issues thank me for this pillow daily! on Amazon Live.mp4"
           }
         },
         "media_item_g6jBA7": {
           "type": "media_item",
           "settings": {
-            "poster_image": "shopify://shop_images/image_41.png",
-            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+            "video": "shopify://files/videos/Dreamy_Blue_video_final_385534.mp4"
           }
         },
         "media_item_TgHwf6": {
           "type": "media_item",
           "settings": {
-            "poster_image": "shopify://shop_images/image_40.png",
-            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+            "video": "shopify://files/videos/Video_032.mp4"
           }
         },
         "media_item_zaPHLj": {
           "type": "media_item",
           "settings": {
-            "poster_image": "shopify://shop_images/image_84.png",
-            "video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4"
+            "video": "shopify://files/videos/Video_033.mp4"
+          }
+        },
+        "media_item_yVwFKp": {
+          "type": "media_item",
+          "settings": {
+            "video": "shopify://files/videos/Dreamy_Blue_video_original_385535.mp4"
+          }
+        },
+        "media_item_iC9hjb": {
+          "type": "media_item",
+          "settings": {
+            "video": "shopify://files/videos/Watch Perfect Pillow for All Sleep Positions on Amazon Live.mp4"
+          }
+        },
+        "media_item_N8QRE6": {
+          "type": "media_item",
+          "settings": {
+            "video": "shopify://files/videos/Watch Used By Two People With Different Pillow Preferences on Amazon Live.mp4"
+          }
+        },
+        "media_item_ymUiVV": {
+          "type": "media_item",
+          "settings": {
+            "video": "shopify://files/videos/Watch 3 Year Review of DreamyBlue Premium Pillow on Amazon Live.mp4"
+          }
+        },
+        "media_item_Jz8pVr": {
+          "type": "media_item",
+          "settings": {
+            "video": "shopify://files/videos/default.vertical.jobtemplate.mp4.480 (3).mp4"
+          }
+        },
+        "media_item_htPraK": {
+          "type": "media_item",
+          "settings": {
+            "video": "shopify://files/videos/Watch Review of pillow on Amazon Live.mp4"
+          }
+        },
+        "media_item_RDkHma": {
+          "type": "media_item",
+          "settings": {
+            "video": "shopify://files/videos/Website Video 02 (1).mp4"
           }
         }
       },
@@ -306,7 +341,14 @@
         "media_item_MJx66T",
         "media_item_g6jBA7",
         "media_item_TgHwf6",
-        "media_item_zaPHLj"
+        "media_item_zaPHLj",
+        "media_item_yVwFKp",
+        "media_item_iC9hjb",
+        "media_item_N8QRE6",
+        "media_item_ymUiVV",
+        "media_item_Jz8pVr",
+        "media_item_htPraK",
+        "media_item_RDkHma"
       ],
       "name": "Custom Quality",
       "settings": {
@@ -321,7 +363,7 @@
         "play_icon": "shopify://shop_images/Frame_68.svg",
         "bottom_video_poster": "shopify://shop_images/image_45.png",
         "bottom_video": "shopify://files/videos/4109487-uhd_4096_2160_25fps.mp4",
-        "bottom_video_label": "<b>Watch:</b> How to Adjust"
+        "bottom_video_label": "Watch: How to Adjust"
       }
     },
     "custom_quiz_xiDFUK": {
