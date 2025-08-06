@@ -1,0 +1,253 @@
+@use "../settings/init" as *;
+
+.pillow-talk {
+  padding: 0 0 rem(120) 0;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
+  xo-container {
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: rem(140);
+    padding: rem(120) rem(90);
+
+    @media (max-width: 768px) {
+      padding: rem(36) 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    font-family: var(--font-beausite-fit-web);
+    font-size: rem(72) !important;
+    font-weight: 300;
+    color: var(--color-black);
+    margin: 0 0 rem(8) 0 !important;
+
+    @media (max-width: 768px) {
+      font-size: rem(48) !important;
+    }
+  }
+
+  &__subheading {
+    font-family: var(--font-twk-lausanne);
+    font-size: rem(18);
+    line-height: 1.6;
+    color: var(--color-black);
+    margin: 0 !important;
+
+    @media (max-width: 768px) {
+      font-size: rem(14) !important;
+      max-width: rem(270);
+      margin: 0 auto !important;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: rem(16);
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__nav-button {
+    width: rem(48);
+    height: rem(48);
+    border-radius: 50%;
+    border: rem(1) solid var(--color-black);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--default-transition);
+
+    svg {
+      width: rem(14);
+      height: rem(24);
+    }
+  }
+
+  &__slider-wrapper {
+    overflow: hidden;
+  }
+
+  &__slide {
+    width: calc((100% - (2 * #{rem(8)})) / 3);
+    margin-right: rem(8);
+    min-height: rem(400);
+  }
+}
+
+.pillow-talk-card {
+  background-color: var(--color-white, #FFFFFF);
+  padding: rem(36);
+  min-height: rem(400);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    min-height: rem(320);
+  }
+
+  &__stars {
+    display: flex;
+    gap: 0;
+    margin-bottom: rem(12);
+  }
+
+  &__title {
+    font-family: var(--font-twk-lausanne) !important;
+    font-weight: 600 !important;
+    font-size: rem(18) !important;
+    color: var(--color-black);
+    margin: 0 0 rem(12) 0 !important;
+
+    @media (max-width: 768px) {
+      font-size: rem(14.4) !important;
+      margin: 0 0 rem(9.6) 0 !important;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-twk-lausanne) !important;
+    font-size: rem(18);
+    line-height: 1.6;
+    color: var(--color-black);
+    flex-grow: 1;
+
+    @media (max-width: 768px) {
+        font-size: rem(14) !important;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(24);
+  }
+
+  &__author {
+    font-family: var(--font-twk-lausanne) !important;
+    font-size: rem(18);
+    line-height: 1.6;
+    color: var(--color-black);
+    margin: 0 !important;
+
+    @media (max-width: 768px) {
+        font-size: rem(14.4) !important;
+    }
+  }
+
+  &__badge {
+    display: flex;
+    align-items: center;
+    font-size: rem(14);
+    padding: 0 rem(12);
+    border-radius: rem(30);
+    height: rem(22);
+
+    @media (max-width: 768px) {
+      font-size: rem(11.2);
+      height: rem(18);
+      padding: 0 rem(9.6);
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .pillow-talk {
+    &__content {
+      gap: rem(60);
+    }
+    &__slide {
+      width: calc((100% - #{rem(8)}) / 2);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .pillow-talk {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: rem(22);
+      padding: rem(40);
+    }
+    
+    &__info {
+      justify-content: flex-start;
+    }
+
+    &__nav {
+      &--desktop {
+        display: none;
+      }
+      &--mobile {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+    
+    &__slide {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pillow-talk {
+    padding: rem(40) 0;
+
+    &__content {
+      padding: rem(36) rem(20);
+    }
+
+    &__heading {
+      font-size: rem(48);
+    }
+
+    &__subheading {
+      font-size: rem(16);
+    }
+    
+    &__info {
+      text-align: center;
+    }
+    
+    &__slider-wrapper {
+      margin: 0 rem(-24);
+    }
+    
+    .pillow-talk__slider {
+      padding: 0 0 0 rem(24);
+    }
+
+    &__slide {
+      width: 80%;
+      margin-right: rem(16);
+    }
+  }
+}
