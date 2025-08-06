@@ -132,6 +132,10 @@ body {
                   transition: color .3s ease-in-out;
                 }
 
+                @media (max-width: 1420px) {
+                  font-size: rem(14);
+                }
+
                 .xo-menu-horizontal__arrow {
                   @include media-breakpoint-up(lg-2) {
                     display: none;
@@ -346,6 +350,10 @@ body {
             @include media-breakpoint-up(lg-2) {
               width: auto;
               height: rem(55);
+            }
+
+            @media (max-width: 1420px) {
+              height: rem(40);
             }
           }
         }

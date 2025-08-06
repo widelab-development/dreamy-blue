@@ -104,6 +104,11 @@ body .xo-header .navy-header .xo-header__body .xo-header__content .xo-header__de
     transition: color 0.3s ease-in-out;
   }
 }
+@media (max-width: 1420px) {
+  body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal li a {
+    font-size: 1.4rem;
+  }
+}
 @media (min-width: 1140px) {
   body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal li a .xo-menu-horizontal__arrow {
     display: none;
@@ -285,6 +290,11 @@ body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-men
   body .xo-header .xo-header__body .xo-header__content .xo-header__left .xo-header__logo-img {
     width: auto;
     height: 5.5rem;
+  }
+}
+@media (max-width: 1420px) {
+  body .xo-header .xo-header__body .xo-header__content .xo-header__left .xo-header__logo-img {
+    height: 4rem;
   }
 }
 @media (min-width: 1140px) {
