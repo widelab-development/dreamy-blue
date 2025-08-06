@@ -2,12 +2,7 @@
 /* stylelint-enable */
 /*MIXINS*/
 .pillow-talk {
-  padding: 0 0 12rem 0;
-}
-@media (max-width: 768px) {
-  .pillow-talk {
-    padding: 0;
-  }
+  padding: 0;
 }
 @media (max-width: 768px) {
   .pillow-talk xo-container {
@@ -86,21 +81,13 @@
 .pillow-talk__slide {
   width: calc((100% - 2 * 0.8rem) / 3);
   margin-right: 0.8rem;
-  min-height: 40rem;
 }
 
 .pillow-talk-card {
   background-color: var(--color-white, #FFFFFF);
   padding: 3.6rem;
-  min-height: 40rem;
-  height: 100%;
   display: flex;
   flex-direction: column;
-}
-@media (max-width: 768px) {
-  .pillow-talk-card {
-    min-height: 32rem;
-  }
 }
 .pillow-talk-card__stars {
   display: flex;
@@ -139,6 +126,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
   margin-top: 2.4rem;
 }
 .pillow-talk-card__author {
@@ -169,7 +158,7 @@
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1500px) {
   .pillow-talk__content {
     gap: 6rem;
   }
