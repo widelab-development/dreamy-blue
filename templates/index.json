@@ -149,8 +149,8 @@
         "content_background_color": "#f2eee8",
         "heading": "Pillow Talk",
         "subheading": "5-star reviews from the tens of thousands of people who’ve had a good night’s sleep.",
-        "arrow_color": "#1D1C50",
-        "arrow_bg_color": "#FFFFFF"
+        "arrow_color": "#1e1e1e",
+        "arrow_bg_color": "rgba(0,0,0,0)"
       }
     },
     "custom_reviews_JEntRe": {
