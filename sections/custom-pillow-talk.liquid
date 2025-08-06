@@ -136,15 +136,12 @@
         button.addEventListener('click', () => flkty.next());
       });
 
-      // --- POCZĄTEK ZMIAN ---
       const setEqualCardHeight = () => {
-        const cards = document.querySelectorAll('#shopify-section-{{ section.id }} .pillow-talk-card');
+        const cards = sliderEl.querySelectorAll('.pillow-talk-card');
         if (!cards.length) return;
 
-        // Resetuj wysokość, aby przeglądarka mogła obliczyć ją na nowo
         cards.forEach(card => card.style.height = 'auto');
 
-        // Znajdź najwyższą kartę
         let maxHeight = 0;
         cards.forEach(card => {
           if (card.offsetHeight > maxHeight) {
@@ -152,13 +149,18 @@
           }
         });
 
-        // Ustaw wysokość wszystkich kart na wysokość tej najwyższej
         cards.forEach(card => card.style.height = `${maxHeight}px`);
       };
 
-      flkty.on('ready', setEqualCardHeight);
-      flkty.on('resize', setEqualCardHeight);
-      // --- KONIEC ZMIAN ---
+      flkty.on('ready', () => {
+        setEqualCardHeight();
+        flkty.reposition();
+      });
+      flkty.on('resize', () => {
+        setEqualCardHeight();
+        flkty.reposition();
+      });
+      flkty.on('change', setEqualCardHeight);
     }
   });
 </script>
