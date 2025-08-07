@@ -20,9 +20,11 @@
 {{ 'inventory-status.css' | asset_url | stylesheet_tag }}
 {{ 'complementary-product.css' | asset_url | stylesheet_tag }}
 
+
 <script>
   window.productVariants = {{ product.variants | json }};
 </script>
+
 
 <div {% render 'section-attr' %}>
   <div class='main-product'>
@@ -33,6 +35,8 @@
         assign product_media_style = section.settings.product_media_style
         assign enable_sticky_cart = section.settings.enable_sticky_cart
         assign gallery_type = section.settings.gallery_type
+        assign custom_desktop_image = product.metafields.custom.desktop_image.value
+        assign custom_mobile_image = product.metafields.custom.mobile_image.value
       %}
       <xo-container class='main-product__container'>
         
@@ -54,6 +58,7 @@
               <p class="main-product__price" data-main-price>{{ current_variant.price | money }}</p>
         </div>
 
+
         <xo-grid class='main-product__grid'>
           <div
             class='main-product__image'
@@ -70,7 +75,9 @@
                   enable_image_zoom: section.settings.enable_image_zoom,
                   variant_images: product.images | where: 'attached_to_variant?', true | map: 'src',
                   gallery_type: gallery_type,
-                  show_image_variants_grouping: section.settings.show_image_variants_grouping
+                  show_image_variants_grouping: section.settings.show_image_variants_grouping,
+                  custom_desktop_image: custom_desktop_image,
+                  custom_mobile_image: custom_mobile_image
                 %}
               {%- elsif product_media_style == 'style-2' -%}
                 {% render 'product-info-media-slide',
@@ -78,7 +85,9 @@
                   enable_image_zoom: section.settings.enable_image_zoom,
                   variant_images: product.images | where: 'attached_to_variant?', true | map: 'src',
                   gallery_type: gallery_type,
-                  show_image_variants_grouping: section.settings.show_image_variants_grouping
+                  show_image_variants_grouping: section.settings.show_image_variants_grouping,
+                  custom_desktop_image: custom_desktop_image,
+                  custom_mobile_image: custom_mobile_image
                 %}
               {% endif %}
             </div>
@@ -215,9 +224,11 @@
         </xo-grid>
       </xo-container>
 
+
       {% if enable_sticky_cart %}
         {% render 'sticky-cart', product: product, variants_block: section.blocks | where: 'type', 'variants' | first %}
       {% endif %}
+
 
       {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
       {%- if first_3d_model -%}
@@ -231,10 +242,12 @@
   </div>
 </div>
 
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
       const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
       if (!sectionEl) return;
+
 
       const quantityRadios = sectionEl.querySelectorAll('input[name="quantity_option"]');
       const hiddenQuantityInput = sectionEl.querySelector('input[name="quantity"]');
@@ -243,14 +256,17 @@
       const buttonPriceEl = sectionEl.querySelector('[data-button-price]');
       let currentVariantPrice = {{ current_variant.price }};
 
+
       function formatMoney(price) {
         const amount = (price / 100).toFixed(2);
         return `{{ cart.currency.symbol }}${amount}`;
       }
 
+
       function updatePrices() {
         const selectedRadio = sectionEl.querySelector('input[name="quantity_option"]:checked');
         if (!selectedRadio) return;
+
 
         const quantity = parseInt(selectedRadio.dataset.quantity, 10);
         const discount = parseFloat(selectedRadio.dataset.discount) / 100 || 0;
@@ -275,6 +291,7 @@
         const selectedTotal = singlePrice * quantity;
         const selectedDiscounted = selectedTotal * (1 - discount);
 
+
         hiddenQuantityInput.value = quantity;
         buttonPriceEl.textContent = formatMoney(selectedDiscounted);
         mainPriceEls.forEach(el => el.textContent = formatMoney(singlePrice));
@@ -287,6 +304,7 @@
             return variant.options[index] === optionValue;
           });
         });
+
 
         if (matchedVariant) {
           currentVariantPrice = matchedVariant.price;
@@ -308,8 +326,10 @@
         }
       }
 
+
       const variantRadios = sectionEl.querySelectorAll('.js-variant-fieldset input[type="radio"]');
       variantRadios.forEach(radio => radio.addEventListener('change', onVariantChange));
+
 
       quantityRadios.forEach(radio => radio.addEventListener('change', updatePrices));
       
@@ -317,6 +337,7 @@
       onVariantChange(); 
     });
 </script>
+
 
 {% schema %}
 {
