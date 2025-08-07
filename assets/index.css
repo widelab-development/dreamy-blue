@@ -132,6 +132,10 @@ img {
   }
 }
 
+.xo-product-info-media-carousel img {
+  border-radius: 0.8rem !important;
+}
+
 button,
 a,
 input,
