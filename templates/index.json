@@ -326,12 +326,6 @@
           "settings": {
             "video": "shopify://files/videos/Watch Review of pillow on Amazon Live.mp4"
           }
-        },
-        "media_item_RDkHma": {
-          "type": "media_item",
-          "settings": {
-            "video": "shopify://files/videos/Website Video 02 (1).mp4"
-          }
         }
       },
       "block_order": [
@@ -347,8 +341,7 @@
         "media_item_N8QRE6",
         "media_item_ymUiVV",
         "media_item_Jz8pVr",
-        "media_item_htPraK",
-        "media_item_RDkHma"
+        "media_item_htPraK"
       ],
       "name": "Custom Quality",
       "settings": {
