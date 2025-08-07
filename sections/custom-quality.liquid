@@ -39,15 +39,23 @@
 
         {%- if section.blocks.size > 0 -%}
           <div class="custom-quality__media-scroller">
+            
             {%- for block in section.blocks -%}
               <div class="custom-quality__media-item" {{ block.shopify_attributes }}>
-                {%- if block.settings.poster_image != blank -%}
+                {%- liquid
+                  assign final_poster = block.settings.poster_image
+                  if final_poster == blank and block.settings.video != blank
+                    assign final_poster = block.settings.video.preview_image
+                  endif
+                -%}
+
+                {%- if final_poster != blank -%}
                   <div class="custom-quality__media-poster-wrapper">
                     <img
-                      src="{{ block.settings.poster_image | image_url: width: 400 }}"
-                      alt="{{ block.settings.poster_image.alt | default: 'Video poster' | escape }}"
+                      src="{{ final_poster | image_url: width: 400 }}"
+                      alt="{{ final_poster.alt | default: 'Video poster' | escape }}"
                       width="400"
-                      height="{{ 400 | divided_by: block.settings.poster_image.aspect_ratio | round }}"
+                      height="{{ 400 | divided_by: final_poster.aspect_ratio | round }}"
                       loading="lazy"
                     >
                     {%- if block.settings.video != blank -%}
@@ -79,6 +87,7 @@
                 {%- endif -%}
               </div>
             {%- endfor -%}
+            
           </div>
         {%- endif -%}
       </div>
@@ -331,4 +340,3 @@
   ]
 }
 {% endschema %}
-
