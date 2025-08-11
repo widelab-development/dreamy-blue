@@ -100,7 +100,7 @@
           {%- if section.blocks.size > 0 -%}
             <div class="custom-advantages__grid">
               {%- for block in section.blocks -%}
-                <div class="custom-advantages__card"
+                <div class="custom-advantages__card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 100 }}"
                   style="--card-bg-color: {{ block.settings.card_background_color }}; --card-text-color: {{ block.settings.card_text_color }};"
                   {{ block.shopify_attributes }}>
                   
