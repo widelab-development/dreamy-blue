@@ -50,7 +50,7 @@
                 -%}
 
                 {%- if final_poster != blank -%}
-                  <div class="custom-quality__media-poster-wrapper">
+                  <div class="custom-quality__media-poster-wrapper" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 100 }}">
                     <img
                       src="{{ final_poster | image_url: width: 400 }}"
                       alt="{{ final_poster.alt | default: 'Video poster' | escape }}"

@@ -61,7 +61,7 @@
           <div class="pillow-talk__slider" id="pillow-talk-slider-{{ section.id }}">
             {%- for block in section.blocks -%}
               <div class="pillow-talk__slide" {{ block.shopify_attributes }}>
-                <div class="pillow-talk-card">
+                <div class="pillow-talk-card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 100 }}">
                   {%- if block.settings.rating > 0 -%}
                     <div class="pillow-talk-card__stars">
                       {%- for i in (1..block.settings.rating) -%}

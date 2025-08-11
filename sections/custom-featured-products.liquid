@@ -24,7 +24,7 @@
                 {%- if section.blocks.size > 0 -%}
                     <div class="custom-featured-products__grid">
                         {%- for block in section.blocks -%}
-                            <div class="custom-featured-products__card"
+                            <div class="custom-featured-products__card" data-aos="fade-up" data-aos-delay="{{ forloop.index0 | times: 100 }}"
                                  style="--card-bg-color: {{ block.settings.background_color }}; --card-text-color: {{ block.settings.text_color }};"
                                  {{ block.shopify_attributes }}>
                                 
