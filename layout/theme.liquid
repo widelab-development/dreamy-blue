@@ -80,6 +80,7 @@
     <script src='{{ 'xo-webcomponents.min.js' | asset_url }}' defer></script>
     {% comment %} <script src='https://fa66-116-104-72-95.ngrok-free.app/main.js' defer></script> {% endcomment %}
     <script src='{{ 'main.js' | asset_url }}' defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body class='gradient'>
@@ -139,5 +140,23 @@
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       };
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+          once: true,
+          duration: 800 
+        });
+      });
+    
+      if (Shopify.designMode) {
+        document.addEventListener('shopify:section:load', () => AOS.refresh());
+        document.addEventListener('shopify:section:reorder', () => AOS.refresh());
+        document.addEventListener('shopify:section:select', () => AOS.refresh());
+        document.addEventListener('shopify:section:deselect', () => AOS.refresh());
+        document.addEventListener('shopify:block:select', () => AOS.refresh());
+        document.addEventListener('shopify:block:deselect', () => AOS.refresh());
+      }
+    </script>    
   </body>
 </html>

@@ -119,10 +119,10 @@
       <xo-container class="custom-featured-products__container custom-featured-products-collection__container">
         <div class="custom-featured-products__header">
           {%- if heading != blank -%}
-            <h2 class="custom-featured-products__heading">{{ heading | escape }}</h2>
+            <h2 class="custom-featured-products__heading" data-aos="fade-up">{{ heading | escape }}</h2>
           {%- endif -%}
           {%- if subheading != blank -%}
-            <div class="custom-featured-products__subheading">{{ subheading }}</div>
+            <div class="custom-featured-products__subheading" data-aos="fade-up">{{ subheading }}</div>
           {%- endif -%}
         </div>
 
@@ -174,10 +174,10 @@
                     <div class="quiz-layout">
                       <div class="quiz-left">
                         {% if block.settings.quiz_heading != blank %}
-                          <h3 class="quiz-heading">{{ block.settings.quiz_heading }}</h3>
+                          <h3 class="quiz-heading" data-aos="fade-up">{{ block.settings.quiz_heading }}</h3>
                         {% endif %}
                         {% if block.settings.quiz_subtext != blank %}
-                          <p class="quiz-subtext">{{ block.settings.quiz_subtext }}</p>
+                          <p class="quiz-subtext" data-aos="fade-up">{{ block.settings.quiz_subtext }}</p>
                         {% endif %}
                       </div>
                       <div class="quiz-right">

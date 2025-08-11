@@ -26,7 +26,7 @@
     style="--container-bg-color: {{ container_bg_color }};"
   >
     <div class="custom-product-reviews-list__header">
-      <div class="custom-product-reviews-list__top-line">
+      <div class="custom-product-reviews-list__top-line" data-aos="fade-up">
         {%- if top_line_text != blank -%}
           <span>{{ top_line_text }}</span>
         {%- endif -%}
@@ -36,11 +36,11 @@
       </div>
       
       {%- if heading != blank -%}
-        <h2 class="custom-product-reviews-list__heading custom-product-reviews-list__heading--desktop">{{ heading }}</h2>
+        <h2 class="custom-product-reviews-list__heading custom-product-reviews-list__heading--desktop" data-aos="fade-up">{{ heading }}</h2>
       {%- endif -%}
 
       {%- if heading_mobile != blank -%}
-        <div class="custom-product-reviews-list__heading custom-product-reviews-list__heading--mobile">{{ heading_mobile }}</div>
+        <div class="custom-product-reviews-list__heading custom-product-reviews-list__heading--mobile" data-aos="fade-up">{{ heading_mobile }}</div>
       {%- endif -%}
     </div>
 
