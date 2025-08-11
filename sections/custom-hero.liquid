@@ -70,13 +70,13 @@
       {%- endif -%}
       <div class="custom-hero-banner__content-box">
         {% if heading != blank %}
-          <h2 class="custom-hero-banner__heading">{{ heading }}</h2>
+          <h2 class="custom-hero-banner__heading" data-aos="fade-up">{{ heading }}</h2>
         {% endif %}
         {% if subheading != blank %}
-          <div class="custom-hero-banner__subheading">{{ subheading }}</div>
+          <div class="custom-hero-banner__subheading" data-aos="fade-up">{{ subheading }}</div>
         {% endif %}
         {% if description != blank %}
-          <div class="custom-hero-banner__desc">{{ description }}</div>
+          <div class="custom-hero-banner__desc" data-aos="fade-up">{{ description }}</div>
         {% endif %}
         <div class="custom-hero-banner__buttons">
           {% if button1_text != blank %}
