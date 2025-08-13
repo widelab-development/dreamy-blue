@@ -1,9 +1,11 @@
 @use "../settings/init" as *;
 
+
 body {
 
+
   .xo-header .navy-header{
-    background-color: var(--color-midnight-blue) !important; 
+    background-color: var(--color-midnight-blue) !important;
   }
   
   .xo-header .navy-header .xo-header__right-item svg path {
@@ -22,6 +24,7 @@ body {
     color: var(--color-white) !important;
   }
 
+
   .xo-header {
     .xo-header__sticky {
       @include media-breakpoint-up(lg-2) {
@@ -29,10 +32,12 @@ body {
         transition: background-color .3s ease-in-out;
       }
 
+
       &:hover {
         @include media-breakpoint-up(lg-2) {
           background-color: var(--color-midnight-blue);
         }
+
 
         .xo-header__content .xo-header__desktop .xo-menu-horizontal li a {
           @include media-breakpoint-up(lg-2) {
@@ -40,16 +45,18 @@ body {
           }
         }
 
+
         .xo-header__logo-img {
           @include media-breakpoint-up(lg-2) {
             filter: brightness(0) saturate(100%) invert(77%) sepia(29%) saturate(682%) hue-rotate(182deg) brightness(98%) contrast(98%);
           }
         }
 
+
         .xo-header__right {
           xo-tooltip {
             svg {
-              path { 
+              path {
                 @include media-breakpoint-up(lg-2) {
                   stroke: var(--color-white) !important;
                 }
@@ -69,6 +76,7 @@ body {
       }
     }
 
+
     .xo-header__container {
       @include media-breakpoint-up(lg-2) {
         background-color: transparent;
@@ -76,15 +84,18 @@ body {
       }
     }
 
+
     .xo-header__body {
       @include media-breakpoint-up(lg-2) {
         padding-top: 0;
       }
 
+
       .xo-header__content {
         @include media-breakpoint-up(lg-2) {
           height: rem(95);
         }
+
 
         .xo-header__desktop {
           .xo-menu-horizontal {
@@ -92,10 +103,12 @@ body {
               gap: rem(58);
             }
 
+
             li {
               @include media-breakpoint-up(lg-2) {
                 height: 100%;
               }
+
 
               &:last-child {
                 a {
@@ -105,6 +118,7 @@ body {
                     gap: rem(6);
                     color: var(--color-purple-100) !important;
                   }
+
 
                   &::before {
                     @include media-breakpoint-up(lg-2) {
@@ -121,6 +135,7 @@ body {
                 }
               }
 
+
               a {
                 @include media-breakpoint-up(lg-2) {
                   display: inline-flex;
@@ -132,9 +147,11 @@ body {
                   transition: color .3s ease-in-out;
                 }
 
+
                 @media (max-width: 1420px) {
                   font-size: rem(14);
                 }
+
 
                 .xo-menu-horizontal__arrow {
                   @include media-breakpoint-up(lg-2) {
@@ -143,6 +160,7 @@ body {
                 }
               }
             }
+
 
             .xo-menu-horizontal__mega-menu {
               @include media-breakpoint-up(lg-2) {
@@ -154,11 +172,13 @@ body {
                 border-radius: 0;
               }
 
+
               .xo-section {
                 @include media-breakpoint-up(lg-2) {
                   background-color: unset;
                 }
               }
+
 
               .mega-menu-1__container {
                 @include media-breakpoint-up(lg-2) {
@@ -168,6 +188,7 @@ body {
                   padding-bottom: rem(72);
                 }
 
+
                 .mega-menu-1__grid {
                   @include media-breakpoint-up(lg-2) {
                     display: grid;
@@ -175,6 +196,7 @@ body {
                     gap: rem(32);
                     align-items: flex-start;
                   }
+
 
                   .mega-menu-1__item--left,
                   .mega-menu-1__item--center {
@@ -184,18 +206,21 @@ body {
                     }
                   }
 
+
                   .mega-menu-1__item--left {
                     @include media-breakpoint-up(lg-2) {
                       align-items: flex-start;
                       padding: 0;
                     }
 
+
                     .mega-menu-1__wrapper {
                       display: flex;
                       flex-direction: column;
                       gap: rem(10);
-                      margin-top: rem(20); 
+                      margin-top: rem(20);
                     }
+
 
                     .mega-menu-product-card--horizontal {
                       .mega-menu-product-card__link {
@@ -204,6 +229,7 @@ body {
                         height: auto;
                       }
 
+
                       .mega-menu-product-card__image-wrapper {
                         flex-shrink: 0;
                         width: rem(60);
@@ -211,6 +237,7 @@ body {
                         margin-right: rem(15);
                         border-radius: rem(6);
                         overflow: hidden;
+
 
                         img {
                           width: 100%;
@@ -223,24 +250,29 @@ body {
                     }
                   }
 
+
                   .mega-menu-1__item--center {
                     @include media-breakpoint-up(lg-2) {
                       align-items: flex-start;
                       padding: 0;
                     }
 
+
                     xo-carousel-list {
                       @include media-breakpoint-up(lg-2) {
                         display: grid;
-                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
                         gap: rem(24);
                       }
+
 
                       xo-carousel-slide {
                         @include media-breakpoint-up(lg-2) {
                           width: 100%;
                           padding: 0;
+                          min-height: rem(300);
                         }
+
 
                         .collection-card-v2 {
                           @include media-breakpoint-up(lg-2) {
@@ -251,11 +283,13 @@ body {
                             border: unset !important
                           }
 
+
                           .collection-card-v2__title {
                             @include media-breakpoint-up(lg-2) {
                               display: none;
                             }
                           }
+
 
                           .collection-card-v2__link {
                             @include media-breakpoint-up(lg-2) {
@@ -266,6 +300,7 @@ body {
                             }
                           }
 
+
                           .collection-card-v2__image {
                             @include media-breakpoint-up(lg-2) {
                               width: 100%;
@@ -274,11 +309,13 @@ body {
                               transform: none !important;
                             }
 
+
                             .xo-image {
                               @include media-breakpoint-up(lg-2) {
                                 width: 100%;
                                 height: auto;
                               }
+
 
                               img {
                                 @include media-breakpoint-up(lg-2) {
@@ -292,10 +329,12 @@ body {
                           }
                         }
 
+
                         .mega-menu-product-card {
                           display: flex;
                           height: 100%;
                           text-align: center;
+
 
                           &__link {
                             display: block;
@@ -303,11 +342,13 @@ body {
                             width: 100%;
                           }
 
+
                           &__image-wrapper {
                             width: 100%;
                             height: 100%;
                             overflow: hidden;
                             border-radius: 0;
+
 
                             img {
                               width: 100%;
@@ -323,11 +364,13 @@ body {
                     }
                   }
 
+
                   .mega-menu-1__item--right {
                     @include media-breakpoint-up(lg-2) {
                       display: none !important;
                     }
                   }
+
 
                   .mega-menu-1__heading {
                     @include media-breakpoint-up(lg-2) {
@@ -345,6 +388,7 @@ body {
           }
         }
 
+
         .xo-header__left {
           .xo-header__logo-img {
             @include media-breakpoint-up(lg-2) {
@@ -352,11 +396,13 @@ body {
               height: rem(55);
             }
 
+
             @media (max-width: 1420px) {
               height: rem(40);
             }
           }
         }
+
 
         .xo-header__center,
         .xo-header__desktop,
@@ -366,12 +412,14 @@ body {
           }
         }
 
+
         .xo-header__right {
           @include media-breakpoint-up(lg-2) {
             display: flex;
             align-items: center;
             gap: rem(36);
           }
+
 
           xo-tooltip {
             @include media-breakpoint-up(lg-2) {
@@ -383,11 +431,13 @@ body {
               height: rem(40);
             }
 
+
             &:first-child {
               @include media-breakpoint-up(lg-2) {
                 display: none;
               }
             }
+
 
             &:nth-child(2) {
               @include media-breakpoint-up(lg-2) {
@@ -395,11 +445,13 @@ body {
               }
             }
 
+
             &:nth-child(3) {
               @include media-breakpoint-up(lg-2) {
                 order: 1;
               }
             }
+
 
             svg {
               @include media-breakpoint-up(lg-2) {
@@ -407,6 +459,7 @@ body {
                 height: auto;
               }
             }
+
 
 
           }

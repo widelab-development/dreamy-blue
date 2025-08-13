@@ -2,10 +2,67 @@
 {{ 'collection-link.css' | asset_url | stylesheet_tag }}
 {{ 'product-card.css' | asset_url | stylesheet_tag }}
 
+<style>
+
+  .mega-menu-product-card .mega-menu-product-card__image-wrapper {
+    position: relative;
+    overflow: hidden; 
+  }
+
+  .mega-menu-product-card__text-overlay {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 5; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    pointer-events: none; 
+  }
+
+  .mega-menu-product-card__overtitle {
+    background-color: var(--overtitle-bg-color, rgba(0, 0, 0, 0.6));
+    color: #000000;
+    padding: 8px 36px;
+    width: 172px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'twk_lausanne';
+    font-weight: 300;
+    line-height: 1;
+    border-radius: 72px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 8px;
+  }
+
+  .mega-menu-product-card__title {
+    font-size: 16px;
+    font-family: 'twk_lausanne';
+    font-weight: 300;
+    line-height: 1;
+    margin: 0 !important;
+    color: #000000;
+  }
+
+  .mega-menu-product-card:hover .mega-menu-product-card__overtitle {
+    background-color: var(--overtitle-bg-color-hover, rgba(200, 50, 50, 0.8));
+  }
+
+  .mega-menu-product-card--horizontal .mega-menu-product-card__text-overlay {
+    display: none;
+  }
+</style>
+
+
 {% liquid
   assign layout = section.settings.layout
   assign index = section.settings.index_nav
 %}
+
 
 
 {% if layout == 'category' %}
@@ -101,6 +158,7 @@
 {% endif %}
 
 
+
 <template xo-mega-menu-name='header-mega-menu' xo-mega-menu-index='{{ index }}'>
   <div class='mega-menu-1{% if layout %} mega-menu-1--{{ layout }}{% endif %}'>
     <div data-id='{{ section.id }}' {% render 'section-attr' %}>
@@ -156,6 +214,7 @@
             </div>
 
 
+
             <div class='mega-menu-1__item mega-menu-1__item--center' style='--xl: 7; --lg: 6; --md: 12; --xs: 12'>
               {% if layout != 'both' %}
                 <xo-carousel
@@ -186,10 +245,18 @@
                                 assign product = block.settings.product
                                 assign custom_image = block.settings.custom_image
                                 assign image_to_display = custom_image | default: product.featured_image
+                                assign overtitle = block.settings.overtitle
+                                assign title = block.settings.title | default: product.title
+                                
+                                assign overtitle_bg_color = block.settings.overtitle_bg_color
+                                assign overtitle_bg_color_hover = block.settings.overtitle_bg_color_hover
                               -%}
                               {% if product != blank and image_to_display != blank %}
                                 <xo-carousel-slide>
-                                  <div class='mega-menu-product-card color-{{ block.settings.color_scheme_box }}'>
+                                  <div
+                                    class='mega-menu-product-card color-{{ block.settings.color_scheme_box }}'
+                                    style="--overtitle-bg-color: {{ overtitle_bg_color }}; --overtitle-bg-color-hover: {{ overtitle_bg_color_hover }};"
+                                  >
                                     <a href='{{ product.url }}' class='mega-menu-product-card__link'>
                                       <div class='mega-menu-product-card__image-wrapper'>
                                         <img
@@ -198,6 +265,15 @@
                                           width='450'
                                           height='{{ 450 | divided_by: image_to_display.aspect_ratio | ceil }}'
                                           loading='lazy'>
+                                        
+                                        <div class="mega-menu-product-card__text-overlay">
+                                          {% if overtitle != blank %}
+                                            <span class="mega-menu-product-card__overtitle">{{ overtitle }}</span>
+                                          {% endif %}
+                                          {% if title != blank %}
+                                            <h3 class="mega-menu-product-card__title">{{ title }}</h3>
+                                          {% endif %}
+                                        </div>
                                       </div>
                                     </a>
                                   </div>
@@ -232,6 +308,7 @@
             </div>
 
 
+
             <div class='mega-menu-1__item mega-menu-1__item--right' style='--xl: 3; --lg: 3; --md: 6; --xs: 12'>
               {% for block in section.blocks %}
                 {% case block.type %}
@@ -258,6 +335,7 @@
         </div>
       </div>
     </div>
+
 
 
     <div class='mega-menu-1__mobile'>
@@ -312,6 +390,7 @@
           </div>
 
 
+
           <div class='mega-menu-1__item mega-menu-1__item--center' style='--lg: 12; --md: 12; --xs: 12'>
             {% if layout == 'category' %}
               <xo-carousel
@@ -328,10 +407,18 @@
                             assign product = block.settings.product
                             assign custom_image = block.settings.custom_image
                             assign image_to_display = custom_image | default: product.featured_image
+                            assign overtitle = block.settings.overtitle
+                            assign title = block.settings.title | default: product.title
+
+                            assign overtitle_bg_color = block.settings.overtitle_bg_color
+                            assign overtitle_bg_color_hover = block.settings.overtitle_bg_color_hover
                           -%}
                           {% if product != blank and image_to_display != blank %}
                             <xo-carousel-slide>
-                              <div class='mega-menu-product-card color-{{ block.settings.color_scheme_box }}'>
+                              <div
+                                class='mega-menu-product-card color-{{ block.settings.color_scheme_box }}'
+                                style="--overtitle-bg-color: {{ overtitle_bg_color }}; --overtitle-bg-color-hover: {{ overtitle_bg_color_hover }};"
+                              >
                                 <a href='{{ product.url }}' class='mega-menu-product-card__link'>
                                   <div class='mega-menu-product-card__image-wrapper'>
                                     <img
@@ -340,6 +427,15 @@
                                       width='450'
                                       height='{{ 450 | divided_by: image_to_display.aspect_ratio | ceil }}'
                                       loading='lazy'>
+
+                                    <div class="mega-menu-product-card__text-overlay">
+                                      {% if overtitle != blank %}
+                                        <span class="mega-menu-product-card__overtitle">{{ overtitle }}</span>
+                                      {% endif %}
+                                      {% if title != blank %}
+                                        <h3 class="mega-menu-product-card__title">{{ title }}</h3>
+                                      {% endif %}
+                                    </div>
                                   </div>
                                 </a>
                               </div>
@@ -378,6 +474,7 @@
           </div>
 
 
+
           <div class='mega-menu-1__item mega-menu-1__item--right' style='--lg: 12; --md: 12; --xs: 12'>
             {% for block in section.blocks %}
               {% case block.type %}
@@ -405,6 +502,7 @@
     </div>
   </div>
 </template>
+
 
 
 {% schema %}
@@ -602,6 +700,37 @@
         {
           "type": "paragraph",
           "content": "Optional. Replaces the default product image."
+        },
+        {
+          "type": "text",
+          "id": "overtitle",
+          "label": "Overtitle (on image)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title (below overtitle)",
+          "info": "If empty, the product title will be used."
+        },
+        {
+          "type": "header",
+          "content": "Overtitle Colors"
+        },
+        {
+          "type": "color",
+          "id": "overtitle_bg_color",
+          "label": "Overtitle Background",
+          "default": "rgba(0,0,0,0.6)"
+        },
+        {
+          "type": "color",
+          "id": "overtitle_bg_color_hover",
+          "label": "Overtitle Background (Hover)",
+          "default": "rgba(200,50,50,0.8)"
+        },
+        {
+          "type": "header",
+          "content": "Card"
         },
         {
           "type": "color_scheme",
