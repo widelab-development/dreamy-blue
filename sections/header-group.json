@@ -102,7 +102,11 @@
           "type": "product-item",
           "settings": {
             "product": "the-signature",
-            "custom_image": "shopify://shop_images/the-signature.png",
+            "custom_image": "shopify://shop_images/Frame_18_1.png",
+            "overtitle": "The Signature",
+            "title": "Adjustable fill for all sleepers.",
+            "overtitle_bg_color": "#6cb1ea",
+            "overtitle_bg_color_hover": "#56a1de",
             "color_scheme_box": "scheme_1"
           }
         },
@@ -110,7 +114,11 @@
           "type": "product-item",
           "settings": {
             "product": "the-sapphire",
-            "custom_image": "shopify://shop_images/Frame_19_b752f0af-08b2-447c-a25e-61aeb8374828.png",
+            "custom_image": "shopify://shop_images/Frame_19_917eb45d-7aa0-4262-b4be-9ab80afcc0f7.png",
+            "overtitle": "The Sapphire",
+            "title": "Even support for broad shoulders.",
+            "overtitle_bg_color": "#b67bba",
+            "overtitle_bg_color_hover": "#ae69b3",
             "color_scheme_box": "scheme_1"
           }
         },
@@ -118,7 +126,11 @@
           "type": "product-item",
           "settings": {
             "product": "the-blue-moon",
-            "custom_image": "shopify://shop_images/Frame_20_0e2cf5e5-1d8d-43ac-9824-b255a772e050.png",
+            "custom_image": "shopify://shop_images/Frame_20_9bd63354-bb40-4b7e-94db-661795a65d0c.png",
+            "overtitle": "Blue Moon",
+            "title": "Crescent for combo sleepers.",
+            "overtitle_bg_color": "#d88a68",
+            "overtitle_bg_color_hover": "#cc7650",
             "color_scheme_box": "scheme_1"
           }
         },
@@ -126,7 +138,11 @@
           "type": "product-item",
           "settings": {
             "product": "the-extrazzz",
-            "custom_image": "shopify://shop_images/Frame_21_bee2d3b7-1098-4f7c-ab1d-9b0eb26b5330.png",
+            "custom_image": "shopify://shop_images/Frame_21_9c520e0a-ff81-44f9-a407-cb057f1fab95.png",
+            "overtitle": "The Extrazzz",
+            "title": "Crescent for combo sleepers.",
+            "overtitle_bg_color": "#e3d4cc",
+            "overtitle_bg_color_hover": "#dcc9be",
             "color_scheme_box": "scheme_1"
           }
         }
