@@ -55,10 +55,10 @@
         "left_text": "s",
         "left_link": "",
         "show_center": true,
-        "center_text": "Free Shipping for all Pillow Orders",
+        "center_text": "Free Shipping on all Pillow Orders",
         "center_link": "shopify://collections",
         "show_right": true,
-        "right_text": "Shipping & Returns",
+        "right_text": "Shipping & Refunds",
         "right_link": "shopify://pages/shipping-refunds"
       }
     },
