@@ -124,12 +124,22 @@
             "author_name": "Ashley",
             "show_verified_badge": true
           }
+        },
+        "review_pyzVQi": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "<p>The comfiest, cooling pillow I’ve had the pleasure of resting this noggin upon. It came with extra stuffing so being a back and side sleeper, definitely crammed it all in lol. </p>",
+            "author_name": "Kento",
+            "show_verified_badge": true
+          }
         }
       },
       "block_order": [
         "review_njQapi",
         "review_M3xyc7",
-        "review_gpa9bn"
+        "review_gpa9bn",
+        "review_pyzVQi"
       ],
       "name": "Custom Product Reviews",
       "settings": {
