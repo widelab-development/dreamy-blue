@@ -63,7 +63,7 @@
             "product": "the-blue-moon",
             "custom_image": "shopify://shop_images/Signature_Pillow_5_2.png",
             "overtitle": "Blue Moon",
-            "description": "The crescent pillow for shoulder reach and combo sleep.",
+            "description": "The crescent pillow for shoulder reach and combo sleepers.",
             "background_color": "#e2a383",
             "text_color": "#d88a68"
           }
@@ -77,7 +77,7 @@
       "name": "Custom Featured Products",
       "settings": {
         "heading": "3 pillows. 1 perfect posture.",
-        "heading_mobile": "<h2>3 pillows.<br>1 perfect posture.</h2>",
+        "heading_mobile": "<h2>3 pillows.<br/>1 perfect posture.</h2>",
         "subheading": "<p>It’s automatic: when your neck, shoulders, and hips (And pelvis and knees, too!) fall into neutral alignment, you naturally rest your best.</p>"
       }
     },
