@@ -188,7 +188,7 @@
       ],
       "name": "Custom Reviews",
       "settings": {
-        "overtitle": "Our Pillows Are Award-Winning!",
+        "overtitle": "Our Pillows Are Award-Winning",
         "background_color": "#ffffff",
         "text_color": "#000000",
         "autoplay_speed": 3
