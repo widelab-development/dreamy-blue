@@ -128,6 +128,7 @@
         "review_pyzVQi": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/1234.png",
             "rating": 5,
             "quote": "<p>The comfiest, cooling pillow I’ve had the pleasure of resting this noggin upon. It came with extra stuffing so being a back and side sleeper, definitely crammed it all in lol. </p>",
             "author_name": "Kento",
