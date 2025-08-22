@@ -48,6 +48,7 @@
 }
 .custom-product-reviews__grid-item {
   display: flex;
+  min-height: 440px;
 }
 .custom-product-reviews__grid-item:not(.is-slider-active .custom-product-reviews__grid-item) {
   height: 100%;

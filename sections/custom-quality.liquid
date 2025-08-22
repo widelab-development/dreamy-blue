@@ -13,6 +13,11 @@
   assign bottom_video_poster = section.settings.bottom_video_poster
   assign bottom_video_label = section.settings.bottom_video_label
   assign play_icon = section.settings.play_icon
+
+  if bottom_video_poster == blank and bottom_video != blank
+    assign bottom_video_poster = bottom_video.preview_image
+  endif
+
   assign main_mp4_url = ''
   if bottom_video != blank
     for source in bottom_video.sources
@@ -91,70 +96,71 @@
           </div>
         {%- endif -%}
       </div>
-{%- if bottom_video_poster != blank -%}
-      <div class="custom-quality__bottom">
-        <div class="custom-quality__bottom-content">
-          {%- if heading_bottom != blank -%}
-            <h2 class="custom-quality__heading-bottom" data-aos="fade-up">{{ heading_bottom }}</h2>
-          {%- endif -%}
-          {%- if description_bottom != blank -%}
-            <div class="custom-quality__description-bottom" data-aos="fade-up">{{ description_bottom }}</div>
-          {%- endif -%}
-          <div class="custom-quality__buttons">
-            {%- if button_1_text != blank and bottom_video != blank -%}
-              <button
-                type="button"
-                class="custom-quality__button custom-quality__button--primary js-video-trigger"
-                aria-label="Play video: {{ bottom_video_label | default: 'Watch video' }}"
-                data-video-url="{{ main_mp4_url }}"
-                data-video-provider="{{ bottom_video.type }}"
-                data-video-id="{{ bottom_video.id }}">
-                {{ button_1_text }}
-              </button>
+      
+      {%- if bottom_video_poster != blank -%}
+        <div class="custom-quality__bottom">
+          <div class="custom-quality__bottom-content">
+            {%- if heading_bottom != blank -%}
+              <h2 class="custom-quality__heading-bottom" data-aos="fade-up">{{ heading_bottom }}</h2>
             {%- endif -%}
-
-            {%- if button_2_text != blank -%}
-              <a href="{{ button_2_link | default: '#' }}" class="custom-quality__button custom-quality__button--secondary">
-                {{ button_2_text }} <span class="custom-quality__button-arrow"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.536053 14.9619L8.46387 7.96191L0.536053 0.961914" stroke="black" stroke-opacity="0.4"/>
-                </svg>
-                </span>
-              </a>
+            {%- if description_bottom != blank -%}
+              <div class="custom-quality__description-bottom" data-aos="fade-up">{{ description_bottom }}</div>
             {%- endif -%}
-          </div>
-        </div>
-
-        <div class="custom-quality__bottom-media">
-          {%- if bottom_video_poster != blank -%}
-            <div class="custom-quality__media-poster-wrapper">
-              <img
-                src="{{ bottom_video_poster | image_url: width: 1200 }}"
-                alt="{{ bottom_video_poster.alt | default: 'Video poster' | escape }}"
-                width="1200"
-                height="{{ 1200 | divided_by: bottom_video_poster.aspect_ratio | round }}"
-                loading="lazy"
-              >
-              {%- if bottom_video != blank -%}
+            <div class="custom-quality__buttons">
+              {%- if button_1_text != blank and bottom_video != blank -%}
                 <button
-                  class="custom-quality__play-button custom-quality__play-button--large js-video-trigger"
-                  aria-label="Play video: {{ bottom_video_label }}"
+                  type="button"
+                  class="custom-quality__button custom-quality__button--primary js-video-trigger"
+                  aria-label="Play video: {{ bottom_video_label | default: 'Watch video' }}"
                   data-video-url="{{ main_mp4_url }}"
                   data-video-provider="{{ bottom_video.type }}"
                   data-video-id="{{ bottom_video.id }}">
-                  {%- if play_icon != blank -%}
-                    <img src="{{ play_icon | image_url: width: 150 }}" alt="Play video icon" class="custom-quality__play-icon-custom" width="60" height="60">
-                  {%- else -%}
-                    <span class="custom-quality__play-icon-default">{% render 'icon-play' %}</span>
-                  {%- endif -%}
-                  {%- if bottom_video_label != blank -%}
-                    <span class="custom-quality__play-label">{{ bottom_video_label }}</span>
-                  {%- endif -%}
+                  {{ button_1_text }}
                 </button>
               {%- endif -%}
+
+              {%- if button_2_text != blank -%}
+                <a href="{{ button_2_link | default: '#' }}" class="custom-quality__button custom-quality__button--secondary">
+                  {{ button_2_text }} <span class="custom-quality__button-arrow"><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.536053 14.9619L8.46387 7.96191L0.536053 0.961914" stroke="black" stroke-opacity="0.4"/>
+                  </svg>
+                  </span>
+                </a>
+              {%- endif -%}
             </div>
-          {%- endif -%}
+          </div>
+
+          <div class="custom-quality__bottom-media">
+            {%- if bottom_video_poster != blank -%}
+              <div class="custom-quality__media-poster-wrapper">
+                <img
+                  src="{{ bottom_video_poster | image_url: width: 1200 }}"
+                  alt="{{ bottom_video_poster.alt | default: 'Video poster' | escape }}"
+                  width="1200"
+                  height="{{ 1200 | divided_by: bottom_video_poster.aspect_ratio | round }}"
+                  loading="lazy"
+                >
+                {%- if bottom_video != blank -%}
+                  <button
+                    class="custom-quality__play-button custom-quality__play-button--large js-video-trigger"
+                    aria-label="Play video: {{ bottom_video_label }}"
+                    data-video-url="{{ main_mp4_url }}"
+                    data-video-provider="{{ bottom_video.type }}"
+                    data-video-id="{{ bottom_video.id }}">
+                    {%- if play_icon != blank -%}
+                      <img src="{{ play_icon | image_url: width: 150 }}" alt="Play video icon" class="custom-quality__play-icon-custom" width="60" height="60">
+                    {%- else -%}
+                      <span class="custom-quality__play-icon-default">{% render 'icon-play' %}</span>
+                    {%- endif -%}
+                    {%- if bottom_video_label != blank -%}
+                      <span class="custom-quality__play-label">{{ bottom_video_label }}</span>
+                    {%- endif -%}
+                  </button>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
         </div>
-      </div>
       {%- endif -%}
     </xo-container>
   </div>
@@ -291,7 +297,8 @@
     {
       "type": "image_picker",
       "id": "bottom_video_poster",
-      "label": "Main Video Poster Image"
+      "label": "Main Video Poster Image",
+      "info": "If left blank, the video's preview image will be used automatically."
     },
     {
       "type": "video",
