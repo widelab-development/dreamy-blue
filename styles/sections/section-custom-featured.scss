@@ -90,6 +90,12 @@
         transition: var(--default-transition);
         text-decoration: none; 
 
+        &:nth-of-type(4) {
+            .custom-featured-products__card-image-wrapper {
+                margin-bottom: rem(32);
+            }
+        }
+
         @media (max-width: 992px) {
             min-height: rem(275);
         }
