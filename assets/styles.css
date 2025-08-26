@@ -7896,18 +7896,6 @@ xo-product-quick-view-trigger[xo-loading]:not([xo-loading=false]) .xo-loader-3:a
     padding-top: 0;
   }
 }
-@media (min-width: 1400px) {
-  .xo-menu-horizontal {
-    -moz-column-gap: 1.8rem;
-         column-gap: 1.8rem;
-  }
-}
-@media (min-width: 1600px) {
-  .xo-menu-horizontal {
-    -moz-column-gap: 2.8rem;
-         column-gap: 2.8rem;
-  }
-}
 
 .xo-menu-horizontal--modifier {
   padding-top: 2.5rem;
@@ -7922,9 +7910,39 @@ xo-product-quick-view-trigger[xo-loading]:not([xo-loading=false]) .xo-loader-3:a
 .xo-menu-horizontal__item {
   padding: 0 0 1.6rem 0;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1141px) {
   .xo-menu-horizontal__item {
-    padding: 2.5rem 2rem;
+    padding: 0;
+  }
+
+  .xo-menu-horizontal__item:nth-of-type(1) {
+    padding-right: 3rem;
+  }
+
+  .xo-menu-horizontal__item:nth-of-type(2) {
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .xo-menu-horizontal__item:nth-of-type(1) {
+    padding-right: 5rem;
+  }
+
+  .xo-menu-horizontal__item:nth-of-type(2) {
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .xo-menu-horizontal__item:nth-of-type(1) {
+    padding-right: 6rem;
+  }
+
+  .xo-menu-horizontal__item:nth-of-type(2) {
+    padding-right: 4rem;
   }
 }
 
@@ -8162,7 +8180,7 @@ xo-product-quick-view-trigger[xo-loading]:not([xo-loading=false]) .xo-loader-3:a
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
-  transition-delay: .2s;
+  transition-delay: 0s;
   visibility: visible;
 }
 
