@@ -63,11 +63,6 @@ body .xo-header .navy-header .xo-header__body .xo-header__content .xo-header__de
     height: 9.5rem;
   }
 }
-@media (min-width: 1200px) {
-  body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal {
-    gap: 5.8rem;
-  }
-}
 @media (min-width: 1140px) {
   body .xo-header .xo-header__body .xo-header__content .xo-header__desktop .xo-menu-horizontal li {
     height: 100%;

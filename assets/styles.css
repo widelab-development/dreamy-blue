@@ -7924,7 +7924,7 @@ xo-product-quick-view-trigger[xo-loading]:not([xo-loading=false]) .xo-loader-3:a
 }
 @media (min-width: 1140px) {
   .xo-menu-horizontal__item {
-    padding: 2.5rem 0;
+    padding: 2.5rem 2rem;
   }
 }
 
@@ -8161,8 +8161,11 @@ xo-product-quick-view-trigger[xo-loading]:not([xo-loading=false]) .xo-loader-3:a
   width: 100%;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
+  transition-delay: .2s;
+  visibility: visible;
 }
+
 [dir=ltr] .xo-menu-horizontal__mega-menu {
   left: 0;
 }
