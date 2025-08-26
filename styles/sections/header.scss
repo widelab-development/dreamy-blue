@@ -99,10 +99,6 @@ body {
 
         .xo-header__desktop {
           .xo-menu-horizontal {
-            @include media-breakpoint-up(xl) {
-              gap: rem(58);
-            }
-
 
             li {
               @include media-breakpoint-up(lg-2) {
