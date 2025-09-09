@@ -185,11 +185,27 @@
                 
                 <input class="quantity__input" type="hidden" name="quantity" value="1">
       
+                {% comment %}
                 <button type="submit" name="add" class="main-product__add-to-cart-button">
                   <span class="main-product__button-price" data-button-price>{{ current_variant.price | money }}</span>
                   <span class="main-product__button-divider">|</span>
                   <span class="main-product__button-text">Add to Cart</span>
                 </button>
+                {% endcomment %}
+                 <button 
+  type="submit" 
+  name="add" 
+  class="main-product__add-to-cart-button"
+  {% unless current_variant.available %}disabled aria-disabled="true"{% endunless %}
+>
+  {% if current_variant.available %}
+    <span class="main-product__button-price" data-button-price>{{ current_variant.price | money }}</span>
+    <span class="main-product__button-divider">|</span>
+    <span class="main-product__button-text">Add to Cart</span>
+  {% else %}
+    <span class="main-product__button-text">Out of stock</span>
+  {% endif %}
+</button>
               {%- endform -%}
             </product-form>
             
