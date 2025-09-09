@@ -24,7 +24,7 @@
         "quantity_option_kgQYfT": {
           "type": "quantity_option",
           "settings": {
-            "quantity": 1,
+            "quantity": 2,
             "label": "Buy 2 Pillows,",
             "discount_text": "Save 10%",
             "discount_percentage": 10
