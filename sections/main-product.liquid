@@ -321,15 +321,24 @@
             hiddenVariantIdInput.value = matchedVariant.id;
           }
           
-          matchedVariant.options.forEach((optionValue, index) => {
-            const fieldset = sectionEl.querySelector(`.js-variant-fieldset[data-option-index="${index + 1}"]`);
-            if (fieldset) {
-              const displaySpan = fieldset.querySelector('.main-product__variant-selected-value');
-              if (displaySpan) {
-                displaySpan.textContent = optionValue;
-              }
-            }
-          });
+matchedVariant.options.forEach((optionValue, index) => {
+  const fieldset = sectionEl.querySelector(`.js-variant-fieldset[data-option-index="${index + 1}"]`);
+  if (fieldset) {
+    const displaySpan = fieldset.querySelector('.main-product__variant-selected-value');
+    if (displaySpan) {
+      let displayText = optionValue;
+
+      // Twój warunek dla konkretnych wariantów
+      if (optionValue === "The Light Stuff (12oz)") {
+        displayText = "Signature Fill Blend";
+      } else if (optionValue === "The Cool Stuff (12oz)") {
+        displayText = "Sapphire Fill Blend";
+      }
+
+      displaySpan.textContent = displayText;
+    }
+  }
+});
           
           updatePrices();
         }
