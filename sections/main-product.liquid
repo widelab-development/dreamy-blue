@@ -128,16 +128,9 @@
                   <fieldset class="js-variant-fieldset" data-option-index="{{ option.position }}">
                     <div class="main-product__variant-header">
                       <legend>{{ option.name }}</legend>
-<span class="main-product__variant-selected-value">
-  {% case option.selected_value %}
-    {% when "The Light Stuff (12oz)" %}
-      Signature Fill Blend
-    {% when "The Cool Stuff (12oz)" %}
-      Sapphire Fill Blend
-    {% else %}
-      {{ option.selected_value }}
-  {% endcase %}
-</span>
+                      <span class="main-product__variant-selected-value">
+                        {{ option.selected_value }}
+                      </span>
                     </div>
                     <div class="main-product__variant-options">
                       {%- for value in option.values -%}
@@ -328,15 +321,24 @@
             hiddenVariantIdInput.value = matchedVariant.id;
           }
           
+          // Change fill description
           matchedVariant.options.forEach((optionValue, index) => {
-            const fieldset = sectionEl.querySelector(`.js-variant-fieldset[data-option-index="${index + 1}"]`);
-            if (fieldset) {
-              const displaySpan = fieldset.querySelector('.main-product__variant-selected-value');
-              if (displaySpan) {
-                displaySpan.textContent = optionValue;
-              }
-            }
-          });
+          const fieldset = sectionEl.querySelector(`.js-variant-fieldset[data-option-index="${index + 1}"]`);
+          if (fieldset) {
+          const displaySpan = fieldset.querySelector('.main-product__variant-selected-value');
+          if (displaySpan) {
+          let displayText = optionValue;
+
+      if (optionValue === "The Light Stuff (12oz)") {
+        displayText = "Signature Fill Blend";
+      } else if (optionValue === "The Cool Stuff (12oz)") {
+        displayText = "Sapphire Fill Blend";
+      }
+
+      displaySpan.textContent = displayText;
+    }
+  }
+});
           
           updatePrices();
         }
