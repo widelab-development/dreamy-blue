@@ -320,7 +320,8 @@
           if (hiddenVariantIdInput) {
             hiddenVariantIdInput.value = matchedVariant.id;
           }
-          
+
+      // Fill description changed
 matchedVariant.options.forEach((optionValue, index) => {
   const fieldset = sectionEl.querySelector(`.js-variant-fieldset[data-option-index="${index + 1}"]`);
   if (fieldset) {
@@ -328,7 +329,6 @@ matchedVariant.options.forEach((optionValue, index) => {
     if (displaySpan) {
       let displayText = optionValue;
 
-      // Twój warunek dla konkretnych wariantów
       if (optionValue === "The Light Stuff (12oz)") {
         displayText = "Signature Fill Blend";
       } else if (optionValue === "The Cool Stuff (12oz)") {
