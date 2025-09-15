@@ -21,9 +21,11 @@
 {{ 'complementary-product.css' | asset_url | stylesheet_tag }}
 
 
+
 <script>
   window.productVariants = {{ product.variants | json }};
 </script>
+
 
 
 <div {% render 'section-attr' %}>
@@ -57,6 +59,7 @@
               {%- endif -%}
               <p class="main-product__price" data-main-price>{{ current_variant.price | money }}</p>
         </div>
+
 
 
         <xo-grid class='main-product__grid'>
@@ -237,9 +240,11 @@
       </xo-container>
 
 
+
       {% if enable_sticky_cart %}
         {% render 'sticky-cart', product: product, variants_block: section.blocks | where: 'type', 'variants' | first %}
       {% endif %}
+
 
 
       {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
@@ -255,6 +260,7 @@
 </div>
 
 
+
 <script>
 class CustomProductScript {
   constructor(container) {
@@ -265,9 +271,11 @@ class CustomProductScript {
     this.init();
   }
 
+
   init() {
     const variantRadios = this.container.querySelectorAll('.js-variant-fieldset input[type="radio"]');
     variantRadios.forEach(radio => radio.addEventListener('change', this.onVariantChange.bind(this)));
+
 
     const quantityRadios = this.container.querySelectorAll('input[name="quantity_option"]');
     quantityRadios.forEach(radio => radio.addEventListener('change', this.updatePrices.bind(this)));
@@ -276,6 +284,7 @@ class CustomProductScript {
     this.updatePrices();
   }
 
+
   onVariantChange(event) {
     const selectedOptions = Array.from(this.container.querySelectorAll('.js-variant-fieldset input:checked')).map(input => input.value);
     const matchedVariant = window.productVariants.find(variant => {
@@ -283,10 +292,13 @@ class CustomProductScript {
       return selectedOptions.every((optionValue, index) => variant.options[index] === optionValue);
     });
 
+
     if (!matchedVariant) return;
+
 
     this.renderPage(matchedVariant.id, this.sectionId);
   }
+
 
   renderPage(variantId, sectionId) {
     const url = `${this.productUrl}?variant=${variantId}&section_id=${sectionId}`;
@@ -298,9 +310,11 @@ class CustomProductScript {
         const destination = document.getElementById(`shopify-section-${sectionId}`);
         const source = html.getElementById(`shopify-section-${sectionId}`);
 
+
         if (source && destination) {
           destination.innerHTML = source.innerHTML;
         }
+
 
         // Update URL
         history.replaceState({}, '', `${this.productUrl}?variant=${variantId}`);
@@ -313,6 +327,7 @@ class CustomProductScript {
       });
   }
 
+
   updatePrices() {
     const mainPriceEls = this.container.querySelectorAll('[data-main-price]');
     const buttonPriceEl = this.container.querySelector('[data-button-price]');
@@ -323,6 +338,26 @@ class CustomProductScript {
       if (!variant) return false;
       return selectedOptions.every((optionValue, index) => variant.options[index] === optionValue);
     });
+
+    if (matchedVariant) {
+      matchedVariant.options.forEach((optionValue, index) => {
+        const fieldset = this.container.querySelector(`.js-variant-fieldset[data-option-index="${index + 1}"]`);
+        if (fieldset) {
+          const displaySpan = fieldset.querySelector('.main-product__variant-selected-value');
+          if (displaySpan) {
+            let displayText = optionValue;
+      
+            if (optionValue === "The Light Stuff (12oz)") {
+              displayText = "The Signature Fill Blend";
+            } else if (optionValue === "The Cool Stuff (12oz)") {
+              displayText = "The Sapphire Fill Blend";
+            }
+      
+            displaySpan.textContent = displayText;
+          }
+        }
+      });
+    }
     
     let currentVariantPrice = matchedVariant ? matchedVariant.price : {{ current_variant.price }};
     
@@ -331,6 +366,7 @@ class CustomProductScript {
       if(mainPriceEls) mainPriceEls.forEach(el => el.textContent = this.formatMoney(currentVariantPrice));
       return;
     };
+
 
     const quantity = parseInt(selectedRadio.dataset.quantity, 10);
     const discount = parseFloat(selectedRadio.dataset.discount) / 100 || 0;
@@ -345,6 +381,7 @@ class CustomProductScript {
       const bundlePriceEl = option.querySelector('[data-bundle-price]');
       const bundleComparePriceEl = option.querySelector('[data-bundle-compare-price]');
 
+
       if (bundlePriceEl) bundlePriceEl.textContent = this.formatMoney(discounted);
       if (bundleComparePriceEl) {
         if (disc > 0) {
@@ -358,6 +395,7 @@ class CustomProductScript {
     const selectedTotal = currentVariantPrice * quantity;
     const selectedDiscounted = selectedTotal * (1 - discount);
 
+
     if (hiddenQuantityInput) hiddenQuantityInput.value = quantity;
     if (buttonPriceEl) buttonPriceEl.textContent = this.formatMoney(selectedDiscounted);
     mainPriceEls.forEach(el => el.textContent = this.formatMoney(currentVariantPrice));
@@ -370,6 +408,7 @@ class CustomProductScript {
   }
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const productSection = document.getElementById('shopify-section-{{ section.id }}');
   if (productSection) {
@@ -377,6 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
+
 
 
 {% schema %}
