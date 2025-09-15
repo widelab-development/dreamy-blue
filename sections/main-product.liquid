@@ -20,11 +20,9 @@
 {{ 'inventory-status.css' | asset_url | stylesheet_tag }}
 {{ 'complementary-product.css' | asset_url | stylesheet_tag }}
 
-
 <script>
   window.productVariants = {{ product.variants | json }};
 </script>
-
 
 <div {% render 'section-attr' %}>
   <div class='main-product'>
@@ -57,7 +55,6 @@
               {%- endif -%}
               <p class="main-product__price" data-main-price>{{ current_variant.price | money }}</p>
         </div>
-
 
         <xo-grid class='main-product__grid'>
           <div
@@ -123,7 +120,7 @@
             </div>
       
             {%- unless product.has_only_default_variant -%}
-              <variant-radios class="main-product__variants" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
+              <variant-radios class="main-product__variants" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false">
                 {%- for option in product.options_with_values -%}
                   <fieldset class="js-variant-fieldset" data-option-index="{{ option.position }}">
                     <div class="main-product__variant-header">
@@ -227,11 +224,9 @@
         </xo-grid>
       </xo-container>
 
-
       {% if enable_sticky_cart %}
         {% render 'sticky-cart', product: product, variants_block: section.blocks | where: 'type', 'variants' | first %}
       {% endif %}
-
 
       {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
       {%- if first_3d_model -%}
@@ -245,31 +240,27 @@
   </div>
 </div>
 
-
 <script>
     document.addEventListener('DOMContentLoaded', () => {
       const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
       if (!sectionEl) return;
 
-
       const quantityRadios = sectionEl.querySelectorAll('input[name="quantity_option"]');
       const hiddenQuantityInput = sectionEl.querySelector('input[name="quantity"]');
-      const hiddenVariantIdInput = sectionEl.querySelector('.main-product__content input[name="id"]');
+      const hiddenVariantIdInput = sectionEl.querySelector('.product-form input[name="id"]');
       const mainPriceEls = sectionEl.querySelectorAll('[data-main-price]');
       const buttonPriceEl = sectionEl.querySelector('[data-button-price]');
       let currentVariantPrice = {{ current_variant.price }};
 
-
       function formatMoney(price) {
         const amount = (price / 100).toFixed(2);
-        return `{{ cart.currency.symbol }}${amount}`;
+        const format = {{ cart.currency.symbol | json }};
+        return `${format}${amount}`;
       }
-
 
       function updatePrices() {
         const selectedRadio = sectionEl.querySelector('input[name="quantity_option"]:checked');
         if (!selectedRadio) return;
-
 
         const quantity = parseInt(selectedRadio.dataset.quantity, 10);
         const discount = parseFloat(selectedRadio.dataset.discount) / 100 || 0;
@@ -283,38 +274,47 @@
           const total = singlePrice * qty;
           const discounted = total * (1 - disc);
           
-          option.querySelector('[data-bundle-price]').textContent = formatMoney(discounted);
-          if (disc > 0) {
-            option.querySelector('[data-bundle-compare-price]').textContent = formatMoney(total);
-          } else {
-            option.querySelector('[data-bundle-compare-price]').textContent = '';
+          const bundlePriceEl = option.querySelector('[data-bundle-price]');
+          const bundleComparePriceEl = option.querySelector('[data-bundle-compare-price]');
+
+          if (bundlePriceEl) bundlePriceEl.textContent = formatMoney(discounted);
+          if (bundleComparePriceEl) {
+            if (disc > 0) {
+              bundleComparePriceEl.textContent = formatMoney(total);
+            } else {
+              bundleComparePriceEl.textContent = '';
+            }
           }
         });
         
         const selectedTotal = singlePrice * quantity;
         const selectedDiscounted = selectedTotal * (1 - discount);
 
-
-        hiddenQuantityInput.value = quantity;
-        buttonPriceEl.textContent = formatMoney(selectedDiscounted);
+        if (hiddenQuantityInput) hiddenQuantityInput.value = quantity;
+        if (buttonPriceEl) buttonPriceEl.textContent = formatMoney(selectedDiscounted);
         mainPriceEls.forEach(el => el.textContent = formatMoney(singlePrice));
       }
       
       function onVariantChange() {
         const selectedOptions = Array.from(sectionEl.querySelectorAll('.js-variant-fieldset input:checked')).map(input => input.value);
         const matchedVariant = window.productVariants.find(variant => {
+          if (!variant) return false;
           return selectedOptions.every((optionValue, index) => {
             return variant.options[index] === optionValue;
           });
         });
 
-
         if (matchedVariant) {
+          // Update prices
           currentVariantPrice = matchedVariant.price;
+          updatePrices();
+
+          // Update hidden input for the form
           if (hiddenVariantIdInput) {
             hiddenVariantIdInput.value = matchedVariant.id;
           }
           
+          // Update the selected value display
           matchedVariant.options.forEach((optionValue, index) => {
             const fieldset = sectionEl.querySelector(`.js-variant-fieldset[data-option-index="${index + 1}"]`);
             if (fieldset) {
@@ -324,23 +324,27 @@
               }
             }
           });
-          
-          updatePrices();
+
+          // Manually update URL and dispatch event to trigger image change and other listeners
+          const url = `${window.location.pathname}?variant=${matchedVariant.id}`;
+          history.replaceState({}, '', url);
+          sectionEl.dispatchEvent(new CustomEvent('variant:change', {
+            detail: {
+              variant: matchedVariant
+            },
+            bubbles: true
+          }));
         }
       }
 
-
       const variantRadios = sectionEl.querySelectorAll('.js-variant-fieldset input[type="radio"]');
       variantRadios.forEach(radio => radio.addEventListener('change', onVariantChange));
-
-
       quantityRadios.forEach(radio => radio.addEventListener('change', updatePrices));
       
-      updatePrices();
-      onVariantChange(); 
+      // Initial state setup
+      onVariantChange();
     });
 </script>
-
 
 {% schema %}
 {
