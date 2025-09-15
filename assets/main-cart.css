@@ -246,6 +246,9 @@ body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-tabl
 body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__info .xo-cart-item__options .xo-cart-item__options-item span {
   opacity: 1;
 }
+body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__fill-blend {
+  margin-bottom: 1.4rem;
+}
 body .shopify-section .xo-main-cart__container .xo-main-cart__left .xo-cart-table__row-product .xo-cart-item .xo-cart-item__img {
   width: 100%;
   height: 13.4rem;

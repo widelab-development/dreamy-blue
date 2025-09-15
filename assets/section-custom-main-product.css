@@ -322,6 +322,9 @@
   gap: 2rem;
   margin-bottom: 1rem;
 }
+.main-product__add-to-cart-button:disabled {
+  cursor: auto;
+}
 .main-product__button-divider {
   opacity: 1;
 }

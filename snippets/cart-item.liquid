@@ -25,7 +25,6 @@
         <p>{{ item.title | escape }}</p>
       </a>
       <div class='xo-cart-item__price'>
-        {% comment %} {% render 'price', product: item.product %} {% endcomment %}
         {%- if item.original_price != item.final_price -%}
           <div class='xo-cart-item__discounted-prices'>
             <span class='xo-visually-hidden'>
@@ -77,6 +76,12 @@
             {%- endif -%}
           {%- endfor -%}
         </div>
+
+        {%- assign fill_blend_description = item.variant.metafields.custom.fill_blend_description -%}
+        {%- if fill_blend_description != blank -%}
+          <p class='xo-cart-item__fill-blend'>{{ fill_blend_description }}</p>
+        {%- endif -%}
+
         <p class='xo-cart-item__selling-plan'>{{ item.selling_plan_allocation.selling_plan.name }}</p>
       {%- endif -%}
       {% if item.line_level_discount_allocations != blank %}
