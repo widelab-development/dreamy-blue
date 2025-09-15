@@ -20,9 +20,11 @@
 {{ 'inventory-status.css' | asset_url | stylesheet_tag }}
 {{ 'complementary-product.css' | asset_url | stylesheet_tag }}
 
+
 <script>
   window.productVariants = {{ product.variants | json }};
 </script>
+
 
 <div {% render 'section-attr' %}>
   <div class='main-product'>
@@ -55,6 +57,7 @@
               {%- endif -%}
               <p class="main-product__price" data-main-price>{{ current_variant.price | money }}</p>
         </div>
+
 
         <xo-grid class='main-product__grid'>
           <div
@@ -120,7 +123,7 @@
             </div>
       
             {%- unless product.has_only_default_variant -%}
-              <variant-radios class="main-product__variants" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false">
+              <variant-radios class="main-product__variants" data-section="{{ section.id }}" data-url="{{ product.url }}">
                 {%- for option in product.options_with_values -%}
                   <fieldset class="js-variant-fieldset" data-option-index="{{ option.position }}">
                     <div class="main-product__variant-header">
@@ -186,19 +189,19 @@
                 <input class="quantity__input" type="hidden" name="quantity" value="1">
       
                  <button 
-  type="submit" 
-  name="add" 
-  class="main-product__add-to-cart-button"
-  {% unless current_variant.available %}disabled aria-disabled="true"{% endunless %}
->
-  {% if current_variant.available %}
-    <span class="main-product__button-price" data-button-price>{{ current_variant.price | money }}</span>
-    <span class="main-product__button-divider">|</span>
-    <span class="main-product__button-text">Add to Cart</span>
-  {% else %}
-    <span class="main-product__button-text">Out of stock</span>
-  {% endif %}
-</button>
+                  type="submit" 
+                  name="add" 
+                  class="main-product__add-to-cart-button"
+                  {% unless current_variant.available %}disabled aria-disabled="true"{% endunless %}
+                >
+                  {% if current_variant.available %}
+                    <span class="main-product__button-price" data-button-price>{{ current_variant.price | money }}</span>
+                    <span class="main-product__button-divider">|</span>
+                    <span class="main-product__button-text">Add to Cart</span>
+                  {% else %}
+                    <span class="main-product__button-text">Out of stock</span>
+                  {% endif %}
+                </button>
               {%- endform -%}
             </product-form>
             
@@ -233,9 +236,11 @@
         </xo-grid>
       </xo-container>
 
+
       {% if enable_sticky_cart %}
         {% render 'sticky-cart', product: product, variants_block: section.blocks | where: 'type', 'variants' | first %}
       {% endif %}
+
 
       {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
       {%- if first_3d_model -%}
@@ -249,111 +254,130 @@
   </div>
 </div>
 
+
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sectionEl = document.getElementById('shopify-section-{{ section.id }}');
-      if (!sectionEl) return;
+class CustomProductScript {
+  constructor(container) {
+    this.container = container;
+    this.sectionId = this.container.closest('.shopify-section').id.replace('shopify-section-', '');
+    this.productUrl = this.container.querySelector('.main-product__variants')?.dataset.url || '';
+    
+    this.init();
+  }
 
-      const quantityRadios = sectionEl.querySelectorAll('input[name="quantity_option"]');
-      const hiddenQuantityInput = sectionEl.querySelector('input[name="quantity"]');
-      const hiddenVariantIdInput = sectionEl.querySelector('.product-form input[name="id"]');
-      const mainPriceEls = sectionEl.querySelectorAll('[data-main-price]');
-      const buttonPriceEl = sectionEl.querySelector('[data-button-price]');
-      let currentVariantPrice = {{ current_variant.price }};
+  init() {
+    const variantRadios = this.container.querySelectorAll('.js-variant-fieldset input[type="radio"]');
+    variantRadios.forEach(radio => radio.addEventListener('change', this.onVariantChange.bind(this)));
 
-      function formatMoney(price) {
-        const amount = (price / 100).toFixed(2);
-        const format = {{ cart.currency.symbol | json }};
-        return `${format}${amount}`;
-      }
+    const quantityRadios = this.container.querySelectorAll('input[name="quantity_option"]');
+    quantityRadios.forEach(radio => radio.addEventListener('change', this.updatePrices.bind(this)));
+    
+    // Initial price calculation
+    this.updatePrices();
+  }
 
-      function updatePrices() {
-        const selectedRadio = sectionEl.querySelector('input[name="quantity_option"]:checked');
-        if (!selectedRadio) return;
+  onVariantChange(event) {
+    const selectedOptions = Array.from(this.container.querySelectorAll('.js-variant-fieldset input:checked')).map(input => input.value);
+    const matchedVariant = window.productVariants.find(variant => {
+      if (!variant) return false;
+      return selectedOptions.every((optionValue, index) => variant.options[index] === optionValue);
+    });
 
-        const quantity = parseInt(selectedRadio.dataset.quantity, 10);
-        const discount = parseFloat(selectedRadio.dataset.discount) / 100 || 0;
+    if (!matchedVariant) return;
+
+    this.renderPage(matchedVariant.id, this.sectionId);
+  }
+
+  renderPage(variantId, sectionId) {
+    const url = `${this.productUrl}?variant=${variantId}&section_id=${sectionId}`;
+    
+    fetch(url)
+      .then(response => response.text())
+      .then(responseText => {
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+        const destination = document.getElementById(`shopify-section-${sectionId}`);
+        const source = html.getElementById(`shopify-section-${sectionId}`);
+
+        if (source && destination) {
+          destination.innerHTML = source.innerHTML;
+        }
+
+        // Update URL
+        history.replaceState({}, '', `${this.productUrl}?variant=${variantId}`);
         
-        const singlePrice = currentVariantPrice;
-        
-        document.querySelectorAll('.main-product__quantity-option').forEach(option => {
-          const radio = option.querySelector('input');
-          const qty = parseInt(radio.dataset.quantity, 10);
-          const disc = parseFloat(radio.dataset.discount) / 100 || 0;
-          const total = singlePrice * qty;
-          const discounted = total * (1 - disc);
-          
-          const bundlePriceEl = option.querySelector('[data-bundle-price]');
-          const bundleComparePriceEl = option.querySelector('[data-bundle-compare-price]');
+        // Re-initialize scripts on the new content
+        new CustomProductScript(destination);
+      })
+      .catch(e => {
+        console.error(e);
+      });
+  }
 
-          if (bundlePriceEl) bundlePriceEl.textContent = formatMoney(discounted);
-          if (bundleComparePriceEl) {
-            if (disc > 0) {
-              bundleComparePriceEl.textContent = formatMoney(total);
-            } else {
-              bundleComparePriceEl.textContent = '';
-            }
-          }
-        });
-        
-        const selectedTotal = singlePrice * quantity;
-        const selectedDiscounted = selectedTotal * (1 - discount);
+  updatePrices() {
+    const mainPriceEls = this.container.querySelectorAll('[data-main-price]');
+    const buttonPriceEl = this.container.querySelector('[data-button-price]');
+    const hiddenQuantityInput = this.container.querySelector('input[name="quantity"]');
+    
+    const selectedOptions = Array.from(this.container.querySelectorAll('.js-variant-fieldset input:checked')).map(input => input.value);
+    const matchedVariant = window.productVariants.find(variant => {
+      if (!variant) return false;
+      return selectedOptions.every((optionValue, index) => variant.options[index] === optionValue);
+    });
+    
+    let currentVariantPrice = matchedVariant ? matchedVariant.price : {{ current_variant.price }};
+    
+    const selectedRadio = this.container.querySelector('input[name="quantity_option"]:checked');
+    if (!selectedRadio) {
+      if(mainPriceEls) mainPriceEls.forEach(el => el.textContent = this.formatMoney(currentVariantPrice));
+      return;
+    };
 
-        if (hiddenQuantityInput) hiddenQuantityInput.value = quantity;
-        if (buttonPriceEl) buttonPriceEl.textContent = formatMoney(selectedDiscounted);
-        mainPriceEls.forEach(el => el.textContent = formatMoney(singlePrice));
-      }
+    const quantity = parseInt(selectedRadio.dataset.quantity, 10);
+    const discount = parseFloat(selectedRadio.dataset.discount) / 100 || 0;
+    
+    this.container.querySelectorAll('.main-product__quantity-option').forEach(option => {
+      const radio = option.querySelector('input');
+      const qty = parseInt(radio.dataset.quantity, 10);
+      const disc = parseFloat(radio.dataset.discount) / 100 || 0;
+      const total = currentVariantPrice * qty;
+      const discounted = total * (1 - disc);
       
-      function onVariantChange() {
-        const selectedOptions = Array.from(sectionEl.querySelectorAll('.js-variant-fieldset input:checked')).map(input => input.value);
-        const matchedVariant = window.productVariants.find(variant => {
-          if (!variant) return false;
-          return selectedOptions.every((optionValue, index) => {
-            return variant.options[index] === optionValue;
-          });
-        });
+      const bundlePriceEl = option.querySelector('[data-bundle-price]');
+      const bundleComparePriceEl = option.querySelector('[data-bundle-compare-price]');
 
-        if (matchedVariant) {
-          // Update prices
-          currentVariantPrice = matchedVariant.price;
-          updatePrices();
-
-          // Update hidden input for the form
-          if (hiddenVariantIdInput) {
-            hiddenVariantIdInput.value = matchedVariant.id;
-          }
-          
-          // Update the selected value display
-          matchedVariant.options.forEach((optionValue, index) => {
-            const fieldset = sectionEl.querySelector(`.js-variant-fieldset[data-option-index="${index + 1}"]`);
-            if (fieldset) {
-              const displaySpan = fieldset.querySelector('.main-product__variant-selected-value');
-              if (displaySpan) {
-                displaySpan.textContent = optionValue;
-              }
-            }
-          });
-
-          // Manually update URL and dispatch event to trigger image change and other listeners
-          const url = `${window.location.pathname}?variant=${matchedVariant.id}`;
-          history.replaceState({}, '', url);
-          sectionEl.dispatchEvent(new CustomEvent('variant:change', {
-            detail: {
-              variant: matchedVariant
-            },
-            bubbles: true
-          }));
+      if (bundlePriceEl) bundlePriceEl.textContent = this.formatMoney(discounted);
+      if (bundleComparePriceEl) {
+        if (disc > 0) {
+          bundleComparePriceEl.textContent = this.formatMoney(total);
+        } else {
+          bundleComparePriceEl.textContent = '';
         }
       }
-
-      const variantRadios = sectionEl.querySelectorAll('.js-variant-fieldset input[type="radio"]');
-      variantRadios.forEach(radio => radio.addEventListener('change', onVariantChange));
-      quantityRadios.forEach(radio => radio.addEventListener('change', updatePrices));
-      
-      // Initial state setup
-      onVariantChange();
     });
+    
+    const selectedTotal = currentVariantPrice * quantity;
+    const selectedDiscounted = selectedTotal * (1 - discount);
+
+    if (hiddenQuantityInput) hiddenQuantityInput.value = quantity;
+    if (buttonPriceEl) buttonPriceEl.textContent = this.formatMoney(selectedDiscounted);
+    mainPriceEls.forEach(el => el.textContent = this.formatMoney(currentVariantPrice));
+  }
+  
+  formatMoney(price) {
+    const amount = (price / 100).toFixed(2);
+    const format = {{ cart.currency.symbol | json }};
+    return `${format}${amount}`;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const productSection = document.getElementById('shopify-section-{{ section.id }}');
+  if (productSection) {
+    new CustomProductScript(productSection);
+  }
+});
 </script>
+
 
 {% schema %}
 {
