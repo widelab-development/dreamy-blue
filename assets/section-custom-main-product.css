@@ -146,8 +146,8 @@
 }
 .main-product__variants label {
   background-color: white;
-  font-size: 1.6rem;
-  padding: 0.4rem 2.4rem;
+  font-size: 1.5rem;
+  padding: 0.4rem 2rem;
   border-radius: 9.6rem;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -321,9 +321,6 @@
   align-items: center;
   gap: 2rem;
   margin-bottom: 1rem;
-}
-.main-product__add-to-cart-button:disabled {
-  cursor: auto;
 }
 .main-product__button-divider {
   opacity: 1;
