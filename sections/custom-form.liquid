@@ -46,38 +46,53 @@
               {%- endif -%}
             </div>
     
-            {%- form 'customer', id: 'NewsletterForm' -%}
+              {%- form 'customer', id: 'NewsletterForm' -%}
+              <input type='hidden' name='contact[tags]' value='newsletter'>
 
+              <!-- Name -->
+              <div class="custom-form__field">
+                <input 
+                  type="text"
+                  name="contact[note][Name]"
+                  placeholder="{{ name_placeholder }}"
+                  class="custom-form__input"
+                  {% if form.errors %}
+                    aria-invalid="true"
+                  {% endif %}
+                >
+              </div>
+
+              <!-- Email -->
+              <div class="custom-form__field">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  placeholder="{{ email_placeholder }}"
+                  required
+                  class="custom-form__input"
+                  {% if form.errors %}
+                    aria-invalid="true"
+                  {% elsif form.posted_successfully? %}
+                    aria-describedby="NewsletterForm-success"
+                  {% endif %}
+                >
+              </div>
+
+              <!-- Success message -->
               {%- if form.posted_successfully? -%}
-                <div class="custom-form__success-message">
+                <div class="custom-form__success-message" id="NewsletterForm-success">
                   <p>Thank you for subscribing to our newsletter. Please check your email.</p>
                 </div>
               {%- endif -%}
 
-              {{ form.errors | default_errors }}
+              <!-- Error message -->
+              {%- if form.errors -%}
+                <div class="custom-form__error-message">
+                  {{ form.errors | default_errors }}
+                </div>
+              {%- endif -%}
 
-              <div class="custom-form__field">
-                <input 
-                  type="text"
-                  name="customer[note][Name]"
-                  placeholder="{{ name_placeholder }}"
-                  class="custom-form__input"
-                >
-              </div>
-
-              <div class="custom-form__field">
-                <input
-                  type="email"
-                  name="customer[email]"
-                  placeholder="{{ email_placeholder }}"
-                  required
-                  class="custom-form__input"
-                >
-              </div>
-
-              <input type="hidden" name="customer[tags]" value="newsletter">
-              <input type="hidden" name="customer[accepts_marketing]" value="true">
-
+              <!-- Submit button -->
               <button 
                 type="submit"
                 class="custom-form__button"
@@ -87,8 +102,6 @@
               </button>
 
             {%- endform -%}
-
-
           </div>
         </div>
       </div>
