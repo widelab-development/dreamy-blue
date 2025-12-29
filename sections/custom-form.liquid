@@ -46,52 +46,47 @@
               {%- endif -%}
             </div>
     
-            {%- form 'contact', id: 'ContactForm' -%}
+            {%- form 'customer', id: 'NewsletterForm' -%}
+
               {%- if form.posted_successfully? -%}
                 <div class="custom-form__success-message">
-                  <p>{{ 'templates.contact.form.post_success' | t }}</p>
+                  <p>Dziękujemy za zapis do newslettera!</p>
                 </div>
               {%- endif -%}
-    
+
               {{ form.errors | default_errors }}
-    
+
               <div class="custom-form__field">
                 <input 
-                  type="text" 
-                  id="ContactForm-name-{{ section.id }}" 
-                  name="contact[{{ 'templates.contact.form.name' | t }}]" 
-                  value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                  type="text"
+                  name="customer[name]"
                   placeholder="{{ name_placeholder }}"
                   class="custom-form__input"
                 >
               </div>
-              
+
               <div class="custom-form__field">
                 <input
                   type="email"
-                  id="ContactForm-email-{{ section.id }}"
-                  name="contact[email]"
-                  spellcheck="false"
-                  autocapitalize="off"
-                  value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-                  aria-required="true"
-                  {% if form.errors contains 'email' %}
-                    aria-invalid="true"
-                    aria-describedby="ContactForm-email-error-{{ section.id }}"
-                  {% endif %}
+                  name="customer[email]"
                   placeholder="{{ email_placeholder }}"
+                  required
                   class="custom-form__input"
                 >
               </div>
-              
+
+              <input type="hidden" name="customer[tags]" value="newsletter">
+
               <button 
-                type="submit" 
-                class="custom-form__button" 
+                type="submit"
+                class="custom-form__button"
                 style="--btn-bg-color: {{ button_bg_color }}; --btn-text-color: {{ button_text_color }};"
               >
                 {{ button_text }}
               </button>
+
             {%- endform -%}
+
           </div>
         </div>
       </div>
